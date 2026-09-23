@@ -518,7 +518,7 @@
     const estadoValor = ORDEN_ESTADOS_SERVICIO.includes(activo.estado) ? activo.estado : "recibido";
     const pagoInfo = activo.pago ? PAGO_ESTADOS()[activo.pago.estado] : null;
     return `
-      <div class="card" style="box-shadow: var(--neu-out), 0 0 0 1px rgba(111,190,68,0.35);">
+      <div class="card" style="box-shadow: var(--neu-out), 0 0 0 1px rgba(243,59,49,0.35);">
         <div class="card-title">🔧 ${esc(t("servicio_en_proceso"))}${activo.folio ? ` <span style="color:var(--green-bright);font-size:11px;">· ${esc(t("folio_label"))} ${esc(activo.folio)}</span>` : ""}</div>
         <div class="timeline-title" style="margin-bottom:2px;">${esc(activo.tipo || "Servicio")}</div>
         ${activo.descripcion ? `<div class="timeline-desc" style="margin-bottom:10px;">${esc(activo.descripcion)}</div>` : `<div style="margin-bottom:10px;"></div>`}

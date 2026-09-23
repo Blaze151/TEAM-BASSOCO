@@ -14,14 +14,14 @@
   --text: #111315;
   --text-dim: #2c3133;
   --text-faint: #444a4c;
-  --green: #2b6a12;
-  --green-bright: #22580c;
-  --green-dim: #22580c;
-  --green-soft: rgba(43, 106, 18, 0.16);
+  --green: #b3140c;
+  --green-bright: #9c100a;
+  --green-dim: #9c100a;
+  --green-soft: rgba(179, 20, 12, 0.14);
   --yellow: #6e5000;
   --blue: #1b4a80;
-  --danger: #8e1f1c;
-  --danger-soft: rgba(142, 31, 28, 0.14);
+  --danger: #6b1410;
+  --danger-soft: rgba(107, 20, 16, 0.14);
   --radius: 14px;
   --radius-sm: 10px;
 
@@ -45,14 +45,14 @@ html[data-theme="light"] {
   --text: #111315;
   --text-dim: #2c3133;
   --text-faint: #444a4c;
-  --green: #2b6a12;
-  --green-bright: #22580c;
-  --green-dim: #22580c;
-  --green-soft: rgba(43, 106, 18, 0.16);
+  --green: #b3140c;
+  --green-bright: #9c100a;
+  --green-dim: #9c100a;
+  --green-soft: rgba(179, 20, 12, 0.14);
   --yellow: #6e5000;
   --blue: #1b4a80;
-  --danger: #8e1f1c;
-  --danger-soft: rgba(142, 31, 28, 0.14);
+  --danger: #6b1410;
+  --danger-soft: rgba(107, 20, 16, 0.14);
 
   --neu-dark: rgba(0, 0, 0, 0.30);
   --neu-light: rgba(255, 255, 255, 0.38);
@@ -188,7 +188,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   background: var(--green);
   border-radius: 3px;
   display: inline-block;
-  box-shadow: 0 0 6px rgba(111, 190, 68, 0.5);
+  box-shadow: 0 0 6px rgba(243, 59, 49, 0.5);
 }
 
 /* ---------------- Vehicle ticket (elemento protagonista) ---------------- */
@@ -288,7 +288,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   padding: 6px;
   background: var(--surface);
   box-shadow: var(--neu-out-lg);
-  border: 1px solid rgba(111, 190, 68, 0.3);
+  border: 1px solid rgba(243, 59, 49, 0.3);
 }
 
 .vehicle-photo img {
@@ -417,7 +417,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   gap: 8px;
   background: var(--surface);
   color: var(--green-bright);
-  border: 1px solid rgba(111, 190, 68, 0.35);
+  border: 1px solid rgba(243, 59, 49, 0.35);
   font-weight: 700;
   font-family: 'Barlow Condensed', sans-serif;
   letter-spacing: 0.03em;
@@ -431,7 +431,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   box-shadow: var(--neu-out-sm);
 }
 
-.btn:hover { color: var(--green-bright); box-shadow: var(--neu-out-sm), 0 0 0 1px rgba(111,190,68,0.5); text-decoration: none; }
+.btn:hover { color: var(--green-bright); box-shadow: var(--neu-out-sm), 0 0 0 1px rgba(243, 59, 49, 0.5); text-decoration: none; }
 .btn:active { box-shadow: var(--neu-in-sm); transform: scale(0.99); }
 
 .btn-outline {
@@ -441,14 +441,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   box-shadow: var(--neu-out-sm);
 }
 
-.btn-outline:hover { color: var(--green-bright); border-color: rgba(111,190,68,0.35); }
+.btn-outline:hover { color: var(--green-bright); border-color: rgba(243, 59, 49, 0.35); }
 .btn-outline:active { box-shadow: var(--neu-in-sm); }
 
 .btn-block { width: 100%; }
 
 .btn[aria-disabled="true"] { opacity: 0.4; pointer-events: none; }
 
-.btn-danger { color: var(--danger); border-color: rgba(179,80,79,0.35); }
+.btn-danger { color: var(--danger); border-color: rgba(107,20,16,0.35); }
 .btn-danger:hover { color: #b3302b; }
 
 .btn-sm { padding: 8px 13px; font-size: 12px; }
@@ -507,7 +507,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 .accept-toggle-txt-on { display: none; }
 .accept-toggle input:checked + .accept-toggle-track {
-  background: rgba(111,190,68,0.14); border-color: var(--green); color: var(--green-bright);
+  background: rgba(243, 59, 49, 0.14); border-color: var(--green); color: var(--green-bright);
 }
 .accept-toggle input:checked + .accept-toggle-track .accept-toggle-dot { background: var(--green); }
 .accept-toggle input:checked + .accept-toggle-track .accept-toggle-dot::after {
@@ -666,8 +666,8 @@ textarea { resize: vertical; min-height: 70px; }
   margin-top: 14px;
   padding: 16px;
   border-radius: 14px;
-  background: rgba(111, 190, 68, 0.055);
-  border: 1px solid rgba(111, 190, 68, 0.22);
+  background: rgba(243, 59, 49, 0.055);
+  border: 1px solid rgba(243, 59, 49, 0.22);
   border-left: 3px solid var(--green);
   animation: toolPanelIn 0.22s ease;
 }
@@ -738,7 +738,7 @@ textarea { resize: vertical; min-height: 70px; }
   box-shadow: var(--neu-out-sm);
   transition: box-shadow 0.15s ease;
 }
-.vlist-item:hover { box-shadow: var(--neu-out-sm), 0 0 0 1px rgba(111,190,68,0.35); }
+.vlist-item:hover { box-shadow: var(--neu-out-sm), 0 0 0 1px rgba(243, 59, 49, 0.35); }
 .vlist-item-title { font-weight: 600; font-size: 14px; }
 .vlist-item-sub { color: var(--text-faint); font-size: 12px; margin-top: 2px; }
 
@@ -908,8 +908,8 @@ textarea { resize: vertical; min-height: 70px; }
   flex-shrink: 0;
 }
 
-.status-step.done .status-step-dot { color: var(--green-bright); box-shadow: var(--neu-in-sm), inset 0 0 0 2px rgba(111,190,68,0.4); }
-.status-step.current .status-step-dot { background: var(--green); color: #ffffff; box-shadow: var(--neu-out-sm), 0 0 12px rgba(111,190,68,0.55); }
+.status-step.done .status-step-dot { color: var(--green-bright); box-shadow: var(--neu-in-sm), inset 0 0 0 2px rgba(243, 59, 49, 0.4); }
+.status-step.current .status-step-dot { background: var(--green); color: #ffffff; box-shadow: var(--neu-out-sm), 0 0 12px rgba(243, 59, 49, 0.55); }
 
 .status-step-label {
   font-size: 10px;
@@ -943,8 +943,8 @@ textarea { resize: vertical; min-height: 70px; }
 }
 .status-chip.st-recibido { color: var(--text-dim); }
 .status-chip.st-en_proceso { color: var(--green); }
-.status-chip.st-listo { color: var(--green-bright); box-shadow: var(--neu-out-sm), 0 0 10px rgba(111,190,68,0.4); }
-.status-chip.st-recogido { color: var(--green-bright); box-shadow: var(--neu-out-sm), 0 0 10px rgba(111,190,68,0.4); }
+.status-chip.st-listo { color: var(--green-bright); box-shadow: var(--neu-out-sm), 0 0 10px rgba(243, 59, 49, 0.4); }
+.status-chip.st-recogido { color: var(--green-bright); box-shadow: var(--neu-out-sm), 0 0 10px rgba(243, 59, 49, 0.4); }
 .status-chip.st-finalizado { color: var(--text-faint); }
 
 /* ---------------- Tablero de estados (admin) ---------------- */
@@ -1137,12 +1137,12 @@ textarea { resize: vertical; min-height: 70px; }
   justify-content: center;
   gap: 6px;
   cursor: pointer;
-  box-shadow: 0 4px 18px rgba(111,190,68,0.45), var(--neu-out);
+  box-shadow: 0 4px 18px rgba(243, 59, 49, 0.45), var(--neu-out);
   z-index: 61;
   white-space: nowrap;
   transition: background 0.15s ease, box-shadow 0.15s ease;
 }
-.fab-save-btn:active { box-shadow: 0 2px 10px rgba(111,190,68,0.4), var(--neu-in); }
+.fab-save-btn:active { box-shadow: 0 2px 10px rgba(243, 59, 49, 0.4), var(--neu-in); }
 .fab-save-btn:disabled { opacity: 0.75; cursor: default; font-size: 13px; }
 .fab-save-btn.btn-success-flash { background: var(--green-bright); font-size: 14px; }
 
@@ -1223,3 +1223,26 @@ textarea { resize: vertical; min-height: 70px; }
    nombre del taller, así que se oculta el texto repetido y el botón de tema. */
 #theme-toggle { display: none !important; }
 body:not([data-page="admin"]) .topbar .brand-name { display: none; }
+
+/* Cabecera del panel: logo arriba con "Administración" debajo, y los
+   controles (idioma / cerrar sesión) en una columna compacta a la derecha,
+   sin desbordar el ancho de la pantalla. */
+.topbar { gap: 12px; }
+.brand { min-width: 0; flex: 1 1 auto; }
+.brand-mark { max-width: 100%; }
+.topbar > div:last-child { flex-shrink: 0; }
+body[data-page="admin"] .brand { flex-direction: column; align-items: flex-start; gap: 8px; }
+body[data-page="admin"] .brand-mark { width: min(300px, 100%); }
+body[data-page="admin"] .brand-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--green);
+}
+body[data-page="admin"] .topbar-controls { margin-top: 0; }
+body[data-page="admin"] #btn-logout { white-space: nowrap; }
+@media (max-width: 480px) {
+  .topbar { padding-bottom: 18px; margin-bottom: 18px; }
+  body[data-page="admin"] .brand-mark { width: 100%; }
+}
