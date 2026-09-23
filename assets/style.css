@@ -7,27 +7,27 @@
    ========================================================== */
 
 :root {
-  --bg: #b1b4b3;
-  --surface: #b9bcbb;
-  --surface-alt: #a8abaa;
-  --white: #ffffff;
-  --text: #111315;
-  --text-dim: #2c3133;
-  --text-faint: #444a4c;
-  --green: #b3140c;
-  --green-bright: #9c100a;
-  --green-dim: #9c100a;
-  --green-soft: rgba(179, 20, 12, 0.14);
-  --yellow: #6e5000;
-  --blue: #1b4a80;
-  --danger: #6b1410;
-  --danger-soft: rgba(107, 20, 16, 0.14);
+  --bg: #1a1c1e;
+  --surface: #1e2124;
+  --surface-alt: #17191b;
+  --white: #f5f6f7;
+  --text: #eef0f0;
+  --text-dim: #9ba1a3;
+  --text-faint: #7d8385;
+  --green: #ff5247;
+  --green-bright: #ff6a60;
+  --green-dim: #d22a20;
+  --green-soft: rgba(243, 59, 49, 0.16);
+  --yellow: #e8c94a;
+  --blue: #4a9be8;
+  --danger: #e8837c;
+  --danger-soft: rgba(232, 131, 124, 0.14);
   --radius: 14px;
   --radius-sm: 10px;
 
   /* Neumorfismo: par de sombras (oscura + clara) sobre superficies del mismo tono */
-  --neu-dark: rgba(0, 0, 0, 0.30);
-  --neu-light: rgba(255, 255, 255, 0.38);
+  --neu-dark: rgba(0, 0, 0, 0.62);
+  --neu-light: rgba(255, 255, 255, 0.04);
   --neu-out: 8px 8px 18px var(--neu-dark), -7px -7px 16px var(--neu-light);
   --neu-out-sm: 5px 5px 11px var(--neu-dark), -4px -4px 10px var(--neu-light);
   --neu-out-lg: 14px 14px 30px var(--neu-dark), -11px -11px 24px var(--neu-light);
@@ -58,13 +58,13 @@ html[data-theme="light"] {
   --neu-light: rgba(255, 255, 255, 0.38);
 }
 
-html .vehicle-photo,
-html .vehicle-photo-placeholder,
-html .plate {
+html[data-theme="light"] .vehicle-photo,
+html[data-theme="light"] .vehicle-photo-placeholder,
+html[data-theme="light"] .plate {
   box-shadow: var(--neu-out-sm);
 }
 
-html .lightbox { background: rgba(20, 22, 20, 0.82); }
+html[data-theme="light"] .lightbox { background: rgba(20, 22, 20, 0.82); }
 
 * { box-sizing: border-box; }
 
@@ -1219,9 +1219,9 @@ textarea { resize: vertical; min-height: 70px; }
 
 
 /* ---------------- Team Bassoco ----------------
-   Tema único gris (el gris del logo); el logo horizontal ya incluye el
-   nombre del taller, así que se oculta el texto repetido y el botón de tema. */
-#theme-toggle { display: none !important; }
+   Tema claro = gris del logo (predeterminado); tema oscuro = carbón con
+   acentos rojos y logo de letras blancas. El logo horizontal ya incluye
+   el nombre del taller, así que se oculta el texto repetido. */
 body:not([data-page="admin"]) .topbar .brand-name { display: none; }
 
 /* Cabecera del panel: logo arriba con "Administración" debajo, y los
