@@ -399,7 +399,7 @@
   const LANG_KEY = "bassoco_lang";
   const STR = {
     es: {
-      admin_titulo: "Team Bassoco — Administración",
+      admin_titulo: "Panel de administración",
       cerrar_sesion: "Cerrar sesión",
       login_titulo: "Conectar con el repositorio",
       login_desc_html: 'Se conecta directo a tu repositorio de GitHub usando un token personal. Los cambios que hagas aquí se guardan como commits en <code class="mono">data/vehicles.json</code>.',
@@ -708,7 +708,7 @@
       confirm_salir_sin_guardar: "Tienes cambios sin guardar. ¿Salir de todas formas?",
     },
     en: {
-      admin_titulo: "Team Bassoco — Admin",
+      admin_titulo: "Admin panel",
       cerrar_sesion: "Log out",
       login_titulo: "Connect to the repository",
       login_desc_html: 'Connects directly to your GitHub repository using a personal token. Changes you make here are saved as commits in <code class="mono">data/vehicles.json</code>.',
