@@ -151,6 +151,140 @@
         }
       },
       "servicios": []
+    },
+    "X2": {
+      "id": "X2",
+      "fecha_creacion": "2026-09-28T19:04:27.833Z",
+      "foto_perfil": "uploads/X2/20260928-130432-perfil.jpg",
+      "documentos_vehiculo": {
+        "fotos": [
+          "uploads/X2/20260928-130435-vdoc-0-17906222451471907685867847367461.jpg"
+        ],
+        "documentos": []
+      },
+      "placas": "E202-70 L",
+      "numero_unidad": "S/N",
+      "marca": "FORD",
+      "modelo": "F150 XLT",
+      "anio": 2010,
+      "version": "4.6",
+      "color": "NEGRO",
+      "combustible": "Gasolina",
+      "vin": "1FTEW1C82AFC56473",
+      "km_actual": 360124.9,
+      "cliente_nombre": "SERGIO GUARDADO",
+      "cliente_telefono": "8711044146",
+      "cliente_telefono_2": "8713940393",
+      "cliente_correo": "",
+      "cliente_rfc": "",
+      "cliente_direccion": "",
+      "ficha_tecnica": {
+        "aceite_tipo": "5w30",
+        "aceite_capacidad": "7 lts",
+        "presion_llantas": "45",
+        "bateria": "BCT-65-850",
+        "filtro_aire": "",
+        "filtro_aceite": ""
+      },
+      "servicio_actual": {
+        "id": "svc_1790620675374",
+        "folio": "A002",
+        "tipo": "SERVICIO DE MTTO DE TRANSMISIÓN Y CAMBIO DE ACEITE DE DIFERENCIAL",
+        "descripcion": "SERVICIO DE MTTO A TRANSMISIÓN Y CAMBIO DE ACEITE A DIFERENCIAL",
+        "nota_interna": "CHEQUEO GENERAL",
+        "km": 360124.9,
+        "costo": null,
+        "tecnico": "JAVIER VARGAS",
+        "tiempo_entrega_aprox": "5 HRS",
+        "fecha_inicio": "2026-09-28",
+        "estado": "recibido",
+        "actualizado": "2026-09-28",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "si",
+              "espejo_lateral": "si",
+              "cristales": "no",
+              "emblema": "si",
+              "tapon_ruedas": "si",
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "si",
+              "triangulo_seguridad": "si",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 25,
+            "danos_notas": "PARABRISAS ESTRELLADO"
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-09-28T18:37:55.374Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X2/20260928-130429-recibido-5-17906221966253057243443186120809.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
+      "servicios": []
     }
   },
   "folio_counter": 1
