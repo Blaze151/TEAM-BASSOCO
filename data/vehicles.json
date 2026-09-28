@@ -8,6 +8,44 @@
     "direccion": "Blvd. Carranza #750, Col. División del Norte, Torreón, Coah.",
     "mapa_url": "https://maps.app.goo.gl/tsMSZsNGj62AQyeVA"
   },
-  "vehicles": {},
+  "vehicles": {
+    "X1": {
+      "id": "X1",
+      "fecha_creacion": "2026-09-28T18:25:15.161Z",
+      "foto_perfil": "uploads/X1/20260928-122515-perfil.jpg",
+      "documentos_vehiculo": {
+        "fotos": [
+          "uploads/X1/20260928-122517-vdoc-0-17906197777838034626739591195414.jpg"
+        ],
+        "documentos": []
+      },
+      "placas": "RXK-777-A",
+      "numero_unidad": "",
+      "marca": "CHEVROLET",
+      "modelo": "BEAT",
+      "anio": 2019,
+      "version": "1.2 S-TECII 16V",
+      "color": "BLANCO/AMARILLO",
+      "combustible": "Gasolina",
+      "vin": "MA6CA6CDXKT016137",
+      "km_actual": 269003,
+      "cliente_nombre": "GOVI REFACCIONARIA",
+      "cliente_telefono": "8713160071",
+      "cliente_telefono_2": "8713940393",
+      "cliente_correo": "luisgermangarciag@gmail.com",
+      "cliente_rfc": "GRE800131RL9",
+      "cliente_direccion": "CALLE LIBRAMIENTO NORESTE # 9239, COL. CUIDAD INDUSTRIAL MITRAS, GARCIA NUEVO LEON.",
+      "ficha_tecnica": {
+        "aceite_tipo": "15W30",
+        "aceite_capacidad": "5 LTS",
+        "presion_llantas": "32 PSI",
+        "bateria": "99-DL",
+        "filtro_aire": "",
+        "filtro_aceite": ""
+      },
+      "servicio_actual": null,
+      "servicios": []
+    }
+  },
   "folio_counter": 0
 }
