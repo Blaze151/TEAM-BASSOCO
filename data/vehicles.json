@@ -54,16 +54,16 @@
         "tecnico": "Oscar flores",
         "tiempo_entrega_aprox": "4 días",
         "fecha_inicio": "2026-09-28",
-        "estado": "recibido",
+        "estado": "diagnostico",
         "actualizado": "2026-09-28",
         "pago": {
           "estado": "no_pagado",
           "metodo": null
         },
         "orden_recepcion": {
-          "enviado": false,
+          "enviado": true,
           "aceptado": false,
-          "fecha_envio": null,
+          "fecha_envio": "2026-09-28",
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
@@ -86,7 +86,8 @@
             },
             "gasolina": 25,
             "danos_notas": "Cofre no cierra, golpes en carrocería revisar fotos de ingreso"
-          }
+          },
+          "pdf_path": "uploads/X1/20260928-123108-informe-recepcion.pdf"
         },
         "cotizacion": {
           "enviado": false,
@@ -110,7 +111,8 @@
           "pdf_path": null
         },
         "fechas_etapa": {
-          "recibido": "2026-09-28T18:25:45.839Z"
+          "recibido": "2026-09-28T18:25:45.839Z",
+          "diagnostico": "2026-09-28T18:31:11.400Z"
         },
         "adjuntos": {
           "recibido": {
