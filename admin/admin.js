@@ -3522,9 +3522,9 @@
       if (totalesResumen.subtotal > 0) {
         toolSummaryHtml = `
           <div class="diag-money-summary">
-            <div><span>${esc(t("cotiz_subtotal"))}</span><span>$${totalesResumen.subtotal.toLocaleString("es-MX", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span></div>
-            ${cotResumen.incluir_iva ? `<div><span>${esc(t("cotiz_iva"))}</span><span>$${totalesResumen.iva.toLocaleString("es-MX", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span></div>` : ""}
-            <div class="diag-money-total"><span>${esc(t("cotiz_total_general"))}</span><span>$${totalesResumen.total.toLocaleString("es-MX", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span></div>
+            <div><span>${esc(t("cotiz_subtotal"))}</span><span id="diag-subtotal-display">$${totalesResumen.subtotal.toLocaleString("es-MX", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span></div>
+            ${cotResumen.incluir_iva ? `<div><span>${esc(t("cotiz_iva"))}</span><span id="diag-iva-display">$${totalesResumen.iva.toLocaleString("es-MX", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span></div>` : ""}
+            <div class="diag-money-total"><span>${esc(t("cotiz_total_general"))}</span><span id="diag-total-display">$${totalesResumen.total.toLocaleString("es-MX", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span></div>
           </div>`;
       }
     } else if (stage === "recogido") {
@@ -3954,6 +3954,9 @@
     $("cotiz-subtotal-display").textContent = formatMXN(subtotal);
     $("cotiz-iva-display").textContent = formatMXN(iva);
     $("cotiz-total-display").textContent = formatMXN(subtotal + iva);
+    if ($("diag-subtotal-display")) $("diag-subtotal-display").textContent = formatMXN(subtotal);
+    if ($("diag-iva-display")) $("diag-iva-display").textContent = formatMXN(iva);
+    if ($("diag-total-display")) $("diag-total-display").textContent = formatMXN(subtotal + iva);
   });
 
   $("active-service-container").addEventListener("click", (e) => {
@@ -4285,6 +4288,8 @@
       const iva = tgt.checked ? subtotal * 0.16 : 0;
       $("cotiz-iva-display").textContent = formatMXN(iva);
       $("cotiz-total-display").textContent = formatMXN(subtotal + iva);
+      if ($("diag-iva-display")) $("diag-iva-display").textContent = formatMXN(iva);
+      if ($("diag-total-display")) $("diag-total-display").textContent = formatMXN(subtotal + iva);
       return;
     }
 
