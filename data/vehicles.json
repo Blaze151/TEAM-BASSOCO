@@ -508,7 +508,113 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1790802822969",
+        "folio": "A003",
+        "tipo": "CALENTAMIENTO",
+        "descripcion": "CALENTAMIWNTO",
+        "nota_interna": "Hay que poner flecha y checar por qué se calienta",
+        "km": 430542,
+        "costo": null,
+        "tecnico": "OSCAR FLORES",
+        "tiempo_entrega_aprox": "1 dia",
+        "fecha_inicio": "2026-09-30",
+        "estado": "recibido",
+        "actualizado": "2026-09-30",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "si",
+              "cristales": "no",
+              "emblema": "si",
+              "tapon_ruedas": "si",
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "si",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "si",
+              "extinguidor": "no"
+            },
+            "gasolina": 100,
+            "danos_notas": "PARABRISAS ESTRELLADO, NO CONTABA CON FLECHA INSTALADA"
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-09-30T21:13:42.969Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X4/20260930-151811-recibido-0-1000137267.jpg",
+              "uploads/X4/20260930-151814-recibido-1-1000137266.jpg",
+              "uploads/X4/20260930-151816-recibido-2-1000137264.jpg",
+              "uploads/X4/20260930-151818-recibido-3-1000137261.jpg",
+              "uploads/X4/20260930-151820-recibido-4-1000137260.jpg",
+              "uploads/X4/20260930-151823-recibido-5-1000137259.jpg",
+              "uploads/X4/20260930-151825-recibido-6-1000137258.jpg",
+              "uploads/X4/20260930-151827-recibido-7-1000137257.jpg",
+              "uploads/X4/20260930-151830-recibido-8-1000137252.jpg",
+              "uploads/X4/20260930-151832-recibido-9-1000137268.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
