@@ -406,14 +406,24 @@
           "pdf_path": "uploads/X3/20260930-130813-informe-recepcion.pdf"
         },
         "cotizacion": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null,
+          "enviado": true,
+          "fecha_envio": "2026-09-30",
+          "pdf_path": "uploads/X3/20260930-135153-cotizacion.pdf",
           "items": [
             {
-              "concepto": "",
+              "concepto": "Cambio de polea loca",
+              "cantidad": 2,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Cambio de polea tensora",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Cambio de banda de accesorios",
+              "cantidad": 1,
+              "costo_unitario": 1
             }
           ],
           "incluir_iva": true,
