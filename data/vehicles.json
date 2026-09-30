@@ -724,9 +724,9 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
-              "cantidad": 1,
-              "costo_unitario": null
+              "concepto": "Tuerca de birlo",
+              "cantidad": 12,
+              "costo_unitario": 1
             }
           ],
           "incluir_iva": true,
