@@ -682,16 +682,16 @@
         "tecnico": "LUIS GARCIA",
         "tiempo_entrega_aprox": "1 HORA",
         "fecha_inicio": "2026-09-30",
-        "estado": "recibido",
+        "estado": "diagnostico",
         "actualizado": "2026-09-30",
         "pago": {
           "estado": "no_pagado",
           "metodo": null
         },
         "orden_recepcion": {
-          "enviado": false,
+          "enviado": true,
           "aceptado": false,
-          "fecha_envio": null,
+          "fecha_envio": "2026-09-30",
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
@@ -714,7 +714,8 @@
             },
             "gasolina": 75,
             "danos_notas": "RETROVISOR LADO DERECHO QUEVRADO"
-          }
+          },
+          "pdf_path": "uploads/X5/20260930-172457-informe-recepcion.pdf"
         },
         "cotizacion": {
           "enviado": false,
@@ -738,7 +739,8 @@
           "pdf_path": null
         },
         "fechas_etapa": {
-          "recibido": "2026-09-30T23:15:01.734Z"
+          "recibido": "2026-09-30T23:15:01.734Z",
+          "diagnostico": "2026-09-30T23:25:06.492Z"
         },
         "adjuntos": {
           "recibido": {
