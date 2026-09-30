@@ -519,16 +519,16 @@
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 dia",
         "fecha_inicio": "2026-09-30",
-        "estado": "recibido",
+        "estado": "diagnostico",
         "actualizado": "2026-09-30",
         "pago": {
           "estado": "no_pagado",
           "metodo": null
         },
         "orden_recepcion": {
-          "enviado": false,
+          "enviado": true,
           "aceptado": false,
-          "fecha_envio": null,
+          "fecha_envio": "2026-09-30",
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
@@ -551,7 +551,8 @@
             },
             "gasolina": 100,
             "danos_notas": "PARABRISAS ESTRELLADO, NO CONTABA CON FLECHA INSTALADA"
-          }
+          },
+          "pdf_path": "uploads/X4/20260930-151912-informe-recepcion.pdf"
         },
         "cotizacion": {
           "enviado": false,
@@ -575,7 +576,8 @@
           "pdf_path": null
         },
         "fechas_etapa": {
-          "recibido": "2026-09-30T21:13:42.969Z"
+          "recibido": "2026-09-30T21:13:42.969Z",
+          "diagnostico": "2026-09-30T21:19:21.431Z"
         },
         "adjuntos": {
           "recibido": {
