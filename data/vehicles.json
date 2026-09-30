@@ -742,7 +742,14 @@
         },
         "adjuntos": {
           "recibido": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X5/20260930-172225-recibido-0-1000137512.jpg",
+              "uploads/X5/20260930-172228-recibido-1-1000137511.jpg",
+              "uploads/X5/20260930-172234-recibido-2-1000137510.jpg",
+              "uploads/X5/20260930-172249-recibido-3-1000137509.jpg",
+              "uploads/X5/20260930-172252-recibido-4-1000137508.jpg",
+              "uploads/X5/20260930-172258-recibido-5-1000137507.jpg"
+            ],
             "documentos": []
           },
           "diagnostico": {
