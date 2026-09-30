@@ -323,7 +323,144 @@
         }
       },
       "servicios": []
+    },
+    "X3": {
+      "id": "X3",
+      "fecha_creacion": "2026-09-30T19:06:49.227Z",
+      "foto_perfil": null,
+      "documentos_vehiculo": {
+        "fotos": [
+          "uploads/X3/20260930-130659-vdoc-0-17907950332987092122621691303563.jpg",
+          "uploads/X3/20260930-130702-vdoc-1-17907950572144039186098198441064.jpg"
+        ],
+        "documentos": []
+      },
+      "placas": "LH-41-249",
+      "numero_unidad": "13511",
+      "marca": "FORD",
+      "modelo": "TRANSIT",
+      "anio": 2020,
+      "version": "2.2",
+      "color": "AMARILLO",
+      "combustible": "Diesel",
+      "vin": "WF0RS5HP5LTP89049",
+      "km_actual": 73028,
+      "cliente_nombre": "TOTAL PARTS",
+      "cliente_telefono": "8713940393",
+      "cliente_telefono_2": "8712238104",
+      "cliente_correo": "",
+      "cliente_rfc": "",
+      "cliente_direccion": "",
+      "ficha_tecnica": {
+        "aceite_tipo": "",
+        "aceite_capacidad": "",
+        "presion_llantas": "",
+        "bateria": "",
+        "filtro_aire": "",
+        "filtro_aceite": ""
+      },
+      "servicio_actual": {
+        "id": "svc_1790794631812",
+        "folio": "A002",
+        "tipo": "BANDAS",
+        "descripcion": "RUIDO EN BANDAS",
+        "nota_interna": "CHEQUEO DE BANDAS",
+        "km": 73028,
+        "costo": null,
+        "tecnico": "OSCAR FLORES",
+        "tiempo_entrega_aprox": "1 Hora",
+        "fecha_inicio": "2026-09-30",
+        "estado": "recibido",
+        "actualizado": "2026-09-30",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "si",
+              "espejo_lateral": "si",
+              "cristales": "no",
+              "emblema": "no",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 75,
+            "danos_notas": "Parabrisas estrellado\nSin Tapa de gasolina\nGolpe en costado izquierdo trasero"
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-09-30T18:57:11.812Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X3/20260930-130651-recibido-9-17907951402892363793107234748899.jpg",
+              "uploads/X3/20260930-130654-recibido-10-17907951500746177874235022805796.jpg",
+              "uploads/X3/20260930-130656-recibido-11-17907951592124712961760076946674.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
+      "servicios": []
     }
   },
-  "folio_counter": 1
+  "folio_counter": 2
 }
