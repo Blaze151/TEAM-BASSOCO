@@ -370,7 +370,7 @@
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 Hora",
         "fecha_inicio": "2026-09-30",
-        "estado": "en_proceso",
+        "estado": "diagnostico",
         "actualizado": "2026-09-30",
         "pago": {
           "estado": "no_pagado",
