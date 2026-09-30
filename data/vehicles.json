@@ -636,7 +636,139 @@
         }
       },
       "servicios": []
+    },
+    "X5": {
+      "id": "X5",
+      "fecha_creacion": "2026-09-30T23:21:55.368Z",
+      "foto_perfil": "uploads/X5/20260930-172200-perfil.jpg",
+      "documentos_vehiculo": {
+        "fotos": [
+          "uploads/X5/20260930-172204-vdoc-0-17908104852806048799065988041178.jpg"
+        ],
+        "documentos": []
+      },
+      "placas": "LF-94-608",
+      "numero_unidad": "15468",
+      "marca": "FORD",
+      "modelo": "TRANSIT",
+      "anio": null,
+      "version": "",
+      "color": "AMARILLO",
+      "combustible": "Gasolina",
+      "vin": "WF0BS5T74PZW25674",
+      "km_actual": 91448,
+      "cliente_nombre": "TOTAL PARTS",
+      "cliente_telefono": "8713940393",
+      "cliente_telefono_2": "",
+      "cliente_correo": "",
+      "cliente_rfc": "",
+      "cliente_direccion": "",
+      "ficha_tecnica": {
+        "aceite_tipo": "",
+        "aceite_capacidad": "",
+        "presion_llantas": "",
+        "bateria": "",
+        "filtro_aire": "",
+        "filtro_aceite": ""
+      },
+      "servicio_actual": {
+        "id": "svc_1790810101734",
+        "folio": "A003",
+        "tipo": "BIRLOS CAPADOS",
+        "descripcion": "BIRLOS CAPADOS DE LLANTA DELANTERA IZQUIERDA",
+        "nota_interna": "",
+        "km": 91448,
+        "costo": null,
+        "tecnico": "LUIS GARCIA",
+        "tiempo_entrega_aprox": "1 HORA",
+        "fecha_inicio": "2026-09-30",
+        "estado": "recibido",
+        "actualizado": "2026-09-30",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "si",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "si",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "si",
+              "llanta_refaccion": "si",
+              "extinguidor": "no"
+            },
+            "gasolina": 75,
+            "danos_notas": "RETROVISOR LADO DERECHO QUEVRADO"
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-09-30T23:15:01.734Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
+      "servicios": []
     }
   },
-  "folio_counter": 2
+  "folio_counter": 3
 }
