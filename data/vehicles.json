@@ -472,6 +472,44 @@
         }
       },
       "servicios": []
+    },
+    "X4": {
+      "id": "X4",
+      "fecha_creacion": "2026-09-30T21:13:20.500Z",
+      "foto_perfil": "uploads/X4/20260930-151321-perfil.jpg",
+      "documentos_vehiculo": {
+        "fotos": [
+          "uploads/X4/20260930-151326-vdoc-0-17908027362755031240022430913951.jpg",
+          "uploads/X4/20260930-151329-vdoc-1-17908027505817288228989348800528.jpg"
+        ],
+        "documentos": []
+      },
+      "placas": "PX-9569-A",
+      "numero_unidad": "156",
+      "marca": "Isuzu",
+      "modelo": "ELF",
+      "anio": 2022,
+      "version": "",
+      "color": "Blanco",
+      "combustible": "Diesel",
+      "vin": "JAANPR75XN7K01921",
+      "km_actual": 430542,
+      "cliente_nombre": "PASTELERÍA LETY SA DE CV",
+      "cliente_telefono": "8713940393",
+      "cliente_telefono_2": "8711044146",
+      "cliente_correo": "",
+      "cliente_rfc": "",
+      "cliente_direccion": "",
+      "ficha_tecnica": {
+        "aceite_tipo": "15w40",
+        "aceite_capacidad": "20 lts",
+        "presion_llantas": "",
+        "bateria": "",
+        "filtro_aire": "",
+        "filtro_aceite": ""
+      },
+      "servicio_actual": null,
+      "servicios": []
     }
   },
   "folio_counter": 2
