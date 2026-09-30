@@ -327,7 +327,7 @@
     "X3": {
       "id": "X3",
       "fecha_creacion": "2026-09-30T19:06:49.227Z",
-      "foto_perfil": null,
+      "foto_perfil": "uploads/X3/20260930-134334-perfil.jpg",
       "documentos_vehiculo": {
         "fotos": [
           "uploads/X3/20260930-130659-vdoc-0-17907950332987092122621691303563.jpg",
@@ -352,10 +352,10 @@
       "cliente_rfc": "",
       "cliente_direccion": "",
       "ficha_tecnica": {
-        "aceite_tipo": "",
-        "aceite_capacidad": "",
-        "presion_llantas": "",
-        "bateria": "",
+        "aceite_tipo": "15w40",
+        "aceite_capacidad": "7 lts",
+        "presion_llantas": "45",
+        "bateria": "G 41",
         "filtro_aire": "",
         "filtro_aceite": ""
       },
