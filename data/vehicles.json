@@ -370,7 +370,7 @@
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 Hora",
         "fecha_inicio": "2026-09-30",
-        "estado": "diagnostico",
+        "estado": "en_proceso",
         "actualizado": "2026-09-30",
         "pago": {
           "estado": "no_pagado",
@@ -428,8 +428,8 @@
           ],
           "incluir_iva": true,
           "observaciones": "",
-          "aceptado": false,
-          "fecha_aceptado": null
+          "aceptado": true,
+          "fecha_aceptado": "2026-09-30"
         },
         "informe_trabajo": {
           "enviado": false,
@@ -438,7 +438,8 @@
         },
         "fechas_etapa": {
           "recibido": "2026-09-30T18:57:11.812Z",
-          "diagnostico": "2026-09-30T19:08:20.129Z"
+          "diagnostico": "2026-09-30T19:08:20.129Z",
+          "en_proceso": "2026-09-30T19:54:29.918Z"
         },
         "adjuntos": {
           "recibido": {
