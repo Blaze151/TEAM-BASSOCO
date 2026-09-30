@@ -327,7 +327,7 @@
     "X3": {
       "id": "X3",
       "fecha_creacion": "2026-09-30T19:06:49.227Z",
-      "foto_perfil": "uploads/X3/20260930-140128-perfil.jpg",
+      "foto_perfil": "uploads/X3/20260930-134334-perfil.jpg",
       "documentos_vehiculo": {
         "fotos": [
           "uploads/X3/20260930-130659-vdoc-0-17907950332987092122621691303563.jpg",
@@ -355,7 +355,7 @@
         "aceite_tipo": "15w40",
         "aceite_capacidad": "7 lts",
         "presion_llantas": "45",
-        "bateria": "G41",
+        "bateria": "G 41",
         "filtro_aire": "",
         "filtro_aceite": ""
       },
@@ -370,7 +370,7 @@
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 Hora",
         "fecha_inicio": "2026-09-30",
-        "estado": "en_proceso",
+        "estado": "diagnostico",
         "actualizado": "2026-09-30",
         "pago": {
           "estado": "no_pagado",
@@ -406,30 +406,20 @@
           "pdf_path": "uploads/X3/20260930-130813-informe-recepcion.pdf"
         },
         "cotizacion": {
-          "enviado": true,
-          "fecha_envio": "2026-09-30",
-          "pdf_path": "uploads/X3/20260930-135153-cotizacion.pdf",
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
           "items": [
             {
-              "concepto": "Cambio de polea loca",
-              "cantidad": 2,
-              "costo_unitario": 1
-            },
-            {
-              "concepto": "Cambio de polea tensora",
+              "concepto": "",
               "cantidad": 1,
-              "costo_unitario": 1
-            },
-            {
-              "concepto": "Cambio de banda de accesorios",
-              "cantidad": 1,
-              "costo_unitario": 1
+              "costo_unitario": null
             }
           ],
           "incluir_iva": true,
           "observaciones": "",
-          "aceptado": true,
-          "fecha_aceptado": "2026-09-30"
+          "aceptado": false,
+          "fecha_aceptado": null
         },
         "informe_trabajo": {
           "enviado": false,
@@ -438,8 +428,7 @@
         },
         "fechas_etapa": {
           "recibido": "2026-09-30T18:57:11.812Z",
-          "diagnostico": "2026-09-30T19:08:20.129Z",
-          "en_proceso": "2026-09-30T19:54:29.918Z"
+          "diagnostico": "2026-09-30T19:08:20.129Z"
         },
         "adjuntos": {
           "recibido": {
@@ -458,22 +447,17 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [
-              "uploads/X3/20260930-134928-diagnostico-0-1000137105.jpg",
-              "uploads/X3/20260930-134931-diagnostico-1-1000137106.jpg",
-              "uploads/X3/20260930-134933-diagnostico-2-1000137104.jpg",
-              "uploads/X3/20260930-134935-diagnostico-3-1000137103.jpg"
-            ],
+            "fotos": [],
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [
-              "uploads/X3/20260930-140030-en_proceso-0-1000137114.jpg"
-            ],
+            "fotos": [],
             "documentos": []
           },
           "listo": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X3/20260930-145423-listo-1-1000137251.jpg"
+            ],
             "documentos": []
           },
           "recogido": {
