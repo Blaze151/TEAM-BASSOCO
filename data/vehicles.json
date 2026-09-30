@@ -370,16 +370,16 @@
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 Hora",
         "fecha_inicio": "2026-09-30",
-        "estado": "recibido",
+        "estado": "diagnostico",
         "actualizado": "2026-09-30",
         "pago": {
           "estado": "no_pagado",
           "metodo": null
         },
         "orden_recepcion": {
-          "enviado": false,
+          "enviado": true,
           "aceptado": false,
-          "fecha_envio": null,
+          "fecha_envio": "2026-09-30",
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
@@ -402,7 +402,8 @@
             },
             "gasolina": 75,
             "danos_notas": "Parabrisas estrellado\nSin Tapa de gasolina\nGolpe en costado izquierdo trasero"
-          }
+          },
+          "pdf_path": "uploads/X3/20260930-130813-informe-recepcion.pdf"
         },
         "cotizacion": {
           "enviado": false,
@@ -426,7 +427,8 @@
           "pdf_path": null
         },
         "fechas_etapa": {
-          "recibido": "2026-09-30T18:57:11.812Z"
+          "recibido": "2026-09-30T18:57:11.812Z",
+          "diagnostico": "2026-09-30T19:08:20.129Z"
         },
         "adjuntos": {
           "recibido": {
