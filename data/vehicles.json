@@ -1124,7 +1124,7 @@
             "gasolina": 50,
             "danos_notas": "PARABRISAS ESTRELLADO"
           },
-          "pdf_path": "uploads/A01/20261005-151636-informe-recepcion.pdf"
+          "pdf_path": "uploads/A01/20261005-151728-informe-recepcion.pdf"
         },
         "cotizacion": {
           "enviado": false,
@@ -1153,7 +1153,20 @@
         },
         "adjuntos": {
           "recibido": {
-            "fotos": [],
+            "fotos": [
+              "uploads/A01/20261005-151732-recibido-0-FRONTAL.jpg",
+              "uploads/A01/20261005-151733-recibido-1-KM.jpg",
+              "uploads/A01/20261005-151735-recibido-2-LADO-DERECHO.jpg",
+              "uploads/A01/20261005-151736-recibido-3-LADO-IZQUIERDO.jpg",
+              "uploads/A01/20261005-151738-recibido-4-PLACA.jpg",
+              "uploads/A01/20261005-151739-recibido-5-VIN.jpg",
+              "uploads/A01/20261005-151740-recibido-6-WhatsApp-Image-2026-09-19-at-1.51.46-PM-3-.jpg",
+              "uploads/A01/20261005-151742-recibido-7-WhatsApp-Image-2026-09-19-at-1.51.47-PM-1-.jpg",
+              "uploads/A01/20261005-151743-recibido-8-WhatsApp-Image-2026-09-19-at-1.51.47-PM-2-.jpg",
+              "uploads/A01/20261005-151744-recibido-9-WhatsApp-Image-2026-09-19-at-1.51.47-PM-3-.jpg",
+              "uploads/A01/20261005-151746-recibido-10-WhatsApp-Image-2026-09-19-at-1.51.47-PM.jpg",
+              "uploads/A01/20261005-151747-recibido-11-WhatsApp-Image-2026-09-19-at-1.51.48-PM.jpg"
+            ],
             "documentos": []
           },
           "diagnostico": {
