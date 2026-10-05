@@ -1089,9 +1089,9 @@
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
-              "antena": "no",
-              "espejo_lateral": "no",
-              "cristales": "no",
+              "antena": "si",
+              "espejo_lateral": "si",
+              "cristales": "si",
               "emblema": "no",
               "tapon_ruedas": "no",
               "molduras_completas": "no",
