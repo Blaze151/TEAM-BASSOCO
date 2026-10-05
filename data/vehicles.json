@@ -1099,9 +1099,9 @@
         },
         "orden_recepcion": {
           "enviado": true,
-          "aceptado": false,
+          "aceptado": true,
           "fecha_envio": "2026-10-05",
-          "fecha_aceptado": null,
+          "fecha_aceptado": "2026-10-05",
           "inventario": {
             "exteriores": {
               "antena": "si",
@@ -1132,9 +1132,14 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "SERVICIO DE AFINACION MAYOR INCLUYE: 8 LTS DE ACEITE SINTETICO, FILTRO DE AIRE, FILTRO DE ACEITE DE MOTOR, 8 BUJIAS DE PLATINO, LIMPIEZA DE INYECTORES, LIMPIEZA DE CUERPO DE ACELERACION, REVISION Y RELLENO DE NIVELES, REVISION DE PUNTOS DE SEGURIDAD",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 2300
+            },
+            {
+              "concepto": "CAMBIO DE BANDA DE ACCESORIOS",
+              "cantidad": 1,
+              "costo_unitario": 1000
             }
           ],
           "incluir_iva": true,
@@ -1170,7 +1175,12 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/A01/20261005-152414-diagnostico-0-ACEITE-SUCIO.jpg",
+              "uploads/A01/20261005-152415-diagnostico-1-BANDA-DANADA.jpg",
+              "uploads/A01/20261005-152418-diagnostico-2-BUJIAS-DANADAS.jpg",
+              "uploads/A01/20261005-152419-diagnostico-3-FILTRO-DE-AIRE-USADO.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
