@@ -1030,6 +1030,43 @@
         }
       },
       "servicios": []
+    },
+    "X7": {
+      "id": "X7",
+      "fecha_creacion": "2026-10-05T17:25:57.206Z",
+      "foto_perfil": null,
+      "documentos_vehiculo": {
+        "fotos": [
+          "uploads/X7/20261005-112557-vdoc-0-17912210842497914472414355605060.jpg"
+        ],
+        "documentos": []
+      },
+      "placas": "LH-40-400",
+      "numero_unidad": "12831",
+      "marca": "FORD",
+      "modelo": "TRANSIT",
+      "anio": 2019,
+      "version": "2.2",
+      "color": "AMARILLO",
+      "combustible": "Diesel",
+      "vin": "WF0RS5GP3LTN66073",
+      "km_actual": null,
+      "cliente_nombre": "TOTAL PARTS",
+      "cliente_telefono": "8713940393",
+      "cliente_telefono_2": "8712238104",
+      "cliente_correo": "",
+      "cliente_rfc": "",
+      "cliente_direccion": "",
+      "ficha_tecnica": {
+        "aceite_tipo": "15w40",
+        "aceite_capacidad": "7 lts",
+        "presion_llantas": "45",
+        "bateria": "41",
+        "filtro_aire": "",
+        "filtro_aceite": "Gp405"
+      },
+      "servicio_actual": null,
+      "servicios": []
     }
   },
   "folio_counter": 3
