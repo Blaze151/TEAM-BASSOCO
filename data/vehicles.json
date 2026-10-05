@@ -939,9 +939,9 @@
         },
         "orden_recepcion": {
           "enviado": true,
-          "aceptado": false,
+          "aceptado": true,
           "fecha_envio": "2026-10-05",
-          "fecha_aceptado": null,
+          "fecha_aceptado": "2026-10-05",
           "inventario": {
             "exteriores": {
               "antena": "no",
@@ -967,9 +967,9 @@
           "pdf_path": "uploads/X6/20261005-104158-informe-recepcion.pdf"
         },
         "cotizacion": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null,
+          "enviado": true,
+          "fecha_envio": "2026-10-05",
+          "pdf_path": "uploads/X6/20261005-142857-cotizacion.pdf",
           "items": [
             {
               "concepto": "AFINACION MAYOR INCLUYE:ACEITE SINTETICO, FILTRO DE ACEITE, FILTRO DE AIRE, 4 BUJIAS, LIMPIEZA DE INYECTORES, LIMPIEZA DE CUERPO DE ACELERACION, RELLENO DE NIVELES Y REVISION DE PUNTOS DE SEGURIDAD",
