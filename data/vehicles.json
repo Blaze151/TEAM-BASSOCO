@@ -809,10 +809,10 @@
       "cliente_rfc": "",
       "cliente_direccion": "",
       "ficha_tecnica": {
-        "aceite_tipo": "",
-        "aceite_capacidad": "",
-        "presion_llantas": "",
-        "bateria": "",
+        "aceite_tipo": "5w30",
+        "aceite_capacidad": "5 lts",
+        "presion_llantas": "32",
+        "bateria": "L47",
         "filtro_aire": "",
         "filtro_aceite": ""
       },
