@@ -1080,9 +1080,106 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1791234879125",
+        "folio": "A005",
+        "tipo": "Servicio de mantenimiento y revisión de bandas y poleas",
+        "descripcion": "SERVICIO DE AFINACION Y REVISION DE POLEAS Y BANDAS",
+        "nota_interna": "REVISION GENERAL",
+        "km": 359737,
+        "costo": null,
+        "tecnico": "OSCAR FLORES",
+        "tiempo_entrega_aprox": "5 HRS",
+        "fecha_inicio": "2026-10-05",
+        "estado": "diagnostico",
+        "actualizado": "2026-10-05",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": true,
+          "aceptado": false,
+          "fecha_envio": "2026-10-05",
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "si",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
+              "tapon_ruedas": "si",
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "si",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
+              "estuche_herramientas": "si",
+              "triangulo_seguridad": "si",
+              "llanta_refaccion": "si",
+              "extinguidor": "si"
+            },
+            "gasolina": 50,
+            "danos_notas": "PARABRISAS ESTRELLADO"
+          },
+          "pdf_path": "uploads/A01/20261005-151636-informe-recepcion.pdf"
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-05T21:14:39.125Z",
+          "diagnostico": "2026-10-05T21:16:38.956Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
-  "folio_counter": 4
+  "folio_counter": 5
 }
