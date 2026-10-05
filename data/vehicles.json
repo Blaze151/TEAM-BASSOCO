@@ -1185,7 +1185,10 @@
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/A01/20261005-152737-en_proceso-0-BANDA-NUEVA.jpg",
+              "uploads/A01/20261005-152740-en_proceso-1-servicio.jpg"
+            ],
             "documentos": []
           },
           "listo": {
