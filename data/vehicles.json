@@ -1095,7 +1095,7 @@
         "actualizado": "2026-10-05",
         "pago": {
           "estado": "no_pagado",
-          "metodo": null
+          "metodo": "transferencia"
         },
         "orden_recepcion": {
           "enviado": true,
@@ -1148,9 +1148,9 @@
           "fecha_aceptado": "2026-10-05"
         },
         "informe_trabajo": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null
+          "enviado": true,
+          "fecha_envio": "2026-10-05",
+          "pdf_path": "uploads/A01/20261005-153308-informe-trabajo.pdf"
         },
         "fechas_etapa": {
           "recibido": "2026-10-05T21:14:39.125Z",
