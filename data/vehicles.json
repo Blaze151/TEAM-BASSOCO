@@ -816,7 +816,113 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1791218026706",
+        "folio": "A004",
+        "tipo": "SERVICIO Y ROTACION DE LLANTAS",
+        "descripcion": "SERVCIO, ROTACION DE LLANTAS, FILTRO DE CABINA,LIMPIEZA Y AJUSTE DE FRENOS",
+        "nota_interna": "Acomodar placa que está suelta debajo del motor",
+        "km": 100857,
+        "costo": null,
+        "tecnico": "JAVIER VARGAS",
+        "tiempo_entrega_aprox": "2 horas",
+        "fecha_inicio": "2026-10-05",
+        "estado": "recibido",
+        "actualizado": "2026-10-05",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
+              "tapon_ruedas": "si",
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "si",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
+              "estuche_herramientas": "si",
+              "triangulo_seguridad": "si",
+              "llanta_refaccion": "si",
+              "extinguidor": "no"
+            },
+            "gasolina": 25,
+            "danos_notas": "PLACA INFERIOR DE MOTOR SUELTA"
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-05T16:33:46.706Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X6/20261005-104021-recibido-0-1000141937.jpg",
+              "uploads/X6/20261005-104023-recibido-1-1000141936.jpg",
+              "uploads/X6/20261005-104025-recibido-2-1000141935.jpg",
+              "uploads/X6/20261005-104027-recibido-3-1000141934.jpg",
+              "uploads/X6/20261005-104029-recibido-4-1000141933.jpg",
+              "uploads/X6/20261005-104031-recibido-5-1000141932.jpg",
+              "uploads/X6/20261005-104033-recibido-6-1000141931.jpg",
+              "uploads/X6/20261005-104035-recibido-7-1000141930.jpg",
+              "uploads/X6/20261005-104037-recibido-8-1000141929.jpg",
+              "uploads/X6/20261005-104039-recibido-9-1000141928.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
