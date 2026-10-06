@@ -1401,7 +1401,139 @@
         }
       },
       "servicios": []
+    },
+    "X8": {
+      "id": "X8",
+      "fecha_creacion": "2026-10-06T20:53:17.317Z",
+      "foto_perfil": "uploads/X8/20261006-145319-perfil.jpg",
+      "documentos_vehiculo": {
+        "fotos": [
+          "uploads/X8/20261006-145321-vdoc-0-1000143084.jpg"
+        ],
+        "documentos": []
+      },
+      "placas": "RF-3202-D",
+      "numero_unidad": "S/n",
+      "marca": "PEUGEOT",
+      "modelo": "PARTNER",
+      "anio": 2024,
+      "version": "2.2",
+      "color": "Morado",
+      "combustible": "",
+      "vin": "VF3YDBTFXS2Z86329",
+      "km_actual": 34971,
+      "cliente_nombre": "PASTELERÍA LETY SA DE CV",
+      "cliente_telefono": "8713940393",
+      "cliente_telefono_2": "8712238104",
+      "cliente_correo": "",
+      "cliente_rfc": "",
+      "cliente_direccion": "",
+      "ficha_tecnica": {
+        "aceite_tipo": "",
+        "aceite_capacidad": "",
+        "presion_llantas": "",
+        "bateria": "",
+        "filtro_aire": "",
+        "filtro_aceite": ""
+      },
+      "servicio_actual": {
+        "id": "svc_1791319659332",
+        "folio": "A009",
+        "tipo": "SERVICIO DE MTTO",
+        "descripcion": "servicio de MTTO mayor",
+        "nota_interna": "",
+        "km": 34971,
+        "costo": null,
+        "tecnico": "Javier",
+        "tiempo_entrega_aprox": "2 horas",
+        "fecha_inicio": "2026-10-06",
+        "estado": "recibido",
+        "actualizado": "2026-10-06",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "no",
+              "cristales": "no",
+              "emblema": "no",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "no"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": ""
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-06T20:47:39.332Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
+      "servicios": []
     }
   },
-  "folio_counter": 8
+  "folio_counter": 9
 }
