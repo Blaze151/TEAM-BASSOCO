@@ -1090,8 +1090,8 @@
         "estado": "listo",
         "actualizado": "2026-10-06",
         "pago": {
-          "estado": "no_pagado",
-          "metodo": null
+          "estado": "pagado",
+          "metodo": "efectivo"
         },
         "orden_recepcion": {
           "enviado": false,
