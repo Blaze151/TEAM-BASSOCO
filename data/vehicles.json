@@ -1128,9 +1128,9 @@
           "pdf_path": "uploads/A03/20261005-231356-informe-recepcion.pdf"
         },
         "cotizacion": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null,
+          "enviado": true,
+          "fecha_envio": "2026-10-06",
+          "pdf_path": "uploads/A03/20261005-231956-cotizacion.pdf",
           "items": [
             {
               "concepto": "CAMBIO DE MOTOR 3/4 NUEVO AL CAMBIO",
