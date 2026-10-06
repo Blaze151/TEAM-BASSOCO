@@ -96,9 +96,14 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "Polea de alternador",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Repara ion de marcha",
+              "cantidad": 1,
+              "costo_unitario": 1
             }
           ],
           "incluir_iva": true,
