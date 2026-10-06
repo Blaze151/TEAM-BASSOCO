@@ -1131,9 +1131,24 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "AFINACION MAYOR INCLUYE: ACEITE DE MOTOR SINTETICO, FILTRO DE ACEITE, FILTRO DE AIRE, 4 BUJIAS, LIMPIEZA DE INYECTORES, LIMPIEZA DE CUERPO DE ACELERACION, REVISION Y RELLENO DE NIVELES, REVISION DE PUNTOS DE SEGURIDAD",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 3800
+            },
+            {
+              "concepto": "CAMBIO DE FILTRO DE CABINA",
+              "cantidad": 1,
+              "costo_unitario": 350
+            },
+            {
+              "concepto": "LIMPIEZA Y AJUSTE DE FRENOS",
+              "cantidad": 1,
+              "costo_unitario": 500
+            },
+            {
+              "concepto": "ROTACION DE NEUMATICOS",
+              "cantidad": 4,
+              "costo_unitario": 80
             }
           ],
           "incluir_iva": true,
@@ -1171,7 +1186,11 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/A02/20261005-223713-diagnostico-0-ACEITE-Y-FILTRO-USADOS.jpg",
+              "uploads/A02/20261005-223715-diagnostico-1-BUJIAS-USADAS.jpg",
+              "uploads/A02/20261005-223717-diagnostico-2-FILTRO-DE-AIRE-USADO.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
