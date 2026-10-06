@@ -1204,7 +1204,12 @@
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/A03/20261005-232132-en_proceso-0-motor.jpg",
+              "uploads/A03/20261005-232134-en_proceso-1-polea-tensora.jpg",
+              "uploads/A03/20261005-232135-en_proceso-2-servicio.jpg",
+              "uploads/A03/20261005-232136-en_proceso-3-WhatsApp-Image-2026-09-30-at-2.05.16-PM.jpg"
+            ],
             "documentos": []
           },
           "listo": {
