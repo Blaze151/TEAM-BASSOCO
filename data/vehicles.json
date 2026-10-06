@@ -1494,9 +1494,9 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "Servicio de mtto",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 1
             }
           ],
           "incluir_iva": true,
@@ -1528,7 +1528,11 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X8/20261006-163409-diagnostico-0-1000143191.jpg",
+              "uploads/X8/20261006-163411-diagnostico-1-1000143181.jpg",
+              "uploads/X8/20261006-163413-diagnostico-2-1000143180.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
