@@ -1641,9 +1641,9 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "Cambio de maza balero",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 1
             }
           ],
           "incluir_iva": true,
