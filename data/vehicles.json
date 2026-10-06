@@ -891,7 +891,13 @@
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X6/20261005-183121-en_proceso-0-LIMPIEZA-1.jpg",
+              "uploads/X6/20261005-183123-en_proceso-1-LIMPIEZA-2.jpg",
+              "uploads/X6/20261005-183124-en_proceso-2-LIMPIEZA-3.jpg",
+              "uploads/X6/20261005-183126-en_proceso-3-LIMPIEZA-4.jpg",
+              "uploads/X6/20261005-183127-en_proceso-4-SERVICIO-NUEVO.jpg"
+            ],
             "documentos": []
           },
           "listo": {
