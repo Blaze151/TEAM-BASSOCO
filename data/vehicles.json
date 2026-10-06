@@ -1555,7 +1555,9 @@
       "fecha_creacion": "2026-10-06T22:00:05.639Z",
       "foto_perfil": "uploads/X9/20261006-160020-perfil.jpg",
       "documentos_vehiculo": {
-        "fotos": [],
+        "fotos": [
+          "uploads/X9/20261006-160039-vdoc-0-1000143139.jpg"
+        ],
         "documentos": []
       },
       "placas": "EH-1208-E",
