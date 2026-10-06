@@ -1609,12 +1609,12 @@
           "inventario": {
             "exteriores": {
               "antena": "no",
-              "espejo_lateral": "no",
-              "cristales": "no",
-              "emblema": "no",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
               "tapon_ruedas": "no",
-              "molduras_completas": "no",
-              "tapon_gasolina": "no"
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
             },
             "accesorios": {
               "gato": "no",
@@ -1622,10 +1622,10 @@
               "llave_ruedas": "no",
               "estuche_herramientas": "no",
               "triangulo_seguridad": "no",
-              "llanta_refaccion": "no",
+              "llanta_refaccion": "si",
               "extinguidor": "no"
             },
-            "gasolina": 0,
+            "gasolina": 25,
             "danos_notas": ""
           }
         },
