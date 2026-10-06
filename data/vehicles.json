@@ -91,9 +91,9 @@
           "pdf_path": "uploads/X3/20261005-112132-informe-recepcion.pdf"
         },
         "cotizacion": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null,
+          "enviado": true,
+          "fecha_envio": "2026-10-06",
+          "pdf_path": "uploads/X3/20261006-124506-cotizacion.pdf",
           "items": [
             {
               "concepto": "Polea de alternador",
