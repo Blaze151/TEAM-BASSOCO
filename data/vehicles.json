@@ -613,7 +613,7 @@
         "tipo": "BANDAS",
         "descripcion": "RUIDO EN BANDAS",
         "nota_interna": "Checar todas las poleas",
-        "km": null,
+        "km": 163892,
         "costo": null,
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 Hora",
