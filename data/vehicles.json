@@ -841,7 +841,14 @@
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/A01/20261006-001705-en_proceso-0-aceite-diferencial.jpg",
+              "uploads/A01/20261006-001706-en_proceso-1-aceite-transmision.jpg",
+              "uploads/A01/20261006-001708-en_proceso-2-CEDAZO-Y-EMPAQUE-DE-CARTER-DE-TRANSMISION.jpg",
+              "uploads/A01/20261006-001709-en_proceso-3-relleno-aceite-diferencial.jpg",
+              "uploads/A01/20261006-001711-en_proceso-4-relleno-aceite-transmision.jpg",
+              "uploads/A01/20261006-001713-en_proceso-5-TAPA-DE-DIFERENCIAL.jpg"
+            ],
             "documentos": []
           },
           "listo": {
