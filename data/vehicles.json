@@ -1047,6 +1047,41 @@
           }
         }
       ]
+    },
+    "A02": {
+      "id": "A02",
+      "fecha_creacion": "2026-10-06T04:28:14.088Z",
+      "foto_perfil": "uploads/A02/20261005-222814-perfil.jpg",
+      "documentos_vehiculo": {
+        "fotos": [],
+        "documentos": []
+      },
+      "placas": "FZC-536-B",
+      "numero_unidad": "S/N",
+      "marca": "HONDA",
+      "modelo": "ACCORD",
+      "anio": 2017,
+      "version": "",
+      "color": "BLANCO",
+      "combustible": "Gasolina",
+      "vin": "1HGCV163XKA900036",
+      "km_actual": 100857,
+      "cliente_nombre": "RAYMUNDO GUARDADO",
+      "cliente_telefono": "8712514774",
+      "cliente_telefono_2": "8713940393",
+      "cliente_correo": "",
+      "cliente_rfc": "",
+      "cliente_direccion": "",
+      "ficha_tecnica": {
+        "aceite_tipo": "5W30",
+        "aceite_capacidad": "5 LTO",
+        "presion_llantas": "32 LBS",
+        "bateria": "12 V",
+        "filtro_aire": "",
+        "filtro_aceite": ""
+      },
+      "servicio_actual": null,
+      "servicios": []
     }
   },
   "folio_counter": 5
