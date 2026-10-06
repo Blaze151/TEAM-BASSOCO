@@ -1154,7 +1154,14 @@
         },
         "adjuntos": {
           "recibido": {
-            "fotos": [],
+            "fotos": [
+              "uploads/A03/20261005-231335-recibido-0-FRONTAL.jpg",
+              "uploads/A03/20261005-231337-recibido-1-LADO-DERECHO.jpg",
+              "uploads/A03/20261005-231339-recibido-2-LADO-IZQUIERDO.jpg",
+              "uploads/A03/20261005-231340-recibido-3-PLACA.jpg",
+              "uploads/A03/20261005-231342-recibido-4-REFACCION.jpg",
+              "uploads/A03/20261005-231343-recibido-5-VIN.jpg"
+            ],
             "documentos": []
           },
           "diagnostico": {
