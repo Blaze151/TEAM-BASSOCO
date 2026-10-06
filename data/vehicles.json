@@ -1577,10 +1577,10 @@
       "cliente_rfc": "",
       "cliente_direccion": "",
       "ficha_tecnica": {
-        "aceite_tipo": "",
-        "aceite_capacidad": "",
-        "presion_llantas": "",
-        "bateria": "",
+        "aceite_tipo": "15w40",
+        "aceite_capacidad": "4lta",
+        "presion_llantas": "32",
+        "bateria": "Xt-99",
         "filtro_aire": "",
         "filtro_aceite": ""
       },
