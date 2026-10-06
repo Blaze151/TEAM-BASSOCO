@@ -1549,7 +1549,145 @@
         }
       },
       "servicios": []
+    },
+    "X9": {
+      "id": "X9",
+      "fecha_creacion": "2026-10-06T22:00:05.639Z",
+      "foto_perfil": "uploads/X9/20261006-160020-perfil.jpg",
+      "documentos_vehiculo": {
+        "fotos": [],
+        "documentos": []
+      },
+      "placas": "EH-1208-E",
+      "numero_unidad": "S/N",
+      "marca": "CHEVROLET",
+      "modelo": "SPARK",
+      "anio": 2017,
+      "version": "1.1",
+      "color": "BLANCO",
+      "combustible": "Gasolina",
+      "vin": "MA6CA6ADXHT037162",
+      "km_actual": 197585,
+      "cliente_nombre": "GOVI REFACCIONARIA",
+      "cliente_telefono": "8713160071",
+      "cliente_telefono_2": "8713940393",
+      "cliente_correo": "",
+      "cliente_rfc": "",
+      "cliente_direccion": "",
+      "ficha_tecnica": {
+        "aceite_tipo": "",
+        "aceite_capacidad": "",
+        "presion_llantas": "",
+        "bateria": "",
+        "filtro_aire": "",
+        "filtro_aceite": ""
+      },
+      "servicio_actual": {
+        "id": "svc_1791323806154",
+        "folio": "A010",
+        "tipo": "BALERO DE RUEDA",
+        "descripcion": "",
+        "nota_interna": "",
+        "km": 197585,
+        "costo": null,
+        "tecnico": "OSCAR FLORES",
+        "tiempo_entrega_aprox": "1 Hora",
+        "fecha_inicio": "2026-10-06",
+        "estado": "recibido",
+        "actualizado": "2026-10-06",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "no",
+              "cristales": "no",
+              "emblema": "no",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "no"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": ""
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-06T21:56:46.155Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X9/20261006-160005-recibido-0-1000143138.jpg",
+              "uploads/X9/20261006-160007-recibido-1-1000143137.jpg",
+              "uploads/X9/20261006-160010-recibido-2-1000143130.jpg",
+              "uploads/X9/20261006-160012-recibido-3-1000143128.jpg",
+              "uploads/X9/20261006-160014-recibido-4-1000143127.jpg",
+              "uploads/X9/20261006-160016-recibido-5-1000143126.jpg",
+              "uploads/X9/20261006-160019-recibido-6-1000143125.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
+      "servicios": []
     }
   },
-  "folio_counter": 9
+  "folio_counter": 10
 }
