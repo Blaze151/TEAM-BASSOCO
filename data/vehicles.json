@@ -676,7 +676,17 @@
               "costo_unitario": 1
             },
             {
-              "concepto": "",
+              "concepto": "Servicio de MTTO mayor",
+              "cantidad": 1,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Mazabalero delantera derecha",
+              "cantidad": 1,
+              "costo_unitario": null
+            },
+            {
+              "concepto": "Sensor de ABS delantero derecha",
               "cantidad": 1,
               "costo_unitario": null
             }
