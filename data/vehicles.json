@@ -762,9 +762,9 @@
         },
         "orden_recepcion": {
           "enviado": true,
-          "aceptado": false,
+          "aceptado": true,
           "fecha_envio": "2026-10-06",
-          "fecha_aceptado": null,
+          "fecha_aceptado": "2026-10-06",
           "inventario": {
             "exteriores": {
               "antena": "si",
@@ -795,12 +795,17 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "SERVICIO DE MANTENIMIENTO DE TRANSMISION, 8 LTO DE ACEITE MERCON LV, CAMBIO DE CEDAZO Y EMPAQUE DE CARTER",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 2200
+            },
+            {
+              "concepto": "SERVICIO DE MANTENIMIENTO DE DIFERENCIAL, 3 LTO DE ACEITE 75W90 SINTETICO, EMPAQUE DE DIFERENCIAL",
+              "cantidad": 1,
+              "costo_unitario": 900
             }
           ],
-          "incluir_iva": true,
+          "incluir_iva": false,
           "observaciones": "",
           "aceptado": false,
           "fecha_aceptado": null
@@ -827,7 +832,11 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/A01/20261006-001430-diagnostico-0-DIFERENCIAL.jpg",
+              "uploads/A01/20261006-001432-diagnostico-1-filtro-transmision-usado.jpg",
+              "uploads/A01/20261006-001433-diagnostico-2-TAPA-DE-DIFERENCIAL.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
