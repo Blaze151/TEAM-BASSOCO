@@ -674,6 +674,11 @@
               "concepto": "Polea loca",
               "cantidad": 1,
               "costo_unitario": 1
+            },
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
             }
           ],
           "incluir_iva": true,
@@ -705,7 +710,11 @@
           "diagnostico": {
             "fotos": [
               "uploads/X7/20261006-110802-diagnostico-0-1000141983.jpg",
-              "uploads/X7/20261006-110804-diagnostico-1-1000141984.jpg"
+              "uploads/X7/20261006-110804-diagnostico-1-1000141984.jpg",
+              "uploads/X7/20261006-123904-diagnostico-0-1000142945.jpg",
+              "uploads/X7/20261006-123907-diagnostico-1-1000142943.jpg",
+              "uploads/X7/20261006-123909-diagnostico-2-1000142941.jpg",
+              "uploads/X7/20261006-123912-diagnostico-3-1000142939.jpg"
             ],
             "documentos": []
           },
