@@ -754,16 +754,16 @@
         "tecnico": "JAVIER VARGAS",
         "tiempo_entrega_aprox": "1 dia",
         "fecha_inicio": "2026-10-06",
-        "estado": "recibido",
+        "estado": "diagnostico",
         "actualizado": "2026-10-06",
         "pago": {
           "estado": "no_pagado",
           "metodo": null
         },
         "orden_recepcion": {
-          "enviado": false,
+          "enviado": true,
           "aceptado": false,
-          "fecha_envio": null,
+          "fecha_envio": "2026-10-06",
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
@@ -786,7 +786,8 @@
             },
             "gasolina": 25,
             "danos_notas": "PARABRISAS ESTRELLADO"
-          }
+          },
+          "pdf_path": "uploads/A01/20261006-000542-informe-recepcion.pdf"
         },
         "cotizacion": {
           "enviado": false,
@@ -810,7 +811,8 @@
           "pdf_path": null
         },
         "fechas_etapa": {
-          "recibido": "2026-10-06T05:59:43.144Z"
+          "recibido": "2026-10-06T05:59:43.144Z",
+          "diagnostico": "2026-10-06T06:05:46.712Z"
         },
         "adjuntos": {
           "recibido": {
