@@ -1133,9 +1133,39 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "CAMBIO DE MOTOR 3/4 NUEVO AL CAMBIO",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 22500
+            },
+            {
+              "concepto": "SERVICIO DE AFINACION MAYOR, INCLUYE:   BUJIAS, FILTRO DE AIRE, FILTRO DE ACEITE,  ACEITE DE MOTOR SINTETICO  MOTORCRAFT, LIMPIEZA CUERPO DE  ACELERACION, LIMPIEZA DE INYECTORES  POR BOYA, REVISION Y RELLENO DE  NIVELES",
+              "cantidad": 1,
+              "costo_unitario": 1800
+            },
+            {
+              "concepto": "CAMBIO DE POLEA TENSORA",
+              "cantidad": 1,
+              "costo_unitario": 900
+            },
+            {
+              "concepto": "REPARACION DE ALTERNADOR",
+              "cantidad": 1,
+              "costo_unitario": 2200
+            },
+            {
+              "concepto": "CAMBIO DE KIT DE CLUTCH",
+              "cantidad": 1,
+              "costo_unitario": 3600
+            },
+            {
+              "concepto": "ACEITE DE TRANSMISION ESTÁNDAR",
+              "cantidad": 4,
+              "costo_unitario": 200
+            },
+            {
+              "concepto": "ANTICONGELANTE",
+              "cantidad": 1,
+              "costo_unitario": 300
             }
           ],
           "incluir_iva": true,
