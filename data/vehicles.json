@@ -743,133 +743,132 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": {
-        "id": "svc_1791266383144",
-        "folio": "A008",
-        "tipo": "SERVICIO DE TRANSMISION Y DIFERENCIAL",
-        "descripcion": "CAMBIO DE ACEITE,CEDAZO DE TRANSMISION, CAMBIO DE ACEITE DE DIFERENCIAL",
-        "nota_interna": "REVISION GENERAL",
-        "km": 360124,
-        "costo": null,
-        "tecnico": "JAVIER VARGAS",
-        "tiempo_entrega_aprox": "1 dia",
-        "fecha_inicio": "2026-10-06",
-        "estado": "recogido",
-        "actualizado": "2026-10-06",
-        "pago": {
-          "estado": "pagado",
-          "metodo": "transferencia"
-        },
-        "orden_recepcion": {
-          "enviado": true,
-          "aceptado": true,
-          "fecha_envio": "2026-10-06",
-          "fecha_aceptado": "2026-10-06",
-          "inventario": {
-            "exteriores": {
-              "antena": "si",
-              "espejo_lateral": "si",
-              "cristales": "si",
-              "emblema": "si",
-              "tapon_ruedas": "si",
-              "molduras_completas": "si",
-              "tapon_gasolina": "si"
-            },
-            "accesorios": {
-              "gato": "si",
-              "maneral_gato": "si",
-              "llave_ruedas": "no",
-              "estuche_herramientas": "no",
-              "triangulo_seguridad": "no",
-              "llanta_refaccion": "no",
-              "extinguidor": "no"
-            },
-            "gasolina": 25,
-            "danos_notas": "PARABRISAS ESTRELLADO"
-          },
-          "pdf_path": "uploads/A01/20261006-000542-informe-recepcion.pdf"
-        },
-        "cotizacion": {
-          "enviado": true,
-          "fecha_envio": "2026-10-06",
-          "pdf_path": "uploads/A01/20261006-001458-cotizacion.pdf",
-          "items": [
-            {
-              "concepto": "SERVICIO DE MANTENIMIENTO DE TRANSMISION, 8 LTO DE ACEITE MERCON LV, CAMBIO DE CEDAZO Y EMPAQUE DE CARTER",
-              "cantidad": 1,
-              "costo_unitario": 2200
-            },
-            {
-              "concepto": "SERVICIO DE MANTENIMIENTO DE DIFERENCIAL, 3 LTO DE ACEITE 75W90 SINTETICO, EMPAQUE DE DIFERENCIAL",
-              "cantidad": 1,
-              "costo_unitario": 900
-            }
-          ],
-          "incluir_iva": false,
-          "observaciones": "",
-          "aceptado": true,
-          "fecha_aceptado": "2026-10-06"
-        },
-        "informe_trabajo": {
-          "enviado": true,
-          "fecha_envio": "2026-10-06",
-          "pdf_path": "uploads/A01/20261006-002341-informe-trabajo.pdf"
-        },
-        "fechas_etapa": {
-          "recibido": "2026-10-06T05:59:43.144Z",
-          "diagnostico": "2026-10-06T06:05:46.712Z",
-          "en_proceso": "2026-10-06T06:16:04.910Z",
-          "listo": "2026-10-06T06:21:26.579Z",
-          "recogido": "2026-10-06T06:22:04.860Z"
-        },
-        "adjuntos": {
-          "recibido": {
-            "fotos": [
-              "uploads/A01/20261006-000404-recibido-0-FRONTAL.jpg",
-              "uploads/A01/20261006-000405-recibido-1-KM.jpg",
-              "uploads/A01/20261006-000407-recibido-2-LADO-DERECHO.jpg",
-              "uploads/A01/20261006-000408-recibido-3-LADO-IZQUIERDO.jpg",
-              "uploads/A01/20261006-000410-recibido-4-PLACA.jpg",
-              "uploads/A01/20261006-000411-recibido-5-VIN.jpg"
-            ],
-            "documentos": []
-          },
-          "diagnostico": {
-            "fotos": [
-              "uploads/A01/20261006-001430-diagnostico-0-DIFERENCIAL.jpg",
-              "uploads/A01/20261006-001432-diagnostico-1-filtro-transmision-usado.jpg",
-              "uploads/A01/20261006-001433-diagnostico-2-TAPA-DE-DIFERENCIAL.jpg"
-            ],
-            "documentos": []
-          },
-          "en_proceso": {
-            "fotos": [
-              "uploads/A01/20261006-001705-en_proceso-0-aceite-diferencial.jpg",
-              "uploads/A01/20261006-001706-en_proceso-1-aceite-transmision.jpg",
-              "uploads/A01/20261006-001708-en_proceso-2-CEDAZO-Y-EMPAQUE-DE-CARTER-DE-TRANSMISION.jpg",
-              "uploads/A01/20261006-001709-en_proceso-3-relleno-aceite-diferencial.jpg",
-              "uploads/A01/20261006-001711-en_proceso-4-relleno-aceite-transmision.jpg",
-              "uploads/A01/20261006-001713-en_proceso-5-TAPA-DE-DIFERENCIAL.jpg"
-            ],
-            "documentos": []
-          },
-          "listo": {
-            "fotos": [
-              "uploads/A01/20261006-002020-listo-0-LADO-DERECHO.jpg"
-            ],
-            "documentos": []
-          },
-          "recogido": {
-            "fotos": [],
-            "documentos": []
-          },
-          "pago": {
-            "fotos": [],
-            "documentos": []
-          }
-        }
-      },
+      "servicio_actual": null,
       "servicios": [
+        {
+          "fecha": "2026-10-06",
+          "folio": "A008",
+          "tipo": "SERVICIO DE TRANSMISION Y DIFERENCIAL",
+          "descripcion": "CAMBIO DE ACEITE,CEDAZO DE TRANSMISION, CAMBIO DE ACEITE DE DIFERENCIAL",
+          "nota_interna": "REVISION GENERAL",
+          "km": 360124,
+          "costo": null,
+          "tecnico": "JAVIER VARGAS",
+          "tiempo_entrega_aprox": "1 dia",
+          "fecha_inicio": "2026-10-06",
+          "pago": {
+            "estado": "pagado",
+            "metodo": "transferencia"
+          },
+          "orden_recepcion": {
+            "enviado": true,
+            "aceptado": true,
+            "fecha_envio": "2026-10-06",
+            "fecha_aceptado": "2026-10-06",
+            "inventario": {
+              "exteriores": {
+                "antena": "si",
+                "espejo_lateral": "si",
+                "cristales": "si",
+                "emblema": "si",
+                "tapon_ruedas": "si",
+                "molduras_completas": "si",
+                "tapon_gasolina": "si"
+              },
+              "accesorios": {
+                "gato": "si",
+                "maneral_gato": "si",
+                "llave_ruedas": "no",
+                "estuche_herramientas": "no",
+                "triangulo_seguridad": "no",
+                "llanta_refaccion": "no",
+                "extinguidor": "no"
+              },
+              "gasolina": 25,
+              "danos_notas": "PARABRISAS ESTRELLADO"
+            },
+            "pdf_path": "uploads/A01/20261006-000542-informe-recepcion.pdf"
+          },
+          "cotizacion": {
+            "enviado": true,
+            "fecha_envio": "2026-10-06",
+            "pdf_path": "uploads/A01/20261006-001458-cotizacion.pdf",
+            "items": [
+              {
+                "concepto": "SERVICIO DE MANTENIMIENTO DE TRANSMISION, 8 LTO DE ACEITE MERCON LV, CAMBIO DE CEDAZO Y EMPAQUE DE CARTER",
+                "cantidad": 1,
+                "costo_unitario": 2200
+              },
+              {
+                "concepto": "SERVICIO DE MANTENIMIENTO DE DIFERENCIAL, 3 LTO DE ACEITE 75W90 SINTETICO, EMPAQUE DE DIFERENCIAL",
+                "cantidad": 1,
+                "costo_unitario": 900
+              }
+            ],
+            "incluir_iva": false,
+            "observaciones": "",
+            "aceptado": true,
+            "fecha_aceptado": "2026-10-06"
+          },
+          "informe_trabajo": {
+            "enviado": true,
+            "fecha_envio": "2026-10-06",
+            "pdf_path": "uploads/A01/20261006-002341-informe-trabajo.pdf"
+          },
+          "fechas_etapa": {
+            "recibido": "2026-10-06T05:59:43.144Z",
+            "diagnostico": "2026-10-06T06:05:46.712Z",
+            "en_proceso": "2026-10-06T06:16:04.910Z",
+            "listo": "2026-10-06T06:21:26.579Z",
+            "recogido": "2026-10-06T06:22:04.860Z"
+          },
+          "adjuntos": {
+            "recibido": {
+              "fotos": [
+                "uploads/A01/20261006-000404-recibido-0-FRONTAL.jpg",
+                "uploads/A01/20261006-000405-recibido-1-KM.jpg",
+                "uploads/A01/20261006-000407-recibido-2-LADO-DERECHO.jpg",
+                "uploads/A01/20261006-000408-recibido-3-LADO-IZQUIERDO.jpg",
+                "uploads/A01/20261006-000410-recibido-4-PLACA.jpg",
+                "uploads/A01/20261006-000411-recibido-5-VIN.jpg"
+              ],
+              "documentos": []
+            },
+            "diagnostico": {
+              "fotos": [
+                "uploads/A01/20261006-001430-diagnostico-0-DIFERENCIAL.jpg",
+                "uploads/A01/20261006-001432-diagnostico-1-filtro-transmision-usado.jpg",
+                "uploads/A01/20261006-001433-diagnostico-2-TAPA-DE-DIFERENCIAL.jpg"
+              ],
+              "documentos": []
+            },
+            "en_proceso": {
+              "fotos": [
+                "uploads/A01/20261006-001705-en_proceso-0-aceite-diferencial.jpg",
+                "uploads/A01/20261006-001706-en_proceso-1-aceite-transmision.jpg",
+                "uploads/A01/20261006-001708-en_proceso-2-CEDAZO-Y-EMPAQUE-DE-CARTER-DE-TRANSMISION.jpg",
+                "uploads/A01/20261006-001709-en_proceso-3-relleno-aceite-diferencial.jpg",
+                "uploads/A01/20261006-001711-en_proceso-4-relleno-aceite-transmision.jpg",
+                "uploads/A01/20261006-001713-en_proceso-5-TAPA-DE-DIFERENCIAL.jpg"
+              ],
+              "documentos": []
+            },
+            "listo": {
+              "fotos": [
+                "uploads/A01/20261006-002020-listo-0-LADO-DERECHO.jpg"
+              ],
+              "documentos": []
+            },
+            "recogido": {
+              "fotos": [],
+              "documentos": []
+            },
+            "pago": {
+              "fotos": [],
+              "documentos": []
+            }
+          }
+        },
         {
           "fecha": "2026-10-05",
           "folio": "A005",
