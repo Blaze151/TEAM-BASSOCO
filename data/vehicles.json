@@ -790,9 +790,9 @@
           "pdf_path": "uploads/A01/20261006-000542-informe-recepcion.pdf"
         },
         "cotizacion": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null,
+          "enviado": true,
+          "fecha_envio": "2026-10-06",
+          "pdf_path": "uploads/A01/20261006-001458-cotizacion.pdf",
           "items": [
             {
               "concepto": "SERVICIO DE MANTENIMIENTO DE TRANSMISION, 8 LTO DE ACEITE MERCON LV, CAMBIO DE CEDAZO Y EMPAQUE DE CARTER",
