@@ -710,7 +710,10 @@
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X7/20261006-122415-en_proceso-0-1000142079.jpg",
+              "uploads/X7/20261006-122418-en_proceso-1-1000142919.jpg"
+            ],
             "documentos": []
           },
           "listo": {
