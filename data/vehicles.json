@@ -648,7 +648,7 @@
               "llanta_refaccion": "no",
               "extinguidor": "no"
             },
-            "gasolina": 50,
+            "gasolina": 0,
             "danos_notas": ""
           }
         },
@@ -690,7 +690,10 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X7/20261006-110802-diagnostico-0-1000141983.jpg",
+              "uploads/X7/20261006-110804-diagnostico-1-1000141984.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
