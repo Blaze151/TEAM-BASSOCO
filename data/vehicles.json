@@ -130,13 +130,17 @@
           },
           "diagnostico": {
             "fotos": [
-              "uploads/X3/20261006-110938-diagnostico-0-1000142329.jpg",
-              "uploads/X3/20261006-110940-diagnostico-1-1000141975.jpg"
+              "uploads/X3/20261006-110940-diagnostico-1-1000141975.jpg",
+              "uploads/X3/20261006-111011-diagnostico-0-1000142324.jpg"
             ],
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X3/20261006-111013-en_proceso-0-1000142800.jpg",
+              "uploads/X3/20261006-111016-en_proceso-1-1000142184.jpg",
+              "uploads/X3/20261006-111018-en_proceso-2-1000142182.jpg"
+            ],
             "documentos": []
           },
           "listo": {
