@@ -1081,9 +1081,106 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1791263191022",
+        "folio": "A007",
+        "tipo": "Cambio de motor, ruido en poleas, sistema de clutch",
+        "descripcion": "CAMBIO DE MOTOR NUEVO AL CAMBIO, REVISION DE RUIDO EN POLEAS, ALTERNADOR Y SISTEMA DE CLUTCH",
+        "nota_interna": "REVISION GENERAL",
+        "km": 269003,
+        "costo": null,
+        "tecnico": "OSCAR FLORES",
+        "tiempo_entrega_aprox": "4 días",
+        "fecha_inicio": "2026-10-06",
+        "estado": "diagnostico",
+        "actualizado": "2026-10-06",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": true,
+          "aceptado": false,
+          "fecha_envio": "2026-10-06",
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
+              "tapon_ruedas": "si",
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "si",
+              "extinguidor": "no"
+            },
+            "gasolina": 25,
+            "danos_notas": "REVISAR DAÑOS EN FOTOGRAFIAS"
+          },
+          "pdf_path": "uploads/A03/20261005-231215-informe-recepcion.pdf"
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-06T05:06:31.022Z",
+          "diagnostico": "2026-10-06T05:12:19.863Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
-  "folio_counter": 6
+  "folio_counter": 7
 }
