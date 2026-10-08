@@ -2016,9 +2016,9 @@
       "cliente_rfc": "",
       "cliente_direccion": "",
       "ficha_tecnica": {
-        "aceite_tipo": "",
-        "aceite_capacidad": "",
-        "presion_llantas": "",
+        "aceite_tipo": "15w40",
+        "aceite_capacidad": "5 lts",
+        "presion_llantas": "32",
         "bateria": "",
         "filtro_aire": "",
         "filtro_aceite": ""
