@@ -1843,6 +1843,41 @@
         }
       },
       "servicios": []
+    },
+    "X11": {
+      "id": "X11",
+      "fecha_creacion": "2026-10-08T19:00:52.142Z",
+      "foto_perfil": "uploads/X11/20261008-130053-perfil.jpg",
+      "documentos_vehiculo": {
+        "fotos": [],
+        "documentos": []
+      },
+      "placas": "ER-2437-D",
+      "numero_unidad": "46",
+      "marca": "MITSUBISHI",
+      "modelo": "L200",
+      "anio": 2016,
+      "version": "2.2",
+      "color": "Blanca",
+      "combustible": "",
+      "vin": "MMBNL45K8GH038127",
+      "km_actual": 248116,
+      "cliente_nombre": "TOTAL PARTS",
+      "cliente_telefono": "8713940393",
+      "cliente_telefono_2": "",
+      "cliente_correo": "",
+      "cliente_rfc": "",
+      "cliente_direccion": "",
+      "ficha_tecnica": {
+        "aceite_tipo": "",
+        "aceite_capacidad": "",
+        "presion_llantas": "",
+        "bateria": "",
+        "filtro_aire": "",
+        "filtro_aceite": ""
+      },
+      "servicio_actual": null,
+      "servicios": []
     }
   },
   "folio_counter": 11
