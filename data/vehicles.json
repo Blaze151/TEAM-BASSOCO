@@ -1809,7 +1809,12 @@
         },
         "adjuntos": {
           "recibido": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X10/20261008-115537-recibido-0-1000144519.jpg",
+              "uploads/X10/20261008-115540-recibido-1-1000144518.jpg",
+              "uploads/X10/20261008-115542-recibido-2-1000144517.jpg",
+              "uploads/X10/20261008-115544-recibido-3-1000144516.jpg"
+            ],
             "documentos": []
           },
           "diagnostico": {
