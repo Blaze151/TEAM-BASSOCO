@@ -1988,6 +1988,41 @@
         }
       },
       "servicios": []
+    },
+    "X12": {
+      "id": "X12",
+      "fecha_creacion": "2026-10-08T19:11:28.583Z",
+      "foto_perfil": "uploads/X12/20261008-131129-perfil.jpg",
+      "documentos_vehiculo": {
+        "fotos": [],
+        "documentos": []
+      },
+      "placas": "GBK-922-E",
+      "numero_unidad": "",
+      "marca": "NISSAN",
+      "modelo": "URVAN",
+      "anio": 2018,
+      "version": "",
+      "color": "BLANCO",
+      "combustible": "Gasolina",
+      "vin": "JN1BE6DS0J9031676",
+      "km_actual": 251154,
+      "cliente_nombre": "TOTAL PARTS",
+      "cliente_telefono": "8713940393",
+      "cliente_telefono_2": "",
+      "cliente_correo": "",
+      "cliente_rfc": "",
+      "cliente_direccion": "",
+      "ficha_tecnica": {
+        "aceite_tipo": "",
+        "aceite_capacidad": "",
+        "presion_llantas": "",
+        "bateria": "",
+        "filtro_aire": "",
+        "filtro_aceite": ""
+      },
+      "servicio_actual": null,
+      "servicios": []
     }
   },
   "folio_counter": 12
