@@ -1994,7 +1994,9 @@
       "fecha_creacion": "2026-10-08T19:11:28.583Z",
       "foto_perfil": "uploads/X12/20261008-131129-perfil.jpg",
       "documentos_vehiculo": {
-        "fotos": [],
+        "fotos": [
+          "uploads/X12/20261008-131135-vdoc-0-1000144827.jpg"
+        ],
         "documentos": []
       },
       "placas": "GBK-922-E",
