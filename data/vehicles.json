@@ -1823,7 +1823,9 @@
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X10/20261008-115806-en_proceso-0-1000144488.jpg"
+            ],
             "documentos": []
           },
           "listo": {
