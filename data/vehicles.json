@@ -1878,9 +1878,113 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1791486088930",
+        "folio": "A012",
+        "tipo": "Servicio de mantenimiento",
+        "descripcion": "SERVICIO MAYOR",
+        "nota_interna": "",
+        "km": 248116,
+        "costo": null,
+        "tecnico": "OSCAR FLORES",
+        "tiempo_entrega_aprox": "1 Hora",
+        "fecha_inicio": "2026-10-08",
+        "estado": "recibido",
+        "actualizado": "2026-10-08",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "si",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
+              "tapon_ruedas": "si",
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "si",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
+              "estuche_herramientas": "si",
+              "triangulo_seguridad": "si",
+              "llanta_refaccion": "si",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": ""
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-08T19:01:28.931Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X11/20261008-130219-recibido-0-1000144803.jpg",
+              "uploads/X11/20261008-130222-recibido-1-1000144802.jpg",
+              "uploads/X11/20261008-130224-recibido-2-1000144801.jpg",
+              "uploads/X11/20261008-130226-recibido-3-1000144800.jpg",
+              "uploads/X11/20261008-130228-recibido-4-1000144798.jpg",
+              "uploads/X11/20261008-130231-recibido-5-1000144797.jpg",
+              "uploads/X11/20261008-130234-recibido-6-1000144796.jpg",
+              "uploads/X11/20261008-130237-recibido-7-1000144795.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
-  "folio_counter": 11
+  "folio_counter": 12
 }
