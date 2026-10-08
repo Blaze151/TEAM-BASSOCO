@@ -1889,16 +1889,16 @@
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 Hora",
         "fecha_inicio": "2026-10-08",
-        "estado": "recibido",
+        "estado": "diagnostico",
         "actualizado": "2026-10-08",
         "pago": {
           "estado": "no_pagado",
           "metodo": null
         },
         "orden_recepcion": {
-          "enviado": false,
+          "enviado": true,
           "aceptado": false,
-          "fecha_envio": null,
+          "fecha_envio": "2026-10-08",
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
@@ -1921,7 +1921,8 @@
             },
             "gasolina": 75,
             "danos_notas": ""
-          }
+          },
+          "pdf_path": "uploads/X11/20261008-130308-informe-recepcion.pdf"
         },
         "cotizacion": {
           "enviado": false,
@@ -1945,7 +1946,8 @@
           "pdf_path": null
         },
         "fechas_etapa": {
-          "recibido": "2026-10-08T19:01:28.931Z"
+          "recibido": "2026-10-08T19:01:28.931Z",
+          "diagnostico": "2026-10-08T19:03:11.762Z"
         },
         "adjuntos": {
           "recibido": {
