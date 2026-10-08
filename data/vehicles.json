@@ -1849,7 +1849,9 @@
       "fecha_creacion": "2026-10-08T19:00:52.142Z",
       "foto_perfil": "uploads/X11/20261008-130053-perfil.jpg",
       "documentos_vehiculo": {
-        "fotos": [],
+        "fotos": [
+          "uploads/X11/20261008-130111-vdoc-0-17914860566474630851263742707622.jpg"
+        ],
         "documentos": []
       },
       "placas": "ER-2437-D",
