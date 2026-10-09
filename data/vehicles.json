@@ -2074,9 +2074,44 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "CAMBIO DE AMORTIGUADOR DELANTERO",
+              "cantidad": 2,
+              "costo_unitario": 1380
+            },
+            {
+              "concepto": "CAMBIO DE AMORTIGUADOR TRASERO",
+              "cantidad": 2,
+              "costo_unitario": 1380
+            },
+            {
+              "concepto": "CAMBIO DE BUJE DE BARRA ESTABILIZADORA",
+              "cantidad": 2,
+              "costo_unitario": 260
+            },
+            {
+              "concepto": "CAMBIO DE TENSOR DE BANDA DE ACCESORIOS",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 2500
+            },
+            {
+              "concepto": "CAMBIO DE BANDA DE ACCESORIOS",
+              "cantidad": 1,
+              "costo_unitario": 900
+            },
+            {
+              "concepto": "CAMBIO DE BALATAS DELANTERAS",
+              "cantidad": 1,
+              "costo_unitario": 1100
+            },
+            {
+              "concepto": "RECTIFICACION DE DISCOS DE FRENO DELANTERO",
+              "cantidad": 2,
+              "costo_unitario": 150
+            },
+            {
+              "concepto": "LIMPIEZA Y AJUSTE DE FRENOS TRASEROS",
+              "cantidad": 1,
+              "costo_unitario": 300
             }
           ],
           "incluir_iva": true,
