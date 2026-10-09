@@ -2282,7 +2282,7 @@
               "llanta_refaccion": "no",
               "extinguidor": "no"
             },
-            "gasolina": 0,
+            "gasolina": 50,
             "danos_notas": ""
           }
         },
