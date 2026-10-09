@@ -2107,7 +2107,19 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X12/20261008-181021-diagnostico-0-WhatsApp-Image-2026-10-08-at-5.45.06-PM-1-.jpg",
+              "uploads/X12/20261008-181023-diagnostico-1-WhatsApp-Image-2026-10-08-at-5.45.06-PM-2-.jpg",
+              "uploads/X12/20261008-181024-diagnostico-2-WhatsApp-Image-2026-10-08-at-5.45.06-PM-3-.jpg",
+              "uploads/X12/20261008-181026-diagnostico-3-WhatsApp-Image-2026-10-08-at-5.45.06-PM-4-.jpg",
+              "uploads/X12/20261008-181029-diagnostico-4-WhatsApp-Image-2026-10-08-at-5.45.06-PM.jpg",
+              "uploads/X12/20261008-181030-diagnostico-5-WhatsApp-Image-2026-10-08-at-5.45.07-PM-1-.jpg",
+              "uploads/X12/20261008-181032-diagnostico-6-WhatsApp-Image-2026-10-08-at-5.45.07-PM.jpg",
+              "uploads/X12/20261008-181033-diagnostico-7-WhatsApp-Image-2026-10-08-at-6.01.25-PM-1-.jpg",
+              "uploads/X12/20261008-181034-diagnostico-8-WhatsApp-Image-2026-10-08-at-6.01.25-PM.jpg",
+              "uploads/X12/20261008-181037-diagnostico-9-WhatsApp-Image-2026-10-08-at-6.06.29-PM-1-.jpg",
+              "uploads/X12/20261008-181038-diagnostico-10-WhatsApp-Image-2026-10-08-at-6.06.29-PM.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
