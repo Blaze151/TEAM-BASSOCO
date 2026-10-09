@@ -2330,7 +2330,10 @@
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X13/20261009-133804-en_proceso-0-1000145672.jpg",
+              "uploads/X13/20261009-133809-en_proceso-1-1000145650.jpg"
+            ],
             "documentos": []
           },
           "listo": {
