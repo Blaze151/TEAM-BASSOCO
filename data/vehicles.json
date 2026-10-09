@@ -2207,6 +2207,42 @@
         }
       },
       "servicios": []
+    },
+    "X13": {
+      "id": "X13",
+      "fecha_creacion": "2026-10-09T19:30:30.041Z",
+      "foto_perfil": "uploads/X13/20261009-133033-perfil.jpg",
+      "documentos_vehiculo": {
+        "fotos": [],
+        "documentos": []
+      },
+      "placas": "RD-1929-A",
+      "numero_unidad": "158",
+      "marca": "ISUZU",
+      "modelo": "Elf",
+      "anio": null,
+      "version": "",
+      "color": "BLANCO",
+      "combustible": "Diesel",
+      "vin": "JAANPR75XP7K00478",
+      "km_actual": null,
+      "cliente_nombre": "PASTELERÍA LETY SA DE CV",
+      "cliente_telefono": "8713940393",
+      "cliente_telefono_2": "8711044146",
+      "cliente_correo": "",
+      "cliente_rfc": "",
+      "cliente_direccion": "",
+      "cliente_actualizado": "2026-10-09T19:30:30.041Z",
+      "ficha_tecnica": {
+        "aceite_tipo": "",
+        "aceite_capacidad": "",
+        "presion_llantas": "",
+        "bateria": "",
+        "filtro_aire": "",
+        "filtro_aceite": ""
+      },
+      "servicio_actual": null,
+      "servicios": []
     }
   },
   "folio_counter": 13
