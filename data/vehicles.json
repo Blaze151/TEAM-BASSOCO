@@ -929,7 +929,7 @@
           "tiempo_entrega_aprox": "5 HRS",
           "fecha_inicio": "2026-10-05",
           "pago": {
-            "estado": "no_pagado",
+            "estado": "a_deber",
             "metodo": "transferencia"
           },
           "orden_recepcion": {
