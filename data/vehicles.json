@@ -1763,9 +1763,9 @@
         },
         "orden_recepcion": {
           "enviado": true,
-          "aceptado": false,
+          "aceptado": true,
           "fecha_envio": "2026-10-09",
-          "fecha_aceptado": null,
+          "fecha_aceptado": "2026-10-09",
           "inventario": {
             "exteriores": {
               "antena": "no",
@@ -1791,14 +1791,14 @@
           "pdf_path": "uploads/X10/20261008-194250-informe-recepcion.pdf"
         },
         "cotizacion": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null,
+          "enviado": true,
+          "fecha_envio": "2026-10-09",
+          "pdf_path": "uploads/X10/20261008-194743-cotizacion.pdf",
           "items": [
             {
-              "concepto": "",
+              "concepto": "SERVICIO DE MANTENIMIENTO MENOR",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 800
             }
           ],
           "incluir_iva": true,
