@@ -2266,12 +2266,12 @@
           "inventario": {
             "exteriores": {
               "antena": "si",
-              "espejo_lateral": "no",
-              "cristales": "no",
-              "emblema": "no",
-              "tapon_ruedas": "no",
-              "molduras_completas": "no",
-              "tapon_gasolina": "no"
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
+              "tapon_ruedas": "si",
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
             },
             "accesorios": {
               "gato": "no",
