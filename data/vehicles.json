@@ -2292,7 +2292,12 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "Cambio Compresor de clima",
+              "cantidad": 1,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Cambio de banda de accesorios",
               "cantidad": 1,
               "costo_unitario": null
             }
