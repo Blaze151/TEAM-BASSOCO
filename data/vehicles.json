@@ -466,6 +466,7 @@
       "cliente_correo": "",
       "cliente_rfc": "",
       "cliente_direccion": "",
+      "cliente_actualizado": "2026-09-30T23:21:55.368Z",
       "ficha_tecnica": {
         "aceite_tipo": "15w40",
         "aceite_capacidad": "5 lts",
@@ -567,7 +568,13 @@
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X5/20261009-092307-en_proceso-0-1000137542.jpg",
+              "uploads/X5/20261009-092309-en_proceso-1-1000137544.jpg",
+              "uploads/X5/20261009-092312-en_proceso-2-1000137546.jpg",
+              "uploads/X5/20261009-092314-en_proceso-3-1000137547.jpg",
+              "uploads/X5/20261009-092316-en_proceso-4-1000137549.jpg"
+            ],
             "documentos": []
           },
           "listo": {
