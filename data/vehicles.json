@@ -1744,120 +1744,120 @@
         "filtro_aire": "",
         "filtro_aceite": "Gp-408"
       },
-      "servicio_actual": {
-        "id": "svc_1791481866729",
-        "folio": "A011",
-        "tipo": "SERVICIO MENOR",
-        "descripcion": "SERVICIO MENOR Y SUSPENSION",
-        "nota_interna": "Revisar suspension",
-        "km": 267947,
-        "costo": null,
-        "tecnico": "JAVIER VARGAS",
-        "tiempo_entrega_aprox": "2 horas",
-        "fecha_inicio": "2026-10-08",
-        "estado": "recogido",
-        "actualizado": "2026-10-09",
-        "pago": {
-          "estado": "no_pagado",
-          "metodo": null
-        },
-        "orden_recepcion": {
-          "enviado": true,
-          "aceptado": true,
-          "fecha_envio": "2026-10-09",
-          "fecha_aceptado": "2026-10-09",
-          "inventario": {
-            "exteriores": {
-              "antena": "no",
-              "espejo_lateral": "si",
-              "cristales": "si",
-              "emblema": "si",
-              "tapon_ruedas": "si",
-              "molduras_completas": "si",
-              "tapon_gasolina": "si"
-            },
-            "accesorios": {
-              "gato": "no",
-              "maneral_gato": "no",
-              "llave_ruedas": "no",
-              "estuche_herramientas": "no",
-              "triangulo_seguridad": "no",
-              "llanta_refaccion": "no",
-              "extinguidor": "no"
-            },
-            "gasolina": 25,
-            "danos_notas": ""
-          },
-          "pdf_path": "uploads/X10/20261008-194250-informe-recepcion.pdf"
-        },
-        "cotizacion": {
-          "enviado": true,
-          "fecha_envio": "2026-10-09",
-          "pdf_path": "uploads/X10/20261008-194743-cotizacion.pdf",
-          "items": [
-            {
-              "concepto": "SERVICIO DE MANTENIMIENTO MENOR",
-              "cantidad": 1,
-              "costo_unitario": 800
-            }
-          ],
-          "incluir_iva": true,
-          "observaciones": "",
-          "aceptado": true,
-          "fecha_aceptado": "2026-10-09"
-        },
-        "informe_trabajo": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null
-        },
-        "fechas_etapa": {
-          "recibido": "2026-10-08T17:51:06.730Z",
-          "diagnostico": "2026-10-09T01:40:47.725Z",
-          "en_proceso": "2026-10-09T01:53:01.849Z",
-          "listo": "2026-10-09T01:53:06.370Z",
-          "recogido": "2026-10-09T01:53:43.624Z"
-        },
-        "adjuntos": {
-          "recibido": {
-            "fotos": [
-              "uploads/X10/20261008-115537-recibido-0-1000144519.jpg",
-              "uploads/X10/20261008-115540-recibido-1-1000144518.jpg",
-              "uploads/X10/20261008-115542-recibido-2-1000144517.jpg",
-              "uploads/X10/20261008-115544-recibido-3-1000144516.jpg",
-              "uploads/X10/20261008-115708-recibido-0-1000144520.jpg"
-            ],
-            "documentos": []
-          },
-          "diagnostico": {
-            "fotos": [
-              "uploads/X10/20261008-130643-diagnostico-0-17914863693013459085668673624919.jpg"
-            ],
-            "documentos": []
-          },
-          "en_proceso": {
-            "fotos": [
-              "uploads/X10/20261008-115806-en_proceso-0-1000144488.jpg"
-            ],
-            "documentos": []
-          },
-          "listo": {
-            "fotos": [
-              "uploads/X10/20261008-195022-listo-0-WhatsApp-Image-2026-04-02-at-1.45.50-PM-3-.jpg"
-            ],
-            "documentos": []
-          },
-          "recogido": {
-            "fotos": [],
-            "documentos": []
-          },
+      "servicio_actual": null,
+      "servicios": [
+        {
+          "fecha": "2026-10-09",
+          "folio": "A011",
+          "tipo": "SERVICIO MENOR",
+          "descripcion": "SERVICIO MENOR Y SUSPENSION",
+          "nota_interna": "Revisar suspension",
+          "km": 267947,
+          "costo": null,
+          "tecnico": "JAVIER VARGAS",
+          "tiempo_entrega_aprox": "2 horas",
+          "fecha_inicio": "2026-10-08",
           "pago": {
-            "fotos": [],
-            "documentos": []
+            "estado": "no_pagado",
+            "metodo": null
+          },
+          "orden_recepcion": {
+            "enviado": true,
+            "aceptado": true,
+            "fecha_envio": "2026-10-09",
+            "fecha_aceptado": "2026-10-09",
+            "inventario": {
+              "exteriores": {
+                "antena": "no",
+                "espejo_lateral": "si",
+                "cristales": "si",
+                "emblema": "si",
+                "tapon_ruedas": "si",
+                "molduras_completas": "si",
+                "tapon_gasolina": "si"
+              },
+              "accesorios": {
+                "gato": "no",
+                "maneral_gato": "no",
+                "llave_ruedas": "no",
+                "estuche_herramientas": "no",
+                "triangulo_seguridad": "no",
+                "llanta_refaccion": "no",
+                "extinguidor": "no"
+              },
+              "gasolina": 25,
+              "danos_notas": ""
+            },
+            "pdf_path": "uploads/X10/20261008-194250-informe-recepcion.pdf"
+          },
+          "cotizacion": {
+            "enviado": true,
+            "fecha_envio": "2026-10-09",
+            "pdf_path": "uploads/X10/20261008-194743-cotizacion.pdf",
+            "items": [
+              {
+                "concepto": "SERVICIO DE MANTENIMIENTO MENOR",
+                "cantidad": 1,
+                "costo_unitario": 800
+              }
+            ],
+            "incluir_iva": true,
+            "observaciones": "",
+            "aceptado": true,
+            "fecha_aceptado": "2026-10-09"
+          },
+          "informe_trabajo": {
+            "enviado": false,
+            "fecha_envio": null,
+            "pdf_path": null
+          },
+          "fechas_etapa": {
+            "recibido": "2026-10-08T17:51:06.730Z",
+            "diagnostico": "2026-10-09T01:40:47.725Z",
+            "en_proceso": "2026-10-09T01:53:01.849Z",
+            "listo": "2026-10-09T01:53:06.370Z",
+            "recogido": "2026-10-09T01:53:43.624Z"
+          },
+          "adjuntos": {
+            "recibido": {
+              "fotos": [
+                "uploads/X10/20261008-115537-recibido-0-1000144519.jpg",
+                "uploads/X10/20261008-115540-recibido-1-1000144518.jpg",
+                "uploads/X10/20261008-115542-recibido-2-1000144517.jpg",
+                "uploads/X10/20261008-115544-recibido-3-1000144516.jpg",
+                "uploads/X10/20261008-115708-recibido-0-1000144520.jpg"
+              ],
+              "documentos": []
+            },
+            "diagnostico": {
+              "fotos": [
+                "uploads/X10/20261008-130643-diagnostico-0-17914863693013459085668673624919.jpg"
+              ],
+              "documentos": []
+            },
+            "en_proceso": {
+              "fotos": [
+                "uploads/X10/20261008-115806-en_proceso-0-1000144488.jpg"
+              ],
+              "documentos": []
+            },
+            "listo": {
+              "fotos": [
+                "uploads/X10/20261008-195022-listo-0-WhatsApp-Image-2026-04-02-at-1.45.50-PM-3-.jpg"
+              ],
+              "documentos": []
+            },
+            "recogido": {
+              "fotos": [],
+              "documentos": []
+            },
+            "pago": {
+              "fotos": [],
+              "documentos": []
+            }
           }
         }
-      },
-      "servicios": []
+      ]
     },
     "X11": {
       "id": "X11",
