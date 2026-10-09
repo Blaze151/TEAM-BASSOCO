@@ -1254,159 +1254,159 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": {
-        "id": "svc_1791263191022",
-        "folio": "A007",
-        "tipo": "Cambio de motor, ruido en poleas, sistema de clutch",
-        "descripcion": "CAMBIO DE MOTOR NUEVO AL CAMBIO, REVISION DE RUIDO EN POLEAS, ALTERNADOR Y SISTEMA DE CLUTCH",
-        "nota_interna": "REVISION GENERAL",
-        "km": 269003,
-        "costo": null,
-        "tecnico": "OSCAR FLORES",
-        "tiempo_entrega_aprox": "4 días",
-        "fecha_inicio": "2026-10-06",
-        "estado": "recogido",
-        "actualizado": "2026-10-06",
-        "pago": {
-          "estado": "no_pagado",
-          "metodo": null
-        },
-        "orden_recepcion": {
-          "enviado": true,
-          "aceptado": true,
-          "fecha_envio": "2026-10-06",
-          "fecha_aceptado": "2026-10-06",
-          "inventario": {
-            "exteriores": {
-              "antena": "no",
-              "espejo_lateral": "si",
-              "cristales": "si",
-              "emblema": "si",
-              "tapon_ruedas": "si",
-              "molduras_completas": "si",
-              "tapon_gasolina": "si"
-            },
-            "accesorios": {
-              "gato": "no",
-              "maneral_gato": "no",
-              "llave_ruedas": "no",
-              "estuche_herramientas": "no",
-              "triangulo_seguridad": "no",
-              "llanta_refaccion": "si",
-              "extinguidor": "no"
-            },
-            "gasolina": 25,
-            "danos_notas": "REVISAR DAÑOS EN FOTOGRAFIAS"
-          },
-          "pdf_path": "uploads/A03/20261005-231356-informe-recepcion.pdf"
-        },
-        "cotizacion": {
-          "enviado": true,
-          "fecha_envio": "2026-10-06",
-          "pdf_path": "uploads/A03/20261005-231956-cotizacion.pdf",
-          "items": [
-            {
-              "concepto": "CAMBIO DE MOTOR 3/4 NUEVO AL CAMBIO",
-              "cantidad": 1,
-              "costo_unitario": 22500
-            },
-            {
-              "concepto": "SERVICIO DE AFINACION MAYOR, INCLUYE:   BUJIAS, FILTRO DE AIRE, FILTRO DE ACEITE,  ACEITE DE MOTOR SINTETICO  MOTORCRAFT, LIMPIEZA CUERPO DE  ACELERACION, LIMPIEZA DE INYECTORES  POR BOYA, REVISION Y RELLENO DE  NIVELES",
-              "cantidad": 1,
-              "costo_unitario": 1800
-            },
-            {
-              "concepto": "CAMBIO DE POLEA TENSORA",
-              "cantidad": 1,
-              "costo_unitario": 900
-            },
-            {
-              "concepto": "REPARACION DE ALTERNADOR",
-              "cantidad": 1,
-              "costo_unitario": 2200
-            },
-            {
-              "concepto": "CAMBIO DE KIT DE CLUTCH",
-              "cantidad": 1,
-              "costo_unitario": 3600
-            },
-            {
-              "concepto": "ACEITE DE TRANSMISION ESTÁNDAR",
-              "cantidad": 4,
-              "costo_unitario": 200
-            },
-            {
-              "concepto": "ANTICONGELANTE",
-              "cantidad": 1,
-              "costo_unitario": 300
-            }
-          ],
-          "incluir_iva": true,
-          "observaciones": "",
-          "aceptado": true,
-          "fecha_aceptado": "2026-10-06"
-        },
-        "informe_trabajo": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null
-        },
-        "fechas_etapa": {
-          "recibido": "2026-10-06T05:06:31.022Z",
-          "diagnostico": "2026-10-06T05:12:19.863Z",
-          "en_proceso": "2026-10-06T05:20:47.172Z",
-          "listo": "2026-10-06T05:24:38.231Z",
-          "recogido": "2026-10-06T21:30:57.293Z"
-        },
-        "adjuntos": {
-          "recibido": {
-            "fotos": [
-              "uploads/A03/20261005-231335-recibido-0-FRONTAL.jpg",
-              "uploads/A03/20261005-231337-recibido-1-LADO-DERECHO.jpg",
-              "uploads/A03/20261005-231339-recibido-2-LADO-IZQUIERDO.jpg",
-              "uploads/A03/20261005-231340-recibido-3-PLACA.jpg",
-              "uploads/A03/20261005-231342-recibido-4-REFACCION.jpg",
-              "uploads/A03/20261005-231343-recibido-5-VIN.jpg",
-              "uploads/A03/20261006-152947-recibido-0-KM.jpg"
-            ],
-            "documentos": []
-          },
-          "diagnostico": {
-            "fotos": [
-              "uploads/A03/20261005-231543-diagnostico-0-motor-usado.jpg",
-              "uploads/A03/20261005-231545-diagnostico-1-motor-usado2.jpg",
-              "uploads/A03/20261005-231546-diagnostico-2-polea-usada.jpg"
-            ],
-            "documentos": []
-          },
-          "en_proceso": {
-            "fotos": [
-              "uploads/A03/20261005-232132-en_proceso-0-motor.jpg",
-              "uploads/A03/20261005-232134-en_proceso-1-polea-tensora.jpg",
-              "uploads/A03/20261005-232135-en_proceso-2-servicio.jpg",
-              "uploads/A03/20261005-232136-en_proceso-3-WhatsApp-Image-2026-09-30-at-2.05.16-PM.jpg"
-            ],
-            "documentos": []
-          },
-          "listo": {
-            "fotos": [
-              "uploads/A03/20261005-232259-listo-0-FRONTAL.jpg"
-            ],
-            "documentos": [
-              "uploads/A03/20261006-152637-listo-0-GARANTIA-MOTORES-GASOLINA.pdf"
-            ]
-          },
-          "recogido": {
-            "fotos": [],
-            "documentos": []
-          },
+      "servicio_actual": null,
+      "servicios": [
+        {
+          "fecha": "2026-10-09",
+          "folio": "A007",
+          "tipo": "Cambio de motor, ruido en poleas, sistema de clutch",
+          "descripcion": "CAMBIO DE MOTOR NUEVO AL CAMBIO, REVISION DE RUIDO EN POLEAS, ALTERNADOR Y SISTEMA DE CLUTCH",
+          "nota_interna": "REVISION GENERAL",
+          "km": 269003,
+          "costo": null,
+          "tecnico": "OSCAR FLORES",
+          "tiempo_entrega_aprox": "4 días",
+          "fecha_inicio": "2026-10-06",
           "pago": {
-            "fotos": [],
-            "documentos": []
+            "estado": "pagado",
+            "metodo": "transferencia"
+          },
+          "orden_recepcion": {
+            "enviado": true,
+            "aceptado": true,
+            "fecha_envio": "2026-10-06",
+            "fecha_aceptado": "2026-10-06",
+            "inventario": {
+              "exteriores": {
+                "antena": "no",
+                "espejo_lateral": "si",
+                "cristales": "si",
+                "emblema": "si",
+                "tapon_ruedas": "si",
+                "molduras_completas": "si",
+                "tapon_gasolina": "si"
+              },
+              "accesorios": {
+                "gato": "no",
+                "maneral_gato": "no",
+                "llave_ruedas": "no",
+                "estuche_herramientas": "no",
+                "triangulo_seguridad": "no",
+                "llanta_refaccion": "si",
+                "extinguidor": "no"
+              },
+              "gasolina": 25,
+              "danos_notas": "REVISAR DAÑOS EN FOTOGRAFIAS"
+            },
+            "pdf_path": "uploads/A03/20261005-231356-informe-recepcion.pdf"
+          },
+          "cotizacion": {
+            "enviado": true,
+            "fecha_envio": "2026-10-06",
+            "pdf_path": "uploads/A03/20261005-231956-cotizacion.pdf",
+            "items": [
+              {
+                "concepto": "CAMBIO DE MOTOR 3/4 NUEVO AL CAMBIO",
+                "cantidad": 1,
+                "costo_unitario": 22500
+              },
+              {
+                "concepto": "SERVICIO DE AFINACION MAYOR, INCLUYE:   BUJIAS, FILTRO DE AIRE, FILTRO DE ACEITE,  ACEITE DE MOTOR SINTETICO  MOTORCRAFT, LIMPIEZA CUERPO DE  ACELERACION, LIMPIEZA DE INYECTORES  POR BOYA, REVISION Y RELLENO DE  NIVELES",
+                "cantidad": 1,
+                "costo_unitario": 1800
+              },
+              {
+                "concepto": "CAMBIO DE POLEA TENSORA",
+                "cantidad": 1,
+                "costo_unitario": 900
+              },
+              {
+                "concepto": "REPARACION DE ALTERNADOR",
+                "cantidad": 1,
+                "costo_unitario": 2200
+              },
+              {
+                "concepto": "CAMBIO DE KIT DE CLUTCH",
+                "cantidad": 1,
+                "costo_unitario": 3600
+              },
+              {
+                "concepto": "ACEITE DE TRANSMISION ESTÁNDAR",
+                "cantidad": 4,
+                "costo_unitario": 200
+              },
+              {
+                "concepto": "ANTICONGELANTE",
+                "cantidad": 1,
+                "costo_unitario": 300
+              }
+            ],
+            "incluir_iva": true,
+            "observaciones": "",
+            "aceptado": true,
+            "fecha_aceptado": "2026-10-06"
+          },
+          "informe_trabajo": {
+            "enviado": false,
+            "fecha_envio": null,
+            "pdf_path": null
+          },
+          "fechas_etapa": {
+            "recibido": "2026-10-06T05:06:31.022Z",
+            "diagnostico": "2026-10-06T05:12:19.863Z",
+            "en_proceso": "2026-10-06T05:20:47.172Z",
+            "listo": "2026-10-06T05:24:38.231Z",
+            "recogido": "2026-10-06T21:30:57.293Z"
+          },
+          "adjuntos": {
+            "recibido": {
+              "fotos": [
+                "uploads/A03/20261005-231335-recibido-0-FRONTAL.jpg",
+                "uploads/A03/20261005-231337-recibido-1-LADO-DERECHO.jpg",
+                "uploads/A03/20261005-231339-recibido-2-LADO-IZQUIERDO.jpg",
+                "uploads/A03/20261005-231340-recibido-3-PLACA.jpg",
+                "uploads/A03/20261005-231342-recibido-4-REFACCION.jpg",
+                "uploads/A03/20261005-231343-recibido-5-VIN.jpg",
+                "uploads/A03/20261006-152947-recibido-0-KM.jpg"
+              ],
+              "documentos": []
+            },
+            "diagnostico": {
+              "fotos": [
+                "uploads/A03/20261005-231543-diagnostico-0-motor-usado.jpg",
+                "uploads/A03/20261005-231545-diagnostico-1-motor-usado2.jpg",
+                "uploads/A03/20261005-231546-diagnostico-2-polea-usada.jpg"
+              ],
+              "documentos": []
+            },
+            "en_proceso": {
+              "fotos": [
+                "uploads/A03/20261005-232132-en_proceso-0-motor.jpg",
+                "uploads/A03/20261005-232134-en_proceso-1-polea-tensora.jpg",
+                "uploads/A03/20261005-232135-en_proceso-2-servicio.jpg",
+                "uploads/A03/20261005-232136-en_proceso-3-WhatsApp-Image-2026-09-30-at-2.05.16-PM.jpg"
+              ],
+              "documentos": []
+            },
+            "listo": {
+              "fotos": [
+                "uploads/A03/20261005-232259-listo-0-FRONTAL.jpg"
+              ],
+              "documentos": [
+                "uploads/A03/20261006-152637-listo-0-GARANTIA-MOTORES-GASOLINA.pdf"
+              ]
+            },
+            "recogido": {
+              "fotos": [],
+              "documentos": []
+            },
+            "pago": {
+              "fotos": [],
+              "documentos": []
+            }
           }
         }
-      },
-      "servicios": []
+      ]
     },
     "A04": {
       "id": "A04",
