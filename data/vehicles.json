@@ -2279,7 +2279,7 @@
               "llave_ruedas": "no",
               "estuche_herramientas": "no",
               "triangulo_seguridad": "no",
-              "llanta_refaccion": "no",
+              "llanta_refaccion": "si",
               "extinguidor": "no"
             },
             "gasolina": 50,
