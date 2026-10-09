@@ -2322,7 +2322,11 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X13/20261009-133750-diagnostico-0-1000130507.jpg",
+              "uploads/X13/20261009-133754-diagnostico-1-1000125666.jpg",
+              "uploads/X13/20261009-133757-diagnostico-2-1000125657.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
