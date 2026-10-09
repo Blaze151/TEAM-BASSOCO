@@ -1885,6 +1885,7 @@
       "cliente_correo": "",
       "cliente_rfc": "",
       "cliente_direccion": "",
+      "cliente_actualizado": "2026-10-08T19:00:52.142Z",
       "ficha_tecnica": {
         "aceite_tipo": "15w40",
         "aceite_capacidad": "5 lts",
@@ -1979,7 +1980,9 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X11/20261009-091806-diagnostico-0-17915590762406324402473750277724.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
