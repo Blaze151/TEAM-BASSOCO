@@ -2069,9 +2069,9 @@
           }
         },
         "cotizacion": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null,
+          "enviado": true,
+          "fecha_envio": "2026-10-09",
+          "pdf_path": "uploads/X12/20261008-182603-cotizacion.pdf",
           "items": [
             {
               "concepto": "CAMBIO DE AMORTIGUADOR DELANTERO",
