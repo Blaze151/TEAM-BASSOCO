@@ -2262,9 +2262,9 @@
         },
         "orden_recepcion": {
           "enviado": false,
-          "aceptado": false,
+          "aceptado": true,
           "fecha_envio": null,
-          "fecha_aceptado": null,
+          "fecha_aceptado": "2026-10-10",
           "inventario": {
             "exteriores": {
               "antena": "si",
