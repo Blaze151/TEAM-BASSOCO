@@ -2309,7 +2309,7 @@
               "costo_unitario": 800
             }
           ],
-          "incluir_iva": true,
+          "incluir_iva": false,
           "observaciones": "",
           "aceptado": false,
           "fecha_aceptado": null
