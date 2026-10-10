@@ -2192,7 +2192,9 @@
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X12/20261010-160454-en_proceso-0-17916698834685495515980666009173.jpg"
+            ],
             "documentos": []
           },
           "listo": {
