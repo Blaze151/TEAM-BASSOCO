@@ -2449,9 +2449,19 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "SERVICIO DE GRUA",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 700
+            },
+            {
+              "concepto": "REPARACION DE ALTERNADOR",
+              "cantidad": 1,
+              "costo_unitario": 1800
+            },
+            {
+              "concepto": "CARGA DE BATERIA",
+              "cantidad": 1,
+              "costo_unitario": 100
             }
           ],
           "incluir_iva": true,
