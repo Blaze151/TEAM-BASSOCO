@@ -2422,7 +2422,7 @@
         "actualizado": "2026-10-10",
         "pago": {
           "estado": "no_pagado",
-          "metodo": null
+          "metodo": "transferencia"
         },
         "orden_recepcion": {
           "enviado": true,
