@@ -2444,9 +2444,9 @@
           "pdf_path": "uploads/A06/20261010-114705-informe-recepcion.pdf"
         },
         "cotizacion": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null,
+          "enviado": true,
+          "fecha_envio": "2026-10-10",
+          "pdf_path": "uploads/A06/20261010-120352-cotizacion.pdf",
           "items": [
             {
               "concepto": "SERVICIO DE GRUA",
