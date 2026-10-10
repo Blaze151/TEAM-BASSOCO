@@ -2408,7 +2408,7 @@
         "tecnico": "JAVIER VARGAS",
         "tiempo_entrega_aprox": "2 dias",
         "fecha_inicio": "2026-10-10",
-        "estado": "diagnostico",
+        "estado": "en_proceso",
         "actualizado": "2026-10-10",
         "pago": {
           "estado": "no_pagado",
@@ -2466,8 +2466,8 @@
           ],
           "incluir_iva": true,
           "observaciones": "LA UNIDAD SE ENCUENTRA DAÑADA DEL ALTERNADOR, ESTA FUE LA CAUSA DE LA FALLA PRESENTADA",
-          "aceptado": false,
-          "fecha_aceptado": null
+          "aceptado": true,
+          "fecha_aceptado": "2026-10-10"
         },
         "informe_trabajo": {
           "enviado": false,
@@ -2476,7 +2476,8 @@
         },
         "fechas_etapa": {
           "recibido": "2026-10-10T17:33:31.603Z",
-          "diagnostico": "2026-10-10T17:47:10.203Z"
+          "diagnostico": "2026-10-10T17:47:10.203Z",
+          "en_proceso": "2026-10-10T18:14:30.337Z"
         },
         "adjuntos": {
           "recibido": {
