@@ -2294,14 +2294,19 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "Cambio Compresor de clima",
+              "concepto": "CAMBIO DE COMPRESOR DE CLIMA",
               "cantidad": 1,
-              "costo_unitario": 1
+              "costo_unitario": 1200
             },
             {
-              "concepto": "Cambio de banda de accesorios",
+              "concepto": "CAMBIO DE BANDA DE ACCESORIOS",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 400
+            },
+            {
+              "concepto": "ATENCION EN SITIO",
+              "cantidad": 1,
+              "costo_unitario": 800
             }
           ],
           "incluir_iva": true,
