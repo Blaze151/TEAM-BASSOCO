@@ -2408,7 +2408,7 @@
         "tecnico": "JAVIER VARGAS",
         "tiempo_entrega_aprox": "2 dias",
         "fecha_inicio": "2026-10-10",
-        "estado": "en_proceso",
+        "estado": "listo",
         "actualizado": "2026-10-10",
         "pago": {
           "estado": "no_pagado",
@@ -2478,7 +2478,7 @@
           "recibido": "2026-10-10T17:33:31.603Z",
           "diagnostico": "2026-10-10T17:47:10.203Z",
           "en_proceso": "2026-10-10T20:25:58.466Z",
-          "listo": "2026-10-10T20:25:30.444Z"
+          "listo": "2026-10-10T20:26:05.651Z"
         },
         "adjuntos": {
           "recibido": {
