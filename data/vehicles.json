@@ -2501,7 +2501,10 @@
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/A06/20261010-121523-en_proceso-0-WhatsApp-Image-2026-10-10-at-11.16.01-AM.jpg",
+              "uploads/A06/20261010-121524-en_proceso-1-WhatsApp-Image-2026-10-10-at-11.17.47-AM.jpg"
+            ],
             "documentos": []
           },
           "listo": {
