@@ -2531,7 +2531,9 @@
           },
           "pago": {
             "fotos": [],
-            "documentos": []
+            "documentos": [
+              "uploads/A06/20261010-151554-pago-0-comprobante_transferencia_10-oct-2026_15_04_20-h.pdf"
+            ]
           }
         }
       },
