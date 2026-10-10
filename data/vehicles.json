@@ -2045,6 +2045,7 @@
       "cliente_correo": "",
       "cliente_rfc": "",
       "cliente_direccion": "",
+      "cliente_actualizado": "2026-10-08T19:11:28.583Z",
       "ficha_tecnica": {
         "aceite_tipo": "15w40",
         "aceite_capacidad": "5 lts",
@@ -2064,8 +2065,8 @@
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 dia",
         "fecha_inicio": "2026-10-08",
-        "estado": "diagnostico",
-        "actualizado": "2026-10-09",
+        "estado": "en_proceso",
+        "actualizado": "2026-10-10",
         "pago": {
           "estado": "no_pagado",
           "metodo": null
@@ -2146,8 +2147,8 @@
           ],
           "incluir_iva": true,
           "observaciones": "",
-          "aceptado": false,
-          "fecha_aceptado": null
+          "aceptado": true,
+          "fecha_aceptado": "2026-10-10"
         },
         "informe_trabajo": {
           "enviado": false,
@@ -2156,7 +2157,8 @@
         },
         "fechas_etapa": {
           "recibido": "2026-10-08T19:11:55.989Z",
-          "diagnostico": "2026-10-09T00:09:03.443Z"
+          "diagnostico": "2026-10-09T00:09:03.443Z",
+          "en_proceso": "2026-10-10T17:15:54.662Z"
         },
         "adjuntos": {
           "recibido": {
