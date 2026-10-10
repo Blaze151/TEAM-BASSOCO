@@ -2421,7 +2421,7 @@
         "estado": "recogido",
         "actualizado": "2026-10-10",
         "pago": {
-          "estado": "no_pagado",
+          "estado": "pagado",
           "metodo": "transferencia"
         },
         "orden_recepcion": {
