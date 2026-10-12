@@ -1600,6 +1600,7 @@
       "cliente_correo": "",
       "cliente_rfc": "",
       "cliente_direccion": "",
+      "cliente_actualizado": "2026-10-06T22:00:05.639Z",
       "ficha_tecnica": {
         "aceite_tipo": "15w40",
         "aceite_capacidad": "4lta",
@@ -1619,8 +1620,8 @@
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 Hora",
         "fecha_inicio": "2026-10-06",
-        "estado": "diagnostico",
-        "actualizado": "2026-10-06",
+        "estado": "listo",
+        "actualizado": "2026-10-12",
         "pago": {
           "estado": "no_pagado",
           "metodo": null
@@ -1677,7 +1678,8 @@
         },
         "fechas_etapa": {
           "recibido": "2026-10-06T21:56:46.155Z",
-          "diagnostico": "2026-10-06T22:03:51.230Z"
+          "diagnostico": "2026-10-06T22:03:51.230Z",
+          "listo": "2026-10-12T16:37:55.631Z"
         },
         "adjuntos": {
           "recibido": {
