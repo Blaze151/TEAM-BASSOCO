@@ -2608,24 +2608,24 @@
           "inventario": {
             "exteriores": {
               "antena": "no",
-              "espejo_lateral": "no",
-              "cristales": "no",
-              "emblema": "no",
-              "tapon_ruedas": "no",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
+              "tapon_ruedas": "si",
               "molduras_completas": "no",
-              "tapon_gasolina": "no"
+              "tapon_gasolina": "si"
             },
             "accesorios": {
-              "gato": "no",
-              "maneral_gato": "no",
-              "llave_ruedas": "no",
+              "gato": "si",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
               "estuche_herramientas": "no",
-              "triangulo_seguridad": "no",
-              "llanta_refaccion": "no",
+              "triangulo_seguridad": "si",
+              "llanta_refaccion": "si",
               "extinguidor": "no"
             },
-            "gasolina": 0,
-            "danos_notas": ""
+            "gasolina": 100,
+            "danos_notas": "SIN MOLDURA TRASERA POR LA PLACA"
           }
         },
         "cotizacion": {
@@ -2662,7 +2662,8 @@
               "uploads/X14/20261012-143821-recibido-3-1000148915.jpg",
               "uploads/X14/20261012-143824-recibido-4-1000148914.jpg",
               "uploads/X14/20261012-143826-recibido-5-1000148913.jpg",
-              "uploads/X14/20261012-143829-recibido-6-1000148912.jpg"
+              "uploads/X14/20261012-143829-recibido-6-1000148912.jpg",
+              "uploads/X14/20261012-143928-recibido-0-17918375102818028929400129323709.jpg"
             ],
             "documentos": []
           },
