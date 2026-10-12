@@ -2755,19 +2755,19 @@
               "cristales": "si",
               "emblema": "si",
               "tapon_ruedas": "si",
-              "molduras_completas": "no",
-              "tapon_gasolina": "no"
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
             },
             "accesorios": {
-              "gato": "no",
-              "maneral_gato": "no",
-              "llave_ruedas": "no",
+              "gato": "si",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
               "estuche_herramientas": "no",
-              "triangulo_seguridad": "no",
-              "llanta_refaccion": "no",
+              "triangulo_seguridad": "si",
+              "llanta_refaccion": "si",
               "extinguidor": "no"
             },
-            "gasolina": 0,
+            "gasolina": 25,
             "danos_notas": ""
           }
         },
