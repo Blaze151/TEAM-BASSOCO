@@ -2069,7 +2069,7 @@
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 dia",
         "fecha_inicio": "2026-10-08",
-        "estado": "en_proceso",
+        "estado": "listo",
         "actualizado": "2026-10-12",
         "pago": {
           "estado": "no_pagado",
@@ -2163,7 +2163,7 @@
           "recibido": "2026-10-08T19:11:55.989Z",
           "diagnostico": "2026-10-09T00:09:03.443Z",
           "en_proceso": "2026-10-12T23:45:12.531Z",
-          "listo": "2026-10-12T23:43:49.605Z"
+          "listo": "2026-10-12T23:45:31.415Z"
         },
         "adjuntos": {
           "recibido": {
