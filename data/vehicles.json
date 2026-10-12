@@ -2552,7 +2552,10 @@
       "fecha_creacion": "2026-10-12T19:25:50.114Z",
       "foto_perfil": "uploads/X14/20261012-132550-perfil.jpg",
       "documentos_vehiculo": {
-        "fotos": [],
+        "fotos": [
+          "uploads/X14/20261012-132634-vdoc-0-17918331619486962287620680875900.jpg",
+          "uploads/X14/20261012-132637-vdoc-1-17918331746776696523795178499880.jpg"
+        ],
         "documentos": []
       },
       "placas": "ET-1890-D",
