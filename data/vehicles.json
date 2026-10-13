@@ -1783,20 +1783,20 @@
           "inventario": {
             "exteriores": {
               "antena": "no",
-              "espejo_lateral": "no",
-              "cristales": "no",
-              "emblema": "no",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
               "tapon_ruedas": "no",
               "molduras_completas": "no",
-              "tapon_gasolina": "no"
+              "tapon_gasolina": "si"
             },
             "accesorios": {
-              "gato": "no",
-              "maneral_gato": "no",
-              "llave_ruedas": "no",
-              "estuche_herramientas": "no",
+              "gato": "si",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
+              "estuche_herramientas": "si",
               "triangulo_seguridad": "no",
-              "llanta_refaccion": "no",
+              "llanta_refaccion": "si",
               "extinguidor": "no"
             },
             "gasolina": 0,
