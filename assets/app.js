@@ -30,6 +30,13 @@
       pdf_hoja_recepcion_label: "Hoja de recepción (PDF)",
       pdf_cotizacion_label: "Cotización (PDF)",
       pdf_informe_trabajo_label: "Informe de trabajo (PDF)",
+      descarga_todas: "Seleccionar todas",
+      descarga_btn: "Descargar",
+      descarga_seleccionar: "Seleccionar foto",
+      descarga_progreso: "⬇️ Descargando {i} de {n}…",
+      descarga_ok: "✓ {n} foto(s) descargada(s)",
+      descarga_ok_zip: "✓ ZIP con {n} foto(s) descargado",
+      descarga_fallaron: "No se pudieron descargar {n} foto(s). Intenta de nuevo en un momento.",
       estado_diagnostico_label: "Diagnóstico", estado_diagnostico_corto: "Diagnóstico",
       estado_en_proceso_label: "En proceso", estado_en_proceso_corto: "En proceso",
       estado_listo_label: "Listo para recoger", estado_listo_corto: "Listo",
@@ -103,6 +110,13 @@
       pdf_hoja_recepcion_label: "Reception form (PDF)",
       pdf_cotizacion_label: "Quote (PDF)",
       pdf_informe_trabajo_label: "Work report (PDF)",
+      descarga_todas: "Select all",
+      descarga_btn: "Download",
+      descarga_seleccionar: "Select photo",
+      descarga_progreso: "⬇️ Downloading {i} of {n}…",
+      descarga_ok: "✓ {n} photo(s) downloaded",
+      descarga_ok_zip: "✓ ZIP with {n} photo(s) downloaded",
+      descarga_fallaron: "{n} photo(s) could not be downloaded. Please try again in a moment.",
       estado_diagnostico_label: "Diagnosis", estado_diagnostico_corto: "Diagnosis",
       estado_en_proceso_label: "In progress", estado_en_proceso_corto: "In progress",
       estado_listo_label: "Ready for pickup", estado_listo_corto: "Ready",
@@ -213,6 +227,155 @@
       if (ventana) ventana.location.href = blobUrl; else window.location.href = blobUrl;
     } catch (err) {
       if (ventana) ventana.location.href = a.href; else window.location.href = a.href;
+    }
+  });
+
+  /* ---------------- Descarga de fotos (una por una, varias o todas) ---------------- */
+
+  // GitHub no deja descargar una imagen con un simple enlace desde otro
+  // dominio, así que cada foto se baja a memoria y de ahí se guarda como
+  // archivo. Para varias a la vez hay dos opciones: cada foto por separado, o un
+  // ZIP. El ZIP se arma aquí mismo, SIN comprimir (las fotos ya vienen
+  // comprimidas en JPG, comprimirlas otra vez no ahorra nada) — así no hace
+  // falta ninguna librería externa.
+  const TABLA_CRC32 = (() => {
+    const tabla = new Uint32Array(256);
+    for (let n = 0; n < 256; n++) {
+      let c = n;
+      for (let k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+      tabla[n] = c >>> 0;
+    }
+    return tabla;
+  })();
+  function crc32(bytes) {
+    let c = 0xFFFFFFFF;
+    for (let i = 0; i < bytes.length; i++) c = TABLA_CRC32[(c ^ bytes[i]) & 0xFF] ^ (c >>> 8);
+    return (c ^ 0xFFFFFFFF) >>> 0;
+  }
+  function crearZip(archivos) {   // archivos: [{ nombre, datos: Uint8Array }]
+    const enc = new TextEncoder();
+    const partes = [];
+    const central = [];
+    let desplazamiento = 0;
+    const ahora = new Date();
+    const hora = (ahora.getHours() << 11) | (ahora.getMinutes() << 5) | (ahora.getSeconds() >> 1);
+    const fecha = ((ahora.getFullYear() - 1980) << 9) | ((ahora.getMonth() + 1) << 5) | ahora.getDate();
+    archivos.forEach((a) => {
+      const nombre = enc.encode(a.nombre);
+      const crc = crc32(a.datos);
+      const tam = a.datos.length;
+      const local = new DataView(new ArrayBuffer(30));
+      local.setUint32(0, 0x04034b50, true); local.setUint16(4, 20, true); local.setUint16(6, 0x0800, true); local.setUint16(8, 0, true);
+      local.setUint16(10, hora, true); local.setUint16(12, fecha, true);
+      local.setUint32(14, crc, true); local.setUint32(18, tam, true); local.setUint32(22, tam, true);
+      local.setUint16(26, nombre.length, true); local.setUint16(28, 0, true);
+      partes.push(new Uint8Array(local.buffer), nombre, a.datos);
+      const cd = new DataView(new ArrayBuffer(46));
+      cd.setUint32(0, 0x02014b50, true); cd.setUint16(4, 20, true); cd.setUint16(6, 20, true); cd.setUint16(8, 0x0800, true); cd.setUint16(10, 0, true);
+      cd.setUint16(12, hora, true); cd.setUint16(14, fecha, true);
+      cd.setUint32(16, crc, true); cd.setUint32(20, tam, true); cd.setUint32(24, tam, true);
+      cd.setUint16(28, nombre.length, true); cd.setUint16(30, 0, true); cd.setUint16(32, 0, true); cd.setUint16(34, 0, true); cd.setUint16(36, 0, true);
+      cd.setUint32(38, 0, true); cd.setUint32(42, desplazamiento, true);
+      central.push(new Uint8Array(cd.buffer), nombre);
+      desplazamiento += 30 + nombre.length + tam;
+    });
+    const tamCentral = central.reduce((s, p) => s + p.length, 0);
+    const fin = new DataView(new ArrayBuffer(22));
+    fin.setUint32(0, 0x06054b50, true); fin.setUint16(4, 0, true); fin.setUint16(6, 0, true);
+    fin.setUint16(8, archivos.length, true); fin.setUint16(10, archivos.length, true);
+    fin.setUint32(12, tamCentral, true); fin.setUint32(16, desplazamiento, true); fin.setUint16(20, 0, true);
+    return new Blob([...partes, ...central, new Uint8Array(fin.buffer)], { type: "application/zip" });
+  }
+
+  function guardarBlobComoArchivo(blob, nombre) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = nombre; a.style.display = "none";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 60000);
+  }
+  function nombreSeguro(s) {
+    return String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^A-Za-z0-9._-]+/g, "-").replace(/^-+|-+$/g, "");
+  }
+  // Ej.: RK-4002-A_A001-Recibido_01.jpg
+  function nombreFoto(path, indice, ctx) {
+    const ext = ((path.split(".").pop() || "jpg").toLowerCase().replace(/[^a-z0-9]/g, "")) || "jpg";
+    return `${nombreSeguro(ctx.base) || "vehiculo"}_${nombreSeguro(ctx.etapa) || "fotos"}_${String(indice + 1).padStart(2, "0")}.${ext}`;
+  }
+
+  let descargandoFotos = false;
+  async function descargarFotos(paths, modo, ctx, onProgreso) {
+    descargandoFotos = true;
+    const zip = [];
+    const fallidas = [];
+    let ok = 0;
+    try {
+      for (let i = 0; i < paths.length; i++) {
+        if (onProgreso) onProgreso(i + 1, paths.length);
+        try {
+          const res = await fetch(rawUrl(paths[i]));
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          const blob = await res.blob();
+          const nombre = nombreFoto(paths[i], i, ctx);
+          if (modo === "zip") {
+            zip.push({ nombre, datos: new Uint8Array(await blob.arrayBuffer()) });
+          } else {
+            guardarBlobComoArchivo(blob, nombre);
+            await new Promise((r) => setTimeout(r, 350));   // el navegador acepta mejor varias descargas seguidas
+          }
+          ok++;
+        } catch (err) {
+          fallidas.push(paths[i]);
+        }
+      }
+      if (modo === "zip" && zip.length) {
+        guardarBlobComoArchivo(crearZip(zip), `${nombreSeguro(ctx.base) || "vehiculo"}_${nombreSeguro(ctx.etapa) || "fotos"}.zip`);
+      }
+    } finally {
+      descargandoFotos = false;
+    }
+    return { ok, fallidas };
+  }
+
+  // ---- Selección y descarga de fotos en la ficha (cada galería es un ".foto-grupo") ----
+  let nombreBaseDescarga = "vehiculo";
+  function refrescarGrupoFotos(grupo) {
+    const cajas = grupo.querySelectorAll(".foto-select");
+    const marcadas = grupo.querySelectorAll(".foto-select:checked").length;
+    const todas = grupo.querySelector("[data-descarga-todas]");
+    if (todas) todas.checked = cajas.length > 0 && marcadas === cajas.length;
+    grupo.querySelectorAll("[data-descarga-modo]").forEach((b) => {
+      b.disabled = marcadas === 0 || descargandoFotos;
+      const s = b.querySelector(".foto-n");
+      if (s) s.textContent = marcadas;
+    });
+  }
+  document.addEventListener("change", (e) => {
+    const grupo = e.target.closest && e.target.closest(".foto-grupo");
+    if (!grupo) return;
+    if (e.target.matches("[data-descarga-todas]")) {
+      grupo.querySelectorAll(".foto-select").forEach((c) => { c.checked = e.target.checked; });
+    }
+    refrescarGrupoFotos(grupo);
+  });
+  document.addEventListener("click", async (e) => {
+    const b = e.target.closest && e.target.closest("[data-descarga-modo]");
+    if (!b || b.disabled || descargandoFotos) return;
+    const grupo = b.closest(".foto-grupo");
+    if (!grupo) return;
+    const paths = Array.from(grupo.querySelectorAll(".foto-select:checked")).map((c) => c.dataset.path);
+    if (!paths.length) return;
+    const modo = b.dataset.descargaModo;
+    const estado = grupo.querySelector(".foto-estado");
+    const ctx = { base: nombreBaseDescarga, etapa: grupo.dataset.etiqueta || "fotos" };
+    const promesa = descargarFotos(paths, modo, ctx, (i, n) => { if (estado) estado.textContent = t("descarga_progreso").replace("{i}", i).replace("{n}", n); });
+    grupo.querySelectorAll("[data-descarga-modo]").forEach((x) => { x.disabled = true; });
+    const r = await promesa;
+    refrescarGrupoFotos(grupo);
+    if (estado) {
+      estado.textContent = r.fallidas.length
+        ? t("descarga_fallaron").replace("{n}", r.fallidas.length)
+        : t(modo === "zip" ? "descarga_ok_zip" : "descarga_ok").replace("{n}", r.ok);
     }
   });
 
@@ -352,7 +515,7 @@
 
   /* ---------------- Galería de fotos + documentos ---------------- */
 
-  function renderAttachmentsGroup(fotos, docs) {
+  function renderAttachmentsGroup(fotos, docs, etiqueta) {
     fotos = fotos || [];
     docs = docs || [];
     if (!fotos.length && !docs.length) return "";
@@ -360,11 +523,19 @@
     let html = "";
     if (fotos.length) {
       const group = JSON.stringify(fotos.map(rawUrl)).replace(/"/g, "&quot;");
-      html += `<div class="attach-gallery">` + fotos.map((path, i) => `
+      const etiquetaAttr = esc(etiqueta || "Fotos").replace(/"/g, "&quot;");
+      const barra = `<div class="foto-descarga-barra">
+          <label class="foto-sel-todas"><input type="checkbox" data-descarga-todas> ${esc(t("descarga_todas"))}</label>
+          <button type="button" class="btn btn-outline btn-sm" data-descarga-modo="archivos" disabled><span>⬇️ ${esc(t("descarga_btn"))} (<span class="foto-n">0</span>)</span></button>
+          <button type="button" class="btn btn-outline btn-sm" data-descarga-modo="zip" disabled>📦 ZIP</button>
+          <span class="foto-estado" aria-live="polite"></span>
+        </div>`;
+      html += `<div class="foto-grupo" data-etiqueta="${etiquetaAttr}">` + barra + `<div class="attach-gallery">` + fotos.map((path, i) => `
         <div class="attach-thumb" data-lightbox-group="${group}" data-lightbox-index="${i}">
+          <label class="foto-check" title="${esc(t("descarga_seleccionar"))}"><input type="checkbox" class="foto-select" data-path="${esc(path)}"></label>
           <img src="${esc(rawUrl(path))}" alt="Foto del servicio" loading="lazy" onerror="__imgRetry(this)" onload="__imgLoaded(this)">
         </div>
-      `).join("") + `</div>`;
+      `).join("") + `</div></div>`;
     }
     if (docs.length) {
       html += docs.map((path) => {
@@ -457,6 +628,7 @@
   });
   contentEl.addEventListener("click", (e) => {
     if (e.target.closest("button")) return;
+    if (e.target.closest(".foto-check")) return;
     const thumb = e.target.closest("[data-lightbox-group]");
     if (!thumb) return;
     e.stopPropagation();
@@ -539,7 +711,8 @@
 
   function renderStageSection(activo, stage) {
     const g = (activo.adjuntos && activo.adjuntos[stage]) || { fotos: [], documentos: [] };
-    const attachHtml = renderAttachmentsGroup(g.fotos, g.documentos);
+    const infoEtapa = ESTADOS_SERVICIO()[stage] || PAGO_INFO();
+    const attachHtml = renderAttachmentsGroup(g.fotos, g.documentos, (activo.folio ? activo.folio + "-" : "") + infoEtapa.label);
     const pdfInfo = pdfInfoForStage(activo, stage);
     const pdfHtml = pdfInfo
       ? `<a class="doc-chip" href="${esc(rawUrl(pdfInfo.path))}" target="_blank" rel="noopener">📄 ${esc(t(pdfInfo.labelKey))}</a>`
@@ -608,12 +781,13 @@
       timelineHtml = `<p style="color:var(--text-faint);font-size:13px;">${esc(t("aun_no_hay_servicios"))}</p>`;
     }
 
+    nombreBaseDescarga = v.placas || v.id || "vehiculo";
     const docVeh = v.documentos_vehiculo || { fotos: [], documentos: [] };
     const docVehCount = (docVeh.fotos || []).length + (docVeh.documentos || []).length;
     const docsVehiculoHtml = docVehCount ? `
       <details class="doc-dropdown">
         <summary>📄 ${esc(t("documentos_vehiculo"))} (${docVehCount})</summary>
-        <div class="doc-dropdown-body">${renderAttachmentsGroup(docVeh.fotos, docVeh.documentos)}</div>
+        <div class="doc-dropdown-body">${renderAttachmentsGroup(docVeh.fotos, docVeh.documentos, t("documentos_vehiculo"))}</div>
       </details>` : "";
 
     const waNum = (taller.whatsapp || "").replace(/\D/g, "");
