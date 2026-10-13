@@ -468,6 +468,10 @@
       guardar_todos_btn: "💾 Guardar todos los cambios",
       guardar_y_volver_btn: "💾 Guardar y volver",
       preview_vehiculo_nuevo: "Vehículo nuevo",
+      saltar_etapa_btn: "Saltar a {etapa}",
+      saltar_etapa_hint: "Avanza sin completar los pasos de esta etapa",
+      confirm_saltar_etapa: "¿Pasar el servicio a «{etapa}» sin completar los pasos de la etapa actual? Se guardará de inmediato y el cliente verá el cambio en su ficha.",
+      msg_whatsapp_no_guardado: "No se abrió WhatsApp porque no se pudieron guardar los cambios. Revisa el aviso e inténtalo de nuevo.",
       descarga_todas: "Seleccionar todas",
       descarga_btn: "Descargar",
       descarga_seleccionar: "Seleccionar foto",
@@ -800,6 +804,10 @@
       guardar_todos_btn: "💾 Save all changes",
       guardar_y_volver_btn: "💾 Save and go back",
       preview_vehiculo_nuevo: "New vehicle",
+      saltar_etapa_btn: "Skip to {etapa}",
+      saltar_etapa_hint: "Moves on without completing this stage's steps",
+      confirm_saltar_etapa: "Move the service to \"{etapa}\" without completing the current stage's steps? It will be saved right away and the customer will see the change on their page.",
+      msg_whatsapp_no_guardado: "WhatsApp was not opened because the changes could not be saved. Check the message and try again.",
       descarga_todas: "Select all",
       descarga_btn: "Download",
       descarga_seleccionar: "Select photo",
@@ -4017,6 +4025,15 @@
       if (toolIsOpen) toolPanelHtml = `<div class="tool-panel">${renderInformeTrabajoSection()}</div>`;
     }
 
+    // Botón para pasar a la siguiente etapa SIN cumplir los pasos de ésta (solo se
+    // muestra en la etapa en la que está el servicio ahora).
+    let saltarHtml = "";
+    const idxEtapaActual = ORDEN_ESTADOS_SERVICIO.indexOf(stage);
+    if (idxEtapaActual >= 0 && svcActual.estado === stage && idxEtapaActual < ORDEN_ESTADOS_SERVICIO.length - 1) {
+      const siguienteEtapa = ORDEN_ESTADOS_SERVICIO[idxEtapaActual + 1];
+      saltarHtml = `<div style="margin-top:16px;"><button type="button" class="btn btn-outline btn-block" data-saltar-etapa="${siguienteEtapa}">⏭️ ${esc(t("saltar_etapa_btn").replace("{etapa}", ESTADOS_SERVICIO()[siguienteEtapa].label))}</button><p style="font-size:10.5px;color:var(--text-faint);margin:5px 0 0;text-align:center;">${esc(t("saltar_etapa_hint"))}</p></div>`;
+    }
+
     return `
       <details class="card-details" id="stage-details-${stage}" style="margin-top:14px;" ${wasOpen ? "open" : ""}>
         <summary class="card-title">${info.icon} ${info.label} (${(saved.fotos||[]).length + pending.fotos.length + (saved.documentos||[]).length + pending.documentos.length})</summary>
@@ -4036,6 +4053,7 @@
           <div class="attach-gallery">${fotosHtml}</div>
           <div>${docsHtml}</div>
           ${toolPanelHtml}
+          ${saltarHtml}
         </div>
       </details>`;
   }
@@ -4448,6 +4466,20 @@
 
   $("active-service-container").addEventListener("click", (e) => {
     if (e.target.id === "btn-start-service") return onStartServiceClick();
+
+    const botonSaltar = e.target.closest("[data-saltar-etapa]");
+    if (botonSaltar) {
+      const selectEstado = $("as-estado");
+      if (!selectEstado || selectEstado.disabled) return;   // ya hay un guardado en curso
+      const siguiente = botonSaltar.dataset.saltarEtapa;
+      if (!confirm(t("confirm_saltar_etapa").replace("{etapa}", ESTADOS_SERVICIO()[siguiente].label))) return;
+      // Se usa el mismo camino que el selector de etapa: marca la fecha, guarda
+      // solo y, si llega a "Listo", ofrece el aviso por WhatsApp.
+      selectEstado.value = siguiente;
+      selectEstado.dispatchEvent(new Event("change", { bubbles: true }));
+      return;
+    }
+
 
     const toggleToolBtn = e.target.closest("[data-toggle-tool]");
     if (toggleToolBtn) {
@@ -5271,6 +5303,24 @@
   });
   $("btn-save-visible").addEventListener("click", () => saveVehicle());
   $("btn-cambiar-id").addEventListener("click", cambiarIdVehiculo);
+  // Antes de abrir cualquier enlace de WhatsApp, si hay cambios sin guardar se
+  // guardan primero. Así no se pierde nada si se sale a WhatsApp y no se vuelve
+  // (en computadora el enlace reemplaza la pestaña del panel). Si hay algo que
+  // impide guardar, WhatsApp no se abre y se avisa. Sin cambios pendientes, el
+  // enlace funciona exactamente igual que antes.
+  document.addEventListener("click", async (e) => {
+    const a = e.target.closest && e.target.closest('a[href^="https://wa.me/"]');
+    if (!a || a.getAttribute("aria-disabled") === "true") return;
+    if (!hasUnsavedChanges || $("view-editor").style.display === "none") return;
+    if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
+    const destino = a.href;
+    const abrirEnNueva = a.target === "_blank";
+    const guardadoOk = await saveVehicle();
+    if (!guardadoOk) { showToast(t("msg_whatsapp_no_guardado"), "error", 7000); return; }
+    if (abrirEnNueva) window.open(destino, "_blank"); else window.location.href = destino;
+  });
+
   $("btn-copiar-enlace").addEventListener("click", async () => {
     if (!currentVehicleId) return;
     const url = `${TRACK_BASE_URL}?v=${encodeURIComponent(currentVehicleId)}`;
