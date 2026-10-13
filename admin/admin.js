@@ -474,6 +474,9 @@
       descarga_ok: "✓ {n} foto(s) descargada(s)",
       descarga_ok_zip: "✓ ZIP con {n} foto(s) descargado",
       descarga_fallaron: "No se pudieron descargar {n} foto(s). Intenta de nuevo en un momento.",
+      pdf_hoja_recepcion_label: "Hoja de recepción (PDF)",
+      pdf_cotizacion_label: "Cotización (PDF)",
+      pdf_informe_trabajo_label: "Informe de trabajo (PDF)",
       cliente_sugerencias_titulo: "Clientes guardados — toca uno para rellenar sus datos",
       cliente_vehiculos_n: "{n} vehículo(s)",
       cliente_datos_cargados: "✓ Datos de {nombre} cargados",
@@ -802,6 +805,9 @@
       descarga_ok: "✓ {n} photo(s) downloaded",
       descarga_ok_zip: "✓ ZIP with {n} photo(s) downloaded",
       descarga_fallaron: "{n} photo(s) could not be downloaded. Please try again in a moment.",
+      pdf_hoja_recepcion_label: "Reception form (PDF)",
+      pdf_cotizacion_label: "Quote (PDF)",
+      pdf_informe_trabajo_label: "Work report (PDF)",
       cliente_sugerencias_titulo: "Saved customers — tap one to fill in their details",
       cliente_vehiculos_n: "{n} vehicle(s)",
       cliente_datos_cargados: "✓ {nombre}'s details loaded",
@@ -3786,11 +3792,21 @@
       </details>`;
   }
 
+  // PDF generado que corresponde a cada etapa de un servicio ya finalizado
+  // (igual que en la ficha del cliente): hoja de recepción, cotización e informe.
+  function pdfDeEtapaHistorial(s, stage) {
+    if (stage === "recibido" && s.orden_recepcion && s.orden_recepcion.pdf_path) return { path: s.orden_recepcion.pdf_path, label: t("pdf_hoja_recepcion_label") };
+    if (stage === "diagnostico" && s.cotizacion && s.cotizacion.pdf_path) return { path: s.cotizacion.pdf_path, label: t("pdf_cotizacion_label") };
+    if (stage === "recogido" && s.informe_trabajo && s.informe_trabajo.pdf_path) return { path: s.informe_trabajo.pdf_path, label: t("pdf_informe_trabajo_label") };
+    return null;
+  }
+
   function renderHistoryAttachmentsDetail(s) {
     let stagesHtml = "";
     ATTACH_STAGES.forEach((stage) => {
       const saved = (s.adjuntos && s.adjuntos[stage]) || { fotos: [], documentos: [] };
-      if (!saved.fotos.length && !saved.documentos.length) return;
+      const pdfEtapa = pdfDeEtapaHistorial(s, stage);
+      if (!saved.fotos.length && !saved.documentos.length && !pdfEtapa) return;
       const info = ESTADOS_SERVICIO()[stage] || PAGO_INFO();
       const savedGroup = JSON.stringify(saved.fotos.map(rawUrl)).replace(/"/g, "&quot;");
       const fotosHtml = saved.fotos.map((path, i) => `<div class="attach-thumb" data-lightbox-group="${savedGroup}" data-lightbox-index="${i}">${fotoCheckHtml(path)}<img src="${esc(rawUrl(path))}" alt="" onerror="__imgRetry(this)" onload="__imgLoaded(this)"></div>`).join("");
@@ -3802,6 +3818,7 @@
         <div style="margin-top:8px;">
           <div style="font-size:10.5px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">${info.icon} ${info.label}</div>
           ${barraDescargaHtml(saved.fotos || [], (s.folio ? s.folio + "-" : "") + info.label)}
+          ${pdfEtapa ? `<a class="doc-chip" href="${esc(rawUrl(pdfEtapa.path))}" target="_blank" rel="noopener">📄 ${esc(pdfEtapa.label)}</a>` : ""}
           ${fotosHtml ? `<div class="attach-gallery">${fotosHtml}</div>` : ""}
           ${docsHtml}
         </div>`;
@@ -3839,6 +3856,7 @@
         nDocs += ((s.adjuntos && s.adjuntos[stage] && s.adjuntos[stage].documentos) || []).length;
         nDocs += ((s._pendingAdjuntos && s._pendingAdjuntos[stage] && s._pendingAdjuntos[stage].documentos) || []).length;
       });
+      nDocs += ["orden_recepcion", "cotizacion", "informe_trabajo"].filter((k) => s[k] && s[k].pdf_path).length;
       const chips = [];
       if (nFotos) chips.push(`<span class="tag">📷 ${nFotos}</span>`);
       if (nDocs) chips.push(`<span class="tag">📄 ${nDocs}</span>`);
