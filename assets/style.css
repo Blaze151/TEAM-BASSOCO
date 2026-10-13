@@ -1291,3 +1291,11 @@ input[type="tel"], input[type="email"] {
 
 /* Barra de descarga: "Seleccionar todas" en su propia fila y botones juntos debajo */
 .foto-sel-todas { flex: 1 0 100%; margin-right: 0; }
+
+/* Tablero de estados: en pantallas anchas se ensancha y las tarjetas van de dos en dos */
+@media (min-width: 820px) {
+  body[data-vista="board"] .shell { max-width: 1040px !important; }   /* !important: el panel fija 820px en el propio HTML */
+  .board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
+  .board > .card { margin-bottom: 0; }
+  .board > .board-resumen { grid-column: 1 / -1; }
+}
