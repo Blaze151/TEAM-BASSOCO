@@ -3047,24 +3047,24 @@
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
-              "antena": "no",
-              "espejo_lateral": "no",
-              "cristales": "no",
-              "emblema": "no",
+              "antena": "si",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
               "tapon_ruedas": "no",
-              "molduras_completas": "no",
+              "molduras_completas": "si",
               "tapon_gasolina": "no"
             },
             "accesorios": {
-              "gato": "no",
-              "maneral_gato": "no",
+              "gato": "si",
+              "maneral_gato": "si",
               "llave_ruedas": "no",
               "estuche_herramientas": "no",
               "triangulo_seguridad": "no",
               "llanta_refaccion": "no",
               "extinguidor": "no"
             },
-            "gasolina": 0,
+            "gasolina": 25,
             "danos_notas": ""
           }
         },
