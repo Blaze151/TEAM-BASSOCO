@@ -3107,11 +3107,16 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X17/20261013-103805-diagnostico-0-17919094522602986088289808706906.jpg",
+              "uploads/X17/20261013-103807-diagnostico-1-17919094592444800637446359905565.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X17/20261013-103809-en_proceso-0-17919094042996846604431817243401.jpg"
+            ],
             "documentos": []
           },
           "listo": {
