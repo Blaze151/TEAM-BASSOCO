@@ -3074,7 +3074,12 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "FILTRO ACEITE",
+              "cantidad": 1,
+              "costo_unitario": null
+            },
+            {
+              "concepto": "7 LTS ACEITE",
               "cantidad": 1,
               "costo_unitario": null
             }
