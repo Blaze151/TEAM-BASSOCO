@@ -1749,6 +1749,7 @@
       "cliente_correo": "",
       "cliente_rfc": "",
       "cliente_direccion": "",
+      "cliente_actualizado": "2026-10-08T17:55:22.894Z",
       "ficha_tecnica": {
         "aceite_tipo": "15w40",
         "aceite_capacidad": "5 lts",
@@ -1757,7 +1758,118 @@
         "filtro_aire": "",
         "filtro_aceite": "Gp-408"
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1791920988908",
+        "folio": "A020",
+        "tipo": "FRENOS, TRANSMISIÓN, SUSPENSIONN",
+        "descripcion": "RUIDO EN SUSPENSION, FRENOS , TRANSMISIÓN",
+        "nota_interna": "",
+        "km": null,
+        "costo": null,
+        "tecnico": "JAVIER VARGAS",
+        "tiempo_entrega_aprox": "1 dia",
+        "fecha_inicio": "2026-10-13",
+        "estado": "recibido",
+        "actualizado": "2026-10-13",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "no",
+              "cristales": "no",
+              "emblema": "no",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "no"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": ""
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-13T19:49:48.908Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [
+              "uploads/A05/20261013-140008-diagnostico-0-1791921527569626084437123759441.jpg",
+              "uploads/A05/20261013-140011-diagnostico-1-17919215389675842008348376295020.jpg",
+              "uploads/A05/20261013-140014-diagnostico-2-17919215538671694447180972202224.jpg",
+              "uploads/A05/20261013-140017-diagnostico-3-17919215644548128120815396420342.jpg",
+              "uploads/A05/20261013-140022-diagnostico-4-1791921570288699577070062001177.jpg",
+              "uploads/A05/20261013-140030-diagnostico-5-17919215817224889297617898461802.jpg",
+              "uploads/A05/20261013-140111-diagnostico-0-1791921527569626084437123759441.jpg",
+              "uploads/A05/20261013-140117-diagnostico-1-17919215389675842008348376295020.jpg",
+              "uploads/A05/20261013-140124-diagnostico-2-17919215538671694447180972202224.jpg",
+              "uploads/A05/20261013-140131-diagnostico-3-17919215644548128120815396420342.jpg",
+              "uploads/A05/20261013-140137-diagnostico-4-1791921570288699577070062001177.jpg",
+              "uploads/A05/20261013-140140-diagnostico-5-17919215817224889297617898461802.jpg",
+              "uploads/A05/20261013-140144-diagnostico-6-17919215875278797451755412956448.jpg"
+            ],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [
+              "uploads/A05/20261013-140159-en_proceso-0-17919216114688213245529995159326.jpg"
+            ],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": [
         {
           "fecha": "2026-10-09",
