@@ -1810,9 +1810,29 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "Amortiguadores delanteros",
+              "cantidad": 2,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Bases de amortiguador",
+              "cantidad": 2,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Balatas delanteras",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Tornillo estabilizador",
+              "cantidad": 2,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Reparación de 5ta y reversa",
+              "cantidad": 1,
+              "costo_unitario": 1
             }
           ],
           "incluir_iva": true,
