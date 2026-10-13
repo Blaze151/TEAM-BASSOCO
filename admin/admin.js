@@ -467,6 +467,7 @@
       guardar_btn: "Guardar cambios en GitHub",
       guardar_todos_btn: "💾 Guardar todos los cambios",
       guardar_y_volver_btn: "💾 Guardar y volver",
+      preview_vehiculo_nuevo: "Vehículo nuevo",
       descarga_todas: "Seleccionar todas",
       descarga_btn: "Descargar",
       descarga_seleccionar: "Seleccionar foto",
@@ -798,6 +799,7 @@
       guardar_btn: "Save changes to GitHub",
       guardar_todos_btn: "💾 Save all changes",
       guardar_y_volver_btn: "💾 Save and go back",
+      preview_vehiculo_nuevo: "New vehicle",
       descarga_todas: "Select all",
       descarga_btn: "Download",
       descarga_seleccionar: "Select photo",
@@ -3643,6 +3645,7 @@
     $("f-cliente-rfc").value = v.cliente_rfc || "";
     $("f-cliente-direccion").value = v.cliente_direccion || "";
     updateClientContactLinks();
+    renderVehiclePreview();
 
     $("f-aceite-tipo").value = ficha.aceite_tipo || "";
     $("f-aceite-cap").value = ficha.aceite_capacidad || "";
@@ -3700,6 +3703,43 @@
 
   /* ---------------- Foto de perfil del vehículo ---------------- */
 
+  // Vista previa del vehículo que se está trabajando, fija al inicio del editor:
+  // foto, número de unidad, marca y tipo (modelo) y placas. Se actualiza sola
+  // mientras se escribe en esos campos o se cambia la foto.
+  let previewFotoArchivo = null;
+  let previewFotoUrl = null;
+  function renderVehiclePreview() {
+    const el = $("vehicle-preview");
+    if (!el) return;
+    const placas = ($("f-placas").value || "").trim().toUpperCase();
+    const unidad = ($("f-numero-unidad").value || "").trim();
+    const nombre = [($("f-marca").value || "").trim(), ($("f-modelo").value || "").trim()].filter(Boolean).join(" ");
+
+    let fotoUrl = null;
+    if (vFotoPerfilPending) {
+      if (previewFotoArchivo !== vFotoPerfilPending) {
+        if (previewFotoUrl) URL.revokeObjectURL(previewFotoUrl);
+        previewFotoUrl = URL.createObjectURL(vFotoPerfilPending);
+        previewFotoArchivo = vFotoPerfilPending;
+      }
+      fotoUrl = previewFotoUrl;
+    } else if (!vFotoPerfilRemoved && currentFotoPerfil) {
+      fotoUrl = rawUrl(currentFotoPerfil);
+    }
+    const fotoHtml = fotoUrl
+      ? `<div class="vehicle-photo" data-lightbox-group="${JSON.stringify([fotoUrl]).replace(/"/g, "&quot;")}" data-lightbox-index="0"><img src="${esc(fotoUrl)}" alt="" onerror="__imgRetry(this)" onload="__imgLoaded(this)"></div>`
+      : `<div class="vehicle-photo" style="cursor:default;"><div class="vehicle-photo-placeholder">🚗</div></div>`;
+
+    el.innerHTML = `
+      ${fotoHtml}
+      <div class="vehicle-preview-datos">
+        ${unidad ? `<div><span class="unit-tag">${esc(t("unidad_prefix"))} ${esc(unidad)}</span></div>` : ""}
+        <div class="vehicle-title">${esc(nombre || t("preview_vehiculo_nuevo"))}</div>
+        <div class="plate-row">${placas ? `<span class="plate">${esc(placas)}</span>` : `<span class="vehicle-preview-vacio">${esc(t("sin_placa_texto"))}</span>`}</div>
+      </div>`;
+  }
+  ["f-placas", "f-numero-unidad", "f-marca", "f-modelo"].forEach((id) => $(id).addEventListener("input", renderVehiclePreview));
+
   function renderVehiclePhotoPreview() {
     const el = $("vehicle-photo-preview");
     if (vFotoPerfilPending) {
@@ -3710,6 +3750,7 @@
     } else {
       el.innerHTML = `<div class="vehicle-photo" style="width:110px;height:110px;"><div class="vehicle-photo-placeholder">🚗</div></div>`;
     }
+    renderVehiclePreview();
     const rmBtn = $("btn-vphoto-remove");
     if (rmBtn) {
       rmBtn.addEventListener("click", () => {
