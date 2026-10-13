@@ -1457,6 +1457,7 @@
   }
 
   function showView(name) {
+    document.body.setAttribute("data-vista", name);   // permite que el CSS adapte cada vista (p. ej. el tablero en pantallas anchas)
     $("view-login").style.display = name === "login" ? "block" : "none";
     $("view-dashboard").style.display = name === "dashboard" ? "block" : "none";
     $("view-board").style.display = name === "board" ? "block" : "none";
@@ -3076,7 +3077,7 @@
       { n: porEtapa.listo.length, label: t("resumen_listos") },
     ];
     const resumenHtml = `
-      <div class="card" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;">
+      <div class="card board-resumen" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;">
         ${resumenItems.map((it) => `
           <div style="text-align:center;flex:1;min-width:64px;">
             <div style="font-size:22px;font-weight:800;color:var(--green-bright);">${it.n}</div>
