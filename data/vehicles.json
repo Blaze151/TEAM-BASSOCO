@@ -3364,11 +3364,11 @@
               "tapon_gasolina": "si"
             },
             "accesorios": {
-              "gato": "no",
-              "maneral_gato": "no",
-              "llave_ruedas": "no",
+              "gato": "si",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
               "estuche_herramientas": "no",
-              "triangulo_seguridad": "no",
+              "triangulo_seguridad": "si",
               "llanta_refaccion": "no",
               "extinguidor": "no"
             },
@@ -3414,7 +3414,9 @@
               "uploads/X18/20261013-171730-recibido-3-1000150291.jpg",
               "uploads/X18/20261013-171732-recibido-4-1000150290.jpg",
               "uploads/X18/20261013-171734-recibido-5-1000150289.jpg",
-              "uploads/X18/20261013-171737-recibido-6-1000150288.jpg"
+              "uploads/X18/20261013-171737-recibido-6-1000150288.jpg",
+              "uploads/X18/20261013-172822-recibido-0-17919340695236579982611989066915.jpg",
+              "uploads/X18/20261013-172824-recibido-1-17919340834501116952148181279864.jpg"
             ],
             "documentos": []
           },
