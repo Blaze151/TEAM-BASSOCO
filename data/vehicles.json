@@ -3382,9 +3382,14 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "BANDA DE MOTOR",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "BANDA DE DIRECCION",
+              "cantidad": 1,
+              "costo_unitario": 1
             }
           ],
           "incluir_iva": true,
