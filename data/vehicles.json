@@ -3034,7 +3034,7 @@
         "tecnico": "JAVIER VARGAS",
         "tiempo_entrega_aprox": "1 Hora",
         "fecha_inicio": "2026-10-13",
-        "estado": "recibido",
+        "estado": "diagnostico",
         "actualizado": "2026-10-13",
         "pago": {
           "estado": "no_pagado",
@@ -3042,9 +3042,9 @@
         },
         "orden_recepcion": {
           "enviado": false,
-          "aceptado": false,
+          "aceptado": true,
           "fecha_envio": null,
-          "fecha_aceptado": null,
+          "fecha_aceptado": "2026-10-13",
           "inventario": {
             "exteriores": {
               "antena": "si",
@@ -3095,7 +3095,8 @@
           "pdf_path": null
         },
         "fechas_etapa": {
-          "recibido": "2026-10-13T16:34:03.962Z"
+          "recibido": "2026-10-13T16:34:03.962Z",
+          "diagnostico": "2026-10-13T17:18:00.751Z"
         },
         "adjuntos": {
           "recibido": {
