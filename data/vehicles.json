@@ -3516,7 +3516,7 @@
               "cristales": "si",
               "emblema": "si",
               "tapon_ruedas": "si",
-              "molduras_completas": "si",
+              "molduras_completas": "no",
               "tapon_gasolina": "si"
             },
             "accesorios": {
