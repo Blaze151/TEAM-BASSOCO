@@ -3487,9 +3487,114 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1791995276877",
+        "folio": "A021",
+        "tipo": "FUGA DE ACEITE",
+        "descripcion": "FUGA DE ACEITE HIDRAULICO",
+        "nota_interna": "REVISAR CREMALLERA",
+        "km": 126708,
+        "costo": null,
+        "tecnico": "OSCAR FLORES",
+        "tiempo_entrega_aprox": "1 dia",
+        "fecha_inicio": "2026-10-14",
+        "estado": "recibido",
+        "actualizado": "2026-10-14",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "no",
+              "cristales": "no",
+              "emblema": "no",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "no"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": ""
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-14T16:27:56.877Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X19/20261014-102850-recibido-0-1000150985.jpg",
+              "uploads/X19/20261014-102852-recibido-1-1000150984.jpg",
+              "uploads/X19/20261014-102855-recibido-2-1000150983.jpg",
+              "uploads/X19/20261014-102857-recibido-3-1000150982.jpg",
+              "uploads/X19/20261014-102859-recibido-4-1000150981.jpg",
+              "uploads/X19/20261014-102902-recibido-5-1000150980.jpg",
+              "uploads/X19/20261014-102905-recibido-6-1000150979.jpg",
+              "uploads/X19/20261014-102907-recibido-7-1000150978.jpg",
+              "uploads/X19/20261014-102910-recibido-8-1000150977.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
-  "folio_counter": 20
+  "folio_counter": 21
 }
