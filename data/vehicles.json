@@ -3630,9 +3630,116 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1791999307575",
+        "folio": "A022",
+        "tipo": "Servicio de mantenimiento y frenos",
+        "descripcion": "Revisión de frenos y servicio de mantenimiento, revisión general",
+        "nota_interna": "",
+        "km": 117808,
+        "costo": null,
+        "tecnico": "",
+        "tiempo_entrega_aprox": "2 dias",
+        "fecha_inicio": "2026-10-14",
+        "estado": "recibido",
+        "actualizado": "2026-10-14",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
+              "tapon_ruedas": "si",
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "si",
+              "llanta_refaccion": "si",
+              "extinguidor": "si"
+            },
+            "gasolina": 0,
+            "danos_notas": "Retrovisores dañados revisar fotografías"
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-14T17:35:07.575Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X30/20261014-114024-recibido-0-17919994869676083813352113610116.jpg",
+              "uploads/X30/20261014-114032-recibido-1-17919994968711507374582526023342.jpg",
+              "uploads/X30/20261014-114035-recibido-2-17919995079623291558125388287115.jpg",
+              "uploads/X30/20261014-114038-recibido-3-17919995160387722501889000889937.jpg",
+              "uploads/X30/20261014-114041-recibido-4-17919995227481032638053206018098.jpg",
+              "uploads/X30/20261014-114043-recibido-5-17919995316124589498844505690422.jpg",
+              "uploads/X30/20261014-114046-recibido-6-17919995448245253876563625289487.jpg",
+              "uploads/X30/20261014-114049-recibido-7-17919995544413224439109211006583.jpg",
+              "uploads/X30/20261014-114105-recibido-8-17919995635966140167430861182489.jpg",
+              "uploads/X30/20261014-114111-recibido-9-17919995739153749926861490325136.jpg",
+              "uploads/X30/20261014-114114-recibido-10-17919995966957563436944603312517.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
-  "folio_counter": 21
+  "folio_counter": 22
 }
