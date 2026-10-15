@@ -3840,14 +3840,13 @@
           },
           "diagnostico": {
             "fotos": [
-              "uploads/X30/20261015-135001-diagnostico-0-1000152065.jpg"
+              "uploads/X30/20261015-135001-diagnostico-0-1000152065.jpg",
+              "uploads/X30/20261015-135204-diagnostico-0-17920938128111086101370804006571.jpg"
             ],
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [
-              "uploads/X30/20261015-115724-en_proceso-0-1000152065.jpg"
-            ],
+            "fotos": [],
             "documentos": []
           },
           "listo": {
