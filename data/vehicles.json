@@ -621,6 +621,7 @@
       "cliente_correo": "",
       "cliente_rfc": "",
       "cliente_direccion": "",
+      "cliente_actualizado": "2026-10-05T17:25:57.206Z",
       "ficha_tecnica": {
         "aceite_tipo": "15w40",
         "aceite_capacidad": "7 lts",
