@@ -712,7 +712,10 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X7/20261015-133329-diagnostico-0-1000152263.jpg",
+              "uploads/X7/20261015-133334-diagnostico-1-1000152255.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
