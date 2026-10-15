@@ -681,7 +681,12 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "REPARACION DE ALTERNADOR",
+              "cantidad": 1,
+              "costo_unitario": null
+            },
+            {
+              "concepto": "CARGA DE BATERIA",
               "cantidad": 1,
               "costo_unitario": null
             }
