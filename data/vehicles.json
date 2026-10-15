@@ -630,144 +630,144 @@
         "filtro_aire": "",
         "filtro_aceite": "Gp405"
       },
-      "servicio_actual": {
-        "id": "svc_1791221199620",
-        "folio": "A004",
-        "tipo": "BANDAS",
-        "descripcion": "RUIDO EN BANDAS",
-        "nota_interna": "Checar todas las poleas",
-        "km": 163892,
-        "costo": null,
-        "tecnico": "OSCAR FLORES",
-        "tiempo_entrega_aprox": "1 Hora",
-        "fecha_inicio": "2026-10-05",
-        "estado": "recibido",
-        "actualizado": "2026-10-05",
-        "pago": {
-          "estado": "no_pagado",
-          "metodo": null
-        },
-        "orden_recepcion": {
-          "enviado": false,
-          "aceptado": false,
-          "fecha_envio": null,
-          "fecha_aceptado": null,
-          "inventario": {
-            "exteriores": {
-              "antena": "si",
-              "espejo_lateral": "si",
-              "cristales": "si",
-              "emblema": "no",
-              "tapon_ruedas": "no",
-              "molduras_completas": "no",
-              "tapon_gasolina": "no"
-            },
-            "accesorios": {
-              "gato": "no",
-              "maneral_gato": "no",
-              "llave_ruedas": "no",
-              "estuche_herramientas": "no",
-              "triangulo_seguridad": "no",
-              "llanta_refaccion": "no",
-              "extinguidor": "no"
-            },
-            "gasolina": 50,
-            "danos_notas": ""
-          }
-        },
-        "cotizacion": {
-          "enviado": true,
-          "fecha_envio": "2026-10-06",
-          "pdf_path": "uploads/X7/20261006-122128-cotizacion.pdf",
-          "items": [
-            {
-              "concepto": "Polea tensora",
-              "cantidad": 1,
-              "costo_unitario": 1
-            },
-            {
-              "concepto": "Polea loca",
-              "cantidad": 1,
-              "costo_unitario": 1
-            },
-            {
-              "concepto": "Servicio de MTTO mayor",
-              "cantidad": 1,
-              "costo_unitario": 1
-            },
-            {
-              "concepto": "Mazabalero delantera derecha",
-              "cantidad": 1,
-              "costo_unitario": null
-            },
-            {
-              "concepto": "Sensor de ABS delantero derecha",
-              "cantidad": 1,
-              "costo_unitario": null
-            }
-          ],
-          "incluir_iva": true,
-          "observaciones": "",
-          "aceptado": false,
-          "fecha_aceptado": null
-        },
-        "informe_trabajo": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null
-        },
-        "fechas_etapa": {
-          "recibido": "2026-10-05T17:26:39.623Z"
-        },
-        "adjuntos": {
-          "recibido": {
-            "fotos": [
-              "uploads/X7/20261005-112903-recibido-0-1000141967.jpg",
-              "uploads/X7/20261005-112905-recibido-1-1000141966.jpg",
-              "uploads/X7/20261005-112907-recibido-2-1000141965.jpg",
-              "uploads/X7/20261005-112909-recibido-3-1000141964.jpg",
-              "uploads/X7/20261005-112911-recibido-4-1000141963.jpg",
-              "uploads/X7/20261006-105652-recibido-0-1000142180.jpg",
-              "uploads/X7/20261006-110631-recibido-0-1000142843.jpg"
-            ],
-            "documentos": []
-          },
-          "diagnostico": {
-            "fotos": [
-              "uploads/X7/20261006-110802-diagnostico-0-1000141983.jpg",
-              "uploads/X7/20261006-110804-diagnostico-1-1000141984.jpg",
-              "uploads/X7/20261006-123904-diagnostico-0-1000142945.jpg",
-              "uploads/X7/20261006-123907-diagnostico-1-1000142943.jpg",
-              "uploads/X7/20261006-123909-diagnostico-2-1000142941.jpg",
-              "uploads/X7/20261006-123912-diagnostico-3-1000142939.jpg"
-            ],
-            "documentos": []
-          },
-          "en_proceso": {
-            "fotos": [
-              "uploads/X7/20261006-122415-en_proceso-0-1000142079.jpg",
-              "uploads/X7/20261006-122418-en_proceso-1-1000142919.jpg",
-              "uploads/X7/20261006-124122-en_proceso-0-1000142937.jpg",
-              "uploads/X7/20261006-150616-en_proceso-0-1000143063.jpg",
-              "uploads/X7/20261006-160749-en_proceso-0-17913244622534769561276456262119.jpg"
-            ],
-            "documentos": []
-          },
-          "listo": {
-            "fotos": [],
-            "documentos": []
-          },
-          "recogido": {
-            "fotos": [],
-            "documentos": []
-          },
+      "servicio_actual": null,
+      "servicios": [
+        {
+          "fecha": "2026-10-15",
+          "folio": "A004",
+          "tipo": "BANDAS",
+          "descripcion": "RUIDO EN BANDAS",
+          "nota_interna": "Checar todas las poleas",
+          "km": 163892,
+          "costo": null,
+          "tecnico": "OSCAR FLORES",
+          "tiempo_entrega_aprox": "1 Hora",
+          "fecha_inicio": "2026-10-05",
           "pago": {
-            "fotos": [],
-            "documentos": []
+            "estado": "no_pagado",
+            "metodo": null
+          },
+          "orden_recepcion": {
+            "enviado": false,
+            "aceptado": false,
+            "fecha_envio": null,
+            "fecha_aceptado": null,
+            "inventario": {
+              "exteriores": {
+                "antena": "si",
+                "espejo_lateral": "si",
+                "cristales": "si",
+                "emblema": "no",
+                "tapon_ruedas": "no",
+                "molduras_completas": "no",
+                "tapon_gasolina": "no"
+              },
+              "accesorios": {
+                "gato": "no",
+                "maneral_gato": "no",
+                "llave_ruedas": "no",
+                "estuche_herramientas": "no",
+                "triangulo_seguridad": "no",
+                "llanta_refaccion": "no",
+                "extinguidor": "no"
+              },
+              "gasolina": 50,
+              "danos_notas": ""
+            }
+          },
+          "cotizacion": {
+            "enviado": true,
+            "fecha_envio": "2026-10-06",
+            "pdf_path": "uploads/X7/20261006-122128-cotizacion.pdf",
+            "items": [
+              {
+                "concepto": "Polea tensora",
+                "cantidad": 1,
+                "costo_unitario": 1
+              },
+              {
+                "concepto": "Polea loca",
+                "cantidad": 1,
+                "costo_unitario": 1
+              },
+              {
+                "concepto": "Servicio de MTTO mayor",
+                "cantidad": 1,
+                "costo_unitario": 1
+              },
+              {
+                "concepto": "Mazabalero delantera derecha",
+                "cantidad": 1,
+                "costo_unitario": null
+              },
+              {
+                "concepto": "Sensor de ABS delantero derecha",
+                "cantidad": 1,
+                "costo_unitario": null
+              }
+            ],
+            "incluir_iva": true,
+            "observaciones": "",
+            "aceptado": false,
+            "fecha_aceptado": null
+          },
+          "informe_trabajo": {
+            "enviado": false,
+            "fecha_envio": null,
+            "pdf_path": null
+          },
+          "fechas_etapa": {
+            "recibido": "2026-10-05T17:26:39.623Z"
+          },
+          "adjuntos": {
+            "recibido": {
+              "fotos": [
+                "uploads/X7/20261005-112903-recibido-0-1000141967.jpg",
+                "uploads/X7/20261005-112905-recibido-1-1000141966.jpg",
+                "uploads/X7/20261005-112907-recibido-2-1000141965.jpg",
+                "uploads/X7/20261005-112909-recibido-3-1000141964.jpg",
+                "uploads/X7/20261005-112911-recibido-4-1000141963.jpg",
+                "uploads/X7/20261006-105652-recibido-0-1000142180.jpg",
+                "uploads/X7/20261006-110631-recibido-0-1000142843.jpg"
+              ],
+              "documentos": []
+            },
+            "diagnostico": {
+              "fotos": [
+                "uploads/X7/20261006-110802-diagnostico-0-1000141983.jpg",
+                "uploads/X7/20261006-110804-diagnostico-1-1000141984.jpg",
+                "uploads/X7/20261006-123904-diagnostico-0-1000142945.jpg",
+                "uploads/X7/20261006-123907-diagnostico-1-1000142943.jpg",
+                "uploads/X7/20261006-123909-diagnostico-2-1000142941.jpg",
+                "uploads/X7/20261006-123912-diagnostico-3-1000142939.jpg"
+              ],
+              "documentos": []
+            },
+            "en_proceso": {
+              "fotos": [
+                "uploads/X7/20261006-122415-en_proceso-0-1000142079.jpg",
+                "uploads/X7/20261006-122418-en_proceso-1-1000142919.jpg",
+                "uploads/X7/20261006-124122-en_proceso-0-1000142937.jpg",
+                "uploads/X7/20261006-150616-en_proceso-0-1000143063.jpg",
+                "uploads/X7/20261006-160749-en_proceso-0-17913244622534769561276456262119.jpg"
+              ],
+              "documentos": []
+            },
+            "listo": {
+              "fotos": [],
+              "documentos": []
+            },
+            "recogido": {
+              "fotos": [],
+              "documentos": []
+            },
+            "pago": {
+              "fotos": [],
+              "documentos": []
+            }
           }
         }
-      },
-      "servicios": []
+      ]
     },
     "A01": {
       "id": "A01",
