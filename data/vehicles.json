@@ -3234,7 +3234,10 @@
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X16/20261016-101916-en_proceso-0-17921675302966902538785427460294.jpg",
+              "uploads/X16/20261016-101921-en_proceso-1-17921675374407739266158147435995.jpg"
+            ],
             "documentos": []
           },
           "listo": {
