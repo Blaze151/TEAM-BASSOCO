@@ -4407,9 +4407,14 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "POLEA LOCA",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "BANDA MOTOR",
+              "cantidad": 1,
+              "costo_unitario": 1
             }
           ],
           "incluir_iva": true,
@@ -4443,7 +4448,8 @@
           },
           "diagnostico": {
             "fotos": [
-              "uploads/X22/20261020-140831-diagnostico-0-17925268712451566961845729442782.jpg"
+              "uploads/X22/20261020-140831-diagnostico-0-17925268712451566961845729442782.jpg",
+              "uploads/X22/20261020-142240-diagnostico-0-17925277298902064595055220370968.jpg"
             ],
             "documentos": []
           },
