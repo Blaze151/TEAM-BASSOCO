@@ -4056,7 +4056,117 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1792512619005",
+        "folio": "A024",
+        "tipo": "LANTAS",
+        "descripcion": "CAMBIO DE LLANTAS",
+        "nota_interna": "CHEQUEO DE TODAS LAS LLLANTAS",
+        "km": 38307,
+        "costo": null,
+        "tecnico": "JAVIER VARGAS",
+        "tiempo_entrega_aprox": "1 Hora",
+        "fecha_inicio": "2026-10-20",
+        "estado": "recibido",
+        "actualizado": "2026-10-20",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "si",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
+              "tapon_ruedas": "si",
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "si",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "si",
+              "llanta_refaccion": "si",
+              "extinguidor": "si"
+            },
+            "gasolina": 25,
+            "danos_notas": "GOLPE COSTADO DERECHO PU"
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-20T16:10:19.005Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X21/20261020-101137-recibido-0-12f5b715-ff44-482e-a75d-f479cecd10e4-1_all_9818.jpg",
+              "uploads/X21/20261020-101142-recibido-1-1000156789.jpg",
+              "uploads/X21/20261020-101144-recibido-2-1000156787.jpg",
+              "uploads/X21/20261020-101146-recibido-3-1000156786.jpg",
+              "uploads/X21/20261020-101149-recibido-4-1000156784.jpg",
+              "uploads/X21/20261020-101151-recibido-5-1000156783.jpg",
+              "uploads/X21/20261020-101153-recibido-6-1000156782.jpg",
+              "uploads/X21/20261020-101157-recibido-7-1000156781.jpg",
+              "uploads/X21/20261020-101159-recibido-8-1000156780.jpg",
+              "uploads/X21/20261020-101202-recibido-9-1000156779.jpg",
+              "uploads/X21/20261020-101205-recibido-10-1000156778.jpg",
+              "uploads/X21/20261020-101207-recibido-11-1000156776.jpg",
+              "uploads/X21/20261020-101211-recibido-12-1000156756.jpg",
+              "uploads/X21/20261020-101213-recibido-13-1000156755.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
