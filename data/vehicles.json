@@ -4380,25 +4380,25 @@
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
-              "antena": "no",
-              "espejo_lateral": "no",
-              "cristales": "no",
-              "emblema": "no",
-              "tapon_ruedas": "no",
+              "antena": "si",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
+              "tapon_ruedas": "si",
               "molduras_completas": "no",
-              "tapon_gasolina": "no"
+              "tapon_gasolina": "si"
             },
             "accesorios": {
-              "gato": "no",
-              "maneral_gato": "no",
-              "llave_ruedas": "no",
+              "gato": "si",
+              "maneral_gato": "si",
+              "llave_ruedas": "si",
               "estuche_herramientas": "no",
-              "triangulo_seguridad": "no",
+              "triangulo_seguridad": "si",
               "llanta_refaccion": "no",
               "extinguidor": "no"
             },
-            "gasolina": 0,
-            "danos_notas": ""
+            "gasolina": 100,
+            "danos_notas": "COSTADO IZQUIERDO SUPERIOR DAÑADO"
           }
         },
         "cotizacion": {
@@ -4436,7 +4436,8 @@
               "uploads/X22/20261020-133616-recibido-5-1000157052.jpg",
               "uploads/X22/20261020-133619-recibido-6-1000157051.jpg",
               "uploads/X22/20261020-133622-recibido-7-1000157050.jpg",
-              "uploads/X22/20261020-133659-recibido-0-17925249917337577618867731722094.jpg"
+              "uploads/X22/20261020-133659-recibido-0-17925249917337577618867731722094.jpg",
+              "uploads/X22/20261020-133747-recibido-0-17925250592753382360955074333290.jpg"
             ],
             "documentos": []
           },
