@@ -4206,9 +4206,119 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1792522923757",
+        "folio": "A025",
+        "tipo": "Fuga de aceite por bayoneta y revisar chapas de puerta corrediza y quinta puerta",
+        "descripcion": "Revisar fuga de aceite y chapas de puerta corrediza y quinta puerta",
+        "nota_interna": "",
+        "km": null,
+        "costo": null,
+        "tecnico": "",
+        "tiempo_entrega_aprox": "",
+        "fecha_inicio": "2026-10-20",
+        "estado": "recibido",
+        "actualizado": "2026-10-20",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "si",
+              "espejo_lateral": "no",
+              "cristales": "no",
+              "emblema": "no",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": "Revisar daños en fotografias, parabrisas estrellado"
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-20T19:02:03.758Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X31/20261020-130634-recibido-0-17925229906894967874187296908411.jpg",
+              "uploads/X31/20261020-130651-recibido-1-1792522999505986009437407567079.jpg",
+              "uploads/X31/20261020-130658-recibido-2-17925230305015290967483332931144.jpg",
+              "uploads/X31/20261020-130705-recibido-3-17925230461628482219075614073634.jpg",
+              "uploads/X31/20261020-130711-recibido-4-17925230514986765276926339723642.jpg",
+              "uploads/X31/20261020-130715-recibido-5-17925230581958721414206303144847.jpg",
+              "uploads/X31/20261020-130721-recibido-6-17925230677197692034094921055534.jpg",
+              "uploads/X31/20261020-130733-recibido-7-17925230773382831984704524965340.jpg",
+              "uploads/X31/20261020-130742-recibido-8-17925230885485620259300703463710.jpg",
+              "uploads/X31/20261020-130750-recibido-9-1792523099295213982126488224074.jpg",
+              "uploads/X31/20261020-130753-recibido-10-17925231101032054341003460372031.jpg",
+              "uploads/X31/20261020-130802-recibido-11-17925231211828881748637731109214.jpg",
+              "uploads/X31/20261020-130813-recibido-12-17925231491532866321866056445427.jpg",
+              "uploads/X31/20261020-130818-recibido-13-17925231751961743902992509148511.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
-  "folio_counter": 24
+  "folio_counter": 25
 }
