@@ -4217,16 +4217,16 @@
         "tecnico": "",
         "tiempo_entrega_aprox": "",
         "fecha_inicio": "2026-10-20",
-        "estado": "recibido",
+        "estado": "diagnostico",
         "actualizado": "2026-10-20",
         "pago": {
           "estado": "no_pagado",
           "metodo": null
         },
         "orden_recepcion": {
-          "enviado": false,
+          "enviado": true,
           "aceptado": false,
-          "fecha_envio": null,
+          "fecha_envio": "2026-10-20",
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
@@ -4249,7 +4249,8 @@
             },
             "gasolina": 0,
             "danos_notas": "Revisar daños en fotografias, parabrisas estrellado, falta luna de retrovisor derecho"
-          }
+          },
+          "pdf_path": "uploads/X31/20261020-130908-informe-recepcion.pdf"
         },
         "cotizacion": {
           "enviado": false,
@@ -4273,7 +4274,8 @@
           "pdf_path": null
         },
         "fechas_etapa": {
-          "recibido": "2026-10-20T19:02:03.758Z"
+          "recibido": "2026-10-20T19:02:03.758Z",
+          "diagnostico": "2026-10-20T19:09:12.462Z"
         },
         "adjuntos": {
           "recibido": {
