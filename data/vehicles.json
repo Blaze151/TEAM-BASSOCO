@@ -4709,9 +4709,14 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "INSTALACION DE RADIADOR",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "ANTICONGELANTE",
+              "cantidad": 1,
+              "costo_unitario": 1
             }
           ],
           "incluir_iva": true,
