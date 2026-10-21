@@ -4836,13 +4836,13 @@
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
-              "antena": "no",
-              "espejo_lateral": "no",
+              "antena": "si",
+              "espejo_lateral": "si",
               "cristales": "no",
-              "emblema": "no",
+              "emblema": "si",
               "tapon_ruedas": "no",
-              "molduras_completas": "no",
-              "tapon_gasolina": "no"
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
             },
             "accesorios": {
               "gato": "no",
@@ -4853,7 +4853,7 @@
               "llanta_refaccion": "no",
               "extinguidor": "no"
             },
-            "gasolina": 0,
+            "gasolina": 50,
             "danos_notas": ""
           }
         },
@@ -4889,12 +4889,22 @@
               "uploads/X25/20261021-134338-recibido-2-1000158149.jpg",
               "uploads/X25/20261021-134341-recibido-3-1000158148.jpg",
               "uploads/X25/20261021-134344-recibido-4-1000158147.jpg",
-              "uploads/X25/20261021-134347-recibido-5-1000158146.jpg"
+              "uploads/X25/20261021-134347-recibido-5-1000158146.jpg",
+              "uploads/X25/20261021-134819-recibido-0-17926118594344834330610282548289.jpg"
             ],
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X25/20261021-134823-diagnostico-0-17926119030647974346203403963893.jpg",
+              "uploads/X25/20261021-134825-diagnostico-1-17926119164895608037003551123105.jpg",
+              "uploads/X25/20261021-134827-diagnostico-2-17926119495626119656409553699654.jpg",
+              "uploads/X25/20261021-134830-diagnostico-3-17926119618543384208087137366414.jpg",
+              "uploads/X25/20261021-134833-diagnostico-4-17926120044553841006630065946422.jpg",
+              "uploads/X25/20261021-134835-diagnostico-5-17926120151521695940380681723002.jpg",
+              "uploads/X25/20261021-134838-diagnostico-6-17926120438857692654227769876683.jpg",
+              "uploads/X25/20261021-134841-diagnostico-7-17926120676392880351975427646478.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
