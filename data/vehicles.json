@@ -69,8 +69,8 @@
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
-              "antena": "no",
-              "espejo_lateral": "no",
+              "antena": "si",
+              "espejo_lateral": "si",
               "cristales": "no",
               "emblema": "no",
               "tapon_ruedas": "no",
@@ -86,8 +86,8 @@
               "llanta_refaccion": "no",
               "extinguidor": "no"
             },
-            "gasolina": 0,
-            "danos_notas": ""
+            "gasolina": 25,
+            "danos_notas": "PARABRISAS DAÑADO, ESTA TIRANDO AGUA,"
           }
         },
         "cotizacion": {
