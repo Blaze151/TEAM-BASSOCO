@@ -4478,7 +4478,7 @@
     "X23": {
       "id": "X23",
       "fecha_creacion": "2026-10-21T17:05:33.368Z",
-      "foto_perfil": null,
+      "foto_perfil": "uploads/X23/20261021-110846-perfil.jpg",
       "documentos_vehiculo": {
         "fotos": [],
         "documentos": []
@@ -4590,11 +4590,17 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X23/20261021-110833-diagnostico-0-1000157961.jpg",
+              "uploads/X23/20261021-110837-diagnostico-1-1000157970.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X23/20261021-110840-en_proceso-0-1000157967.jpg",
+              "uploads/X23/20261021-110843-en_proceso-1-1000157969.jpg"
+            ],
             "documentos": []
           },
           "listo": {
