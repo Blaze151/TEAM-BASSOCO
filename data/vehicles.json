@@ -4863,9 +4863,44 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
+              "concepto": "Horquilla inferior",
+              "cantidad": 2,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Terminal de dirección",
+              "cantidad": 2,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Bujes de horquilla superior",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 2
+            },
+            {
+              "concepto": "Rotula superior",
+              "cantidad": 1,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Bieleta",
+              "cantidad": 1,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Reparación de manguera de clima",
+              "cantidad": 1,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Carga de gas",
+              "cantidad": 1,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "Válvula expansiva",
+              "cantidad": 1,
+              "costo_unitario": 1
             }
           ],
           "incluir_iva": true,
@@ -4895,7 +4930,12 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X25/20261021-135609-diagnostico-0-17926123785911529915322126161763.jpg",
+              "uploads/X25/20261021-135612-diagnostico-1-17926124064023765781606513258674.jpg",
+              "uploads/X25/20261021-135615-diagnostico-2-1792612412761367757937661294308.jpg",
+              "uploads/X25/20261021-135617-diagnostico-3-17926124173052501390535295294729.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
