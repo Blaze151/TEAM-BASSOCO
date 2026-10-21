@@ -4895,20 +4895,20 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [
-              "uploads/X25/20261021-134823-diagnostico-0-17926119030647974346203403963893.jpg",
-              "uploads/X25/20261021-134825-diagnostico-1-17926119164895608037003551123105.jpg",
-              "uploads/X25/20261021-134827-diagnostico-2-17926119495626119656409553699654.jpg",
-              "uploads/X25/20261021-134830-diagnostico-3-17926119618543384208087137366414.jpg",
-              "uploads/X25/20261021-134833-diagnostico-4-17926120044553841006630065946422.jpg",
-              "uploads/X25/20261021-134835-diagnostico-5-17926120151521695940380681723002.jpg",
-              "uploads/X25/20261021-134838-diagnostico-6-17926120438857692654227769876683.jpg",
-              "uploads/X25/20261021-134841-diagnostico-7-17926120676392880351975427646478.jpg"
-            ],
+            "fotos": [],
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X25/20261021-134947-en_proceso-0-1000158173.jpg",
+              "uploads/X25/20261021-134950-en_proceso-1-1000158172.jpg",
+              "uploads/X25/20261021-134955-en_proceso-2-1000158171.jpg",
+              "uploads/X25/20261021-135001-en_proceso-3-1000158170.jpg",
+              "uploads/X25/20261021-135004-en_proceso-4-1000158169.jpg",
+              "uploads/X25/20261021-135007-en_proceso-5-1000158168.jpg",
+              "uploads/X25/20261021-135010-en_proceso-6-1000158166.jpg",
+              "uploads/X25/20261021-135013-en_proceso-7-1000158167.jpg"
+            ],
             "documentos": []
           },
           "listo": {
