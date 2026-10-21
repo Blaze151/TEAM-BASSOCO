@@ -4484,15 +4484,15 @@
         "documentos": []
       },
       "placas": "",
-      "numero_unidad": "",
+      "numero_unidad": "315",
       "marca": "",
       "modelo": "",
       "anio": null,
       "version": "",
-      "color": "",
-      "combustible": "",
+      "color": "BLANCO",
+      "combustible": "Diesel",
       "vin": "",
-      "km_actual": null,
+      "km_actual": 258695,
       "cliente_nombre": "",
       "cliente_telefono": "",
       "cliente_telefono_2": "",
@@ -4514,7 +4514,7 @@
         "tipo": "ACUMULADOR",
         "descripcion": "CAMBIO DE 2 ACUMULADORES",
         "nota_interna": "",
-        "km": null,
+        "km": 258695,
         "costo": null,
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 Hora",
@@ -4584,7 +4584,8 @@
               "uploads/X23/20261021-110536-recibido-1-1000157968.jpg",
               "uploads/X23/20261021-110539-recibido-2-1000157966.jpg",
               "uploads/X23/20261021-110541-recibido-3-1000157965.jpg",
-              "uploads/X23/20261021-110543-recibido-4-1000157964.jpg"
+              "uploads/X23/20261021-110543-recibido-4-1000157964.jpg",
+              "uploads/X23/20261021-110639-recibido-0-17926023494377152205931745716562.jpg"
             ],
             "documentos": []
           },
