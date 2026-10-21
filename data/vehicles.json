@@ -4740,7 +4740,11 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X24/20261021-131342-diagnostico-0-1000157832.jpg",
+              "uploads/X24/20261021-131344-diagnostico-1-1000157831.jpg",
+              "uploads/X24/20261021-131347-diagnostico-2-1000157586.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
