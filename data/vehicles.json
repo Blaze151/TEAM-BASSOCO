@@ -4812,9 +4812,111 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1792611737710",
+        "folio": "A029",
+        "tipo": "SUSPENSIÓN, CLIMA Y FALLA",
+        "descripcion": "SUSPENSION, CLIMA Y FALLA EN MOTOR",
+        "nota_interna": "",
+        "km": 427680,
+        "costo": null,
+        "tecnico": "MIGUEL SALAS",
+        "tiempo_entrega_aprox": "1 dia",
+        "fecha_inicio": "2026-10-21",
+        "estado": "recibido",
+        "actualizado": "2026-10-21",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "no",
+              "cristales": "no",
+              "emblema": "no",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "no"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": ""
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-21T19:42:17.711Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X25/20261021-134333-recibido-0-1000158151.jpg",
+              "uploads/X25/20261021-134336-recibido-1-1000158150.jpg",
+              "uploads/X25/20261021-134338-recibido-2-1000158149.jpg",
+              "uploads/X25/20261021-134341-recibido-3-1000158148.jpg",
+              "uploads/X25/20261021-134344-recibido-4-1000158147.jpg",
+              "uploads/X25/20261021-134347-recibido-5-1000158146.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
-  "folio_counter": 28
+  "folio_counter": 29
 }
