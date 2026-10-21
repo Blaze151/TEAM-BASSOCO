@@ -4532,13 +4532,13 @@
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
-              "antena": "no",
-              "espejo_lateral": "no",
+              "antena": "si",
+              "espejo_lateral": "si",
               "cristales": "no",
-              "emblema": "no",
-              "tapon_ruedas": "no",
-              "molduras_completas": "no",
-              "tapon_gasolina": "no"
+              "emblema": "si",
+              "tapon_ruedas": "si",
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
             },
             "accesorios": {
               "gato": "no",
@@ -4549,8 +4549,8 @@
               "llanta_refaccion": "no",
               "extinguidor": "no"
             },
-            "gasolina": 0,
-            "danos_notas": ""
+            "gasolina": 25,
+            "danos_notas": "PARABRISAS ESTRELLADO"
           }
         },
         "cotizacion": {
@@ -4585,7 +4585,8 @@
               "uploads/X23/20261021-110539-recibido-2-1000157966.jpg",
               "uploads/X23/20261021-110541-recibido-3-1000157965.jpg",
               "uploads/X23/20261021-110543-recibido-4-1000157964.jpg",
-              "uploads/X23/20261021-110639-recibido-0-17926023494377152205931745716562.jpg"
+              "uploads/X23/20261021-110639-recibido-0-17926023494377152205931745716562.jpg",
+              "uploads/X23/20261021-111114-recibido-0-17926026547104758810971969827948.jpg"
             ],
             "documentos": []
           },
