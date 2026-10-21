@@ -4682,9 +4682,9 @@
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
-              "antena": "no",
-              "espejo_lateral": "no",
-              "cristales": "no",
+              "antena": "si",
+              "espejo_lateral": "si",
+              "cristales": "si",
               "emblema": "no",
               "tapon_ruedas": "no",
               "molduras_completas": "no",
@@ -4740,7 +4740,10 @@
               "uploads/X24/20261021-131324-recibido-2-1000158137.jpg",
               "uploads/X24/20261021-131327-recibido-3-1000158136.jpg",
               "uploads/X24/20261021-131330-recibido-4-1000158135.jpg",
-              "uploads/X24/20261021-131332-recibido-5-1000158134.jpg"
+              "uploads/X24/20261021-131332-recibido-5-1000158134.jpg",
+              "uploads/X24/20261021-131541-recibido-0-17926101001711334339284458526535.jpg",
+              "uploads/X24/20261021-131544-recibido-1-1792610121136523741382355117334.jpg",
+              "uploads/X24/20261021-131547-recibido-2-17926101296376936803094305933219.jpg"
             ],
             "documentos": []
           },
