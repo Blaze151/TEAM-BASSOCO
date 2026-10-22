@@ -5391,7 +5391,9 @@
       "fecha_creacion": "2026-10-22T18:46:21.302Z",
       "foto_perfil": "uploads/X28/20261022-124621-perfil.jpg",
       "documentos_vehiculo": {
-        "fotos": [],
+        "fotos": [
+          "uploads/X28/20261022-124902-vdoc-0-17926949069774187493072470714940.jpg"
+        ],
         "documentos": []
       },
       "placas": "FL6258-C",
