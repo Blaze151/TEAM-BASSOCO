@@ -5313,13 +5313,23 @@
           "items": [
             {
               "concepto": "BASE DE AMORTIGUADOR",
+              "cantidad": 2,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "HORQUILLA",
+              "cantidad": 2,
+              "costo_unitario": 1
+            },
+            {
+              "concepto": "BALATAS DELANTERAS",
               "cantidad": 1,
               "costo_unitario": 1
             },
             {
-              "concepto": "",
+              "concepto": "BALATAS TRASERAS",
               "cantidad": 1,
-              "costo_unitario": null
+              "costo_unitario": 1
             }
           ],
           "incluir_iva": true,
