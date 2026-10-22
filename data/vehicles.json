@@ -5312,6 +5312,11 @@
           "pdf_path": null,
           "items": [
             {
+              "concepto": "BASE DE AMORTIGUADOR",
+              "cantidad": 1,
+              "costo_unitario": 1
+            },
+            {
               "concepto": "",
               "cantidad": 1,
               "costo_unitario": null
@@ -5343,7 +5348,12 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X27/20261022-124300-diagnostico-0-17926945214242499827528786564959.jpg",
+              "uploads/X27/20261022-124305-diagnostico-1-17926945311194695377736117735725.jpg",
+              "uploads/X27/20261022-124309-diagnostico-2-17926945391882820299997251229239.jpg",
+              "uploads/X27/20261022-124312-diagnostico-3-17926945493972435765073526496306.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
