@@ -4836,9 +4836,9 @@
           "fecha_aceptado": "2026-10-24"
         },
         "informe_trabajo": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null
+          "enviado": true,
+          "fecha_envio": "2026-10-24",
+          "pdf_path": "uploads/X24/20261024-140834-informe-trabajo.pdf"
         },
         "fechas_etapa": {
           "recibido": "2026-10-21T19:12:33.873Z",
