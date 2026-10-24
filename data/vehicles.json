@@ -5718,7 +5718,7 @@
         "tipo": "ACU",
         "descripcion": "",
         "nota_interna": "",
-        "km": null,
+        "km": 189267,
         "costo": null,
         "tecnico": "JAVIER VARGAS",
         "tiempo_entrega_aprox": "1 Hora",
@@ -5789,7 +5789,8 @@
               "uploads/X32/20261024-105001-recibido-2-1000160632.jpg",
               "uploads/X32/20261024-105004-recibido-3-1000160631.jpg",
               "uploads/X32/20261024-105006-recibido-4-1000160630.jpg",
-              "uploads/X32/20261024-105051-recibido-0-17928606220344059815830129144450.jpg"
+              "uploads/X32/20261024-105051-recibido-0-17928606220344059815830129144450.jpg",
+              "uploads/X32/20261024-105557-recibido-0-17928609380426145952295780879001.jpg"
             ],
             "documentos": []
           },
