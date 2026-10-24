@@ -5705,9 +5705,9 @@
       "cliente_direccion": "",
       "cliente_actualizado": "2026-10-24T16:48:00.805Z",
       "ficha_tecnica": {
-        "aceite_tipo": "",
-        "aceite_capacidad": "",
-        "presion_llantas": "",
+        "aceite_tipo": "15w40",
+        "aceite_capacidad": "10lts",
+        "presion_llantas": "45",
         "bateria": "",
         "filtro_aire": "",
         "filtro_aceite": ""
