@@ -5868,9 +5868,111 @@
         "filtro_aire": "",
         "filtro_aceite": "Gp405"
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1792874062699",
+        "folio": "A036",
+        "tipo": "LLANTAS",
+        "descripcion": "CAMBIO DE LLANTAS",
+        "nota_interna": "",
+        "km": 33343,
+        "costo": null,
+        "tecnico": "OSCAR FLORES",
+        "tiempo_entrega_aprox": "1 Hora",
+        "fecha_inicio": "2026-10-24",
+        "estado": "recibido",
+        "actualizado": "2026-10-24",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "si",
+              "espejo_lateral": "si",
+              "cristales": "si",
+              "emblema": "si",
+              "tapon_ruedas": "si",
+              "molduras_completas": "si",
+              "tapon_gasolina": "si"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": ""
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-24T20:34:22.702Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X33/20261024-143611-recibido-0-1000160843.jpg",
+              "uploads/X33/20261024-143613-recibido-1-1000160842.jpg",
+              "uploads/X33/20261024-143616-recibido-2-1000160841.jpg",
+              "uploads/X33/20261024-143618-recibido-3-1000160840.jpg",
+              "uploads/X33/20261024-143620-recibido-4-1000160839.jpg",
+              "uploads/X33/20261024-143622-recibido-5-1000160838.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
-  "folio_counter": 35
+  "folio_counter": 36
 }
