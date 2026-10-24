@@ -5909,8 +5909,8 @@
               "llanta_refaccion": "no",
               "extinguidor": "no"
             },
-            "gasolina": 0,
-            "danos_notas": ""
+            "gasolina": 25,
+            "danos_notas": "MANIJA DE PUERTA CORREDIZA DAÑADA"
           }
         },
         "cotizacion": {
@@ -5951,7 +5951,10 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X33/20261024-143725-diagnostico-0-17928742290102688997555122665350.jpg",
+              "uploads/X33/20261024-143728-diagnostico-1-1792874237572668835020551250278.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
