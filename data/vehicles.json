@@ -5681,7 +5681,10 @@
       "fecha_creacion": "2026-10-24T16:46:46.179Z",
       "foto_perfil": "uploads/X32/20261024-104646-perfil.jpg",
       "documentos_vehiculo": {
-        "fotos": [],
+        "fotos": [
+          "uploads/X32/20261024-104851-vdoc-0-17928605039168367486062105882291.jpg",
+          "uploads/X32/20261024-104854-vdoc-1-17928605149928526207398267128698.jpg"
+        ],
         "documentos": []
       },
       "placas": "13-AJ-3U",
