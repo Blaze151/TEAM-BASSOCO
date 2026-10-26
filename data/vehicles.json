@@ -6361,9 +6361,9 @@
           "metodo": null
         },
         "orden_recepcion": {
-          "enviado": false,
+          "enviado": true,
           "aceptado": true,
-          "fecha_envio": null,
+          "fecha_envio": "2026-10-26",
           "fecha_aceptado": "2026-10-26",
           "inventario": {
             "exteriores": {
@@ -6386,7 +6386,8 @@
             },
             "gasolina": 25,
             "danos_notas": "PARABRISAS ESTRELLADO, CHECAR FOTOGRAFIAS"
-          }
+          },
+          "pdf_path": "uploads/X36/20261026-162245-informe-recepcion.pdf"
         },
         "cotizacion": {
           "enviado": false,
