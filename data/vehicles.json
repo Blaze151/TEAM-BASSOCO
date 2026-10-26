@@ -6014,9 +6014,130 @@
         "filtro_aire": "",
         "filtro_aceite": "Gp405"
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1793047148676",
+        "folio": "A037",
+        "tipo": "LANTAS",
+        "descripcion": "",
+        "nota_interna": "",
+        "km": null,
+        "costo": null,
+        "tecnico": "",
+        "tiempo_entrega_aprox": "",
+        "fecha_inicio": "2026-10-26",
+        "estado": "recibido",
+        "actualizado": "2026-10-26",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "no",
+              "cristales": "no",
+              "emblema": "no",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "no"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": ""
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "hoja_salida": {
+          "fecha_entrada": null,
+          "fecha_salida": null,
+          "km_entrada": null,
+          "km_salida": null,
+          "conformidad": "",
+          "observaciones": "",
+          "entrega_nombre": "",
+          "entrega_ine": "",
+          "firma_path": null,
+          "foto_persona_path": null,
+          "ine_frente_path": null,
+          "ine_reverso_path": null,
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-26T20:39:08.677Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X34/20261026-144039-recibido-0-1793047158782975653181200471865.jpg",
+              "uploads/X34/20261026-144049-recibido-1-17930471650282708930020380754312.jpg",
+              "uploads/X34/20261026-144053-recibido-2-17930471730327801601658806545315.jpg",
+              "uploads/X34/20261026-144057-recibido-3-17930471800173727595484732095554.jpg",
+              "uploads/X34/20261026-144113-recibido-4-17930471898025541024330528414395.jpg",
+              "uploads/X34/20261026-144120-recibido-5-1793047200784234593655793745408.jpg",
+              "uploads/X34/20261026-144136-recibido-6-17930472109628768252503656683583.jpg",
+              "uploads/X34/20261026-144140-recibido-7-17930472228632662269732267805680.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
-  "folio_counter": 36
+  "folio_counter": 37
 }
