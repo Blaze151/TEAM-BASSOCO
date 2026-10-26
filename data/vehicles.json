@@ -5984,7 +5984,9 @@
       "fecha_creacion": "2026-10-26T20:34:27.704Z",
       "foto_perfil": "uploads/X34/20261026-143428-perfil.jpg",
       "documentos_vehiculo": {
-        "fotos": [],
+        "fotos": [
+          "uploads/X34/20261026-143638-vdoc-0-17930469904233475352375886639339.jpg"
+        ],
         "documentos": []
       },
       "placas": "LF-94-608",
