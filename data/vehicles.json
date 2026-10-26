@@ -6179,13 +6179,13 @@
       "servicio_actual": {
         "id": "svc_1793050158610",
         "folio": "A038",
-        "tipo": "",
-        "descripcion": "",
+        "tipo": "LLANTAS",
+        "descripcion": "LLANTAS",
         "nota_interna": "",
         "km": 40479,
         "costo": null,
-        "tecnico": "",
-        "tiempo_entrega_aprox": "",
+        "tecnico": "MIGUEL SALAS",
+        "tiempo_entrega_aprox": "1 Hora",
         "fecha_inicio": "2026-10-26",
         "estado": "recibido",
         "actualizado": "2026-10-26",
@@ -6270,7 +6270,8 @@
               "uploads/X35/20261026-153157-recibido-2-17930501745177350994785428258452.jpg",
               "uploads/X35/20261026-153213-recibido-3-17930502005085987132887278966929.jpg",
               "uploads/X35/20261026-153219-recibido-4-17930502052298055902788307262726.jpg",
-              "uploads/X35/20261026-153222-recibido-5-1793050230468362711966994372266.jpg"
+              "uploads/X35/20261026-153222-recibido-5-1793050230468362711966994372266.jpg",
+              "uploads/X35/20261026-153514-recibido-0-17930505031662543651426555514445.jpg"
             ],
             "documentos": []
           },
