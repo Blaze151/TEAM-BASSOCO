@@ -6357,7 +6357,7 @@
         "tecnico": "",
         "tiempo_entrega_aprox": "2 dias",
         "fecha_inicio": "2026-10-26",
-        "estado": "diagnostico",
+        "estado": "en_proceso",
         "actualizado": "2026-10-26",
         "pago": {
           "estado": "no_pagado",
@@ -6404,7 +6404,7 @@
             }
           ],
           "incluir_iva": true,
-          "observaciones": "",
+          "observaciones": "CAMBIO DE DOS LLANTAS FRENOS DELANTEROS RECTIFICACION DE DISCOS, SEGUROS DE BALATAS, Y AJUSTE DE FRENOS TRASEROS",
           "aceptado": false,
           "fecha_aceptado": null
         },
@@ -6415,7 +6415,8 @@
         },
         "fechas_etapa": {
           "recibido": "2026-10-26T22:16:51.857Z",
-          "diagnostico": "2026-10-26T22:22:26.846Z"
+          "diagnostico": "2026-10-26T22:22:26.846Z",
+          "en_proceso": "2026-10-26T22:51:52.904Z"
         },
         "adjuntos": {
           "recibido": {
