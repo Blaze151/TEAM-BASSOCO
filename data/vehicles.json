@@ -6148,7 +6148,9 @@
       "fecha_creacion": "2026-10-26T21:31:33.226Z",
       "foto_perfil": "uploads/X35/20261026-153311-perfil.jpg",
       "documentos_vehiculo": {
-        "fotos": [],
+        "fotos": [
+          "uploads/X35/20261026-153605-vdoc-0-17930505578425476154378987609095.jpg"
+        ],
         "documentos": []
       },
       "placas": "LG-44-049",
