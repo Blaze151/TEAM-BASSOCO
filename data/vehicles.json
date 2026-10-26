@@ -6367,10 +6367,10 @@
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
-              "antena": "no",
-              "espejo_lateral": "no",
+              "antena": "si",
+              "espejo_lateral": "si",
               "cristales": "no",
-              "emblema": "no",
+              "emblema": "si",
               "tapon_ruedas": "no",
               "molduras_completas": "no",
               "tapon_gasolina": "no"
@@ -6378,14 +6378,14 @@
             "accesorios": {
               "gato": "no",
               "maneral_gato": "no",
-              "llave_ruedas": "no",
-              "estuche_herramientas": "no",
+              "llave_ruedas": "si",
+              "estuche_herramientas": "si",
               "triangulo_seguridad": "no",
               "llanta_refaccion": "no",
               "extinguidor": "no"
             },
-            "gasolina": 0,
-            "danos_notas": ""
+            "gasolina": 25,
+            "danos_notas": "PARABRISAS ESTRELLADO, CHECAR FOTOGRAFIAS"
           }
         },
         "cotizacion": {
