@@ -6115,11 +6115,16 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X34/20261026-144253-diagnostico-0-1793047337174382166949580329748.jpg",
+              "uploads/X34/20261026-144256-diagnostico-1-17930473476114424191527562432973.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X34/20261026-144259-en_proceso-0-17930473293604964003235429612811.jpg"
+            ],
             "documentos": []
           },
           "listo": {
