@@ -30,6 +30,7 @@
       pdf_hoja_recepcion_label: "Hoja de recepción (PDF)",
       pdf_cotizacion_label: "Cotización (PDF)",
       pdf_informe_trabajo_label: "Informe de trabajo (PDF)",
+      pdf_hoja_salida_label: "Hoja de salida (PDF)",
       descarga_todas: "Seleccionar todas",
       descarga_btn: "Descargar",
       descarga_seleccionar: "Seleccionar foto",
@@ -110,6 +111,7 @@
       pdf_hoja_recepcion_label: "Reception form (PDF)",
       pdf_cotizacion_label: "Quote (PDF)",
       pdf_informe_trabajo_label: "Work report (PDF)",
+      pdf_hoja_salida_label: "Delivery sheet (PDF)",
       descarga_todas: "Select all",
       descarga_btn: "Download",
       descarga_seleccionar: "Select photo",
@@ -717,13 +719,18 @@
     const pdfHtml = pdfInfo
       ? `<a class="doc-chip" href="${esc(rawUrl(pdfInfo.path))}" target="_blank" rel="noopener">📄 ${esc(t(pdfInfo.labelKey))}</a>`
       : "";
-    if (!attachHtml && !pdfHtml) return "";
+    // Solo Team Bassoco: la hoja de salida va en Entregado, junto al informe de trabajo.
+    const pdfSalida = (stage === "recogido" && activo.hoja_salida && activo.hoja_salida.pdf_path) ? activo.hoja_salida.pdf_path : null;
+    const pdfSalidaHtml = pdfSalida
+      ? `<a class="doc-chip" href="${esc(rawUrl(pdfSalida))}" target="_blank" rel="noopener">📄 ${esc(t("pdf_hoja_salida_label"))}</a>`
+      : "";
+    if (!attachHtml && !pdfHtml && !pdfSalidaHtml) return "";
     const info = ESTADOS_SERVICIO()[stage] || PAGO_INFO();
-    const count = (g.fotos || []).length + (g.documentos || []).length + (pdfInfo ? 1 : 0);
+    const count = (g.fotos || []).length + (g.documentos || []).length + (pdfInfo ? 1 : 0) + (pdfSalida ? 1 : 0);
     return `
       <details class="doc-dropdown" style="margin-top:12px;">
         <summary>${info.icon} ${esc(info.label)} (${count})</summary>
-        <div class="doc-dropdown-body">${pdfHtml}${attachHtml}</div>
+        <div class="doc-dropdown-body">${pdfHtml}${pdfSalidaHtml}${attachHtml}</div>
       </details>`;
   }
 
