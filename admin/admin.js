@@ -357,7 +357,7 @@
   function setEditorControlsBusy(busy) {
     [
       "as-estado", "btn-finalize-service", "btn-cancel-service", "btn-back",
-      "btn-save-visible", "btn-save-and-back", "btn-cambiar-id", "btn-enviar-orden", "btn-enviar-cotizacion", "btn-enviar-informe-trabajo",
+      "btn-save-visible", "btn-save-and-back", "btn-cambiar-id", "btn-enviar-orden", "btn-enviar-cotizacion", "btn-enviar-informe-trabajo", "btn-enviar-hoja-salida",
     ].forEach((id) => {
       const el = $(id);
       if (el) el.disabled = busy;
@@ -393,6 +393,32 @@
 
   function emptyInformeTrabajo() {
     return { enviado: false, fecha_envio: null, pdf_path: null };
+  }
+
+  // ===== Hoja de salida (SOLO Team Bassoco) =====
+  // Se llena al entregar el vehículo: fechas y kilometraje de entrada/salida,
+  // servicios realizados (los conceptos de la cotización, SIN precios) y los
+  // datos de la persona que recibe la unidad (nombre, INE, fotos y firma).
+  function emptyHojaSalida() {
+    return {
+      fecha_entrada: null, fecha_salida: null, km_entrada: null, km_salida: null,
+      conformidad: "", observaciones: "",
+      entrega_nombre: "", entrega_ine: "",
+      firma_path: null, foto_persona_path: null, ine_frente_path: null, ine_reverso_path: null,
+      enviado: false, fecha_envio: null, pdf_path: null,
+    };
+  }
+  // Fotos y firma capturadas en esta sesión que todavía no se suben a GitHub.
+  // firma: dataURL PNG; persona / ine_frente / ine_reverso: { file, url }.
+  function emptyHojaSalidaPending() {
+    return { firma: null, persona: null, ine_frente: null, ine_reverso: null };
+  }
+  const HS_FOTO_CAMPOS = { persona: "foto_persona_path", ine_frente: "ine_frente_path", ine_reverso: "ine_reverso_path" };
+  // Todas las rutas de archivos de la hoja de salida de un servicio (PDF, firma y fotos).
+  function hojaSalidaPaths(s) {
+    const h = s && s.hoja_salida;
+    if (!h) return [];
+    return [h.pdf_path, h.firma_path, h.foto_persona_path, h.ine_frente_path, h.ine_reverso_path].filter(Boolean);
   }
 
   /* ---------------- Idioma (ES/EN) ---------------- */
@@ -711,6 +737,49 @@
       informe_trabajo_estado_no_enviado: "No se ha enviado al cliente",
       btn_enviar_informe_trabajo: "📤 Enviar informe de trabajo",
       wa_prompt_titulo_informe_trabajo: "📲 Enviar informe de trabajo",
+      hoja_salida_titulo: "📋 Hoja de salida",
+      hoja_salida_desc: "Datos de la entrega: fechas, kilometraje, servicios realizados (sin precios) y la persona que recibe el vehículo. Se genera en PDF, se manda por WhatsApp y aparece en la ficha del cliente.",
+      hoja_salida_estado_enviado: "✅ Hoja de salida enviada el",
+      hoja_salida_estado_no_enviado: "No se ha enviado al cliente",
+      hs_fecha_entrada: "Fecha de entrada",
+      hs_fecha_salida: "Fecha de salida",
+      hs_km_entrada: "Kilometraje de entrada",
+      hs_km_salida: "Kilometraje de salida",
+      hs_conformidad: "¿Recibió de conformidad los trabajos?",
+      hs_conformidad_sin: "Sin indicar",
+      hs_si: "Sí",
+      hs_no: "No",
+      hs_servicios: "Servicios realizados (de la cotización, sin precios)",
+      hs_descripcion: "Descripción",
+      hs_cantidad: "Cantidad",
+      hs_sin_conceptos: "La cotización no tiene conceptos: en el PDF se pondrá el tipo de servicio.",
+      hs_observaciones: "Observaciones (opcional)",
+      hs_persona_titulo: "Persona que recibe el vehículo",
+      hs_nombre: "Nombre completo",
+      hs_ine: "Número de INE",
+      hs_foto_persona: "Foto de la persona",
+      hs_ine_frente: "INE — frente",
+      hs_ine_reverso: "INE — reverso",
+      hs_tomar_foto: "📷 Tomar",
+      hs_fototeca: "🖼️ Fototeca",
+      hs_firma: "Firma de la persona que recibe",
+      hs_firma_hint: "Que firme con el dedo dentro del recuadro blanco.",
+      hs_firma_borrar: "🧽 Borrar firma",
+      hs_firma_rehacer: "✍️ Firmar de nuevo",
+      hs_aviso_subida: "Las fotos y la firma se suben a GitHub al guardar o al enviar la hoja de salida.",
+      hs_aviso_publico: "Ojo: el repositorio es público, así que las fotos de la INE y de la persona se pueden consultar sin contraseña.",
+      btn_enviar_hoja_salida: "📤 Enviar hoja de salida",
+      wa_prompt_titulo_hoja_salida: "📲 Enviar hoja de salida",
+      msg_hoja_salida_wa: "Hola {nombre}, tu vehículo {marca} {modelo} (placas {placas}){unidad} fue entregado. Aquí se encuentra la hoja de salida con los servicios realizados y los datos de la entrega: {pdf} Saludos.",
+      hs_falta_obligatorio: "Para generar la hoja de salida falta: {lista}",
+      hs_confirm_incompleto: "A la hoja de salida le falta:\n{lista}\n\n¿Generarla así de todos modos?",
+      hs_km_menor: "El kilometraje de salida es menor que el de entrada",
+      hs_subiendo: "Subiendo {i} de {n}…",
+      hs_subiendo_toast: "Subiendo fotos y firma de la hoja de salida…",
+      msg_error_hoja_salida_pdf: "Error al generar/subir la hoja de salida: ",
+      msg_error_hoja_salida_subida: "No se pudieron subir las fotos o la firma de la hoja de salida: ",
+      pdf_hoja_salida_label: "Hoja de salida (PDF)",
+      resumen_hoja_salida_no_enviada: "Hoja de salida no enviada",
       msg_informe_trabajo_wa: "Hola {nombre}, tu {marca} {modelo} (placas {placas}){unidad} ya está listo. Aquí está el informe completo de lo que se hizo: {pdf}. {agradecimiento}",
       cliente_acepto_check: "Cliente aceptó (márcalo al recibir su confirmación)",
       cliente_ya_acepto_txt: "✅ Cliente ya aceptó",
@@ -1047,6 +1116,49 @@
       informe_trabajo_estado_no_enviado: "Not sent to the customer yet",
       btn_enviar_informe_trabajo: "📤 Send work report",
       wa_prompt_titulo_informe_trabajo: "📲 Send work report",
+      hoja_salida_titulo: "📋 Delivery sheet",
+      hoja_salida_desc: "Hand-over details: dates, mileage, services performed (no prices) and the person picking up the vehicle. It is generated as a PDF, sent via WhatsApp and shown on the customer page.",
+      hoja_salida_estado_enviado: "✅ Delivery sheet sent on",
+      hoja_salida_estado_no_enviado: "Not sent to the customer yet",
+      hs_fecha_entrada: "Check-in date",
+      hs_fecha_salida: "Check-out date",
+      hs_km_entrada: "Check-in mileage",
+      hs_km_salida: "Check-out mileage",
+      hs_conformidad: "Work received to satisfaction?",
+      hs_conformidad_sin: "Not specified",
+      hs_si: "Yes",
+      hs_no: "No",
+      hs_servicios: "Services performed (from the quote, no prices)",
+      hs_descripcion: "Description",
+      hs_cantidad: "Quantity",
+      hs_sin_conceptos: "The quote has no items: the PDF will show the service type.",
+      hs_observaciones: "Remarks (optional)",
+      hs_persona_titulo: "Person picking up the vehicle",
+      hs_nombre: "Full name",
+      hs_ine: "ID (INE) number",
+      hs_foto_persona: "Photo of the person",
+      hs_ine_frente: "ID — front",
+      hs_ine_reverso: "ID — back",
+      hs_tomar_foto: "📷 Take",
+      hs_fototeca: "🖼️ Library",
+      hs_firma: "Signature of the person picking up",
+      hs_firma_hint: "Have them sign with a finger inside the white box.",
+      hs_firma_borrar: "🧽 Clear signature",
+      hs_firma_rehacer: "✍️ Sign again",
+      hs_aviso_subida: "Photos and signature are uploaded to GitHub when you save or send the delivery sheet.",
+      hs_aviso_publico: "Note: the repository is public, so the ID and person photos can be viewed without a password.",
+      btn_enviar_hoja_salida: "📤 Send delivery sheet",
+      wa_prompt_titulo_hoja_salida: "📲 Send delivery sheet",
+      msg_hoja_salida_wa: "Hi {nombre}, your vehicle {marca} {modelo} (plates {placas}){unidad} has been delivered. Here is the delivery sheet with the services performed and the hand-over details: {pdf} Regards.",
+      hs_falta_obligatorio: "To generate the delivery sheet, this is missing: {lista}",
+      hs_confirm_incompleto: "The delivery sheet is missing:\n{lista}\n\nGenerate it anyway?",
+      hs_km_menor: "Check-out mileage is lower than check-in mileage",
+      hs_subiendo: "Uploading {i} of {n}…",
+      hs_subiendo_toast: "Uploading delivery sheet photos and signature…",
+      msg_error_hoja_salida_pdf: "Error generating/uploading the delivery sheet: ",
+      msg_error_hoja_salida_subida: "Could not upload the delivery sheet photos or signature: ",
+      pdf_hoja_salida_label: "Delivery sheet (PDF)",
+      resumen_hoja_salida_no_enviada: "Delivery sheet not sent",
       msg_informe_trabajo_wa: "Hi {nombre}, your {marca} {modelo} (plates {placas}){unidad} is ready. Here's the full report of what was done: {pdf}. {agradecimiento}",
       cliente_acepto_check: "Customer accepted (check once they confirm)",
       cliente_ya_acepto_txt: "✅ Customer already accepted",
@@ -1166,6 +1278,9 @@
 
   let pendingServices = [];       // historial (servicios finalizados) del vehículo en edición
   let svcActual = null;           // servicio en proceso del vehículo en edición (o null)
+  let hojaSalidaPending = emptyHojaSalidaPending();   // solo Team Bassoco (ver emptyHojaSalidaPending)
+  let hojaSalidaFirmaEditando = false;                // true = mostrar el recuadro para firmar aunque ya haya firma guardada
+  const hojaSalidaImgCache = {};                      // ruta -> dataURL de lo recién subido (para el PDF, sin esperar a GitHub)
   let toolPanelOpen = {};         // qué paneles-herramienta (Hoja de recepción, Cotización) están abiertos, por etapa
   let svcActualEstadoOriginal = null;
   let svcActualPending = null;    // File[] pendientes de subir, por etapa: { recibido:{fotos,documentos}, ... }
@@ -1522,6 +1637,7 @@
       if (s.orden_recepcion && s.orden_recepcion.pdf_path) referenced.add(s.orden_recepcion.pdf_path);
       if (s.cotizacion && s.cotizacion.pdf_path) referenced.add(s.cotizacion.pdf_path);
       if (s.informe_trabajo && s.informe_trabajo.pdf_path) referenced.add(s.informe_trabajo.pdf_path);
+      hojaSalidaPaths(s).forEach((p) => referenced.add(p));
     };
     Object.values(db.vehicles || {}).forEach((v) => {
       if (v.foto_perfil) referenced.add(v.foto_perfil);
@@ -2311,6 +2427,311 @@
     return doc.output("blob");
   }
 
+  // ---------------- Hoja de salida en PDF (solo Team Bassoco) ----------------
+
+  // Conceptos de la cotización SIN precios (descripción + cantidad). Si la
+  // cotización no tiene conceptos, se usa el tipo de servicio como único renglón.
+  function conceptosHojaSalida(svc) {
+    const items = ((svc.cotizacion && svc.cotizacion.items) || [])
+      .filter((it) => (it.concepto || "").trim())
+      .map((it) => ({ concepto: it.concepto.trim(), cantidad: Number(it.cantidad) || 0 }));
+    return items;
+  }
+
+  function isoAFechaLocal(iso) {
+    if (!iso) return "";
+    if (/^\d{4}-\d{2}-\d{2}$/.test(iso)) return iso;
+    const d = new Date(iso);
+    if (isNaN(d)) return "";
+    const p = (n) => String(n).padStart(2, "0");
+    return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+  }
+
+  function fechaLargaPdf(iso) {
+    if (!iso) return "—";
+    const d = new Date(iso + "T00:00:00");
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString("es-MX", { day: "numeric", month: "long", year: "numeric" });
+  }
+
+  async function hojaSalidaImgDataUrl(path) {
+    if (!path) return null;
+    if (hojaSalidaImgCache[path]) return hojaSalidaImgCache[path];
+    try {
+      const res = await fetch(rawUrl(path));
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const url = await blobToDataUrl(await res.blob());
+      hojaSalidaImgCache[path] = url;
+      return url;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  async function generarHojaSalidaPDF(vehicle, svc) {
+    await loadJsPdf();
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ unit: "mm", format: "letter" });
+    const pageW = doc.internal.pageSize.getWidth();
+    const pageH = doc.internal.pageSize.getHeight();
+    const marginX = 15;
+    const contentW = pageW - marginX * 2;
+    const bottomLimit = pageH - 16;
+    let y = 18;
+
+    const DARK = [20, 23, 26], GREEN = [243, 59, 49], GREY = [110, 110, 110];
+    const taller = tallerInfoForPdf();
+    const hs = svc.hoja_salida || emptyHojaSalida();
+
+    function ensureSpace(need) {
+      if (y + need > bottomLimit) { doc.addPage(); y = 18; }
+    }
+    function sectionTitle(txt) {
+      ensureSpace(12);
+      doc.setFont("helvetica", "bold"); doc.setFontSize(11.5); doc.setTextColor(...DARK);
+      doc.text(txt, marginX, y);
+      y += 2.5;
+      doc.setDrawColor(...GREEN); doc.setLineWidth(0.4);
+      doc.line(marginX, y, pageW - marginX, y);
+      y += 6;
+    }
+    // Dos datos por renglón (izquierda y derecha), como en el formato en papel.
+    const colW = contentW / 2;
+    function celda(x, label, value, labelW) {
+      doc.setFont("helvetica", "bold"); doc.setFontSize(9); doc.setTextColor(...GREY);
+      doc.text(label + ":", x, y);
+      doc.setFont("helvetica", "normal"); doc.setTextColor(...DARK);
+      const txt = doc.splitTextToSize(String(value || "—"), colW - labelW - 3)[0];
+      doc.text(txt, x + labelW, y);
+    }
+    function par(l1, v1, l2, v2) {
+      ensureSpace(6.5);
+      celda(marginX, l1, v1, 36);
+      if (l2) celda(marginX + colW, l2, v2, 40);
+      y += 6.2;
+    }
+    async function imagenAjustada(dataUrl, fmt, x, top, maxW, maxH) {
+      if (!dataUrl) return 0;
+      try {
+        const dims = await imageDataUrlSize(dataUrl);
+        let w = maxW, h = maxW * (dims.h / dims.w);
+        if (h > maxH) { h = maxH; w = maxH * (dims.w / dims.h); }
+        doc.addImage(dataUrl, fmt, x + (maxW - w) / 2, top, w, h, undefined, "FAST");
+        return h;
+      } catch (err) {
+        return 0;
+      }
+    }
+    function kmTxt(km) {
+      return (km !== null && km !== undefined && km !== "") ? `${Number(km).toLocaleString("es-MX")} km` : "—";
+    }
+
+    // Encabezado (igual que los otros PDFs del taller)
+    let logoDataUrl = null;
+    try {
+      const logoRes = await fetch("../assets/logo-black.png");
+      logoDataUrl = await blobToDataUrl(await logoRes.blob());
+    } catch (err) { /* si el logo no carga, seguimos sin él */ }
+    const logoW = 62, logoH = logoW * (249 / 1200);
+    const textX = marginX;
+    let textY = y + 6;
+    let logoOk = false;
+    if (logoDataUrl) {
+      try { doc.addImage(logoDataUrl, "PNG", marginX, y - 6, logoW, logoH, undefined, "FAST"); logoOk = true; textY = y - 6 + logoH + 5; } catch (err) { /* seguimos sin logo si falla */ }
+    }
+    if (!logoOk) {
+      doc.setFont("helvetica", "bold"); doc.setFontSize(16); doc.setTextColor(...DARK);
+      doc.text(taller.nombre.toUpperCase(), textX, y);
+    }
+    doc.setFont("helvetica", "normal"); doc.setFontSize(10.5); doc.setTextColor(...GREEN);
+    doc.text("Hoja de Salida del Vehículo", textX, textY);
+    doc.setFontSize(8); doc.setTextColor(...GREY);
+    doc.text(taller.direccion, textX, textY + 5.5);
+    if (svc.folio) {
+      doc.setFont("helvetica", "bold"); doc.setFontSize(13); doc.setTextColor(...GREEN);
+      doc.text(`Folio: ${svc.folio}`, pageW - marginX, y, { align: "right" });
+    }
+    doc.setFont("helvetica", "normal"); doc.setFontSize(8); doc.setTextColor(...GREY);
+    doc.text(`Generado: ${new Date().toLocaleString("es-MX")}`, pageW - marginX, y + 6, { align: "right" });
+    y = Math.max(y + 16, textY + 9.5);
+    doc.setDrawColor(...GREEN); doc.setLineWidth(0.7);
+    doc.line(marginX, y, pageW - marginX, y);
+    y += 9;
+
+    doc.setFont("helvetica", "bold"); doc.setFontSize(12); doc.setTextColor(...DARK);
+    doc.text("FORMATO DE RECEPCIÓN Y CONFORMIDAD DEL TRABAJO EFECTUADO", pageW / 2, y, { align: "center" });
+    y += 10;
+
+    sectionTitle("Fechas del servicio");
+    par("Fecha de entrada", fechaLargaPdf(hs.fecha_entrada), "Fecha de salida", fechaLargaPdf(hs.fecha_salida));
+    y += 2;
+
+    sectionTitle("Datos generales del vehículo");
+    const modeloTxt = [vehicle.modelo, vehicle.anio].filter(Boolean).join(" ");
+    par("Marca", vehicle.marca, "Modelo", modeloTxt);
+    par("Número de placa", vehicle.placas, "Km de entrada", kmTxt(hs.km_entrada));
+    par("Número económico", vehicle.numero_unidad, "Km de salida", kmTxt(hs.km_salida));
+    par("VIN", vehicle.vin, "Cliente", vehicle.cliente_nombre);
+    y += 2;
+
+    // Recibí de conformidad (casillas Sí / No)
+    ensureSpace(9);
+    doc.setFont("helvetica", "bold"); doc.setFontSize(9.5); doc.setTextColor(...DARK);
+    doc.text("Recibí de conformidad los trabajos efectuados:", marginX, y);
+    const casilla = (x, etiqueta, marcada) => {
+      doc.setDrawColor(...DARK); doc.setLineWidth(0.35);
+      doc.rect(x, y - 3.6, 4.4, 4.4);
+      if (marcada) {
+        doc.setLineWidth(0.6);
+        doc.line(x + 0.8, y - 2.8, x + 3.6, y);
+        doc.line(x + 3.6, y - 2.8, x + 0.8, y);
+      }
+      doc.setFont("helvetica", "normal"); doc.setFontSize(9.5);
+      doc.text(etiqueta, x + 6, y);
+    };
+    casilla(marginX + 92, "SÍ", hs.conformidad === "si");
+    casilla(marginX + 112, "NO", hs.conformidad === "no");
+    y += 10;
+
+    // Servicios realizados: conceptos de la cotización, sin precios
+    sectionTitle("Servicios realizados");
+    let conceptos = conceptosHojaSalida(svc);
+    if (!conceptos.length) conceptos = [{ concepto: svc.tipo || "—", cantidad: 1 }];
+    const colCantW = 26;
+    ensureSpace(8);
+    doc.setFillColor(252, 228, 226);
+    doc.rect(marginX, y - 4.5, contentW, 7, "F");
+    doc.setFont("helvetica", "bold"); doc.setFontSize(9); doc.setTextColor(...DARK);
+    doc.text("Descripción", marginX + 2, y);
+    doc.text("Cantidad", pageW - marginX - colCantW / 2, y, { align: "center" });
+    y += 6;
+    doc.setFont("helvetica", "normal"); doc.setFontSize(9);
+    conceptos.forEach((c) => {
+      const lineas = doc.splitTextToSize(c.concepto.toUpperCase(), contentW - colCantW - 6);
+      const alto = lineas.length * 4.3 + 2;
+      ensureSpace(alto + 1);
+      doc.setTextColor(...DARK);
+      doc.text(lineas, marginX + 2, y);
+      doc.text(String(c.cantidad || ""), pageW - marginX - colCantW / 2, y, { align: "center" });
+      y += (lineas.length - 1) * 4.3;
+      doc.setDrawColor(210, 210, 210); doc.setLineWidth(0.2);
+      doc.line(marginX, y + 2.4, pageW - marginX, y + 2.4);
+      y += 7;
+    });
+    y += 3;
+
+    if ((hs.observaciones || "").trim()) {
+      ensureSpace(12);
+      doc.setFont("helvetica", "bold"); doc.setFontSize(9.5); doc.setTextColor(...GREY);
+      doc.text("Observaciones:", marginX, y);
+      y += 5;
+      doc.setFont("helvetica", "normal"); doc.setTextColor(...DARK);
+      const lineas = doc.splitTextToSize(hs.observaciones.trim(), contentW);
+      ensureSpace(lineas.length * 4.6);
+      doc.text(lineas, marginX, y);
+      y += lineas.length * 4.6 + 4;
+    }
+
+    // Persona que recibe la unidad
+    sectionTitle("Datos de la persona que recibe la unidad");
+    par("Nombre", hs.entrega_nombre, "No. de INE", hs.entrega_ine);
+    y += 2;
+
+    // Foto de la persona (izquierda) y firma (derecha)
+    const fotoPersona = await hojaSalidaImgDataUrl(hs.foto_persona_path);
+    const firma = await hojaSalidaImgDataUrl(hs.firma_path);
+    const altoBloque = 44;
+    ensureSpace(altoBloque + 10);
+    const top = y;
+    doc.setFont("helvetica", "bold"); doc.setFontSize(8.5); doc.setTextColor(...GREY);
+    doc.text("Foto de la persona", marginX, top);
+    doc.text("Firma de conformidad", marginX + 70, top);
+    const fotoTop = top + 2.5;
+    const hFoto = fotoPersona ? await imagenAjustada(fotoPersona, "JPEG", marginX, fotoTop, 58, altoBloque) : 0;
+    if (!fotoPersona) {
+      doc.setDrawColor(200, 200, 200); doc.setLineWidth(0.3);
+      doc.rect(marginX, fotoTop, 58, altoBloque);
+    }
+    const firmaW = contentW - 70;
+    const hFirma = firma ? await imagenAjustada(firma, "PNG", marginX + 70, fotoTop + 2, firmaW, 30) : 0;
+    const lineaFirmaY = fotoTop + 35;
+    doc.setDrawColor(...DARK); doc.setLineWidth(0.35);
+    doc.line(marginX + 70, lineaFirmaY, pageW - marginX, lineaFirmaY);
+    doc.setFont("helvetica", "bold"); doc.setFontSize(9.5); doc.setTextColor(...DARK);
+    doc.text(hs.entrega_nombre || "", marginX + 70 + firmaW / 2, lineaFirmaY + 5, { align: "center" });
+    void hFirma;
+    y = Math.max(fotoTop + (fotoPersona ? hFoto : altoBloque), lineaFirmaY + 5) + 7;
+
+    ensureSpace(12);
+    doc.setFont("helvetica", "italic"); doc.setFontSize(8.5); doc.setTextColor(...GREY);
+    const nota = doc.splitTextToSize("* Nombre completo y firma de conformidad del usuario que recibe la unidad con los servicios realizados, así como las refacciones/partes usadas.", contentW);
+    doc.text(nota, marginX, y);
+    y += nota.length * 4 + 6;
+
+    // INE frente y reverso, lado a lado
+    const ineFrente = await hojaSalidaImgDataUrl(hs.ine_frente_path);
+    const ineReverso = await hojaSalidaImgDataUrl(hs.ine_reverso_path);
+    if (ineFrente || ineReverso) {
+      const anchoIne = (contentW - 8) / 2;
+      ensureSpace(66);
+      doc.setFont("helvetica", "bold"); doc.setFontSize(8.5); doc.setTextColor(...GREY);
+      doc.text("Identificación (INE) — frente", marginX, y);
+      doc.text("Identificación (INE) — reverso", marginX + anchoIne + 8, y);
+      const topIne = y + 2.5;
+      const h1 = await imagenAjustada(ineFrente, "JPEG", marginX, topIne, anchoIne, 58);
+      const h2 = await imagenAjustada(ineReverso, "JPEG", marginX + anchoIne + 8, topIne, anchoIne, 58);
+      y = topIne + Math.max(h1, h2, 10) + 8;
+    }
+
+    doc.setFont("helvetica", "normal"); doc.setFontSize(7.5); doc.setTextColor(...GREY);
+    doc.text(`Documento generado automáticamente por el sistema NFC de ${taller.nombre}.`, marginX, pageH - 10);
+
+    return doc.output("blob");
+  }
+
+  function hayPendientesHojaSalida() {
+    return !!(hojaSalidaPending.firma || hojaSalidaPending.persona || hojaSalidaPending.ine_frente || hojaSalidaPending.ine_reverso);
+  }
+
+  // Sube (una por una, nunca en paralelo) la firma y las fotos de la hoja de
+  // salida que estén pendientes, y deja sus rutas en svcActual.hoja_salida.
+  // Si se reemplazó una foto o firma ya guardada, la anterior se manda a la
+  // cola de borrado (se borra solo cuando el guardado del registro sale bien).
+  async function subirPendientesHojaSalida(vehicleId, placas, onProgreso) {
+    if (!svcActual || !hayPendientesHojaSalida()) return;
+    if (!svcActual.hoja_salida) svcActual.hoja_salida = emptyHojaSalida();
+    const hs = svcActual.hoja_salida;
+    const tareas = [];
+    if (hojaSalidaPending.firma) tareas.push("firma");
+    Object.keys(HS_FOTO_CAMPOS).forEach((k) => { if (hojaSalidaPending[k]) tareas.push(k); });
+    for (let i = 0; i < tareas.length; i++) {
+      const tipo = tareas[i];
+      if (onProgreso) onProgreso(i + 1, tareas.length);
+      if (tipo === "firma") {
+        const dataUrl = hojaSalidaPending.firma;
+        const path = `uploads/${vehicleId}/${timestampSlug()}-salida-firma.png`;
+        await uploadBinaryFile(path, String(dataUrl).split(",")[1] || "", `Hoja de salida: firma — ${placas || vehicleId}`);
+        if (hs.firma_path && hs.firma_path !== path) queueDelete(hs.firma_path);
+        hs.firma_path = path;
+        hojaSalidaImgCache[path] = dataUrl;
+        hojaSalidaPending.firma = null;
+        hojaSalidaFirmaEditando = false;
+      } else {
+        const pend = hojaSalidaPending[tipo];
+        const blob = await compressOrSkip(pend.file, 1600, 0.8);
+        if (!blob) { hojaSalidaPending[tipo] = null; continue; }
+        const path = `uploads/${vehicleId}/${timestampSlug()}-salida-${tipo.replace("_", "-")}.jpg`;
+        await uploadBinaryFile(path, await blobToBase64(blob), `Hoja de salida: ${tipo.replace("_", " ")} — ${placas || vehicleId}`);
+        const campo = HS_FOTO_CAMPOS[tipo];
+        if (hs[campo] && hs[campo] !== path) queueDelete(hs[campo]);
+        hs[campo] = path;
+        hojaSalidaImgCache[path] = await blobToDataUrl(blob);
+        try { URL.revokeObjectURL(pend.url); } catch (err) { /* nada */ }
+        hojaSalidaPending[tipo] = null;
+      }
+    }
+  }
+
   async function compressOrSkip(file, maxDim, quality) {
     let workingFile = file;
     if (looksLikeHeic(file)) {
@@ -2399,6 +2820,7 @@
       if (s.orden_recepcion && s.orden_recepcion.pdf_path) rutas.add(s.orden_recepcion.pdf_path);
       if (s.cotizacion && s.cotizacion.pdf_path) rutas.add(s.cotizacion.pdf_path);
       if (s.informe_trabajo && s.informe_trabajo.pdf_path) rutas.add(s.informe_trabajo.pdf_path);
+      hojaSalidaPaths(s).forEach((p) => rutas.add(p));
     };
     if (v.foto_perfil) rutas.add(v.foto_perfil);
     grupo(v.documentos_vehiculo);
@@ -2456,6 +2878,7 @@
     if (s.orden_recepcion && s.orden_recepcion.pdf_path) paths.push(s.orden_recepcion.pdf_path);
     if (s.cotizacion && s.cotizacion.pdf_path) paths.push(s.cotizacion.pdf_path);
     if (s.informe_trabajo && s.informe_trabajo.pdf_path) paths.push(s.informe_trabajo.pdf_path);
+    paths.push(...hojaSalidaPaths(s));
     return paths;
   }
 
@@ -3346,6 +3769,30 @@
     return `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
   }
 
+  function buildWhatsAppHojaSalidaLink({ nombre, telefono, marca, modelo, placas, numero_unidad, pdfUrl }) {
+    let phone = (telefono || "").replace(/\D/g, "");
+    if (!phone) return null;
+    if (phone.length === 10) phone = "52" + phone;
+    const unidadTxt = numero_unidad ? ` (Unidad ${numero_unidad})` : "";
+    const msg = t("msg_hoja_salida_wa")
+      .replace("{nombre}", nombre || "")
+      .replace("{marca}", marca || "")
+      .replace("{modelo}", modelo || "")
+      .replace("{placas}", placas || "N/A")
+      .replace("{unidad}", unidadTxt)
+      .replace("{pdf}", pdfUrl || "")
+      .replace(/\s+/g, " ").trim();
+    return `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+  }
+
+  function offerWhatsAppHojaSalida(datos) {
+    const links = [
+      { href: buildWhatsAppHojaSalidaLink({ ...datos, telefono: datos.telefono }), label: "Tel. 1" },
+      { href: datos.telefono2 ? buildWhatsAppHojaSalidaLink({ ...datos, telefono: datos.telefono2 }) : null, label: "Tel. 2" },
+    ];
+    showWhatsAppPrompt(datos.nombre, links, t("wa_prompt_titulo_hoja_salida"));
+  }
+
   function offerWhatsAppInformeTrabajo(datos) {
     const links = [
       { href: buildWhatsAppInformeTrabajoLink({ ...datos, telefono: datos.telefono }), label: "Tel. 1" },
@@ -3371,6 +3818,7 @@
       orden_recepcion: active.orden_recepcion ? JSON.parse(JSON.stringify(active.orden_recepcion)) : null,
       cotizacion: active.cotizacion ? JSON.parse(JSON.stringify(active.cotizacion)) : null,
       informe_trabajo: active.informe_trabajo ? JSON.parse(JSON.stringify(active.informe_trabajo)) : null,
+      hoja_salida: active.hoja_salida ? JSON.parse(JSON.stringify(active.hoja_salida)) : null,
       fechas_etapa: active.fechas_etapa ? JSON.parse(JSON.stringify(active.fechas_etapa)) : null,
       adjuntos: JSON.parse(JSON.stringify(active.adjuntos || emptyPendingStruct())),
       _pendingAdjuntos: pending,
@@ -3672,6 +4120,8 @@
     }
     svcActualEstadoOriginal = svcActual ? svcActual.estado : null;
     svcActualPending = emptyPendingStruct();
+    hojaSalidaPending = emptyHojaSalidaPending();
+    hojaSalidaFirmaEditando = false;
 
     // Si el vehículo ya trae datos en la Hoja de recepción o la Cotización,
     // el panel se abre solo — así nunca da la impresión de que se perdieron.
@@ -3690,6 +4140,8 @@
       if (cotHasData) toolPanelOpen.diagnostico = true;
 
       if (svcActual.informe_trabajo && svcActual.informe_trabajo.enviado) toolPanelOpen.recogido = true;
+      const hsAbrir = svcActual.hoja_salida;
+      if (hsAbrir && (hsAbrir.enviado || (hsAbrir.entrega_nombre || "").trim() || hsAbrir.fecha_salida)) toolPanelOpen.salida = true;
     }
 
     currentFotoPerfil = (v && v.foto_perfil) || null;
@@ -3856,7 +4308,8 @@
     ATTACH_STAGES.forEach((stage) => {
       const saved = (s.adjuntos && s.adjuntos[stage]) || { fotos: [], documentos: [] };
       const pdfEtapa = pdfDeEtapaHistorial(s, stage);
-      if (!saved.fotos.length && !saved.documentos.length && !pdfEtapa) return;
+      const pdfSalida = (stage === "recogido" && s.hoja_salida && s.hoja_salida.pdf_path) ? s.hoja_salida.pdf_path : null;
+      if (!saved.fotos.length && !saved.documentos.length && !pdfEtapa && !pdfSalida) return;
       const info = ESTADOS_SERVICIO()[stage] || PAGO_INFO();
       const savedGroup = JSON.stringify(saved.fotos.map(rawUrl)).replace(/"/g, "&quot;");
       const fotosHtml = saved.fotos.map((path, i) => `<div class="attach-thumb" data-lightbox-group="${savedGroup}" data-lightbox-index="${i}">${fotoCheckHtml(path)}<img src="${esc(rawUrl(path))}" alt="" onerror="__imgRetry(this)" onload="__imgLoaded(this)"></div>`).join("");
@@ -3869,6 +4322,7 @@
           <div style="font-size:10.5px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">${info.icon} ${info.label}</div>
           ${barraDescargaHtml(saved.fotos || [], (s.folio ? s.folio + "-" : "") + info.label)}
           ${pdfEtapa ? `<a class="doc-chip" href="${esc(rawUrl(pdfEtapa.path))}" target="_blank" rel="noopener">📄 ${esc(pdfEtapa.label)}</a>` : ""}
+          ${pdfSalida ? `<a class="doc-chip" href="${esc(rawUrl(pdfSalida))}" target="_blank" rel="noopener">📄 ${esc(t("pdf_hoja_salida_label"))}</a>` : ""}
           ${fotosHtml ? `<div class="attach-gallery">${fotosHtml}</div>` : ""}
           ${docsHtml}
         </div>`;
@@ -3906,7 +4360,7 @@
         nDocs += ((s.adjuntos && s.adjuntos[stage] && s.adjuntos[stage].documentos) || []).length;
         nDocs += ((s._pendingAdjuntos && s._pendingAdjuntos[stage] && s._pendingAdjuntos[stage].documentos) || []).length;
       });
-      nDocs += ["orden_recepcion", "cotizacion", "informe_trabajo"].filter((k) => s[k] && s[k].pdf_path).length;
+      nDocs += ["orden_recepcion", "cotizacion", "informe_trabajo", "hoja_salida"].filter((k) => s[k] && s[k].pdf_path).length;
       const chips = [];
       if (nFotos) chips.push(`<span class="tag">📷 ${nFotos}</span>`);
       if (nDocs) chips.push(`<span class="tag">📄 ${nDocs}</span>`);
@@ -4023,6 +4477,10 @@
     } else if (stage === "recogido") {
       toolButtonHtml = `<button type="button" class="btn btn-sm ${toolIsOpen ? "btn-tool-active" : "btn-outline"}" data-toggle-tool="recogido">${esc(t("informe_trabajo_titulo"))}</button>`;
       if (toolIsOpen) toolPanelHtml = `<div class="tool-panel">${renderInformeTrabajoSection()}</div>`;
+      // Solo Team Bassoco: Hoja de salida, como segundo panel-herramienta de Entregado.
+      const salidaAbierta = !!toolPanelOpen.salida;
+      toolButtonHtml += `<button type="button" class="btn btn-sm ${salidaAbierta ? "btn-tool-active" : "btn-outline"}" data-toggle-tool="salida">${esc(t("hoja_salida_titulo"))}</button>`;
+      if (salidaAbierta) toolPanelHtml += `<div class="tool-panel">${renderHojaSalidaSection()}</div>`;
     }
 
     // Botón para pasar a la siguiente etapa SIN cumplir los pasos de ésta (solo se
@@ -4104,6 +4562,139 @@
     const tieneCotizacion = cot && (cot.items || []).some((it) => (Number(it.cantidad) || 0) * (Number(it.costo_unitario) || 0) > 0);
     if (tieneCotizacion) return calcCotizacionTotales(cot.items, cot.incluir_iva).total;
     return servicio ? Number(servicio.costo) || 0 : 0;
+  }
+
+  function hsFotoSlotHtml(tipo, labelKey, savedPath) {
+    const pend = hojaSalidaPending[tipo];
+    const src = pend ? pend.url : (savedPath ? rawUrl(savedPath) : "");
+    const img = src
+      ? `<img src="${esc(src)}" alt="${esc(t(labelKey))}" ${pend ? "" : `onerror="__imgRetry(this)" onload="__imgLoaded(this)"`}>`
+      : `<span style="font-size:22px;">${tipo === "persona" ? "🧑" : "🪪"}</span>`;
+    return `
+      <div class="hs-foto-slot">
+        <label class="form-label">${esc(t(labelKey))}${pend ? ` <span style="color:var(--yellow);text-transform:none;">●</span>` : ""}</label>
+        <div class="hs-foto-preview">${img}</div>
+        <div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;">
+          <button type="button" class="btn btn-outline btn-sm" data-hs-foto-cam="${tipo}">${esc(t("hs_tomar_foto"))}</button>
+          <button type="button" class="btn btn-outline btn-sm" data-hs-foto-gal="${tipo}">${esc(t("hs_fototeca"))}</button>
+        </div>
+        <input type="file" id="hs-cam-${tipo}" data-hs-foto-input="${tipo}" accept="image/*" capture="environment" style="display:none;">
+        <input type="file" id="hs-gal-${tipo}" data-hs-foto-input="${tipo}" accept="image/*" style="display:none;">
+      </div>`;
+  }
+
+  function renderHojaSalidaSection() {
+    if (!svcActual.hoja_salida) svcActual.hoja_salida = emptyHojaSalida();
+    const hs = svcActual.hoja_salida;
+    const fechaEntrada = hs.fecha_entrada || isoAFechaLocal((svcActual.fechas_etapa && svcActual.fechas_etapa.recibido) || svcActual.fecha_inicio);
+    const kmEntrada = (hs.km_entrada !== null && hs.km_entrada !== undefined) ? hs.km_entrada : (svcActual.km ?? "");
+    const conceptos = conceptosHojaSalida(svcActual);
+    const conceptosHtml = conceptos.length
+      ? `<table class="hs-conceptos-tabla"><thead><tr><th>${esc(t("hs_descripcion"))}</th><th style="width:70px;text-align:center;">${esc(t("hs_cantidad"))}</th></tr></thead><tbody>${conceptos.map((c) => `<tr><td>${esc(c.concepto)}</td><td style="text-align:center;">${esc(String(c.cantidad))}</td></tr>`).join("")}</tbody></table>`
+      : `<p style="font-size:11.5px;color:var(--text-faint);margin:0;">${esc(t("hs_sin_conceptos"))}</p>`;
+    const mostrarCanvas = !hs.firma_path || hojaSalidaFirmaEditando || !!hojaSalidaPending.firma;
+    const firmaHtml = mostrarCanvas
+      ? `<canvas id="hs-firma-canvas" class="hs-firma-canvas" width="900" height="300"></canvas>
+         <p style="font-size:10.5px;color:var(--text-faint);margin:4px 0 6px;">${esc(t("hs_firma_hint"))}</p>
+         <button type="button" class="btn btn-outline btn-sm" id="btn-hs-firma-borrar">${esc(t("hs_firma_borrar"))}</button>`
+      : `<img class="hs-firma-img" src="${esc(rawUrl(hs.firma_path))}" alt="${esc(t("hs_firma"))}" onerror="__imgRetry(this)" onload="__imgLoaded(this)">
+         <div style="margin-top:6px;"><button type="button" class="btn btn-outline btn-sm" id="btn-hs-firma-rehacer">${esc(t("hs_firma_rehacer"))}</button></div>`;
+    return `
+        <div class="tool-panel-title">${esc(t("hoja_salida_titulo"))}</div>
+        <p style="color:var(--text-faint);font-size:11.5px;margin-top:-6px;">${esc(t("hoja_salida_desc"))}</p>
+        <div style="font-size:11.5px;color:${hs.enviado ? "var(--green-bright)" : "var(--text-faint)"};margin-bottom:12px;">
+          ${hs.enviado ? `${esc(t("hoja_salida_estado_enviado"))} ${formatFechaCorta(hs.fecha_envio)}` : esc(t("hoja_salida_estado_no_enviado"))}
+          ${hs.pdf_path ? ` · <a href="${esc(rawUrl(hs.pdf_path))}" target="_blank" rel="noopener">${esc(t("ver_pdf_enviado"))}</a>` : ""}
+        </div>
+        <div class="grid-2">
+          <div class="form-group"><label class="form-label">${esc(t("hs_fecha_entrada"))}</label><input type="date" id="hs-fecha-entrada" value="${esc(fechaEntrada || "")}"></div>
+          <div class="form-group"><label class="form-label">${esc(t("hs_fecha_salida"))} *</label><input type="date" id="hs-fecha-salida" value="${esc(hs.fecha_salida || "")}"></div>
+          <div class="form-group"><label class="form-label">${esc(t("hs_km_entrada"))}</label><input type="number" id="hs-km-entrada" inputmode="numeric" value="${esc(String(kmEntrada))}"></div>
+          <div class="form-group"><label class="form-label">${esc(t("hs_km_salida"))} *</label><input type="number" id="hs-km-salida" inputmode="numeric" value="${hs.km_salida ?? ""}"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">${esc(t("hs_conformidad"))}</label>
+          <select id="hs-conformidad">
+            <option value="" ${!hs.conformidad ? "selected" : ""}>${esc(t("hs_conformidad_sin"))}</option>
+            <option value="si" ${hs.conformidad === "si" ? "selected" : ""}>${esc(t("hs_si"))}</option>
+            <option value="no" ${hs.conformidad === "no" ? "selected" : ""}>${esc(t("hs_no"))}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">${esc(t("hs_servicios"))}</label>
+          ${conceptosHtml}
+        </div>
+        <div class="form-group">
+          <label class="form-label">${esc(t("hs_observaciones"))}</label>
+          <textarea id="hs-observaciones" style="min-height:56px;">${esc(hs.observaciones || "")}</textarea>
+        </div>
+        <div class="tool-panel-title" style="margin-top:6px;">${esc(t("hs_persona_titulo"))}</div>
+        <div class="grid-2">
+          <div class="form-group"><label class="form-label">${esc(t("hs_nombre"))} *</label><input type="text" id="hs-entrega-nombre" autocomplete="off" value="${esc(hs.entrega_nombre || "")}"></div>
+          <div class="form-group"><label class="form-label">${esc(t("hs_ine"))}</label><input type="text" id="hs-entrega-ine" autocomplete="off" value="${esc(hs.entrega_ine || "")}"></div>
+        </div>
+        <div class="hs-fotos-grid">
+          ${hsFotoSlotHtml("persona", "hs_foto_persona", hs.foto_persona_path)}
+          ${hsFotoSlotHtml("ine_frente", "hs_ine_frente", hs.ine_frente_path)}
+          ${hsFotoSlotHtml("ine_reverso", "hs_ine_reverso", hs.ine_reverso_path)}
+        </div>
+        <div class="form-group" style="margin-top:14px;">
+          <label class="form-label">${esc(t("hs_firma"))} *${hojaSalidaPending.firma ? ` <span style="color:var(--yellow);text-transform:none;">●</span>` : ""}</label>
+          ${firmaHtml}
+        </div>
+        <p style="font-size:10.5px;color:var(--text-faint);margin:2px 0 4px;">${esc(t("hs_aviso_subida"))}</p>
+        <p style="font-size:10.5px;color:var(--yellow);margin:0 0 10px;">⚠️ ${esc(t("hs_aviso_publico"))}</p>
+        <div class="actions-row">
+          <button class="btn btn-outline btn-sm" id="btn-enviar-hoja-salida" type="button">${esc(t("btn_enviar_hoja_salida"))}</button>
+        </div>`;
+  }
+
+  // Recuadro de firma: se dibuja con el dedo (o el mouse). Cada vez que se
+  // levanta el dedo se guarda la firma como imagen en memoria, así no se
+  // pierde aunque la tarjeta se vuelva a dibujar.
+  function initFirmaCanvas() {
+    const canvas = $("hs-firma-canvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const prepararTrazo = () => {
+      ctx.lineWidth = 4.5; ctx.lineCap = "round"; ctx.lineJoin = "round";
+      ctx.strokeStyle = "#111418"; ctx.fillStyle = "#111418";
+    };
+    prepararTrazo();
+    if (hojaSalidaPending.firma) {
+      const img = new Image();
+      img.onload = () => ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      img.src = hojaSalidaPending.firma;
+    }
+    let dibujando = false;
+    let ultimo = null;
+    const pos = (e) => {
+      const r = canvas.getBoundingClientRect();
+      return { x: (e.clientX - r.left) * (canvas.width / r.width), y: (e.clientY - r.top) * (canvas.height / r.height) };
+    };
+    canvas.addEventListener("pointerdown", (e) => {
+      e.preventDefault();
+      dibujando = true;
+      ultimo = pos(e);
+      try { canvas.setPointerCapture(e.pointerId); } catch (err) { /* nada */ }
+      prepararTrazo();
+      ctx.beginPath(); ctx.arc(ultimo.x, ultimo.y, ctx.lineWidth / 2, 0, Math.PI * 2); ctx.fill();
+    });
+    canvas.addEventListener("pointermove", (e) => {
+      if (!dibujando) return;
+      e.preventDefault();
+      const p = pos(e);
+      ctx.beginPath(); ctx.moveTo(ultimo.x, ultimo.y); ctx.lineTo(p.x, p.y); ctx.stroke();
+      ultimo = p;
+    });
+    const terminar = () => {
+      if (!dibujando) return;
+      dibujando = false;
+      hojaSalidaPending.firma = canvas.toDataURL("image/png");
+      hasUnsavedChanges = true; contadorDeEdiciones++; updateUnsavedIndicator();
+    };
+    canvas.addEventListener("pointerup", terminar);
+    canvas.addEventListener("pointercancel", terminar);
   }
 
   function renderInformeTrabajoSection() {
@@ -4303,6 +4894,7 @@
         <button class="btn btn-outline btn-danger" id="btn-cancel-service">${esc(t("cancelar_servicio_btn"))}</button>
       </div>
     `;
+    initFirmaCanvas();
   }
 
   function readActiveServiceFieldsFromDom() {
@@ -4341,6 +4933,18 @@
     }
     if ($("cotiz-incluir-iva")) cot.incluir_iva = $("cotiz-incluir-iva").checked;
     if ($("cotiz-observaciones")) cot.observaciones = $("cotiz-observaciones").value.trim();
+    if ($("hs-fecha-salida")) {
+      if (!svcActual.hoja_salida) svcActual.hoja_salida = emptyHojaSalida();
+      const hs = svcActual.hoja_salida;
+      hs.fecha_entrada = $("hs-fecha-entrada").value || null;
+      hs.fecha_salida = $("hs-fecha-salida").value || null;
+      hs.km_entrada = $("hs-km-entrada").value !== "" ? Number($("hs-km-entrada").value) : null;
+      hs.km_salida = $("hs-km-salida").value !== "" ? Number($("hs-km-salida").value) : null;
+      hs.conformidad = $("hs-conformidad").value;
+      hs.observaciones = $("hs-observaciones").value.trim();
+      hs.entrega_nombre = $("hs-entrega-nombre").value.trim();
+      hs.entrega_ine = $("hs-entrega-ine").value.trim();
+    }
     const nuevoEstado = $("as-estado").value;
     if (nuevoEstado !== svcActualEstadoOriginal) {
       svcActual.actualizado = todayISO();
@@ -4362,6 +4966,7 @@
       orden_recepcion: emptyOrdenRecepcion(),
       cotizacion: emptyCotizacion(),
       informe_trabajo: emptyInformeTrabajo(),
+      hoja_salida: emptyHojaSalida(),
       adjuntos: {
         recibido: { fotos: [], documentos: [] },
         diagnostico: { fotos: [], documentos: [] },
@@ -4373,6 +4978,8 @@
     };
     svcActualEstadoOriginal = "recibido";
     svcActualPending = emptyPendingStruct();
+    hojaSalidaPending = emptyHojaSalidaPending();
+    hojaSalidaFirmaEditando = false;
     renderActiveServiceCard();
   }
 
@@ -4382,6 +4989,8 @@
     if (svcActual.adjuntos) collectServiceAttachmentPaths(svcActual).forEach(queueDelete);
     svcActual = null;
     svcActualPending = emptyPendingStruct();
+    hojaSalidaPending = emptyHojaSalidaPending();
+    hojaSalidaFirmaEditando = false;
     renderActiveServiceCard();
   }
 
@@ -4399,6 +5008,7 @@
     if (svcActual.estado !== "recogido") pendientes.push(t("resumen_no_entregado"));
     if (svcActual.pago.estado !== "pagado") pendientes.push(t("resumen_pago_pendiente"));
     if (!svcActual.informe_trabajo || !svcActual.informe_trabajo.enviado) pendientes.push(t("resumen_informe_no_enviado"));
+    if (!svcActual.hoja_salida || !svcActual.hoja_salida.enviado) pendientes.push(t("resumen_hoja_salida_no_enviada"));
     if (svcActual.cotizacion && (svcActual.cotizacion.items || []).some((it) => (Number(it.cantidad) || 0) * (Number(it.costo_unitario) || 0) > 0) && !svcActual.cotizacion.aceptado) {
       pendientes.push(t("resumen_cotizacion_no_aceptada"));
     }
@@ -4406,6 +5016,18 @@
       ? t("confirm_finalizar_incompleto").replace("{lista}", pendientes.map((p) => `⚠️ ${p}`).join("\n"))
       : t("confirm_finalizar_servicio");
     if (!confirm(mensaje)) return;
+
+    // Fotos o firma de la hoja de salida capturadas pero no subidas: se suben
+    // ANTES de pasar el servicio al historial, o se perderían al finalizar.
+    if (hayPendientesHojaSalida()) {
+      try {
+        showToast(t("hs_subiendo_toast"));
+        await subirPendientesHojaSalida($("f-id").value.trim(), $("f-placas").value.trim());
+      } catch (err) {
+        showToast(t("msg_error_hoja_salida_subida") + err.message, "error", 9000);
+        return;
+      }
+    }
 
     const svcActualRespaldo = svcActual;
     const svcActualPendingRespaldo = svcActualPending;
@@ -4480,6 +5102,100 @@
       return;
     }
 
+
+    // ---- Hoja de salida (solo Team Bassoco) ----
+    const hsCam = e.target.closest("[data-hs-foto-cam]");
+    if (hsCam) { $("hs-cam-" + hsCam.dataset.hsFotoCam).click(); return; }
+    const hsGal = e.target.closest("[data-hs-foto-gal]");
+    if (hsGal) { $("hs-gal-" + hsGal.dataset.hsFotoGal).click(); return; }
+    if (e.target.id === "btn-hs-firma-borrar") {
+      readActiveServiceFieldsFromDom();
+      hojaSalidaPending.firma = null;
+      hojaSalidaFirmaEditando = true;
+      renderActiveServiceCard();
+      return;
+    }
+    if (e.target.id === "btn-hs-firma-rehacer") {
+      readActiveServiceFieldsFromDom();
+      hojaSalidaFirmaEditando = true;
+      renderActiveServiceCard();
+      return;
+    }
+    if (e.target.id === "btn-enviar-hoja-salida") {
+      readActiveServiceFieldsFromDom();
+      const hs = svcActual.hoja_salida || emptyHojaSalida();
+      svcActual.hoja_salida = hs;
+      const faltan = [];
+      if (!hs.fecha_salida) faltan.push(t("hs_fecha_salida"));
+      if (hs.km_salida === null || hs.km_salida === undefined) faltan.push(t("hs_km_salida"));
+      if (!hs.entrega_nombre) faltan.push(t("hs_nombre"));
+      if (!hs.firma_path && !hojaSalidaPending.firma) faltan.push(t("hs_firma"));
+      if (faltan.length) { showToast(t("hs_falta_obligatorio").replace("{lista}", faltan.join(", ")), "error", 8000); return; }
+      const avisos = [];
+      if (!hs.entrega_ine) avisos.push(t("hs_ine"));
+      if (!hs.foto_persona_path && !hojaSalidaPending.persona) avisos.push(t("hs_foto_persona"));
+      if (!hs.ine_frente_path && !hojaSalidaPending.ine_frente) avisos.push(t("hs_ine_frente"));
+      if (!hs.ine_reverso_path && !hojaSalidaPending.ine_reverso) avisos.push(t("hs_ine_reverso"));
+      if (hs.km_entrada !== null && hs.km_entrada !== undefined && Number(hs.km_salida) < Number(hs.km_entrada)) avisos.push(t("hs_km_menor"));
+      if (avisos.length && !confirm(t("hs_confirm_incompleto").replace("{lista}", avisos.map((a) => `⚠️ ${a}`).join("\n")))) return;
+
+      const vehicleId = $("f-id").value.trim();
+      const vehicleSnap = {
+        id: vehicleId,
+        placas: $("f-placas").value.trim(),
+        numero_unidad: $("f-numero-unidad").value.trim(),
+        marca: $("f-marca").value.trim(),
+        modelo: $("f-modelo").value.trim(),
+        anio: $("f-anio").value.trim(),
+        vin: $("f-vin").value.trim(),
+        cliente_nombre: $("f-cliente-nombre").value.trim(),
+        cliente_telefono: $("f-cliente-tel").value.trim(),
+        cliente_telefono_2: $("f-cliente-tel-2").value.trim(),
+      };
+      if (!vehicleId) { showToast(t("msg_id_nfc_obligatorio"), "error"); return; }
+      const btn = e.target;
+      const originalLabel = btn.textContent;
+      btn.disabled = true;
+      (async () => {
+        try {
+          await subirPendientesHojaSalida(vehicleId, vehicleSnap.placas, (i, n) => {
+            btn.textContent = t("hs_subiendo").replace("{i}", i).replace("{n}", n);
+          });
+          btn.textContent = t("btn_generando_pdf");
+          const pdfBlob = await generarHojaSalidaPDF(vehicleSnap, svcActual);
+          btn.textContent = t("btn_subiendo_pdf");
+          const path = `uploads/${vehicleId}/${timestampSlug()}-hoja-salida.pdf`;
+          await uploadBinaryFile(path, await blobToBase64(pdfBlob), `Hoja de salida — ${vehicleSnap.placas || vehicleId}`);
+          const hsOk = svcActual.hoja_salida;
+          if (hsOk.pdf_path && hsOk.pdf_path !== path) queueDelete(hsOk.pdf_path);
+          hsOk.enviado = true;
+          hsOk.fecha_envio = todayISO();
+          hsOk.pdf_path = path;
+          renderActiveServiceCard();
+          btn.textContent = t("guardando_btn");
+          const guardadoOk = await saveVehicle();
+          if (!guardadoOk) return;
+          offerWhatsAppHojaSalida({
+            nombre: vehicleSnap.cliente_nombre,
+            telefono: vehicleSnap.cliente_telefono,
+            telefono2: vehicleSnap.cliente_telefono_2,
+            marca: vehicleSnap.marca,
+            modelo: vehicleSnap.modelo,
+            placas: vehicleSnap.placas,
+            numero_unidad: vehicleSnap.numero_unidad,
+            id: vehicleId,
+            pdfUrl: rawUrl(path),
+          });
+        } catch (err) {
+          showToast(t("msg_error_hoja_salida_pdf") + err.message, "error", 9000);
+          renderActiveServiceCard();
+        } finally {
+          const b = $("btn-enviar-hoja-salida");
+          if (b) { b.disabled = false; b.textContent = originalLabel; }
+        }
+      })();
+      return;
+    }
 
     const toggleToolBtn = e.target.closest("[data-toggle-tool]");
     if (toggleToolBtn) {
@@ -4783,6 +5499,20 @@
     }
   });
 
+  $("active-service-container").addEventListener("change", (e) => {
+    const tipo = e.target.dataset && e.target.dataset.hsFotoInput;
+    if (!tipo) return;
+    const file = e.target.files && e.target.files[0];
+    e.target.value = "";
+    if (!file) return;
+    if (!file.type.startsWith("image/") && !looksLikeHeic(file)) return;
+    readActiveServiceFieldsFromDom();
+    const anterior = hojaSalidaPending[tipo];
+    if (anterior) { try { URL.revokeObjectURL(anterior.url); } catch (err) { /* nada */ } }
+    hojaSalidaPending[tipo] = { file, url: URL.createObjectURL(file) };
+    renderActiveServiceCard();
+  });
+
   $("active-service-container").addEventListener("change", async (e) => {
     const tgt = e.target;
 
@@ -4982,6 +5712,7 @@
         orden_recepcion: svcActual.orden_recepcion,
         cotizacion: svcActual.cotizacion,
         informe_trabajo: svcActual.informe_trabajo,
+        hoja_salida: svcActual.hoja_salida || null,
         fechas_etapa: svcActual.fechas_etapa,
         adjuntos: svcActual.adjuntos,
         _pendingAdjuntos: svcActualPending,
@@ -5085,6 +5816,14 @@
       // antes en este proyecto) — aquí se prioriza confiabilidad sobre
       // velocidad, igual que en la subida de fotos dentro de cada etapa.
       await uploadPendingAttachments(vehicle);
+      // Hoja de salida (solo Team Bassoco): firma y fotos pendientes. Las rutas
+      // quedan en svcActual.hoja_salida, que es el MISMO objeto que lleva el
+      // vehículo que se va a guardar (vehicle.servicio_actual.hoja_salida).
+      if (hayPendientesHojaSalida()) {
+        showToast(t("hs_subiendo_toast"));
+        await subirPendientesHojaSalida(vehicle.id, vehicle.placas);
+        if (vehicle.servicio_actual && svcActual) vehicle.servicio_actual.hoja_salida = svcActual.hoja_salida;
+      }
       await uploadPendingActiveServiceAttachments(vehicle);
       await uploadVehicleLevelAttachments(vehicle);
 
