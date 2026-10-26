@@ -6343,9 +6343,113 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1793053011857",
+        "folio": "A041",
+        "tipo": "SERVICIO Y ROTACION DE LLANTAS",
+        "descripcion": "SERVICIO DE MANTENIMIENTO Y ROTACION DE LLANTAS",
+        "nota_interna": "REVISION GENERAL",
+        "km": 189909,
+        "costo": null,
+        "tecnico": "",
+        "tiempo_entrega_aprox": "2 dias",
+        "fecha_inicio": "2026-10-26",
+        "estado": "recibido",
+        "actualizado": "2026-10-26",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "no",
+              "cristales": "no",
+              "emblema": "no",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "no"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": ""
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-26T22:16:51.857Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X36/20261026-161852-recibido-0-COMPROBANTE-DE-DOMICILIO.jpg",
+              "uploads/X36/20261026-161856-recibido-1-LOGO-BASSOCO-OK-PNG.jpg",
+              "uploads/X36/20261026-161857-recibido-2-LOGO-BASSOCO.jpg",
+              "uploads/X36/20261026-161859-recibido-3-WhatsApp-Image-2025-02-25-at-1.47.32-PM.jpg",
+              "uploads/X36/20261026-161901-recibido-4-WhatsApp-Image-2025-02-25-at-1.47.33-PM-1-.jpg",
+              "uploads/X36/20261026-161904-recibido-5-WhatsApp-Image-2025-02-25-at-1.47.33-PM-2-.jpg",
+              "uploads/X36/20261026-161905-recibido-6-WhatsApp-Image-2025-02-25-at-1.47.33-PM.jpg",
+              "uploads/X36/20261026-161907-recibido-7-WhatsApp-Image-2025-02-25-at-1.48.35-PM-1-.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
-  "folio_counter": 40
+  "folio_counter": 41
 }
