@@ -6493,9 +6493,132 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1793118082200",
+        "folio": "A042",
+        "tipo": "",
+        "descripcion": "FRENOS, LUZ TABLERO, SERVICIO",
+        "nota_interna": "",
+        "km": 255371,
+        "costo": null,
+        "tecnico": "JAVIER VARGAS",
+        "tiempo_entrega_aprox": "1 dia",
+        "fecha_inicio": "2026-10-27",
+        "estado": "recibido",
+        "actualizado": "2026-10-27",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "no",
+              "cristales": "no",
+              "emblema": "no",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "no"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": ""
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "hoja_salida": {
+          "fecha_entrada": null,
+          "fecha_salida": null,
+          "km_entrada": null,
+          "km_salida": null,
+          "conformidad": "",
+          "observaciones": "",
+          "entrega_nombre": "",
+          "entrega_ine": "",
+          "firma_path": null,
+          "foto_persona_path": null,
+          "ine_frente_path": null,
+          "ine_reverso_path": null,
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-27T16:21:22.200Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X37/20261027-102502-recibido-0-17931181788953882793856862374548.jpg",
+              "uploads/X37/20261027-102508-recibido-1-17931181890116436414923468322285.jpg",
+              "uploads/X37/20261027-102515-recibido-2-1793118209499489404378460320839.jpg",
+              "uploads/X37/20261027-102531-recibido-3-17931182162495982081056232493986.jpg",
+              "uploads/X37/20261027-102537-recibido-4-17931182258781929464810201570635.jpg",
+              "uploads/X37/20261027-102549-recibido-5-17931182309661609321390914484494.jpg",
+              "uploads/X37/20261027-102604-recibido-6-17931182405485061196534849700596.jpg",
+              "uploads/X37/20261027-102608-recibido-7-17931182502628523894808483909945.jpg",
+              "uploads/X37/20261027-102615-recibido-8-17931182785248557492313935174816.jpg",
+              "uploads/X37/20261027-102617-recibido-9-17931182877344053438130548859524.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": []
     }
   },
-  "folio_counter": 41
+  "folio_counter": 42
 }
