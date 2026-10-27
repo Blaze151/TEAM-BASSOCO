@@ -6486,7 +6486,7 @@
       "cliente_direccion": "",
       "cliente_actualizado": "2026-10-27T16:20:40.127Z",
       "ficha_tecnica": {
-        "aceite_tipo": "",
+        "aceite_tipo": "15w40",
         "aceite_capacidad": "",
         "presion_llantas": "",
         "bateria": "",
