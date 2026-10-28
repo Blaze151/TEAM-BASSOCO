@@ -6032,9 +6032,9 @@
               "maneral_gato": "no",
               "llave_ruedas": "no",
               "estuche_herramientas": "no",
-              "triangulo_seguridad": "no",
+              "triangulo_seguridad": "si",
               "llanta_refaccion": "no",
-              "extinguidor": "no"
+              "extinguidor": "si"
             },
             "gasolina": 25,
             "danos_notas": "MANIJA DE PUERTA CORREDIZA DAÑADA"
