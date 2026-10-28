@@ -6793,16 +6793,16 @@
         "tecnico": "OSCAR FLORES",
         "tiempo_entrega_aprox": "1 dia",
         "fecha_inicio": "2026-10-28",
-        "estado": "recibido",
+        "estado": "diagnostico",
         "actualizado": "2026-10-28",
         "pago": {
           "estado": "no_pagado",
           "metodo": null
         },
         "orden_recepcion": {
-          "enviado": false,
+          "enviado": true,
           "aceptado": false,
-          "fecha_envio": null,
+          "fecha_envio": "2026-10-28",
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
@@ -6825,7 +6825,8 @@
             },
             "gasolina": 25,
             "danos_notas": "RIN DELANTERO IZQUIERDO DAÑADO"
-          }
+          },
+          "pdf_path": "uploads/X38/20261028-134951-informe-recepcion.pdf"
         },
         "cotizacion": {
           "enviado": false,
@@ -6866,7 +6867,8 @@
           "pdf_path": null
         },
         "fechas_etapa": {
-          "recibido": "2026-10-28T19:30:21.738Z"
+          "recibido": "2026-10-28T19:30:21.738Z",
+          "diagnostico": "2026-10-28T19:49:54.396Z"
         },
         "adjuntos": {
           "recibido": {
