@@ -6917,7 +6917,9 @@
       "fecha_creacion": "2026-10-28T22:26:01.250Z",
       "foto_perfil": "uploads/X40/20261028-162616-perfil.jpg",
       "documentos_vehiculo": {
-        "fotos": [],
+        "fotos": [
+          "uploads/X40/20261028-162946-vdoc-0-1000165239.jpg"
+        ],
         "documentos": []
       },
       "placas": "RK-4004-A",
