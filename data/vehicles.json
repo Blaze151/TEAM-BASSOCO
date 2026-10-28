@@ -6061,19 +6061,21 @@
           "fecha_envio": null,
           "pdf_path": null
         },
+        "hoja_salida": null,
         "fechas_etapa": {
           "recibido": "2026-10-24T20:34:22.702Z"
         },
         "adjuntos": {
           "recibido": {
             "fotos": [
-              "uploads/X33/20261024-143611-recibido-0-1000160843.jpg",
-              "uploads/X33/20261024-143613-recibido-1-1000160842.jpg",
-              "uploads/X33/20261024-143616-recibido-2-1000160841.jpg",
-              "uploads/X33/20261024-143618-recibido-3-1000160840.jpg",
-              "uploads/X33/20261024-143620-recibido-4-1000160839.jpg",
-              "uploads/X33/20261024-143622-recibido-5-1000160838.jpg",
-              "uploads/X33/20261024-143639-recibido-0-17928741933192362123391059894593.jpg"
+              "uploads/X33/20261024-143639-recibido-0-17928741933192362123391059894593.jpg",
+              "uploads/X33/20261028-094908-recibido-0-1000164811.jpg",
+              "uploads/X33/20261028-094911-recibido-1-1000164812.jpg",
+              "uploads/X33/20261028-094913-recibido-2-1000164813.jpg",
+              "uploads/X33/20261028-094916-recibido-3-1000164814.jpg",
+              "uploads/X33/20261028-094919-recibido-4-1000164815.jpg",
+              "uploads/X33/20261028-094922-recibido-5-1000164816.jpg",
+              "uploads/X33/20261028-094924-recibido-6-1000164817.jpg"
             ],
             "documentos": []
           },
