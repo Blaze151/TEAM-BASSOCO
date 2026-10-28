@@ -6752,7 +6752,9 @@
       "fecha_creacion": "2026-10-28T19:25:01.699Z",
       "foto_perfil": "uploads/X38/20261028-132939-perfil.jpg",
       "documentos_vehiculo": {
-        "fotos": [],
+        "fotos": [
+          "uploads/X38/20261028-132951-vdoc-0-1000165044.jpg"
+        ],
         "documentos": []
       },
       "placas": "FFR-473-D",
