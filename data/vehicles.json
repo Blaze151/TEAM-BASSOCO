@@ -6834,9 +6834,9 @@
           "pdf_path": null,
           "items": [
             {
-              "concepto": "",
-              "cantidad": 1,
-              "costo_unitario": null
+              "concepto": "BASE DE AMORTIGUADOR DELANTERO",
+              "cantidad": 2,
+              "costo_unitario": 1300
             }
           ],
           "incluir_iva": true,
