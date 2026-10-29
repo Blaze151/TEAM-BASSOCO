@@ -4357,6 +4357,7 @@
           "fecha_envio": null,
           "pdf_path": null
         },
+        "hoja_salida": null,
         "fechas_etapa": {
           "recibido": "2026-10-20T16:10:19.005Z"
         },
@@ -4382,11 +4383,18 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X21/20261029-162631-diagnostico-0-17933127828603211141252493671862.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X21/20261029-162634-en_proceso-0-17933127325648781195413018604518.jpg",
+              "uploads/X21/20261029-162637-en_proceso-1-17933127406021051878994513297991.jpg",
+              "uploads/X21/20261029-162639-en_proceso-2-17933127623173453440377682499630.jpg",
+              "uploads/X21/20261029-162642-en_proceso-3-17933127720706611976336571235608.jpg"
+            ],
             "documentos": []
           },
           "listo": {
