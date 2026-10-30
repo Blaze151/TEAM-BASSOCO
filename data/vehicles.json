@@ -5781,6 +5781,7 @@
           "fecha_envio": null,
           "pdf_path": null
         },
+        "hoja_salida": null,
         "fechas_etapa": {
           "recibido": "2026-10-23T19:01:23.993Z"
         },
@@ -5799,11 +5800,16 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X29/20261030-114556-diagnostico-0-1000166602.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X29/20261030-114558-en_proceso-0-1000166596.jpg",
+              "uploads/X29/20261030-114601-en_proceso-1-1000166595.jpg"
+            ],
             "documentos": []
           },
           "listo": {
