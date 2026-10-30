@@ -663,6 +663,7 @@
       wa_sin_telefono: "Este vehículo no tiene teléfono de cliente registrado.",
       cerrar_btn: "Cerrar",
       wa_prompt_titulo: "📲 Vehículo listo para recoger",
+      msg_listo_nfc_wa: "Recuerda que puedes checar el historial de los servicios realizados a tu vehículo con el llavero NFC{id} en tus llaves, solo acércalo a tu celular activando el lector NFC y listo,\no haciendo click en el siguiente enlace: {link}\n\nGracias por tu preferencia y confianza!\n\nLuis Germán García Guajardo\nTEAM BASSOCO GRUPO AUTOMOTOR INTEGRADO",
       wa_prompt_titulo_recibido: "📲 Vehículo recibido en el taller",
       wa_prompt_pre: "¿Quieres avisarle a",
       wa_prompt_post: "por WhatsApp?",
@@ -1042,6 +1043,7 @@
       wa_sin_telefono: "This vehicle has no customer phone registered.",
       cerrar_btn: "Close",
       wa_prompt_titulo: "📲 Vehicle ready for pickup",
+      msg_listo_nfc_wa: "Remember you can check the history of the services done to your vehicle with the NFC key fob{id} on your keys, just bring it close to your phone with the NFC reader on and that's it,\nor by clicking the following link: {link}\n\nThank you for your preference and trust!\n\nLuis Germán García Guajardo\nTEAM BASSOCO GRUPO AUTOMOTOR INTEGRADO",
       wa_prompt_titulo_recibido: "📲 Vehicle received at the shop",
       wa_prompt_pre: "Do you want to notify",
       wa_prompt_post: "via WhatsApp?",
@@ -3567,7 +3569,7 @@
 
   /* ---------------- Mensaje de WhatsApp al marcar "listo para recoger" ---------------- */
 
-  function buildWhatsAppListoLink({ nombre, telefono, marca, modelo, placas, numero_unidad, costo }) {
+  function buildWhatsAppListoLink({ nombre, telefono, marca, modelo, placas, numero_unidad, costo, id }) {
     let phone = (telefono || "").replace(/\D/g, "");
     if (!phone) return null;
     if (phone.length === 10) phone = "52" + phone;
@@ -3576,7 +3578,13 @@
     const unidadTxt = numero_unidad ? ` (Unidad ${numero_unidad})` : "";
     const msg = `Hola ${nombre || ""}, tu vehículo ${marca || ""} ${modelo || ""} (placas ${placas || "N/A"})${unidadTxt} ya está listo para recoger en ${tallerNombre}. El total a pagar es ${costoTxt}. Te esperamos!`
       .replace(/\s+/g, " ").trim();
-    return `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+    // Recordatorio del llavero NFC + enlace a la ficha. Va aparte porque
+    // lleva saltos de línea (el mensaje principal colapsa los espacios).
+    const trackUrl = id ? `${TRACK_BASE_URL}?v=${encodeURIComponent(id)}` : TRACK_BASE_URL;
+    const nfc = t("msg_listo_nfc_wa")
+      .replace("{id}", id ? ` (ID ${id})` : "")
+      .replace("{link}", trackUrl);
+    return `https://wa.me/${phone}?text=${encodeURIComponent(msg + "\n\n" + nfc)}`;
   }
 
   // Muestra un enlace REAL de WhatsApp para que el usuario lo toque directamente.
@@ -5587,6 +5595,7 @@
             placas: $("f-placas").value.trim(),
             numero_unidad: $("f-numero-unidad").value.trim(),
             costo: montoAviso,
+            id: currentVehicleId,
           });
         }
       }
