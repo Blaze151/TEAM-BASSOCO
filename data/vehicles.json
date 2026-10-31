@@ -69,8 +69,8 @@
           "fecha_aceptado": null,
           "inventario": {
             "exteriores": {
-              "antena": "no",
-              "espejo_lateral": "no",
+              "antena": "si",
+              "espejo_lateral": "si",
               "cristales": "no",
               "emblema": "no",
               "tapon_ruedas": "no",
@@ -86,7 +86,7 @@
               "llanta_refaccion": "no",
               "extinguidor": "no"
             },
-            "gasolina": 0,
+            "gasolina": 75,
             "danos_notas": ""
           }
         },
@@ -150,7 +150,10 @@
               "uploads/X3/20261031-110618-recibido-3-17934662778448454693759269004731.jpg",
               "uploads/X3/20261031-110625-recibido-4-17934662831051853260042112930408.jpg",
               "uploads/X3/20261031-110632-recibido-5-17934663014331127733615397752867.jpg",
-              "uploads/X3/20261031-110639-recibido-6-17934663127893937228215774475212.jpg"
+              "uploads/X3/20261031-110639-recibido-6-17934663127893937228215774475212.jpg",
+              "uploads/X3/20261031-110759-recibido-0-17934664464486577333406356012338.jpg",
+              "uploads/X3/20261031-110801-recibido-1-17934664556308374195667359142267.jpg",
+              "uploads/X3/20261031-110817-recibido-2-17934664614733387226241569703833.jpg"
             ],
             "documentos": []
           },
