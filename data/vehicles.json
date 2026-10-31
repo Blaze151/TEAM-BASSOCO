@@ -45,7 +45,137 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": null,
+      "servicio_actual": {
+        "id": "svc_1793466215020",
+        "folio": "A046",
+        "tipo": "Afinación",
+        "descripcion": "Cambio de aceite y filtro de aceite. Revisión de niveles.",
+        "nota_interna": "",
+        "km": 75106,
+        "costo": null,
+        "tecnico": "MIGUEL SALAS",
+        "tiempo_entrega_aprox": "1 Hora",
+        "fecha_inicio": "2026-10-31",
+        "estado": "recibido",
+        "actualizado": "2026-10-31",
+        "pago": {
+          "estado": "no_pagado",
+          "metodo": null
+        },
+        "orden_recepcion": {
+          "enviado": false,
+          "aceptado": false,
+          "fecha_envio": null,
+          "fecha_aceptado": null,
+          "inventario": {
+            "exteriores": {
+              "antena": "no",
+              "espejo_lateral": "no",
+              "cristales": "no",
+              "emblema": "no",
+              "tapon_ruedas": "no",
+              "molduras_completas": "no",
+              "tapon_gasolina": "no"
+            },
+            "accesorios": {
+              "gato": "no",
+              "maneral_gato": "no",
+              "llave_ruedas": "no",
+              "estuche_herramientas": "no",
+              "triangulo_seguridad": "no",
+              "llanta_refaccion": "no",
+              "extinguidor": "no"
+            },
+            "gasolina": 0,
+            "danos_notas": ""
+          }
+        },
+        "cotizacion": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null,
+          "items": [
+            {
+              "concepto": "Aceite de motor",
+              "cantidad": 1,
+              "costo_unitario": null
+            },
+            {
+              "concepto": "Filtro de aceite",
+              "cantidad": 1,
+              "costo_unitario": null
+            },
+            {
+              "concepto": "Mano de obra",
+              "cantidad": 1,
+              "costo_unitario": null
+            }
+          ],
+          "incluir_iva": true,
+          "observaciones": "",
+          "aceptado": false,
+          "fecha_aceptado": null
+        },
+        "informe_trabajo": {
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "hoja_salida": {
+          "fecha_entrada": null,
+          "fecha_salida": null,
+          "km_entrada": null,
+          "km_salida": null,
+          "conformidad": "",
+          "observaciones": "",
+          "entrega_nombre": "",
+          "entrega_ine": "",
+          "firma_path": null,
+          "foto_persona_path": null,
+          "ine_frente_path": null,
+          "ine_reverso_path": null,
+          "enviado": false,
+          "fecha_envio": null,
+          "pdf_path": null
+        },
+        "fechas_etapa": {
+          "recibido": "2026-10-31T17:03:35.023Z"
+        },
+        "adjuntos": {
+          "recibido": {
+            "fotos": [
+              "uploads/X3/20261031-110606-recibido-0-17934662506946711713357072499056.jpg",
+              "uploads/X3/20261031-110614-recibido-1-17934662589448913708760996434.jpg",
+              "uploads/X3/20261031-110616-recibido-2-17934662677221447134280458874153.jpg",
+              "uploads/X3/20261031-110618-recibido-3-17934662778448454693759269004731.jpg",
+              "uploads/X3/20261031-110625-recibido-4-17934662831051853260042112930408.jpg",
+              "uploads/X3/20261031-110632-recibido-5-17934663014331127733615397752867.jpg",
+              "uploads/X3/20261031-110639-recibido-6-17934663127893937228215774475212.jpg"
+            ],
+            "documentos": []
+          },
+          "diagnostico": {
+            "fotos": [],
+            "documentos": []
+          },
+          "en_proceso": {
+            "fotos": [],
+            "documentos": []
+          },
+          "listo": {
+            "fotos": [],
+            "documentos": []
+          },
+          "recogido": {
+            "fotos": [],
+            "documentos": []
+          },
+          "pago": {
+            "fotos": [],
+            "documentos": []
+          }
+        }
+      },
       "servicios": [
         {
           "fecha": "2026-10-31",
@@ -7105,5 +7235,5 @@
       "servicios": []
     }
   },
-  "folio_counter": 45
+  "folio_counter": 46
 }
