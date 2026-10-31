@@ -45,119 +45,119 @@
         "filtro_aire": "",
         "filtro_aceite": ""
       },
-      "servicio_actual": {
-        "id": "svc_1792626606750",
-        "folio": "A031",
-        "tipo": "FILTRO DAÑADO",
-        "descripcion": "",
-        "nota_interna": "",
-        "km": 74413,
-        "costo": null,
-        "tecnico": "LUIS GARCIA",
-        "tiempo_entrega_aprox": "1 Hora",
-        "fecha_inicio": "2026-10-21",
-        "estado": "recibido",
-        "actualizado": "2026-10-21",
-        "pago": {
-          "estado": "no_pagado",
-          "metodo": null
-        },
-        "orden_recepcion": {
-          "enviado": false,
-          "aceptado": false,
-          "fecha_envio": null,
-          "fecha_aceptado": null,
-          "inventario": {
-            "exteriores": {
-              "antena": "si",
-              "espejo_lateral": "si",
-              "cristales": "no",
-              "emblema": "no",
-              "tapon_ruedas": "no",
-              "molduras_completas": "no",
-              "tapon_gasolina": "no"
-            },
-            "accesorios": {
-              "gato": "no",
-              "maneral_gato": "no",
-              "llave_ruedas": "no",
-              "estuche_herramientas": "no",
-              "triangulo_seguridad": "no",
-              "llanta_refaccion": "no",
-              "extinguidor": "no"
-            },
-            "gasolina": 25,
-            "danos_notas": "PARABRISAS DAÑADO, ESTA TIRANDO AGUA,"
-          }
-        },
-        "cotizacion": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null,
-          "items": [
-            {
-              "concepto": "",
-              "cantidad": 1,
-              "costo_unitario": null
-            }
-          ],
-          "incluir_iva": true,
-          "observaciones": "",
-          "aceptado": false,
-          "fecha_aceptado": null
-        },
-        "informe_trabajo": {
-          "enviado": false,
-          "fecha_envio": null,
-          "pdf_path": null
-        },
-        "fechas_etapa": {
-          "recibido": "2026-10-21T23:50:06.753Z"
-        },
-        "adjuntos": {
-          "recibido": {
-            "fotos": [
-              "uploads/X3/20261021-175415-recibido-0-1000158374.jpg",
-              "uploads/X3/20261021-175418-recibido-1-1000158373.jpg",
-              "uploads/X3/20261021-175421-recibido-2-1000158371.jpg",
-              "uploads/X3/20261021-175423-recibido-3-1000158372.jpg",
-              "uploads/X3/20261021-175426-recibido-4-1000158367.jpg",
-              "uploads/X3/20261021-175429-recibido-5-1000158364.jpg",
-              "uploads/X3/20261021-175432-recibido-6-1000158366.jpg",
-              "uploads/X3/20261021-175434-recibido-7-1000158365.jpg"
-            ],
-            "documentos": []
-          },
-          "diagnostico": {
-            "fotos": [
-              "uploads/X3/20261021-175619-diagnostico-0-1000158374.jpg",
-              "uploads/X3/20261021-175636-diagnostico-0-17926269858168356979423195935950.jpg",
-              "uploads/X3/20261021-175646-diagnostico-0-17926269976778999336838188665326.jpg",
-              "uploads/X3/20261021-180657-diagnostico-0-17926276043605684726712498543253.jpg"
-            ],
-            "documentos": []
-          },
-          "en_proceso": {
-            "fotos": [
-              "uploads/X3/20261021-175731-en_proceso-0-1000158375.jpg"
-            ],
-            "documentos": []
-          },
-          "listo": {
-            "fotos": [],
-            "documentos": []
-          },
-          "recogido": {
-            "fotos": [],
-            "documentos": []
-          },
-          "pago": {
-            "fotos": [],
-            "documentos": []
-          }
-        }
-      },
+      "servicio_actual": null,
       "servicios": [
+        {
+          "fecha": "2026-10-31",
+          "folio": "A031",
+          "tipo": "FILTRO DAÑADO",
+          "descripcion": "",
+          "nota_interna": "",
+          "km": 74413,
+          "costo": null,
+          "tecnico": "LUIS GARCIA",
+          "tiempo_entrega_aprox": "1 Hora",
+          "fecha_inicio": "2026-10-21",
+          "pago": {
+            "estado": "no_pagado",
+            "metodo": null
+          },
+          "orden_recepcion": {
+            "enviado": false,
+            "aceptado": false,
+            "fecha_envio": null,
+            "fecha_aceptado": null,
+            "inventario": {
+              "exteriores": {
+                "antena": "si",
+                "espejo_lateral": "si",
+                "cristales": "no",
+                "emblema": "no",
+                "tapon_ruedas": "no",
+                "molduras_completas": "no",
+                "tapon_gasolina": "no"
+              },
+              "accesorios": {
+                "gato": "no",
+                "maneral_gato": "no",
+                "llave_ruedas": "no",
+                "estuche_herramientas": "no",
+                "triangulo_seguridad": "no",
+                "llanta_refaccion": "no",
+                "extinguidor": "no"
+              },
+              "gasolina": 25,
+              "danos_notas": "PARABRISAS DAÑADO, ESTA TIRANDO AGUA,"
+            }
+          },
+          "cotizacion": {
+            "enviado": false,
+            "fecha_envio": null,
+            "pdf_path": null,
+            "items": [
+              {
+                "concepto": "",
+                "cantidad": 1,
+                "costo_unitario": null
+              }
+            ],
+            "incluir_iva": true,
+            "observaciones": "",
+            "aceptado": false,
+            "fecha_aceptado": null
+          },
+          "informe_trabajo": {
+            "enviado": false,
+            "fecha_envio": null,
+            "pdf_path": null
+          },
+          "hoja_salida": null,
+          "fechas_etapa": {
+            "recibido": "2026-10-21T23:50:06.753Z"
+          },
+          "adjuntos": {
+            "recibido": {
+              "fotos": [
+                "uploads/X3/20261021-175415-recibido-0-1000158374.jpg",
+                "uploads/X3/20261021-175418-recibido-1-1000158373.jpg",
+                "uploads/X3/20261021-175421-recibido-2-1000158371.jpg",
+                "uploads/X3/20261021-175423-recibido-3-1000158372.jpg",
+                "uploads/X3/20261021-175426-recibido-4-1000158367.jpg",
+                "uploads/X3/20261021-175429-recibido-5-1000158364.jpg",
+                "uploads/X3/20261021-175432-recibido-6-1000158366.jpg",
+                "uploads/X3/20261021-175434-recibido-7-1000158365.jpg"
+              ],
+              "documentos": []
+            },
+            "diagnostico": {
+              "fotos": [
+                "uploads/X3/20261021-175619-diagnostico-0-1000158374.jpg",
+                "uploads/X3/20261021-175636-diagnostico-0-17926269858168356979423195935950.jpg",
+                "uploads/X3/20261021-175646-diagnostico-0-17926269976778999336838188665326.jpg",
+                "uploads/X3/20261021-180657-diagnostico-0-17926276043605684726712498543253.jpg"
+              ],
+              "documentos": []
+            },
+            "en_proceso": {
+              "fotos": [
+                "uploads/X3/20261021-175731-en_proceso-0-1000158375.jpg"
+              ],
+              "documentos": []
+            },
+            "listo": {
+              "fotos": [],
+              "documentos": []
+            },
+            "recogido": {
+              "fotos": [],
+              "documentos": []
+            },
+            "pago": {
+              "fotos": [],
+              "documentos": []
+            }
+          }
+        },
         {
           "fecha": "2026-10-21",
           "folio": "A004",
