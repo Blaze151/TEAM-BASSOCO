@@ -7540,7 +7540,10 @@
             "documentos": []
           },
           "diagnostico": {
-            "fotos": [],
+            "fotos": [
+              "uploads/X39/20261031-123932-diagnostico-0-17934719591453427987053520054502.jpg",
+              "uploads/X39/20261031-123935-diagnostico-1-17934719678373032034163039117665.jpg"
+            ],
             "documentos": []
           },
           "en_proceso": {
