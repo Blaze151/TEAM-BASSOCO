@@ -676,6 +676,71 @@
       kilometraje_label: "Kilometraje",
       costo_estimado_label: "Precio",
       tecnico_label: "Técnico",
+      mec_boton_panel: "👨‍🔧 Mecánicos",
+      mec_titulo: "Mecánicos",
+      mec_lista_vacia: "Todavía no hay mecánicos dados de alta.",
+      mec_agregar_titulo: "Dar de alta un mecánico",
+      mec_nombre_label: "Nombre",
+      mec_pin_label: "PIN (4 a 8 dígitos)",
+      mec_agregar_btn: "Agregar mecánico",
+      mec_falta_nombre: "Escribe el nombre del mecánico",
+      mec_pin_invalido: "El PIN debe tener de 4 a 8 dígitos (solo números)",
+      mec_nombre_repetido: "Ya hay un mecánico con ese nombre",
+      mec_no_existe: "Ese mecánico ya no existe",
+      mec_inactivo: "inactivo",
+      mec_asignados_n: "{n} vehículo(s) asignado(s)",
+      mec_enlace_btn: "Enlace de acceso",
+      mec_pin_btn: "Cambiar PIN",
+      mec_nombre_btn: "Renombrar",
+      mec_activar_btn: "Activar",
+      mec_desactivar_btn: "Desactivar",
+      mec_eliminar_btn: "Eliminar",
+      mec_pin_prompt: "Nuevo PIN para {nombre} (4 a 8 dígitos):",
+      mec_nombre_prompt: "Nombre del mecánico:",
+      mec_confirm_desactivar: "¿Desactivar a {nombre}? Ya no podrá entrar a su página hasta que lo actives de nuevo.",
+      mec_confirm_borrar: "¿Eliminar a {nombre}? Sus fotos y notas ya guardadas se conservan.",
+      mec_borrar_con_asignados: "Este mecánico tiene vehículos asignados. Quítale primero las asignaciones.",
+      mec_enlace_titulo: "Acceso de {nombre}",
+      mec_enlace_desc: "Manda este enlace al mecánico. Al abrirlo en su celular queda activado y entra con su PIN. No lo compartas con nadie más: da acceso de escritura al repositorio.",
+      mec_enlace_wa: "Hola {nombre}, este es tu acceso al sistema de {taller}. Ábrelo en tu celular y entra con tu PIN. No lo compartas con nadie: {link}",
+      mec_copiar_btn: "Copiar enlace",
+      mec_enlace_copiado: "Enlace copiado",
+      mec_req_titulo: "Requisitos por etapa",
+      mec_req_desc: "Lo mínimo que el mecánico debe subir en cada etapa antes de poder pedir tu autorización.",
+      mec_req_min_fotos: "mínimo de fotos",
+      mec_req_nota_oblig: "Nota escrita obligatoria",
+      mec_req_guardar_btn: "Guardar requisitos",
+      mec_acceso_titulo: "Acceso de los mecánicos",
+      mec_acceso_desc: "Cada mecánico entra con su enlace y su PIN, y solo ve los vehículos que le asignes. El enlace lleva un token de GitHub; si un celular se pierde o un mecánico se va, desactívalo aquí y cambia el token en GitHub.",
+      mec_token_label: "Token para mecánicos (opcional)",
+      mec_token_hint: "Si lo dejas vacío, los enlaces usan tu propio token. Se guarda solo en este dispositivo.",
+      mec_token_guardado: "Token para mecánicos guardado en este dispositivo",
+      mec_asignados_label: "Mecánicos asignados",
+      mec_asignados_hint: "Solo los mecánicos marcados ven este vehículo en su página.",
+      mec_sin_alta_hint: "Para asignar este vehículo a un mecánico, primero dalo de alta en «Mecánicos» (en la lista de vehículos).",
+      mec_bloque_titulo: "Mecánico",
+      mec_req_fotos: "Fotos {n}/{min}",
+      mec_req_nota: "Nota",
+      mec_nota_de: "Nota de",
+      mec_un_mecanico: "El mecánico",
+      mec_solicitud_txt: "{nombre} pide autorización",
+      mec_req_incompletos: "Los requisitos de esta etapa ya no se cumplen",
+      mec_autorizar_btn: "Autorizar y pasar a {etapa}",
+      mec_autorizar_listo_btn: "Autorizar trabajo terminado",
+      mec_rechazar_btn: "Rechazar",
+      mec_confirm_autorizar: "¿Autorizar esta etapa y pasar el servicio a «{etapa}»? Se guardará de inmediato y el cliente verá el cambio en su ficha.",
+      mec_confirm_autorizar_listo: "¿Autorizar el trabajo terminado? El servicio se queda en «Listo» hasta que entregues el vehículo.",
+      mec_rechazo_prompt: "¿Qué debe corregir el mecánico? (lo verá en su página)",
+      mec_rechazado_txt: "Rechazado",
+      mec_autorizado_txt: "Autorizado",
+      mec_cambios_incorporados: "Se incorporaron fotos o notas que subió el mecánico mientras editabas",
+      mec_folio_reasignado: "Otro dispositivo usó el mismo folio: este servicio quedó con el {folio}",
+      pend_autorizacion: "Autorización pendiente",
+      filtro_por_autorizar: "🔔 Por autorizar",
+      msg_vacio_por_autorizar: "Ningún mecánico está esperando autorización.",
+      msg_vehiculo_ya_no_existe: "Ese vehículo ya no existe (se eliminó desde otro dispositivo)",
+      msg_sin_conexion_sesion: "No se pudo conectar con GitHub (revisa tu conexión). Tu sesión sigue guardada.",
+      reintentar_btn: "Reintentar",
       tiempo_entrega_label: "Tiempo de entrega aproximado",
       tiempo_entrega_placeholder: "ej. Mañana por la tarde, 2-3 días...",
       descripcion_label: "Descripción",
@@ -1056,6 +1121,71 @@
       kilometraje_label: "Mileage",
       costo_estimado_label: "Price",
       tecnico_label: "Technician",
+      mec_boton_panel: "👨‍🔧 Mechanics",
+      mec_titulo: "Mechanics",
+      mec_lista_vacia: "No mechanics registered yet.",
+      mec_agregar_titulo: "Register a mechanic",
+      mec_nombre_label: "Name",
+      mec_pin_label: "PIN (4 to 8 digits)",
+      mec_agregar_btn: "Add mechanic",
+      mec_falta_nombre: "Enter the mechanic's name",
+      mec_pin_invalido: "The PIN must be 4 to 8 digits (numbers only)",
+      mec_nombre_repetido: "There is already a mechanic with that name",
+      mec_no_existe: "That mechanic no longer exists",
+      mec_inactivo: "inactive",
+      mec_asignados_n: "{n} vehicle(s) assigned",
+      mec_enlace_btn: "Access link",
+      mec_pin_btn: "Change PIN",
+      mec_nombre_btn: "Rename",
+      mec_activar_btn: "Activate",
+      mec_desactivar_btn: "Deactivate",
+      mec_eliminar_btn: "Delete",
+      mec_pin_prompt: "New PIN for {nombre} (4 to 8 digits):",
+      mec_nombre_prompt: "Mechanic's name:",
+      mec_confirm_desactivar: "Deactivate {nombre}? They won't be able to open their page until you activate them again.",
+      mec_confirm_borrar: "Delete {nombre}? Photos and notes already saved are kept.",
+      mec_borrar_con_asignados: "This mechanic has vehicles assigned. Remove the assignments first.",
+      mec_enlace_titulo: "Access for {nombre}",
+      mec_enlace_desc: "Send this link to the mechanic. Opening it on their phone activates it, and they sign in with their PIN. Don't share it with anyone else: it grants write access to the repository.",
+      mec_enlace_wa: "Hi {nombre}, this is your access to the {taller} system. Open it on your phone and sign in with your PIN. Don't share it with anyone: {link}",
+      mec_copiar_btn: "Copy link",
+      mec_enlace_copiado: "Link copied",
+      mec_req_titulo: "Requirements per stage",
+      mec_req_desc: "The minimum the mechanic must upload at each stage before they can ask for your authorization.",
+      mec_req_min_fotos: "minimum photos",
+      mec_req_nota_oblig: "Written note required",
+      mec_req_guardar_btn: "Save requirements",
+      mec_acceso_titulo: "Mechanic access",
+      mec_acceso_desc: "Each mechanic signs in with their link and PIN and only sees the vehicles you assign. The link carries a GitHub token; if a phone is lost or a mechanic leaves, deactivate them here and rotate the token on GitHub.",
+      mec_token_label: "Token for mechanics (optional)",
+      mec_token_hint: "If left empty, links use your own token. It is stored only on this device.",
+      mec_token_guardado: "Mechanics token saved on this device",
+      mec_asignados_label: "Assigned mechanics",
+      mec_asignados_hint: "Only the checked mechanics see this vehicle on their page.",
+      mec_sin_alta_hint: "To assign this vehicle to a mechanic, register them first under \"Mechanics\" (on the vehicle list).",
+      mec_bloque_titulo: "Mechanic",
+      mec_req_fotos: "Photos {n}/{min}",
+      mec_req_nota: "Note",
+      mec_nota_de: "Note by",
+      mec_un_mecanico: "The mechanic",
+      mec_solicitud_txt: "{nombre} requests authorization",
+      mec_req_incompletos: "This stage's requirements are no longer met",
+      mec_autorizar_btn: "Authorize and move to {etapa}",
+      mec_autorizar_listo_btn: "Authorize finished work",
+      mec_rechazar_btn: "Reject",
+      mec_confirm_autorizar: "Authorize this stage and move the service to \"{etapa}\"? It will be saved right away and the customer will see the change on their page.",
+      mec_confirm_autorizar_listo: "Authorize the finished work? The service stays in \"Ready\" until you hand over the vehicle.",
+      mec_rechazo_prompt: "What should the mechanic fix? (they will see it on their page)",
+      mec_rechazado_txt: "Rejected",
+      mec_autorizado_txt: "Authorized",
+      mec_cambios_incorporados: "Photos or notes the mechanic uploaded while you were editing were merged in",
+      mec_folio_reasignado: "Another device used the same folio: this service is now {folio}",
+      pend_autorizacion: "Authorization pending",
+      filtro_por_autorizar: "🔔 To authorize",
+      msg_vacio_por_autorizar: "No mechanic is waiting for authorization.",
+      msg_vehiculo_ya_no_existe: "That vehicle no longer exists (it was deleted from another device)",
+      msg_sin_conexion_sesion: "Could not reach GitHub (check your connection). Your session is still saved.",
+      reintentar_btn: "Retry",
       tiempo_entrega_label: "Approximate delivery time",
       tiempo_entrega_placeholder: "e.g. Tomorrow afternoon, 2-3 days...",
       descripcion_label: "Description",
@@ -1222,6 +1352,7 @@
   function rerenderCurrentView() {
     if (!db) return;
     if ($("view-board").style.display !== "none") { renderBoard(); return; }
+    if ($("view-mecanicos").style.display !== "none") { renderMecanicosView(); return; }
     if ($("view-editor").style.display !== "none") {
       renderVehiclePhotoPreview();
       renderVehicleDocsPreview();
@@ -1589,8 +1720,10 @@
     $("view-dashboard").style.display = name === "dashboard" ? "block" : "none";
     $("view-board").style.display = name === "board" ? "block" : "none";
     $("view-editor").style.display = name === "editor" ? "block" : "none";
+    $("view-mecanicos").style.display = name === "mecanicos" ? "block" : "none";
     $("btn-logout").style.display = name === "login" ? "none" : "inline-flex";
     $("btn-save").style.display = name === "editor" ? "flex" : "none";
+    if (name === "dashboard") setTimeout(refrescarListaSiVisible, 0);   // al volver a la lista, se pone al día
 
     const active = $("view-" + name);
     if (active) {
@@ -3024,6 +3157,10 @@
     if (!db.vehicles) db.vehicles = {};
     if (!db.taller) db.taller = {};
     if (!db.folio_counter) db.folio_counter = 0;
+    // El contador nunca puede quedar por debajo del mayor folio que ya está en
+    // uso (pasó cuando dos dispositivos guardaron casi a la vez): si no, el
+    // siguiente servicio repetiría un folio.
+    db.folio_counter = Math.max(db.folio_counter, maxFolioUsado());
   }
 
   async function saveDatabase(commitMessage) {
@@ -3076,9 +3213,545 @@
       // de folio retroceda por debajo de lo que ya usamos localmente — así un folio
       // asignado en esta sesión nunca se vuelve a repetir en otro servicio.
       db.folio_counter = Math.max(db.folio_counter || 0, folioCounterLocal);
+      // Si lo que hay en GitHub no es lo que este editor acaba de armar (se
+      // recargó por un choque), se incorpora lo que el mecánico u otro
+      // dispositivo agregó al servicio, en vez de pisarlo con la versión de aquí.
+      const remoto = db.vehicles[vehicle.id];
+      if (remoto && remoto !== vehicle) {
+        if (fusionarServicioRemoto(vehicle.servicio_actual, remoto.servicio_actual, vehicleBase && vehicleBase.servicio_actual)) seFusionoRemoto = true;
+        resolverFolioRepetido(vehicle);
+      }
       db.vehicles[vehicle.id] = vehicle;
     });
   }
+
+  /* ---------------- Mecánicos ---------------- */
+
+  // Alta de mecánicos, asignación de vehículos y autorización de etapas.
+  //   db.mecanicos            → [{ id, nombre, salt, pin_hash, activo, creado }]
+  //   db.requisitos_mecanico  → { diagnostico|en_proceso|listo: { min_fotos, nota } }
+  //   servicio.mecanicos      → [id, ...] mecánicos asignados al servicio
+  //   servicio.mec            → { notas: { etapa: { texto, por, nombre, fecha } },
+  //                               solicitud: { etapa, por, nombre, fecha } | null,
+  //                               autorizaciones: { etapa: { fecha, solicito } },
+  //                               rechazo: { etapa, motivo, fecha } | null }
+  // El mecánico trabaja desde /mecanico/ y SOLO toca: las fotos de la etapa
+  // (las agrega), su nota y su solicitud. El cambio de etapa lo hace siempre
+  // el admin desde este panel.
+  const ETAPAS_MECANICO = ["diagnostico", "en_proceso", "listo"];
+  const MEC_TOKEN_KEY = SESSION_KEY.replace("admin_session", "mec_token");
+
+  function listaMecanicos() {
+    return (db && Array.isArray(db.mecanicos)) ? db.mecanicos : [];
+  }
+  function mecanicoPorId(id) {
+    return listaMecanicos().find((m) => m.id === id) || null;
+  }
+  function nombresMecanicos(ids) {
+    return (ids || []).map((id) => { const m = mecanicoPorId(id); return m ? m.nombre : null; }).filter(Boolean);
+  }
+  function requisitosMecanico() {
+    const guardados = (db && db.requisitos_mecanico) || {};
+    const out = {};
+    ETAPAS_MECANICO.forEach((etapa) => {
+      const r = guardados[etapa] || {};
+      const n = Number(r.min_fotos);
+      out[etapa] = { min_fotos: Number.isFinite(n) && r.min_fotos !== null && r.min_fotos !== "" ? Math.max(0, Math.floor(n)) : 3, nota: r.nota !== false };
+    });
+    return out;
+  }
+  function emptyMec() {
+    return { notas: {}, solicitud: null, autorizaciones: {}, rechazo: null };
+  }
+  async function sha256Hex(texto) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(texto));
+    return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+  }
+  function saltAleatorio() {
+    const a = new Uint8Array(8);
+    crypto.getRandomValues(a);
+    return Array.from(a).map((b) => b.toString(16).padStart(2, "0")).join("");
+  }
+  function pinValido(pin) { return /^\d{4,8}$/.test(pin); }
+
+  // --- Folios: número <-> texto, y el mayor folio que ya está en uso ---
+  function folioANumero(folio) {
+    const m = /^([A-Z])(\d{3})$/.exec(String(folio || ""));
+    return m ? (m[1].charCodeAt(0) - 65) * 999 + Number(m[2]) : 0;
+  }
+  function maxFolioUsado() {
+    let max = 0;
+    Object.values((db && db.vehicles) || {}).forEach((v) => {
+      if (v.servicio_actual) max = Math.max(max, folioANumero(v.servicio_actual.folio));
+      (v.servicios || []).forEach((s) => { max = Math.max(max, folioANumero(s.folio)); });
+    });
+    return max;
+  }
+
+  // --- Datos frescos: evita trabajar sobre una copia vieja de vehicles.json ---
+  // Consulta barata (solo el listado de data/, ~1 KB) para saber si el archivo
+  // cambió en GitHub desde la última vez que se descargó.
+  async function hayCambiosRemotos() {
+    const lista = await githubRequest(`data?ref=${encodeURIComponent(cfg.branch)}`, { method: "GET", cache: "no-store" });
+    const archivo = Array.isArray(lista) ? lista.find((x) => x.path === DATA_PATH) : null;
+    return !archivo || archivo.sha !== dbSha;
+  }
+  async function refrescarBaseSiCambio() {
+    if (!cfg || !db) return false;
+    if (!(await hayCambiosRemotos())) return false;
+    await loadDatabase();
+    return true;
+  }
+  let refrescandoLista = false;
+  async function refrescarListaSiVisible() {
+    if (!cfg || !db || refrescandoLista || document.hidden) return;
+    const enLista = $("view-dashboard").style.display !== "none";
+    const enMecanicos = $("view-mecanicos").style.display !== "none";
+    if (!enLista && !enMecanicos) return;
+    if (enMecanicos && mecGuardando) return;
+    refrescandoLista = true;
+    try {
+      if (await refrescarBaseSiCambio()) {
+        if (enLista) renderDashboard($("search-box").value);
+        else renderMecanicosView();
+      }
+    } catch (err) { /* sin red: se queda con lo que ya había */ }
+    finally { refrescandoLista = false; }
+  }
+
+  // --- Fusión por campos: lo que el mecánico (u otro dispositivo) agregó al
+  // servicio mientras este editor estaba abierto NO se pierde al guardar.
+  //   mio    → servicio que se va a guardar (se modifica aquí mismo)
+  //   remoto → el mismo servicio, recién leído de GitHub
+  //   base   → el servicio como estaba cuando se abrió el editor (o null)
+  // Devuelve true si se incorporó algo.
+  let vehicleBase = null;         // copia del vehículo tal como estaba en GitHub al abrir/guardar
+  let seFusionoRemoto = false;
+  let folioReasignado = null;
+  function fusionarServicioRemoto(mio, remoto, base) {
+    if (!mio || !remoto || !mio.id || mio.id !== remoto.id) return false;
+    if (base && base.id !== mio.id) base = null;
+    let cambio = false;
+    if (!mio.adjuntos) mio.adjuntos = emptyPendingStruct();
+    ATTACH_STAGES.forEach((etapa) => {
+      ["fotos", "documentos"].forEach((tipo) => {
+        const delRemoto = (remoto.adjuntos && remoto.adjuntos[etapa] && remoto.adjuntos[etapa][tipo]) || [];
+        const deBase = new Set((base && base.adjuntos && base.adjuntos[etapa] && base.adjuntos[etapa][tipo]) || []);
+        if (!mio.adjuntos[etapa]) mio.adjuntos[etapa] = { fotos: [], documentos: [] };
+        if (!mio.adjuntos[etapa][tipo]) mio.adjuntos[etapa][tipo] = [];
+        delRemoto.forEach((ruta) => {
+          // Solo lo NUEVO en GitHub: lo que ya estaba al abrir y aquí se quitó, se queda quitado.
+          if (deBase.has(ruta) || mio.adjuntos[etapa][tipo].includes(ruta)) return;
+          mio.adjuntos[etapa][tipo].push(ruta);
+          cambio = true;
+        });
+      });
+    });
+    const mr = remoto.mec;
+    if (mr) {
+      const mb = (base && base.mec) || {};
+      if (!mio.mec) mio.mec = emptyMec();
+      if (!mio.mec.notas) mio.mec.notas = {};
+      const igual = (a, b) => JSON.stringify(a || null) === JSON.stringify(b || null);
+      ETAPAS_MECANICO.forEach((etapa) => {
+        const nr = (mr.notas || {})[etapa];
+        if (!igual(nr, (mb.notas || {})[etapa]) && !igual(nr, mio.mec.notas[etapa])) {
+          if (nr) mio.mec.notas[etapa] = nr; else delete mio.mec.notas[etapa];
+          cambio = true;
+        }
+      });
+      // La solicitud del mecánico solo se toma si aquí no se tocó (si el admin
+      // ya autorizó o rechazó en este editor, manda lo que hizo el admin).
+      if (!igual(mr.solicitud, mb.solicitud) && igual(mio.mec.solicitud, mb.solicitud)) {
+        const sol = mr.solicitud || null;
+        if (!sol || sol.etapa === mio.estado) {
+          mio.mec.solicitud = sol;
+          if (sol) mio.mec.rechazo = mr.rechazo || null;
+          cambio = true;
+        }
+      }
+    }
+    return cambio;
+  }
+
+  // Si otro dispositivo usó el mismo folio para un servicio distinto mientras
+  // este servicio nuevo seguía sin guardarse, se le da el siguiente libre.
+  function resolverFolioRepetido(vehicle) {
+    const sa = vehicle.servicio_actual;
+    if (!sa || !sa.folio) return;
+    const baseSvc = vehicleBase && vehicleBase.servicio_actual;
+    if (baseSvc && baseSvc.id === sa.id) return;   // ya estaba guardado con ese folio
+    let repetido = false;
+    Object.values(db.vehicles || {}).forEach((v) => {
+      const lista = (v.servicio_actual ? [v.servicio_actual] : []).concat(v.servicios || []);
+      lista.forEach((s) => { if (s && s.folio === sa.folio && s.id !== sa.id) repetido = true; });
+    });
+    if (!repetido) return;
+    db.folio_counter = Math.max(db.folio_counter || 0, maxFolioUsado());
+    const nuevo = siguienteFolio();
+    sa.folio = nuevo;
+    if (svcActual && svcActual.id === sa.id) svcActual.folio = nuevo;
+    folioReasignado = nuevo;
+  }
+
+  // --- Asignación dentro del servicio activo ---
+  function renderAsignacionMecanicosHtml() {
+    const asignados = Array.isArray(svcActual.mecanicos) ? svcActual.mecanicos : [];
+    const mecs = listaMecanicos().filter((m) => m.activo !== false || asignados.includes(m.id));
+    if (!mecs.length) {
+      return `<p style="font-size:11.5px;color:var(--text-faint);margin:0 0 12px;">${esc(t("mec_sin_alta_hint"))}</p>`;
+    }
+    return `
+      <div class="form-group">
+        <label class="form-label">${esc(t("mec_asignados_label"))}</label>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          ${mecs.map((m) => `<label class="tag" style="cursor:pointer;display:inline-flex;align-items:center;gap:7px;padding:8px 11px;font-size:12.5px;"><input type="checkbox" data-mec-asignar="${esc(m.id)}" ${asignados.includes(m.id) ? "checked" : ""} style="width:auto;margin:0;"> 👨‍🔧 ${esc(m.nombre)}${m.activo === false ? " (" + esc(t("mec_inactivo")) + ")" : ""}</label>`).join("")}
+        </div>
+        <p style="font-size:10.5px;color:var(--text-faint);margin:5px 0 0;">${esc(t("mec_asignados_hint"))}</p>
+      </div>`;
+  }
+  // Lee las casillas y deja el campo "Técnico" con los nombres asignados (así
+  // los PDFs y el historial siguen mostrando quién hizo el trabajo).
+  function leerAsignacionMecanicosDelDom() {
+    if (!svcActual) return;
+    const casillas = document.querySelectorAll("#active-service-container [data-mec-asignar]");
+    if (!casillas.length) { if (!Array.isArray(svcActual.mecanicos)) svcActual.mecanicos = []; return; }
+    svcActual.mecanicos = Array.from(casillas).filter((c) => c.checked).map((c) => c.dataset.mecAsignar);
+    const campo = $("as-tecnico");
+    if (svcActual.mecanicos.length) {
+      svcActual.tecnico = nombresMecanicos(svcActual.mecanicos).join(" / ");
+      if (campo) { campo.value = svcActual.tecnico; campo.readOnly = true; campo.style.opacity = "0.75"; }
+    } else if (campo) {
+      campo.readOnly = false; campo.style.opacity = "";
+    }
+  }
+
+  // --- Bloque del mecánico dentro de cada etapa (nota, requisitos, autorización) ---
+  function fechaHoraCorta(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (isNaN(d)) return "";
+    return d.toLocaleString(currentLang === "en" ? "en-US" : "es-MX", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" });
+  }
+  function solicitudDeEtapa(stage) {
+    const mec = svcActual && svcActual.mec;
+    return mec && mec.solicitud && mec.solicitud.etapa === stage ? mec.solicitud : null;
+  }
+  function renderMecanicoEtapaHtml(stage) {
+    if (!ETAPAS_MECANICO.includes(stage)) return "";
+    const asignados = svcActual.mecanicos || [];
+    const mec = svcActual.mec || {};
+    const nota = (mec.notas || {})[stage];
+    const sol = solicitudDeEtapa(stage);
+    const aut = (mec.autorizaciones || {})[stage];
+    const rech = mec.rechazo && mec.rechazo.etapa === stage ? mec.rechazo : null;
+    if (!asignados.length && !nota && !sol && !aut && !rech) return "";
+
+    const req = requisitosMecanico()[stage];
+    const nFotos = ((svcActual.adjuntos[stage] || {}).fotos || []).length;
+    const fotosOk = nFotos >= req.min_fotos;
+    const notaOk = !req.nota || !!(nota && (nota.texto || "").trim());
+    const reqTxt = `${fotosOk ? "✓" : "✗"} ${esc(t("mec_req_fotos").replace("{n}", nFotos).replace("{min}", req.min_fotos))}${req.nota ? ` · ${notaOk ? "✓" : "✗"} ${esc(t("mec_req_nota"))}` : ""}`;
+
+    let partes = "";
+    if (nota && (nota.texto || "").trim()) {
+      partes += `<div style="margin-top:8px;"><div style="font-size:11px;color:var(--text-faint);">📝 ${esc(t("mec_nota_de"))} ${esc(nota.nombre || "")} · ${esc(fechaHoraCorta(nota.fecha))}</div><div style="font-size:13px;white-space:pre-wrap;margin-top:3px;">${esc(nota.texto)}</div></div>`;
+    }
+    if (sol && svcActual.estado === stage) {
+      const idx = ORDEN_ESTADOS_SERVICIO.indexOf(stage);
+      const etiqueta = stage === "listo"
+        ? t("mec_autorizar_listo_btn")
+        : t("mec_autorizar_btn").replace("{etapa}", ESTADOS_SERVICIO()[ORDEN_ESTADOS_SERVICIO[idx + 1]].label);
+      partes += `
+        <div style="margin-top:10px;padding:10px;border-radius:10px;border:1px solid var(--yellow);">
+          <div style="font-size:13px;font-weight:600;color:var(--yellow);">🔔 ${esc(t("mec_solicitud_txt").replace("{nombre}", sol.nombre || t("mec_un_mecanico")))} · ${esc(fechaHoraCorta(sol.fecha))}</div>
+          ${(!fotosOk || !notaOk) ? `<div style="font-size:11.5px;color:var(--danger);margin-top:4px;">⚠ ${esc(t("mec_req_incompletos"))}</div>` : ""}
+          <div class="actions-row" style="margin-top:9px;flex-wrap:wrap;">
+            <button type="button" class="btn btn-sm" data-mec-autorizar="${stage}">✅ ${esc(etiqueta)}</button>
+            <button type="button" class="btn btn-outline btn-sm btn-danger" data-mec-rechazar="${stage}">✗ ${esc(t("mec_rechazar_btn"))}</button>
+          </div>
+        </div>`;
+    }
+    if (rech) {
+      partes += `<div style="margin-top:8px;font-size:12.5px;color:var(--danger);">✗ ${esc(t("mec_rechazado_txt"))} · ${esc(fechaHoraCorta(rech.fecha))}${rech.motivo ? ": " + esc(rech.motivo) : ""}</div>`;
+    }
+    if (aut) {
+      partes += `<div style="margin-top:8px;font-size:12.5px;color:var(--green-bright);">✅ ${esc(t("mec_autorizado_txt"))} · ${esc(fechaHoraCorta(aut.fecha))}</div>`;
+    }
+    return `
+      <div data-sin-cambios style="margin:10px 0 4px;padding:10px 12px;border-radius:12px;box-shadow:var(--neu-in-sm, none);border:1px solid rgba(128,128,128,0.18);">
+        <div style="font-size:12px;font-weight:600;">👨‍🔧 ${esc(t("mec_bloque_titulo"))}${asignados.length ? ": " + esc(nombresMecanicos(asignados).join(", ")) : ""}</div>
+        <div style="font-size:11.5px;color:var(--text-dim);margin-top:4px;">${reqTxt}</div>
+        ${partes}
+      </div>`;
+  }
+
+  async function autorizarEtapaMecanico(stage) {
+    if (!svcActual) return;
+    readActiveServiceFieldsFromDom();
+    const sol = solicitudDeEtapa(stage);
+    if (!sol || svcActual.estado !== stage) return;
+    const idx = ORDEN_ESTADOS_SERVICIO.indexOf(stage);
+    const siguiente = stage === "listo" ? null : ORDEN_ESTADOS_SERVICIO[idx + 1];
+    const pregunta = siguiente
+      ? t("mec_confirm_autorizar").replace("{etapa}", ESTADOS_SERVICIO()[siguiente].label)
+      : t("mec_confirm_autorizar_listo");
+    if (!confirm(pregunta)) return;
+    if (!svcActual.mec.autorizaciones) svcActual.mec.autorizaciones = {};
+    svcActual.mec.autorizaciones[stage] = { fecha: new Date().toISOString(), solicito: sol.por || null };
+    svcActual.mec.solicitud = null;
+    svcActual.mec.rechazo = null;
+    hasUnsavedChanges = true;
+    if (siguiente) {
+      // Mismo camino que el selector de etapa: marca la fecha, guarda solo y,
+      // si llega a "Listo", ofrece el aviso por WhatsApp.
+      const sel = $("as-estado");
+      sel.value = siguiente;
+      sel.dispatchEvent(new Event("change", { bubbles: true }));
+    } else {
+      renderActiveServiceCard();
+      await saveVehicle();
+    }
+  }
+  async function rechazarEtapaMecanico(stage) {
+    if (!svcActual) return;
+    const motivo = prompt(t("mec_rechazo_prompt"));
+    if (motivo === null) return;
+    readActiveServiceFieldsFromDom();
+    const sol = solicitudDeEtapa(stage);
+    if (!sol) return;
+    svcActual.mec.rechazo = { etapa: stage, motivo: motivo.trim(), fecha: new Date().toISOString() };
+    svcActual.mec.solicitud = null;
+    hasUnsavedChanges = true;
+    renderActiveServiceCard();
+    await saveVehicle();
+  }
+
+  // --- Vista "Mecánicos" (alta, PIN, enlace de activación y requisitos) ---
+  let mecGuardando = false;
+  function vehiculosAsignadosPorMecanico() {
+    const mapa = {};
+    Object.values(db.vehicles || {}).forEach((v) => {
+      const s = v.servicio_actual;
+      if (!s || !Array.isArray(s.mecanicos)) return;
+      s.mecanicos.forEach((id) => { (mapa[id] = mapa[id] || []).push(v); });
+    });
+    return mapa;
+  }
+  function renderMecanicosView() {
+    const cont = $("mecanicos-container");
+    if (!cont || !db) return;
+    const mecs = listaMecanicos();
+    const req = requisitosMecanico();
+    const asignados = vehiculosAsignadosPorMecanico();
+    let tokenLocal = "";
+    try { tokenLocal = localStorage.getItem(MEC_TOKEN_KEY) || ""; } catch (err) {}
+
+    const filas = mecs.length ? mecs.map((m) => {
+      const lista = asignados[m.id] || [];
+      const detalle = lista.map((v) => {
+        const s = v.servicio_actual;
+        const pide = s.mec && s.mec.solicitud ? " 🔔" : "";
+        return `<button type="button" class="tag" data-mec-abrir="${esc(v.id)}" style="cursor:pointer;border:0;font:inherit;font-size:11.5px;">${esc(v.placas || v.id)}${v.numero_unidad ? " · " + esc(v.numero_unidad) : ""} — ${ESTADOS_SERVICIO()[s.estado] ? esc(ESTADOS_SERVICIO()[s.estado].label) : ""}${pide}</button>`;
+      }).join(" ");
+      return `
+        <div class="vlist-item" style="display:block;cursor:default;">
+          <div class="vlist-item-title">👨‍🔧 ${esc(m.nombre)} ${m.activo === false ? `<span class="tag" style="color:var(--danger);">${esc(t("mec_inactivo"))}</span>` : ""}</div>
+          <div class="vlist-item-sub">${esc(t("mec_asignados_n").replace("{n}", lista.length))}</div>
+          ${detalle ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">${detalle}</div>` : ""}
+          <div class="actions-row" style="margin-top:10px;flex-wrap:wrap;gap:6px;">
+            <button type="button" class="btn btn-sm" data-mec-enlace="${esc(m.id)}" ${m.activo === false ? "disabled" : ""}>🔗 ${esc(t("mec_enlace_btn"))}</button>
+            <button type="button" class="btn btn-outline btn-sm" data-mec-pin="${esc(m.id)}">🔑 ${esc(t("mec_pin_btn"))}</button>
+            <button type="button" class="btn btn-outline btn-sm" data-mec-nombre="${esc(m.id)}">✏️ ${esc(t("mec_nombre_btn"))}</button>
+            <button type="button" class="btn btn-outline btn-sm" data-mec-toggle="${esc(m.id)}">${m.activo === false ? "▶️ " + esc(t("mec_activar_btn")) : "⏸️ " + esc(t("mec_desactivar_btn"))}</button>
+            <button type="button" class="btn btn-outline btn-sm btn-danger" data-mec-borrar="${esc(m.id)}">🗑️ ${esc(t("mec_eliminar_btn"))}</button>
+          </div>
+        </div>`;
+    }).join("") : `<p style="color:var(--text-faint);font-size:13px;">${esc(t("mec_lista_vacia"))}</p>`;
+
+    cont.innerHTML = `
+      <div class="card">
+        <div class="card-title">👨‍🔧 ${esc(t("mec_titulo"))}</div>
+        ${filas}
+        <hr class="divider">
+        <div class="card-title" style="font-size:13px;">${esc(t("mec_agregar_titulo"))}</div>
+        <div class="grid-2">
+          <div class="form-group"><label class="form-label">${esc(t("mec_nombre_label"))}</label><input type="text" id="mec-nuevo-nombre" autocomplete="off"></div>
+          <div class="form-group"><label class="form-label">${esc(t("mec_pin_label"))}</label><input type="text" id="mec-nuevo-pin" inputmode="numeric" autocomplete="off" maxlength="8"></div>
+        </div>
+        <button type="button" class="btn btn-block" id="mec-agregar-btn">+ ${esc(t("mec_agregar_btn"))}</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">📋 ${esc(t("mec_req_titulo"))}</div>
+        <p style="color:var(--text-faint);font-size:12px;margin-top:0;">${esc(t("mec_req_desc"))}</p>
+        ${ETAPAS_MECANICO.map((etapa) => `
+          <div class="grid-2" style="align-items:end;">
+            <div class="form-group"><label class="form-label">${ESTADOS_SERVICIO()[etapa].icon} ${esc(ESTADOS_SERVICIO()[etapa].label)} — ${esc(t("mec_req_min_fotos"))}</label><input type="number" min="0" max="30" id="mec-req-fotos-${etapa}" value="${req[etapa].min_fotos}"></div>
+            <div class="form-group"><label style="display:inline-flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;"><input type="checkbox" id="mec-req-nota-${etapa}" ${req[etapa].nota ? "checked" : ""} style="width:auto;margin:0;"> ${esc(t("mec_req_nota_oblig"))}</label></div>
+          </div>`).join("")}
+        <button type="button" class="btn btn-outline btn-block" id="mec-req-guardar">💾 ${esc(t("mec_req_guardar_btn"))}</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">🔐 ${esc(t("mec_acceso_titulo"))}</div>
+        <p style="color:var(--text-dim);font-size:12.5px;margin-top:0;line-height:1.5;">${esc(t("mec_acceso_desc"))}</p>
+        <div class="form-group">
+          <label class="form-label">${esc(t("mec_token_label"))}</label>
+          <input type="password" id="mec-token-local" placeholder="github_pat_..." value="${esc(tokenLocal)}" autocomplete="off">
+          <p style="font-size:10.5px;color:var(--text-faint);margin:4px 0 0;">${esc(t("mec_token_hint"))}</p>
+        </div>
+      </div>`;
+  }
+
+  async function guardarCambioMecanicos(mensaje, aplicar) {
+    if (mecGuardando) return false;
+    mecGuardando = true;
+    try {
+      await saveDatabaseWithRetry(mensaje, aplicar);
+      showToast(t("msg_cambios_guardados"), "success");
+      return true;
+    } catch (err) {
+      if (err.status === 409) showToast(t("msg_conflicto_persistente"), "error", 9000);
+      else showToast(t("msg_error_guardar") + err.message, "error", 8000);
+      try { await loadDatabase(); } catch (e2) { /* se queda con la copia en memoria */ }
+      return false;
+    } finally {
+      mecGuardando = false;
+      renderMecanicosView();
+    }
+  }
+  function modificarMecanico(id, cambio) {
+    return () => {
+      const m = (db.mecanicos || []).find((x) => x.id === id);
+      if (!m) throw new Error(t("mec_no_existe"));
+      cambio(m);
+    };
+  }
+
+  function enlaceActivacion(mec) {
+    let token = "";
+    try { token = (localStorage.getItem(MEC_TOKEN_KEY) || "").trim(); } catch (err) {}
+    if (!token) token = cfg.token;
+    const datos = JSON.stringify({ t: token, m: mec.id, r: REPO_NAME });
+    const b64 = btoa(datos).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+    return new URL("../mecanico/", location.href).href + "#a=" + b64;
+  }
+  function cerrarEnlaceMecanico() {
+    const el = $("mec-link-overlay");
+    if (el) el.remove();
+  }
+  function mostrarEnlaceMecanico(mec) {
+    cerrarEnlaceMecanico();
+    const enlace = enlaceActivacion(mec);
+    const taller = (db.taller && db.taller.nombre) || "";
+    const texto = t("mec_enlace_wa").replace("{nombre}", mec.nombre).replace("{taller}", taller).replace("{link}", enlace);
+    const overlay = document.createElement("div");
+    overlay.id = "mec-link-overlay";
+    overlay.className = "wa-prompt-overlay";
+    overlay.innerHTML = `
+      <div class="card wa-prompt-card">
+        <div class="card-title">🔗 ${esc(t("mec_enlace_titulo").replace("{nombre}", mec.nombre))}</div>
+        <p style="font-size:13px;color:var(--text-dim);margin:0 0 10px;line-height:1.5;">${esc(t("mec_enlace_desc"))}</p>
+        <input type="text" id="mec-link-input" readonly value="${esc(enlace)}" style="font-size:11px;">
+        <div class="actions-row" style="flex-wrap:wrap;margin-top:12px;">
+          <button type="button" class="btn" id="mec-link-copiar">📋 ${esc(t("mec_copiar_btn"))}</button>
+          <a class="btn btn-outline" href="https://wa.me/?text=${encodeURIComponent(texto)}" rel="noopener" target="_blank">💬 WhatsApp</a>
+          <button type="button" class="btn btn-outline" id="mec-link-cerrar">${esc(t("cerrar_btn"))}</button>
+        </div>
+      </div>`;
+    document.body.appendChild(overlay);
+    $("mec-link-cerrar").addEventListener("click", cerrarEnlaceMecanico);
+    $("mec-link-copiar").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(enlace);
+      } catch (err) {
+        const campo = $("mec-link-input");
+        campo.focus(); campo.select();
+        try { document.execCommand("copy"); } catch (e2) {}
+      }
+      showToast(t("mec_enlace_copiado"), "success");
+    });
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) cerrarEnlaceMecanico(); });
+  }
+
+  async function onMecanicosClick(e) {
+    const btn = e.target.closest("button");
+    if (!btn || mecGuardando) return;
+
+    if (btn.id === "mec-agregar-btn") {
+      const nombre = $("mec-nuevo-nombre").value.trim();
+      const pin = $("mec-nuevo-pin").value.trim();
+      if (!nombre) { showToast(t("mec_falta_nombre"), "error"); return; }
+      if (!pinValido(pin)) { showToast(t("mec_pin_invalido"), "error"); return; }
+      if (listaMecanicos().some((m) => normalizarTexto(m.nombre) === normalizarTexto(nombre))) { showToast(t("mec_nombre_repetido"), "error"); return; }
+      const salt = saltAleatorio();
+      const nuevo = {
+        id: "mec_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+        nombre, salt, pin_hash: await sha256Hex(salt + ":" + pin), activo: true, creado: new Date().toISOString(),
+      };
+      await guardarCambioMecanicos(`Agregar mecánico ${nombre}`, () => {
+        if (!Array.isArray(db.mecanicos)) db.mecanicos = [];
+        if (!db.mecanicos.some((m) => m.id === nuevo.id)) db.mecanicos.push(nuevo);
+      });
+      return;
+    }
+    if (btn.id === "mec-req-guardar") {
+      const nuevos = {};
+      ETAPAS_MECANICO.forEach((etapa) => {
+        const n = Number($("mec-req-fotos-" + etapa).value);
+        nuevos[etapa] = { min_fotos: Number.isFinite(n) ? Math.min(30, Math.max(0, Math.floor(n))) : 3, nota: $("mec-req-nota-" + etapa).checked };
+      });
+      await guardarCambioMecanicos("Actualizar requisitos de mecánicos", () => { db.requisitos_mecanico = nuevos; });
+      return;
+    }
+    if (btn.dataset.mecAbrir) { openEditor(btn.dataset.mecAbrir); return; }
+
+    const id = btn.dataset.mecEnlace || btn.dataset.mecPin || btn.dataset.mecNombre || btn.dataset.mecToggle || btn.dataset.mecBorrar;
+    const mec = id ? mecanicoPorId(id) : null;
+    if (!mec) return;
+
+    if (btn.dataset.mecEnlace) { mostrarEnlaceMecanico(mec); return; }
+    if (btn.dataset.mecPin) {
+      const pin = prompt(t("mec_pin_prompt").replace("{nombre}", mec.nombre));
+      if (pin === null) return;
+      if (!pinValido(pin.trim())) { showToast(t("mec_pin_invalido"), "error"); return; }
+      const salt = saltAleatorio();
+      const hash = await sha256Hex(salt + ":" + pin.trim());
+      await guardarCambioMecanicos(`Cambiar PIN de mecánico ${mec.nombre}`, modificarMecanico(id, (m) => { m.salt = salt; m.pin_hash = hash; }));
+      return;
+    }
+    if (btn.dataset.mecNombre) {
+      const nombre = prompt(t("mec_nombre_prompt"), mec.nombre);
+      if (nombre === null || !nombre.trim() || nombre.trim() === mec.nombre) return;
+      const limpio = nombre.trim();
+      await guardarCambioMecanicos(`Renombrar mecánico ${mec.nombre} → ${limpio}`, () => {
+        modificarMecanico(id, (m) => { m.nombre = limpio; })();
+        // El campo "Técnico" de los servicios activos donde está asignado sigue al nombre nuevo.
+        Object.values(db.vehicles || {}).forEach((v) => {
+          const s = v.servicio_actual;
+          if (s && Array.isArray(s.mecanicos) && s.mecanicos.includes(id)) s.tecnico = nombresMecanicos(s.mecanicos).join(" / ");
+        });
+      });
+      return;
+    }
+    if (btn.dataset.mecToggle) {
+      const activar = mec.activo === false;
+      if (!activar && !confirm(t("mec_confirm_desactivar").replace("{nombre}", mec.nombre))) return;
+      await guardarCambioMecanicos(`${activar ? "Activar" : "Desactivar"} mecánico ${mec.nombre}`, modificarMecanico(id, (m) => { m.activo = activar; }));
+      return;
+    }
+    if (btn.dataset.mecBorrar) {
+      if ((vehiculosAsignadosPorMecanico()[id] || []).length) { showToast(t("mec_borrar_con_asignados"), "error", 7000); return; }
+      if (!confirm(t("mec_confirm_borrar").replace("{nombre}", mec.nombre))) return;
+      await guardarCambioMecanicos(`Eliminar mecánico ${mec.nombre}`, () => {
+        const enUso = Object.values(db.vehicles || {}).some((v) => v.servicio_actual && Array.isArray(v.servicio_actual.mecanicos) && v.servicio_actual.mecanicos.includes(id));
+        if (enUso) throw new Error(t("mec_borrar_con_asignados"));
+        db.mecanicos = (db.mecanicos || []).filter((m) => m.id !== id);
+      });
+    }
+  }
+
 
   /* ---------------- Login / sesión ---------------- */
 
@@ -3156,6 +3829,9 @@
     const active = v.servicio_actual;
     if (!active) return [];
     const badges = [];
+    if (active.mec && active.mec.solicitud) {
+      badges.push({ txt: "🔔 " + t("pend_autorizacion"), cls: "warn" });
+    }
     if (active.orden_recepcion && active.orden_recepcion.enviado && !active.orden_recepcion.aceptado) {
       badges.push({ txt: t("pend_cliente_no_acepto"), cls: "warn" });
     }
@@ -3218,6 +3894,7 @@
       entries = entries.filter((v) => {
         const active = v.servicio_actual;
         if (filtroActivo === "requiere_atencion") return vehiclePendingBadges(v).length > 0;
+        if (filtroActivo === "por_autorizar") return !!(active && active.mec && active.mec.solicitud);
         if (filtroActivo === "sin_servicio") return !active;
         if (filtroActivo === "pagado") return active && active.pago && active.pago.estado === "pagado";
         if (filtroActivo === "a_deber") return active && active.pago && active.pago.estado === "a_deber";
@@ -3242,6 +3919,7 @@
     if (!filtered.length) {
       const mensajesVacioPorFiltro = {
         requiere_atencion: "msg_vacio_requiere_atencion",
+        por_autorizar: "msg_vacio_por_autorizar",
         recibido: "msg_vacio_recibido",
         diagnostico: "msg_vacio_diagnostico",
         en_proceso: "msg_vacio_en_proceso",
@@ -3263,6 +3941,8 @@
         : `<span class="tag">${esc(t("sin_servicio_activo"))}</span>`;
       const pagoInfo = active && active.pago ? PAGO_ESTADOS()[active.pago.estado] : null;
       const pagoBadge = pagoInfo ? `<span class="tag">${pagoInfo.icon} ${pagoInfo.label}</span>` : "";
+      const mecNombres = active ? nombresMecanicos(active.mecanicos) : [];
+      const mecBadge = mecNombres.length ? `<span class="tag">👨‍🔧 ${esc(mecNombres.join(", "))}</span>` : "";
       const pendientesHtml = vehiclePendingBadges(v).map((b) =>
         `<span class="tag" style="color:${b.cls === "ok" ? "var(--green-bright)" : "var(--yellow)"};">${b.cls === "ok" ? "✅" : "⚠"} ${esc(b.txt)}</span>`
       ).join("");
@@ -3278,7 +3958,7 @@
             <div class="vlist-item-sub">ID: ${v.id} ${v.cliente_nombre ? "· " + v.cliente_nombre : ""} · ${(v.servicios || []).length} ${esc(t("en_historial"))}</div>
           </div>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:9px;">${badge}${pagoBadge}${pendientesHtml}</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:9px;">${badge}${pagoBadge}${mecBadge}${pendientesHtml}</div>
       </div>
     `;
     }).join("");
@@ -3812,6 +4492,7 @@
   function buildHistoricalEntryFromActive(active, pending) {
     pending = pending || emptyPendingStruct();
     return {
+      id: active.id,
       fecha: todayISO(),
       folio: active.folio,
       tipo: active.tipo,
@@ -3829,6 +4510,8 @@
       hoja_salida: active.hoja_salida ? JSON.parse(JSON.stringify(active.hoja_salida)) : null,
       fechas_etapa: active.fechas_etapa ? JSON.parse(JSON.stringify(active.fechas_etapa)) : null,
       adjuntos: JSON.parse(JSON.stringify(active.adjuntos || emptyPendingStruct())),
+      mecanicos: Array.isArray(active.mecanicos) ? active.mecanicos.slice() : [],
+      ...(active.mec ? { mec: JSON.parse(JSON.stringify(active.mec)) } : {}),
       _pendingAdjuntos: pending,
     };
   }
@@ -4046,8 +4729,18 @@
   }
 
   async function openEditor(id) {
+    // Antes de abrir, se confirma que la copia en memoria sea la última de
+    // GitHub (otro dispositivo o un mecánico pudo haber guardado algo).
+    try { await refrescarBaseSiCambio(); } catch (err) { /* sin red: se abre con la copia en memoria */ }
+    if (id && !(db.vehicles && db.vehicles[id])) {
+      showToast(t("msg_vehiculo_ya_no_existe"), "error", 7000);
+      renderDashboard($("search-box").value);
+      showView("dashboard");
+      return;
+    }
     isNewVehicle = !id;
     currentVehicleId = id || null;
+    vehicleBase = id ? JSON.parse(JSON.stringify(db.vehicles[id])) : null;
 
     // Si hay un borrador local (algo que quedó sin guardar, de este
     // vehículo o de una alta nueva), se ofrece qué hacer con él antes de
@@ -4061,6 +4754,11 @@
       if (decision === "recuperar") {
         vehicleOverride = draft.vehicle;
         borradorRecuperado = true;
+        // El borrador pudo quedarse atrás: se le suma lo que el mecánico haya
+        // subido después (fotos, nota, solicitud) para no perderlo al guardar.
+        if (id && vehicleOverride.servicio_actual) {
+          fusionarServicioRemoto(vehicleOverride.servicio_actual, db.vehicles[id].servicio_actual, null);
+        }
         borrarBorradorLocal(id);
       } else if (decision === "descartar") {
         borrarBorradorLocal(id);
@@ -4125,6 +4823,7 @@
       if (!svcActual.adjuntos) svcActual.adjuntos = emptyPendingStruct();
       if (!svcActual.adjuntos.pago) svcActual.adjuntos.pago = { fotos: [], documentos: [] };
       if (!svcActual.adjuntos.recogido) svcActual.adjuntos.recogido = { fotos: [], documentos: [] };
+      if (!Array.isArray(svcActual.mecanicos)) svcActual.mecanicos = [];
     }
     svcActualEstadoOriginal = svcActual ? svcActual.estado : null;
     svcActualPending = emptyPendingStruct();
@@ -4440,7 +5139,8 @@
     const saved = (svcActual.adjuntos[stage]) || { fotos: [], documentos: [] };
     const pending = svcActualPending[stage];
     const prevDetails = document.getElementById(`stage-details-${stage}`);
-    const wasOpen = prevDetails ? prevDetails.open : false;
+    // Si el mecánico está pidiendo autorización de esta etapa, se abre sola.
+    const wasOpen = (prevDetails ? prevDetails.open : false) || !!(solicitudDeEtapa(stage) && svcActual.estado === stage);
 
     let fotosHtml = "";
     const activeGroup = JSON.stringify((saved.fotos || []).map(rawUrl)).replace(/"/g, "&quot;");
@@ -4514,6 +5214,7 @@
             <input type="file" id="as-gal-${stage}" data-stage="${stage}" data-kind="foto" accept="image/*" multiple style="display:none;">
             <input type="file" id="as-pdf-${stage}" data-stage="${stage}" data-kind="pdf" accept="application/pdf" multiple style="display:none;">
           </div>
+          ${renderMecanicoEtapaHtml(stage)}
           ${toolSummaryHtml}
           ${barraDescargaHtml(saved.fotos || [], info.label)}
           <div class="attach-gallery">${fotosHtml}</div>
@@ -4851,9 +5552,10 @@
         </div>
         <div class="form-group"><label class="form-label">${esc(t("kilometraje_label"))}</label><input type="number" id="as-km" value="${svcActual.km ?? ""}"></div>
         <div class="form-group"><label class="form-label">${esc(t("costo_estimado_label"))}</label><input type="number" id="as-costo" value="${svcActual.costo ?? ""}"></div>
-        <div class="form-group"><label class="form-label">${esc(t("tecnico_label"))}</label><input type="text" id="as-tecnico" list="tecnicos-list" value="${esc(svcActual.tecnico || "")}"></div>
+        <div class="form-group"><label class="form-label">${esc(t("tecnico_label"))}</label><input type="text" id="as-tecnico" list="tecnicos-list" value="${esc(svcActual.tecnico || "")}"${(svcActual.mecanicos || []).length ? ' readonly style="opacity:0.75;"' : ""}></div>
         <div class="form-group"><label class="form-label">${esc(t("tiempo_entrega_label"))}</label><input type="text" id="as-tiempo-entrega" placeholder="${esc(t("tiempo_entrega_placeholder"))}" value="${esc(svcActual.tiempo_entrega_aprox || "")}"></div>
       </div>
+      ${renderAsignacionMecanicosHtml()}
       <div class="form-group">
         <label class="form-label">${esc(t("descripcion_label"))}</label>
         <textarea id="as-desc">${esc(svcActual.descripcion || "")}</textarea>
@@ -4913,6 +5615,7 @@
     svcActual.km = $("as-km").value ? Number($("as-km").value) : null;
     svcActual.costo = $("as-costo").value ? Number($("as-costo").value) : null;
     svcActual.tecnico = $("as-tecnico").value.trim();
+    leerAsignacionMecanicosDelDom();
     svcActual.tiempo_entrega_aprox = $("as-tiempo-entrega").value.trim();
     if (!svcActual.pago) svcActual.pago = { estado: "no_pagado", metodo: null };
     if ($("as-pago-estado")) svcActual.pago.estado = $("as-pago-estado").value;
@@ -4960,9 +5663,17 @@
       marcarFechaEtapa(nuevoEstado);
     }
     svcActual.estado = nuevoEstado;
+    // Una solicitud del mecánico solo vale para la etapa en la que se pidió.
+    if (svcActual.mec && svcActual.mec.solicitud && svcActual.mec.solicitud.etapa !== nuevoEstado) svcActual.mec.solicitud = null;
   }
 
-  function onStartServiceClick() {
+  async function onStartServiceClick() {
+    // El folio sale del contador: se confirma primero que sea el último de
+    // GitHub, para no repetir uno que otro dispositivo ya usó.
+    const btnInicio = $("btn-start-service");
+    if (btnInicio) btnInicio.disabled = true;
+    try { await refrescarBaseSiCambio(); } catch (err) { /* sin red: se usa el contador en memoria */ }
+    if (svcActual) return;
     const today = todayISO();
     svcActual = {
       id: "svc_" + Date.now(),
@@ -4975,6 +5686,7 @@
       cotizacion: emptyCotizacion(),
       informe_trabajo: emptyInformeTrabajo(),
       hoja_salida: emptyHojaSalida(),
+      mecanicos: [],
       adjuntos: {
         recibido: { fotos: [], documentos: [] },
         diagnostico: { fotos: [], documentos: [] },
@@ -5096,6 +5808,21 @@
 
   $("active-service-container").addEventListener("click", (e) => {
     if (e.target.id === "btn-start-service") return onStartServiceClick();
+
+    const botonAutorizar = e.target.closest("[data-mec-autorizar]");
+    if (botonAutorizar) {
+      const sel = $("as-estado");
+      if (!sel || sel.disabled) return;   // ya hay un guardado en curso
+      autorizarEtapaMecanico(botonAutorizar.dataset.mecAutorizar);
+      return;
+    }
+    const botonRechazar = e.target.closest("[data-mec-rechazar]");
+    if (botonRechazar) {
+      const sel = $("as-estado");
+      if (!sel || sel.disabled) return;
+      rechazarEtapaMecanico(botonRechazar.dataset.mecRechazar);
+      return;
+    }
 
     const botonSaltar = e.target.closest("[data-saltar-etapa]");
     if (botonSaltar) {
@@ -5524,6 +6251,11 @@
   $("active-service-container").addEventListener("change", async (e) => {
     const tgt = e.target;
 
+    if (tgt.dataset && tgt.dataset.mecAsignar) {
+      leerAsignacionMecanicosDelDom();
+      return;
+    }
+
     if (tgt.id === "as-plantilla") {
       if (tgt.value) aplicarPlantillaServicio(tgt.value);
       return;
@@ -5583,6 +6315,10 @@
       renderActiveServiceCard();
       if (tgt.value !== prevEstado) {
         const montoAviso = efectiveCosto(svcActual);
+        // Se deja terminar primero este mismo evento "change" (que también
+        // cuenta como edición en el editor): si el guardado empezara antes,
+        // avisaría en falso que "editaste algo más mientras subía".
+        await new Promise((r) => setTimeout(r, 0));
         const guardadoOk = await saveVehicle();
         if (!guardadoOk) return;
         if (tgt.value === "listo") {
@@ -5724,6 +6460,8 @@
         hoja_salida: svcActual.hoja_salida || null,
         fechas_etapa: svcActual.fechas_etapa,
         adjuntos: svcActual.adjuntos,
+        mecanicos: Array.isArray(svcActual.mecanicos) ? svcActual.mecanicos : [],
+        ...(svcActual.mec ? { mec: svcActual.mec } : {}),
         _pendingAdjuntos: svcActualPending,
       };
     }
@@ -5816,6 +6554,8 @@
     uploadProgress = { done: 0, total: countPendingUploads(vehicle) };
     const hadNewPhoto = !!vehicle._pendingFotoPerfil;
     skippedPhotoNames = [];
+    seFusionoRemoto = false;
+    folioReasignado = null;
     let uploadsSucceeded = false;
     try {
       // Estas 3 se corren una tras otra a propósito: cada archivo subido es
@@ -5856,6 +6596,19 @@
         : `Actualizar vehículo ${vehicle.placas || vehicle.id}`;
       await saveVehicleWithRetry(vehicle, msg);
       await flushPendingDeletes();
+      vehicleBase = JSON.parse(JSON.stringify(db.vehicles[vehicle.id]));
+      // Si la fusión trajo datos del mecánico que este editor aún no tenía,
+      // pasan al servicio en memoria (si no, el siguiente guardado los borraría).
+      if (svcActual && vehicle.servicio_actual && vehicle.servicio_actual.id === svcActual.id && vehicle.servicio_actual.mec) {
+        svcActual.mec = vehicle.servicio_actual.mec;
+      }
+      if (seFusionoRemoto || folioReasignado) {
+        // Lo que se incorporó de GitHub ya está en el servicio en memoria; se
+        // vuelve a dibujar para que se vea.
+        if (svcActual) renderActiveServiceCard();
+        if (seFusionoRemoto) showToast(t("mec_cambios_incorporados"), "", 6500);
+        if (folioReasignado) showToast(t("mec_folio_reasignado").replace("{folio}", folioReasignado), "", 9000);
+      }
       showToast(t("msg_cambios_guardados"), "success");
       if (hadNewPhoto && !skippedPhotoNames.length) showToast(t("msg_foto_puede_tardar"), "", 6500);
       if (skippedPhotoNames.length) {
@@ -6086,6 +6839,22 @@
   });
   $("btn-new-vehicle").addEventListener("click", () => openEditor(null));
   $("btn-view-board").addEventListener("click", () => { renderBoard(); showView("board"); });
+  $("btn-mecanicos").addEventListener("click", () => { renderMecanicosView(); showView("mecanicos"); refrescarListaSiVisible(); });
+  $("btn-mecanicos-back").addEventListener("click", () => { renderDashboard($("search-box").value); showView("dashboard"); });
+  $("mecanicos-container").addEventListener("click", onMecanicosClick);
+  $("mecanicos-container").addEventListener("change", (e) => {
+    if (e.target.id !== "mec-token-local") return;
+    try {
+      const valor = e.target.value.trim();
+      if (valor) localStorage.setItem(MEC_TOKEN_KEY, valor); else localStorage.removeItem(MEC_TOKEN_KEY);
+      showToast(t("mec_token_guardado"), "success");
+    } catch (err) {}
+  });
+  // La lista se pone al día sola (para ver las solicitudes de los mecánicos):
+  // al volver a la pestaña y cada minuto, con una consulta ligera que solo
+  // descarga los datos si de verdad cambiaron.
+  document.addEventListener("visibilitychange", refrescarListaSiVisible);
+  setInterval(refrescarListaSiVisible, 60000);
   $("btn-board-back").addEventListener("click", () => { renderDashboard($("search-box").value); showView("dashboard"); });
   $("btn-save").addEventListener("click", saveVehicle);
   $("btn-delete").addEventListener("click", deleteVehicle);
@@ -6137,7 +6906,23 @@
         showView("dashboard");
         return;
       } catch (err) {
-        localStorage.removeItem(SESSION_KEY);
+        // Solo se descarta la sesión si GitHub rechazó el token o el repositorio.
+        // Un fallo de red (sin señal) NO debe obligar a volver a pegar el token.
+        if (err.status === 401 || err.status === 403 || err.status === 404) {
+          localStorage.removeItem(SESSION_KEY);
+        } else {
+          showView("login");
+          const errEl = $("login-error");
+          errEl.textContent = t("msg_sin_conexion_sesion") + " ";
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "btn btn-outline btn-sm";
+          btn.textContent = t("reintentar_btn");
+          btn.addEventListener("click", () => location.reload());
+          errEl.appendChild(btn);
+          errEl.style.display = "block";
+          return;
+        }
       }
     }
     showView("login");

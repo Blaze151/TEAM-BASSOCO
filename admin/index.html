@@ -88,6 +88,10 @@
       <button class="btn btn-outline btn-block" id="btn-view-board" data-i18n="ver_tablero">📋 Ver tablero por estado</button>
     </div>
 
+    <div class="actions-row" style="margin-bottom:14px;">
+      <button class="btn btn-outline btn-block" id="btn-mecanicos" data-i18n="mec_boton_panel">👨‍🔧 Mecánicos</button>
+    </div>
+
     <div class="card">
       <div class="card-title" data-i18n="buscar_vehiculo_titulo">Buscar vehículo</div>
       <input type="text" id="search-box" placeholder="Buscar por placa, marca, modelo o cliente..." data-i18n-placeholder="buscar_vehiculo_placeholder">
@@ -97,6 +101,7 @@
           <select id="filter-select">
             <option value="todos" data-i18n="filtro_todos">Todos</option>
             <option value="requiere_atencion" data-i18n="filtro_requiere_atencion">⚠ Requiere atención</option>
+            <option value="por_autorizar" data-i18n="filtro_por_autorizar">🔔 Por autorizar</option>
             <option value="recibido" data-i18n="filtro_recibido">Recibidos</option>
             <option value="diagnostico" data-i18n="filtro_diagnostico">Diagnóstico</option>
             <option value="en_proceso" data-i18n="filtro_en_proceso">En proceso</option>
@@ -132,6 +137,13 @@
     <button class="btn btn-outline btn-sm" id="btn-board-back" data-i18n="volver_lista">← Volver a la lista</button>
     <div style="height:14px;"></div>
     <div class="board" id="board"></div>
+  </div>
+
+  <!-- ===== Mecánicos (alta, requisitos y acceso) ===== -->
+  <div id="view-mecanicos" style="display:none;">
+    <button class="btn btn-outline btn-sm" id="btn-mecanicos-back" data-i18n="volver_lista">← Volver a la lista</button>
+    <div style="height:14px;"></div>
+    <div id="mecanicos-container"></div>
   </div>
 
   <!-- ===== Editor de vehículo ===== -->
@@ -330,6 +342,6 @@
   <div class="lightbox-counter" id="lightbox-counter"></div>
 </div>
 
-<script src="admin.min.js?v=51"></script>
+<script src="admin.min.js?v=52"></script>
 </body>
 </html>
