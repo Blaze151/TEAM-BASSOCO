@@ -681,37 +681,54 @@
       mec_lista_vacia: "Todavía no hay mecánicos dados de alta.",
       mec_agregar_titulo: "Dar de alta un mecánico",
       mec_nombre_label: "Nombre",
-      mec_pin_label: "PIN (4 a 8 dígitos)",
       mec_agregar_btn: "Agregar mecánico",
       mec_falta_nombre: "Escribe el nombre del mecánico",
-      mec_pin_invalido: "El PIN debe tener de 4 a 8 dígitos (solo números)",
+      mec_alta_hint: "Al agregarlo se genera su NIP y aparece su enlace de acceso para mandárselos por WhatsApp.",
       mec_nombre_repetido: "Ya hay un mecánico con ese nombre",
       mec_no_existe: "Ese mecánico ya no existe",
       mec_inactivo: "inactivo",
       mec_asignados_n: "{n} vehículo(s) asignado(s)",
       mec_enlace_btn: "Enlace de acceso",
-      mec_pin_btn: "Cambiar PIN",
+      mec_pin_btn: "NIP nuevo",
       mec_nombre_btn: "Renombrar",
       mec_activar_btn: "Activar",
       mec_desactivar_btn: "Desactivar",
       mec_eliminar_btn: "Eliminar",
-      mec_pin_prompt: "Nuevo PIN para {nombre} (4 a 8 dígitos):",
+      mec_tel_label: "WhatsApp del mecánico (opcional)",
+      mec_tel_hint: "10 dígitos. Sirve para mandarle su enlace de acceso directo a su chat.",
+      mec_tel_invalido: "El teléfono debe tener 10 dígitos (o déjalo vacío)",
+      mec_tel_btn: "Cambiar teléfono",
+      mec_tel_agregar_btn: "Agregar teléfono",
+      mec_tel_prompt: "WhatsApp de {nombre} (10 dígitos; vacío para quitarlo):",
+      mec_wa_directo_btn: "Enviar a {nombre} por WhatsApp",
+      mec_sin_tel_hint: "Este mecánico no tiene teléfono guardado: WhatsApp te pedirá elegir el contacto.",
+      mec_confirm_pin_nuevo: "¿Generar un NIP nuevo para {nombre}? El NIP anterior deja de funcionar y tendrá que entrar con el nuevo.",
+      mec_pin_no_disponible: "El NIP de este mecánico no está guardado en este dispositivo (se creó en otro). Si no lo recuerda, genera uno nuevo.",
       mec_nombre_prompt: "Nombre del mecánico:",
       mec_confirm_desactivar: "¿Desactivar a {nombre}? Ya no podrá entrar a su página hasta que lo actives de nuevo.",
       mec_confirm_borrar: "¿Eliminar a {nombre}? Sus fotos y notas ya guardadas se conservan.",
       mec_borrar_con_asignados: "Este mecánico tiene vehículos asignados. Quítale primero las asignaciones.",
       mec_enlace_titulo: "Acceso de {nombre}",
-      mec_enlace_desc: "Manda este enlace al mecánico. Al abrirlo en su celular queda activado y entra con su PIN. No lo compartas con nadie más: da acceso de escritura al repositorio.",
-      mec_enlace_wa: "Hola {nombre}, este es tu acceso al sistema de {taller}. Ábrelo en tu celular y entra con tu PIN. No lo compartas con nadie: {link}",
-      mec_copiar_btn: "Copiar enlace",
-      mec_enlace_copiado: "Enlace copiado",
+      mec_enlace_desc: "Manda este mensaje al mecánico. Al abrir el enlace en su celular escribe su NIP una sola vez y su sesión queda abierta hasta que la cierre. No lo compartas con nadie más.",
+      mec_enlace_wa: "Hola {nombre}, este es tu acceso al sistema de {taller}. Abre este enlace en tu celular y entra con tu NIP: {pin}. No lo compartas con nadie. {link}",
+      mec_enlace_wa_sin_pin: "Hola {nombre}, este es tu acceso al sistema de {taller}. Abre este enlace en tu celular y entra con tu NIP. No lo compartas con nadie. {link}",
+      mec_aviso_titulo: "Avisar al mecánico",
+      mec_aviso_desc: "Mándale el aviso por WhatsApp con el mensaje ya escrito.",
+      mec_aviso_btn: "Avisar a {nombre}",
+      mec_wa_asignado: "Hola {nombre}, te asigné el {vehiculo} (placas {placas}), folio {folio}. Servicio: {servicio}. Entra a tu página para ver los detalles y subir las fotos: {pagina}",
+      mec_wa_autorizado: "Hola {nombre}, ya autoricé la etapa de {etapa} del {vehiculo} (placas {placas}). Ya puedes iniciar la siguiente: {siguiente}.",
+      mec_wa_autorizado_listo: "Hola {nombre}, ya autoricé el trabajo terminado del {vehiculo} (placas {placas}). Gracias.",
+      mec_wa_rechazado: "Hola {nombre}, revisé la etapa de {etapa} del {vehiculo} (placas {placas}) y falta corregir: {motivo}. Cuando esté, vuelve a pedir la autorización.",
+      mec_wa_sin_motivo: "revisa los detalles en tu página",
+      mec_copiar_btn: "Copiar mensaje",
+      mec_enlace_copiado: "Mensaje copiado",
       mec_req_titulo: "Requisitos por etapa",
       mec_req_desc: "Lo mínimo que el mecánico debe subir en cada etapa antes de poder pedir tu autorización.",
       mec_req_min_fotos: "mínimo de fotos",
       mec_req_nota_oblig: "Nota escrita obligatoria",
       mec_req_guardar_btn: "Guardar requisitos",
       mec_acceso_titulo: "Acceso de los mecánicos",
-      mec_acceso_desc: "Cada mecánico entra con su enlace y su PIN, y solo ve los vehículos que le asignes. El enlace lleva un token de GitHub; si un celular se pierde o un mecánico se va, desactívalo aquí y cambia el token en GitHub.",
+      mec_acceso_desc: "Cada mecánico entra con su enlace y su NIP, y solo ve los vehículos que le asignes. El enlace lleva un token de GitHub; si un celular se pierde o un mecánico se va, desactívalo aquí y cambia el token en GitHub.",
       mec_token_label: "Token para mecánicos (opcional)",
       mec_token_hint: "Si lo dejas vacío, los enlaces usan tu propio token. Se guarda solo en este dispositivo.",
       mec_token_guardado: "Token para mecánicos guardado en este dispositivo",
@@ -1126,30 +1143,47 @@
       mec_lista_vacia: "No mechanics registered yet.",
       mec_agregar_titulo: "Register a mechanic",
       mec_nombre_label: "Name",
-      mec_pin_label: "PIN (4 to 8 digits)",
       mec_agregar_btn: "Add mechanic",
       mec_falta_nombre: "Enter the mechanic's name",
-      mec_pin_invalido: "The PIN must be 4 to 8 digits (numbers only)",
+      mec_alta_hint: "Adding them generates their PIN and shows their access link so you can send both by WhatsApp.",
       mec_nombre_repetido: "There is already a mechanic with that name",
       mec_no_existe: "That mechanic no longer exists",
       mec_inactivo: "inactive",
       mec_asignados_n: "{n} vehicle(s) assigned",
       mec_enlace_btn: "Access link",
-      mec_pin_btn: "Change PIN",
+      mec_pin_btn: "New PIN",
       mec_nombre_btn: "Rename",
       mec_activar_btn: "Activate",
       mec_desactivar_btn: "Deactivate",
       mec_eliminar_btn: "Delete",
-      mec_pin_prompt: "New PIN for {nombre} (4 to 8 digits):",
+      mec_tel_label: "Mechanic's WhatsApp (optional)",
+      mec_tel_hint: "10 digits. Used to send their access link straight to their chat.",
+      mec_tel_invalido: "The phone must have 10 digits (or leave it empty)",
+      mec_tel_btn: "Change phone",
+      mec_tel_agregar_btn: "Add phone",
+      mec_tel_prompt: "WhatsApp for {nombre} (10 digits; empty to remove it):",
+      mec_wa_directo_btn: "Send to {nombre} on WhatsApp",
+      mec_sin_tel_hint: "This mechanic has no phone saved: WhatsApp will ask you to pick the contact.",
+      mec_confirm_pin_nuevo: "Generate a new PIN for {nombre}? The old PIN stops working and they will have to sign in with the new one.",
+      mec_pin_no_disponible: "This mechanic's PIN is not stored on this device (it was created on another). If they don't remember it, generate a new one.",
       mec_nombre_prompt: "Mechanic's name:",
       mec_confirm_desactivar: "Deactivate {nombre}? They won't be able to open their page until you activate them again.",
       mec_confirm_borrar: "Delete {nombre}? Photos and notes already saved are kept.",
       mec_borrar_con_asignados: "This mechanic has vehicles assigned. Remove the assignments first.",
       mec_enlace_titulo: "Access for {nombre}",
-      mec_enlace_desc: "Send this link to the mechanic. Opening it on their phone activates it, and they sign in with their PIN. Don't share it with anyone else: it grants write access to the repository.",
-      mec_enlace_wa: "Hi {nombre}, this is your access to the {taller} system. Open it on your phone and sign in with your PIN. Don't share it with anyone: {link}",
-      mec_copiar_btn: "Copy link",
-      mec_enlace_copiado: "Link copied",
+      mec_enlace_desc: "Send this message to the mechanic. After opening the link on their phone they enter their PIN once and stay signed in until they sign out. Don't share it with anyone else.",
+      mec_enlace_wa: "Hi {nombre}, this is your access to the {taller} system. Open this link on your phone and sign in with your PIN: {pin}. Don't share it with anyone. {link}",
+      mec_enlace_wa_sin_pin: "Hi {nombre}, this is your access to the {taller} system. Open this link on your phone and sign in with your PIN. Don't share it with anyone. {link}",
+      mec_aviso_titulo: "Notify the mechanic",
+      mec_aviso_desc: "Send the notice by WhatsApp with the message already written.",
+      mec_aviso_btn: "Notify {nombre}",
+      mec_wa_asignado: "Hi {nombre}, I assigned you the {vehiculo} (plates {placas}), folio {folio}. Service: {servicio}. Open your page to see the details and upload the photos: {pagina}",
+      mec_wa_autorizado: "Hi {nombre}, I authorized the {etapa} stage of the {vehiculo} (plates {placas}). You can start the next one: {siguiente}.",
+      mec_wa_autorizado_listo: "Hi {nombre}, I authorized the finished work on the {vehiculo} (plates {placas}). Thanks.",
+      mec_wa_rechazado: "Hi {nombre}, I reviewed the {etapa} stage of the {vehiculo} (plates {placas}) and this needs fixing: {motivo}. When it's done, request authorization again.",
+      mec_wa_sin_motivo: "check the details on your page",
+      mec_copiar_btn: "Copy message",
+      mec_enlace_copiado: "Message copied",
       mec_req_titulo: "Requirements per stage",
       mec_req_desc: "The minimum the mechanic must upload at each stage before they can ask for your authorization.",
       mec_req_min_fotos: "minimum photos",
@@ -3272,7 +3306,43 @@
     crypto.getRandomValues(a);
     return Array.from(a).map((b) => b.toString(16).padStart(2, "0")).join("");
   }
-  function pinValido(pin) { return /^\d{4,8}$/.test(pin); }
+  // El NIP lo genera el panel (4 dígitos al azar). En GitHub solo se guarda su
+  // hash, así que el NIP en claro se recuerda únicamente en este dispositivo,
+  // para poder reenviarlo por WhatsApp sin tener que generar otro.
+  const MEC_PINS_KEY = SESSION_KEY.replace("admin_session", "mec_pins");
+  function pinAleatorio() {
+    const a = new Uint32Array(1);
+    crypto.getRandomValues(a);
+    return String(a[0] % 10000).padStart(4, "0");
+  }
+  function pinsLocales() {
+    try { return JSON.parse(localStorage.getItem(MEC_PINS_KEY) || "{}") || {}; } catch (err) { return {}; }
+  }
+  function recordarPinLocal(id, pin) {
+    try {
+      const mapa = pinsLocales();
+      if (pin) mapa[id] = pin; else delete mapa[id];
+      localStorage.setItem(MEC_PINS_KEY, JSON.stringify(mapa));
+    } catch (err) {}
+  }
+  // Solo vale el NIP recordado si sigue siendo el vigente (otro dispositivo pudo generar uno nuevo).
+  async function pinLocalVigente(mec) {
+    const pin = pinsLocales()[mec.id];
+    if (!pin) return "";
+    return (await sha256Hex((mec.salt || "") + ":" + pin)) === mec.pin_hash ? pin : "";
+  }
+  // Teléfono del mecánico: solo dígitos. Vacío es válido (es opcional); si se
+  // escribe, deben ser 10 dígitos, o 11 a 13 si incluye la clave del país.
+  function telefonoMecanicoLimpio(texto) {
+    const digitos = String(texto || "").replace(/\D/g, "");
+    if (!digitos) return "";
+    return digitos.length >= 10 && digitos.length <= 13 ? digitos : null;
+  }
+  function telefonoMecanicoWa(mec) {
+    const digitos = String((mec && mec.telefono) || "").replace(/\D/g, "");
+    if (!digitos) return "";
+    return digitos.length === 10 ? "52" + digitos : digitos;
+  }
 
   // --- Folios: número <-> texto, y el mayor folio que ya está en uso ---
   function folioANumero(folio) {
@@ -3499,6 +3569,13 @@
     if (!confirm(pregunta)) return;
     if (!svcActual.mec.autorizaciones) svcActual.mec.autorizaciones = {};
     svcActual.mec.autorizaciones[stage] = { fecha: new Date().toISOString(), solicito: sol.por || null };
+    {
+      const veh = buildVehicleFromForm();
+      const datos = datosVehiculoParaAviso(veh);
+      datos.etapa = ESTADOS_SERVICIO()[stage].label;
+      datos.siguiente = siguiente ? ESTADOS_SERVICIO()[siguiente].label : "";
+      encolarAvisoMecanico(sol.por ? [sol.por] : svcActual.mecanicos, siguiente ? "mec_wa_autorizado" : "mec_wa_autorizado_listo", datos);
+    }
     svcActual.mec.solicitud = null;
     svcActual.mec.rechazo = null;
     hasUnsavedChanges = true;
@@ -3521,6 +3598,12 @@
     const sol = solicitudDeEtapa(stage);
     if (!sol) return;
     svcActual.mec.rechazo = { etapa: stage, motivo: motivo.trim(), fecha: new Date().toISOString() };
+    {
+      const datos = datosVehiculoParaAviso(buildVehicleFromForm());
+      datos.etapa = ESTADOS_SERVICIO()[stage].label;
+      datos.motivo = motivo.trim() || t("mec_wa_sin_motivo");
+      encolarAvisoMecanico(sol.por ? [sol.por] : svcActual.mecanicos, "mec_wa_rechazado", datos);
+    }
     svcActual.mec.solicitud = null;
     hasUnsavedChanges = true;
     renderActiveServiceCard();
@@ -3557,11 +3640,12 @@
       return `
         <div class="vlist-item" style="display:block;cursor:default;">
           <div class="vlist-item-title">👨‍🔧 ${esc(m.nombre)} ${m.activo === false ? `<span class="tag" style="color:var(--danger);">${esc(t("mec_inactivo"))}</span>` : ""}</div>
-          <div class="vlist-item-sub">${esc(t("mec_asignados_n").replace("{n}", lista.length))}</div>
+          <div class="vlist-item-sub">${m.telefono ? "📱 " + esc(m.telefono) + " · " : ""}${esc(t("mec_asignados_n").replace("{n}", lista.length))}</div>
           ${detalle ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">${detalle}</div>` : ""}
           <div class="actions-row" style="margin-top:10px;flex-wrap:wrap;gap:6px;">
             <button type="button" class="btn btn-sm" data-mec-enlace="${esc(m.id)}" ${m.activo === false ? "disabled" : ""}>🔗 ${esc(t("mec_enlace_btn"))}</button>
             <button type="button" class="btn btn-outline btn-sm" data-mec-pin="${esc(m.id)}">🔑 ${esc(t("mec_pin_btn"))}</button>
+            <button type="button" class="btn btn-outline btn-sm" data-mec-tel="${esc(m.id)}">📱 ${esc(t(m.telefono ? "mec_tel_btn" : "mec_tel_agregar_btn"))}</button>
             <button type="button" class="btn btn-outline btn-sm" data-mec-nombre="${esc(m.id)}">✏️ ${esc(t("mec_nombre_btn"))}</button>
             <button type="button" class="btn btn-outline btn-sm" data-mec-toggle="${esc(m.id)}">${m.activo === false ? "▶️ " + esc(t("mec_activar_btn")) : "⏸️ " + esc(t("mec_desactivar_btn"))}</button>
             <button type="button" class="btn btn-outline btn-sm btn-danger" data-mec-borrar="${esc(m.id)}">🗑️ ${esc(t("mec_eliminar_btn"))}</button>
@@ -3575,10 +3659,13 @@
         ${filas}
         <hr class="divider">
         <div class="card-title" style="font-size:13px;">${esc(t("mec_agregar_titulo"))}</div>
-        <div class="grid-2">
-          <div class="form-group"><label class="form-label">${esc(t("mec_nombre_label"))}</label><input type="text" id="mec-nuevo-nombre" autocomplete="off"></div>
-          <div class="form-group"><label class="form-label">${esc(t("mec_pin_label"))}</label><input type="text" id="mec-nuevo-pin" inputmode="numeric" autocomplete="off" maxlength="8"></div>
+        <div class="form-group"><label class="form-label">${esc(t("mec_nombre_label"))}</label><input type="text" id="mec-nuevo-nombre" autocomplete="off"></div>
+        <div class="form-group">
+          <label class="form-label">${esc(t("mec_tel_label"))}</label>
+          <input type="tel" id="mec-nuevo-tel" inputmode="tel" autocomplete="off" placeholder="871 000 0000">
+          <p style="font-size:10.5px;color:var(--text-faint);margin:4px 0 0;">${esc(t("mec_tel_hint"))}</p>
         </div>
+        <p style="font-size:11.5px;color:var(--text-faint);margin:0 0 12px;">${esc(t("mec_alta_hint"))}</p>
         <button type="button" class="btn btn-block" id="mec-agregar-btn">+ ${esc(t("mec_agregar_btn"))}</button>
       </div>
 
@@ -3641,11 +3728,13 @@
     const el = $("mec-link-overlay");
     if (el) el.remove();
   }
-  function mostrarEnlaceMecanico(mec) {
+  async function mostrarEnlaceMecanico(mec) {
     cerrarEnlaceMecanico();
     const enlace = enlaceActivacion(mec);
+    const pin = await pinLocalVigente(mec);
     const taller = (db.taller && db.taller.nombre) || "";
-    const texto = t("mec_enlace_wa").replace("{nombre}", mec.nombre).replace("{taller}", taller).replace("{link}", enlace);
+    const texto = t(pin ? "mec_enlace_wa" : "mec_enlace_wa_sin_pin").replace("{nombre}", mec.nombre).replace("{taller}", taller).replace("{link}", enlace).replace("{pin}", pin);
+    const numero = telefonoMecanicoWa(mec);
     const overlay = document.createElement("div");
     overlay.id = "mec-link-overlay";
     overlay.className = "wa-prompt-overlay";
@@ -3653,18 +3742,27 @@
       <div class="card wa-prompt-card">
         <div class="card-title">🔗 ${esc(t("mec_enlace_titulo").replace("{nombre}", mec.nombre))}</div>
         <p style="font-size:13px;color:var(--text-dim);margin:0 0 10px;line-height:1.5;">${esc(t("mec_enlace_desc"))}</p>
+        ${pin
+          ? `<div style="text-align:center;margin:0 0 12px;"><div style="font-size:11px;color:var(--text-faint);">NIP</div><div class="mono" id="mec-link-pin" style="font-size:28px;font-weight:700;letter-spacing:8px;">${esc(pin)}</div></div>`
+          : `<p style="font-size:12px;color:var(--yellow);margin:0 0 12px;line-height:1.5;">${esc(t("mec_pin_no_disponible"))}</p>`}
         <input type="text" id="mec-link-input" readonly value="${esc(enlace)}" style="font-size:11px;">
+        ${numero ? "" : `<p style="font-size:11.5px;color:var(--text-faint);margin:8px 0 0;">${esc(t("mec_sin_tel_hint"))}</p>`}
         <div class="actions-row" style="flex-wrap:wrap;margin-top:12px;">
-          <button type="button" class="btn" id="mec-link-copiar">📋 ${esc(t("mec_copiar_btn"))}</button>
-          <a class="btn btn-outline" href="https://wa.me/?text=${encodeURIComponent(texto)}" rel="noopener" target="_blank">💬 WhatsApp</a>
+          <a class="btn" id="mec-link-wa" href="https://wa.me/${numero}?text=${encodeURIComponent(texto)}" rel="noopener" target="_blank">💬 ${esc(numero ? t("mec_wa_directo_btn").replace("{nombre}", mec.nombre.split(" ")[0]) : "WhatsApp")}</a>
+          <button type="button" class="btn btn-outline" id="mec-link-copiar">📋 ${esc(t("mec_copiar_btn"))}</button>
+          <button type="button" class="btn btn-outline" id="mec-link-pin-nuevo">🔑 ${esc(t("mec_pin_btn"))}</button>
           <button type="button" class="btn btn-outline" id="mec-link-cerrar">${esc(t("cerrar_btn"))}</button>
         </div>
       </div>`;
     document.body.appendChild(overlay);
     $("mec-link-cerrar").addEventListener("click", cerrarEnlaceMecanico);
+    $("mec-link-pin-nuevo").addEventListener("click", async () => {
+      if (mecGuardando || !confirm(t("mec_confirm_pin_nuevo").replace("{nombre}", mec.nombre))) return;
+      await generarPinNuevo(mec.id);
+    });
     $("mec-link-copiar").addEventListener("click", async () => {
       try {
-        await navigator.clipboard.writeText(enlace);
+        await navigator.clipboard.writeText(texto);
       } catch (err) {
         const campo = $("mec-link-input");
         campo.focus(); campo.select();
@@ -3675,25 +3773,101 @@
     overlay.addEventListener("click", (e) => { if (e.target === overlay) cerrarEnlaceMecanico(); });
   }
 
+  // --- Avisos al mecánico por WhatsApp (asignación, autorización, rechazo) ---
+  // No se pueden mandar solos: se ofrece un botón por mecánico que abre su chat
+  // con el mensaje ya escrito. Solo para mecánicos con teléfono guardado.
+  let avisosMecanico = [];   // [{ id, texto }]
+  function encolarAvisoMecanico(ids, clave, datos) {
+    Array.from(new Set(ids || [])).forEach((id) => {
+      const mec = mecanicoPorId(id);
+      if (!mec || mec.activo === false || !telefonoMecanicoWa(mec)) return;
+      let texto = t(clave).replace("{nombre}", mec.nombre.split(" ")[0]);
+      Object.keys(datos).forEach((k) => { texto = texto.replace("{" + k + "}", datos[k]); });
+      avisosMecanico = avisosMecanico.filter((a) => !(a.id === id && a.clave === clave));
+      avisosMecanico.push({ id, clave, texto: texto.replace(/\s+/g, " ").trim() });
+    });
+  }
+  function datosVehiculoParaAviso(vehicle) {
+    const s = vehicle.servicio_actual || {};
+    return {
+      vehiculo: `${vehicle.marca || ""} ${vehicle.modelo || ""}`.trim() || vehicle.id,
+      placas: vehicle.placas || "s/p",
+      folio: s.folio || "",
+      servicio: s.tipo || "",
+      pagina: new URL("../mecanico/", location.href).href,
+    };
+  }
+  function mostrarAvisosMecanico() {
+    const lista = avisosMecanico;
+    avisosMecanico = [];
+    const previo = $("mec-aviso-overlay");
+    if (previo) previo.remove();
+    if (!lista.length) return;
+    const overlay = document.createElement("div");
+    overlay.id = "mec-aviso-overlay";
+    overlay.className = "wa-prompt-overlay";
+    overlay.innerHTML = `
+      <div class="card wa-prompt-card">
+        <div class="card-title">💬 ${esc(t("mec_aviso_titulo"))}</div>
+        <p style="font-size:13px;color:var(--text-dim);margin:0 0 14px;line-height:1.5;">${esc(t("mec_aviso_desc"))}</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          ${lista.map((a) => { const m = mecanicoPorId(a.id); return `<a class="btn" data-mec-aviso href="https://wa.me/${telefonoMecanicoWa(m)}?text=${encodeURIComponent(a.texto)}" rel="noopener" target="_blank">💬 ${esc(t("mec_aviso_btn").replace("{nombre}", m.nombre))}</a>`; }).join("")}
+          <button type="button" class="btn btn-outline" id="mec-aviso-cerrar">${esc(t("cerrar_btn"))}</button>
+        </div>
+      </div>`;
+    document.body.appendChild(overlay);
+    const cerrar = () => overlay.remove();
+    $("mec-aviso-cerrar").addEventListener("click", cerrar);
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) cerrar(); });
+    if (lista.length === 1) overlay.querySelector("[data-mec-aviso]").addEventListener("click", () => setTimeout(cerrar, 300));
+  }
+  // Tras guardar: avisa a los mecánicos recién asignados a este servicio.
+  function encolarAvisosDeAsignacion(vehicle, baseAnterior) {
+    const sa = vehicle.servicio_actual;
+    if (!sa || !Array.isArray(sa.mecanicos) || !sa.mecanicos.length) return;
+    const antes = baseAnterior && baseAnterior.servicio_actual && baseAnterior.servicio_actual.id === sa.id ? (baseAnterior.servicio_actual.mecanicos || []) : [];
+    const nuevos = sa.mecanicos.filter((id) => !antes.includes(id));
+    if (nuevos.length) encolarAvisoMecanico(nuevos, "mec_wa_asignado", datosVehiculoParaAviso(vehicle));
+  }
+
+  async function generarPinNuevo(id) {
+    const mec = mecanicoPorId(id);
+    if (!mec) return;
+    const pin = pinAleatorio();
+    const salt = saltAleatorio();
+    const hash = await sha256Hex(salt + ":" + pin);
+    const guardado = await guardarCambioMecanicos(`Generar NIP nuevo de mecánico ${mec.nombre}`, modificarMecanico(id, (m) => { m.salt = salt; m.pin_hash = hash; }));
+    if (!guardado) return;
+    recordarPinLocal(id, pin);
+    mostrarEnlaceMecanico(mecanicoPorId(id));
+  }
+
   async function onMecanicosClick(e) {
     const btn = e.target.closest("button");
     if (!btn || mecGuardando) return;
 
     if (btn.id === "mec-agregar-btn") {
       const nombre = $("mec-nuevo-nombre").value.trim();
-      const pin = $("mec-nuevo-pin").value.trim();
+      const pin = pinAleatorio();
       if (!nombre) { showToast(t("mec_falta_nombre"), "error"); return; }
-      if (!pinValido(pin)) { showToast(t("mec_pin_invalido"), "error"); return; }
+      const telefono = telefonoMecanicoLimpio($("mec-nuevo-tel").value);
+      if (telefono === null) { showToast(t("mec_tel_invalido"), "error"); return; }
       if (listaMecanicos().some((m) => normalizarTexto(m.nombre) === normalizarTexto(nombre))) { showToast(t("mec_nombre_repetido"), "error"); return; }
       const salt = saltAleatorio();
       const nuevo = {
         id: "mec_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
         nombre, salt, pin_hash: await sha256Hex(salt + ":" + pin), activo: true, creado: new Date().toISOString(),
       };
-      await guardarCambioMecanicos(`Agregar mecánico ${nombre}`, () => {
+      if (telefono) nuevo.telefono = telefono;
+      const guardado = await guardarCambioMecanicos(`Agregar mecánico ${nombre}`, () => {
         if (!Array.isArray(db.mecanicos)) db.mecanicos = [];
         if (!db.mecanicos.some((m) => m.id === nuevo.id)) db.mecanicos.push(nuevo);
       });
+      if (guardado) {
+        // Recién creado: se muestra de una vez su enlace y su NIP para mandarlos por WhatsApp.
+        recordarPinLocal(nuevo.id, pin);
+        mostrarEnlaceMecanico(mecanicoPorId(nuevo.id) || nuevo);
+      }
       return;
     }
     if (btn.id === "mec-req-guardar") {
@@ -3707,18 +3881,23 @@
     }
     if (btn.dataset.mecAbrir) { openEditor(btn.dataset.mecAbrir); return; }
 
-    const id = btn.dataset.mecEnlace || btn.dataset.mecPin || btn.dataset.mecNombre || btn.dataset.mecToggle || btn.dataset.mecBorrar;
+    const id = btn.dataset.mecEnlace || btn.dataset.mecTel || btn.dataset.mecPin || btn.dataset.mecNombre || btn.dataset.mecToggle || btn.dataset.mecBorrar;
     const mec = id ? mecanicoPorId(id) : null;
     if (!mec) return;
 
     if (btn.dataset.mecEnlace) { mostrarEnlaceMecanico(mec); return; }
+    if (btn.dataset.mecTel) {
+      const entrada = prompt(t("mec_tel_prompt").replace("{nombre}", mec.nombre), mec.telefono || "");
+      if (entrada === null) return;
+      const telefono = telefonoMecanicoLimpio(entrada);
+      if (telefono === null) { showToast(t("mec_tel_invalido"), "error"); return; }
+      if (telefono === (mec.telefono || "")) return;
+      await guardarCambioMecanicos(`Actualizar teléfono de mecánico ${mec.nombre}`, modificarMecanico(id, (m) => { if (telefono) m.telefono = telefono; else delete m.telefono; }));
+      return;
+    }
     if (btn.dataset.mecPin) {
-      const pin = prompt(t("mec_pin_prompt").replace("{nombre}", mec.nombre));
-      if (pin === null) return;
-      if (!pinValido(pin.trim())) { showToast(t("mec_pin_invalido"), "error"); return; }
-      const salt = saltAleatorio();
-      const hash = await sha256Hex(salt + ":" + pin.trim());
-      await guardarCambioMecanicos(`Cambiar PIN de mecánico ${mec.nombre}`, modificarMecanico(id, (m) => { m.salt = salt; m.pin_hash = hash; }));
+      if (!confirm(t("mec_confirm_pin_nuevo").replace("{nombre}", mec.nombre))) return;
+      await generarPinNuevo(id);
       return;
     }
     if (btn.dataset.mecNombre) {
@@ -6596,7 +6775,9 @@
         : `Actualizar vehículo ${vehicle.placas || vehicle.id}`;
       await saveVehicleWithRetry(vehicle, msg);
       await flushPendingDeletes();
+      encolarAvisosDeAsignacion(vehicle, vehicleBase);
       vehicleBase = JSON.parse(JSON.stringify(db.vehicles[vehicle.id]));
+      mostrarAvisosMecanico();
       // Si la fusión trajo datos del mecánico que este editor aún no tenía,
       // pasan al servicio en memoria (si no, el siguiente guardado los borraría).
       if (svcActual && vehicle.servicio_actual && vehicle.servicio_actual.id === svcActual.id && vehicle.servicio_actual.mec) {
