@@ -732,8 +732,16 @@
       mec_acceso_titulo: "Acceso de los mecánicos",
       mec_acceso_desc: "Cada mecánico entra con su enlace y su NIP, y solo ve los vehículos que le asignes. El enlace lleva un token de GitHub; si un celular se pierde o un mecánico se va, desactívalo aquí y cambia el token en GitHub.",
       mec_token_label: "Token para mecánicos (opcional)",
-      mec_token_hint: "Si lo dejas vacío, los enlaces usan tu propio token. Se guarda solo en este dispositivo.",
-      mec_token_guardado: "Token para mecánicos guardado en este dispositivo",
+      mec_token_hint: "No es una contraseña: es un token de GitHub (empieza con github_pat_ o ghp_). Si lo dejas vacío, los enlaces usan tu propio token. Se guarda solo en este dispositivo.",
+      mec_token_guardado: "Token comprobado y guardado: los enlaces nuevos lo usarán",
+      mec_token_quitado: "Sin token aparte: los enlaces usan tu propio token",
+      mec_token_comprobando: "Comprobando el token con GitHub…",
+      mec_token_err_invalido: "Eso no es un token válido de GitHub, así que no se guardó. Los enlaces seguirán usando tu propio token.",
+      mec_token_err_repo: "Ese token no tiene acceso a este repositorio, así que no se guardó. Los enlaces seguirán usando tu propio token.",
+      mec_token_err_lectura: "Ese token solo puede leer: le falta el permiso «Contents: Read and write» en este repositorio. No se guardó.",
+      mec_token_err_red: "No se pudo comprobar el token (revisa tu conexión). No se guardó; inténtalo de nuevo.",
+      mec_token_estado_admin: "Ahora los enlaces usan tu propio token.",
+      mec_token_estado_propio: "✓ Token aparte comprobado: los enlaces lo usan.",
       mec_asignados_label: "Mecánicos asignados",
       mec_asignados_hint: "Solo los mecánicos marcados ven este vehículo en su página.",
       mec_sin_alta_hint: "Para asignar este vehículo a un mecánico, primero dalo de alta en «Mecánicos» (en la lista de vehículos).",
@@ -1196,8 +1204,16 @@
       mec_acceso_titulo: "Mechanic access",
       mec_acceso_desc: "Each mechanic signs in with their link and PIN and only sees the vehicles you assign. The link carries a GitHub token; if a phone is lost or a mechanic leaves, deactivate them here and rotate the token on GitHub.",
       mec_token_label: "Token for mechanics (optional)",
-      mec_token_hint: "If left empty, links use your own token. It is stored only on this device.",
-      mec_token_guardado: "Mechanics token saved on this device",
+      mec_token_hint: "This is not a password: it is a GitHub token (starts with github_pat_ or ghp_). If left empty, links use your own token. It is stored only on this device.",
+      mec_token_guardado: "Token verified and saved: new links will use it",
+      mec_token_quitado: "No separate token: links use your own token",
+      mec_token_comprobando: "Checking the token with GitHub…",
+      mec_token_err_invalido: "That is not a valid GitHub token, so it was not saved. Links will keep using your own token.",
+      mec_token_err_repo: "That token has no access to this repository, so it was not saved. Links will keep using your own token.",
+      mec_token_err_lectura: "That token is read-only: it lacks the 'Contents: Read and write' permission on this repository. Not saved.",
+      mec_token_err_red: "Could not check the token (check your connection). Not saved; try again.",
+      mec_token_estado_admin: "Links currently use your own token.",
+      mec_token_estado_propio: "✓ Separate token verified: links use it.",
       mec_asignados_label: "Assigned mechanics",
       mec_asignados_hint: "Only the checked mechanics see this vehicle on their page.",
       mec_sin_alta_hint: "To assign this vehicle to a mechanic, register them first under \"Mechanics\" (on the vehicle list).",
@@ -3631,8 +3647,7 @@
     const mecs = listaMecanicos();
     const req = requisitosMecanico();
     const asignados = vehiculosAsignadosPorMecanico();
-    let tokenLocal = "";
-    try { tokenLocal = localStorage.getItem(MEC_TOKEN_KEY) || ""; } catch (err) {}
+    const tokenLocal = tokenMecanicosVigente();
 
     const filas = mecs.length ? mecs.map((m) => {
       const lista = asignados[m.id] || [];
@@ -3691,6 +3706,7 @@
           <label class="form-label">${esc(t("mec_token_label"))}</label>
           <input type="password" id="mec-token-local" placeholder="github_pat_..." value="${esc(tokenLocal)}" autocomplete="off">
           <p style="font-size:10.5px;color:var(--text-faint);margin:4px 0 0;">${esc(t("mec_token_hint"))}</p>
+          <p id="mec-token-estado" style="font-size:11.5px;margin:6px 0 0;color:${tokenLocal ? "var(--green-bright)" : "var(--text-dim)"};">${esc(t(tokenLocal ? "mec_token_estado_propio" : "mec_token_estado_admin"))}</p>
         </div>
       </div>`;
   }
@@ -3720,9 +3736,71 @@
     };
   }
 
+  // --- Token aparte para mecánicos: solo se usa si se comprobó contra GitHub ---
+  // Se guarda junto con una marca de "comprobado". Un valor que nunca pasó la
+  // comprobación (por ejemplo, algo tecleado como si fuera una contraseña) se
+  // ignora y los enlaces usan el token del administrador.
+  const MEC_TOKEN_OK_KEY = MEC_TOKEN_KEY + "_ok";
+  function tokenMecanicosVigente() {
+    try {
+      const token = (localStorage.getItem(MEC_TOKEN_KEY) || "").trim();
+      return token && localStorage.getItem(MEC_TOKEN_OK_KEY) === token ? token : "";
+    } catch (err) { return ""; }
+  }
+  function olvidarTokenMecanicos() {
+    try { localStorage.removeItem(MEC_TOKEN_KEY); localStorage.removeItem(MEC_TOKEN_OK_KEY); } catch (err) {}
+  }
+  // Devuelve "" si el token sirve, o la clave del mensaje de error.
+  // 1) Lectura del archivo de datos: descarta lo que no es un token de GitHub.
+  // 2) Escritura: se intenta guardar el MISMO contenido actual con una huella
+  //    (sha) falsa. GitHub nunca acepta ese guardado: responde 409/422 si el
+  //    token puede escribir y 403/404 si no. No cambia nada en el repositorio.
+  async function comprobarTokenMecanicos(token) {
+    const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${DATA_PATH}`;
+    const headers = { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github+json" };
+    let res;
+    try {
+      res = await fetch(`${url}?ref=${encodeURIComponent(cfg.branch)}`, { method: "GET", headers, cache: "no-store" });
+    } catch (err) { return "mec_token_err_red"; }
+    if (res.status === 401) return "mec_token_err_invalido";
+    if (!res.ok) return "mec_token_err_repo";
+    try {
+      res = await fetch(url, {
+        method: "PUT", headers,
+        body: JSON.stringify({ message: "Comprobación de permiso (no guarda nada)", content: b64EncodeUnicode(JSON.stringify(db, null, 2)), sha: "0".repeat(40), branch: cfg.branch }),
+      });
+    } catch (err) { return "mec_token_err_red"; }
+    if (res.status === 409 || res.status === 422) return "";
+    if (res.status === 401) return "mec_token_err_invalido";
+    return "mec_token_err_lectura";
+  }
+  let comprobandoTokenMecanicos = false;
+  async function onTokenMecanicosChange(campo) {
+    if (comprobandoTokenMecanicos) return;
+    const valor = campo.value.trim();
+    if (!valor) {
+      olvidarTokenMecanicos();
+      showToast(t("mec_token_quitado"), "success");
+      return;
+    }
+    comprobandoTokenMecanicos = true;
+    campo.disabled = true;
+    showToast(t("mec_token_comprobando"), "", 2500);
+    const error = await comprobarTokenMecanicos(valor);
+    comprobandoTokenMecanicos = false;
+    if (error) {
+      // No se guarda: los enlaces siguen usando el token del administrador.
+      olvidarTokenMecanicos();
+      showToast(t(error), "error", 11000);
+    } else {
+      try { localStorage.setItem(MEC_TOKEN_KEY, valor); localStorage.setItem(MEC_TOKEN_OK_KEY, valor); } catch (err) {}
+      showToast(t("mec_token_guardado"), "success");
+    }
+    if ($("view-mecanicos").style.display !== "none") renderMecanicosView();
+  }
+
   function enlaceActivacion(mec) {
-    let token = "";
-    try { token = (localStorage.getItem(MEC_TOKEN_KEY) || "").trim(); } catch (err) {}
+    let token = tokenMecanicosVigente();
     if (!token) token = cfg.token;
     const datos = JSON.stringify({ t: token, m: mec.id, r: REPO_NAME });
     const b64 = btoa(datos).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
@@ -7051,11 +7129,7 @@
   $("mecanicos-container").addEventListener("click", onMecanicosClick);
   $("mecanicos-container").addEventListener("change", (e) => {
     if (e.target.id !== "mec-token-local") return;
-    try {
-      const valor = e.target.value.trim();
-      if (valor) localStorage.setItem(MEC_TOKEN_KEY, valor); else localStorage.removeItem(MEC_TOKEN_KEY);
-      showToast(t("mec_token_guardado"), "success");
-    } catch (err) {}
+    onTokenMecanicosChange(e.target);
   });
   // La lista se pone al día sola (para ver las solicitudes de los mecánicos):
   // al volver a la pestaña y cada minuto, con una consulta ligera que solo
