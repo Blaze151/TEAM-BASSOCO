@@ -715,6 +715,8 @@
       mec_aviso_titulo: "Avisar al mecánico",
       mec_aviso_desc: "Mándale el aviso por WhatsApp con el mensaje ya escrito.",
       mec_aviso_btn: "Avisar a {nombre}",
+      mec_aviso_desc_asignar: "Avísale que le asignaste este vehículo. Al abrir WhatsApp se guarda primero la asignación.",
+      mec_sin_tel_aviso: "{nombre} no tiene teléfono guardado: agrégalo en «Mecánicos» para poder avisarle por WhatsApp.",
       mec_wa_asignado: "Hola {nombre}, te asigné el {vehiculo} (placas {placas}), folio {folio}. Servicio: {servicio}. Entra a tu página para ver los detalles y subir las fotos: {pagina}",
       mec_wa_autorizado: "Hola {nombre}, ya autoricé la etapa de {etapa} del {vehiculo} (placas {placas}). Ya puedes iniciar la siguiente: {siguiente}.",
       mec_wa_autorizado_listo: "Hola {nombre}, ya autoricé el trabajo terminado del {vehiculo} (placas {placas}). Gracias.",
@@ -1177,6 +1179,8 @@
       mec_aviso_titulo: "Notify the mechanic",
       mec_aviso_desc: "Send the notice by WhatsApp with the message already written.",
       mec_aviso_btn: "Notify {nombre}",
+      mec_aviso_desc_asignar: "Let them know you assigned this vehicle. Opening WhatsApp saves the assignment first.",
+      mec_sin_tel_aviso: "{nombre} has no phone saved: add it under 'Mechanics' to notify them by WhatsApp.",
       mec_wa_asignado: "Hi {nombre}, I assigned you the {vehiculo} (plates {placas}), folio {folio}. Service: {servicio}. Open your page to see the details and upload the photos: {pagina}",
       mec_wa_autorizado: "Hi {nombre}, I authorized the {etapa} stage of the {vehiculo} (plates {placas}). You can start the next one: {siguiente}.",
       mec_wa_autorizado_listo: "Hi {nombre}, I authorized the finished work on the {vehiculo} (plates {placas}). Thanks.",
@@ -3797,7 +3801,7 @@
       pagina: new URL("../mecanico/", location.href).href,
     };
   }
-  function mostrarAvisosMecanico() {
+  function mostrarAvisosMecanico(claveDescripcion) {
     const lista = avisosMecanico;
     avisosMecanico = [];
     const previo = $("mec-aviso-overlay");
@@ -3809,7 +3813,7 @@
     overlay.innerHTML = `
       <div class="card wa-prompt-card">
         <div class="card-title">💬 ${esc(t("mec_aviso_titulo"))}</div>
-        <p style="font-size:13px;color:var(--text-dim);margin:0 0 14px;line-height:1.5;">${esc(t("mec_aviso_desc"))}</p>
+        <p style="font-size:13px;color:var(--text-dim);margin:0 0 14px;line-height:1.5;">${esc(t(claveDescripcion || "mec_aviso_desc"))}</p>
         <div style="display:flex;flex-direction:column;gap:8px;">
           ${lista.map((a) => { const m = mecanicoPorId(a.id); return `<a class="btn" data-mec-aviso href="https://wa.me/${telefonoMecanicoWa(m)}?text=${encodeURIComponent(a.texto)}" rel="noopener" target="_blank">💬 ${esc(t("mec_aviso_btn").replace("{nombre}", m.nombre))}</a>`; }).join("")}
           <button type="button" class="btn btn-outline" id="mec-aviso-cerrar">${esc(t("cerrar_btn"))}</button>
@@ -3821,12 +3825,33 @@
     overlay.addEventListener("click", (e) => { if (e.target === overlay) cerrar(); });
     if (lista.length === 1) overlay.querySelector("[data-mec-aviso]").addEventListener("click", () => setTimeout(cerrar, 300));
   }
-  // Tras guardar: avisa a los mecánicos recién asignados a este servicio.
+  // Al MARCAR a un mecánico en el servicio: ventana para avisarle por WhatsApp
+  // en ese momento. La asignación todavía no está guardada, pero el enlace de
+  // WhatsApp guarda primero (como todos los wa.me del editor), así el mecánico
+  // ya ve el vehículo cuando abre su página.
+  const avisadosAlSeleccionar = new Set();   // "idServicio:idMecanico" ya ofrecidos (no se repiten al guardar)
+  function avisarAsignacionAlSeleccionar(id, marcado) {
+    if (!svcActual) return;
+    const clave = svcActual.id + ":" + id;
+    if (!marcado) { avisadosAlSeleccionar.delete(clave); return; }
+    const mec = mecanicoPorId(id);
+    if (!mec) return;
+    if (!telefonoMecanicoWa(mec)) {
+      showToast(t("mec_sin_tel_aviso").replace("{nombre}", mec.nombre), "", 7000);
+      return;
+    }
+    avisosMecanico = avisosMecanico.filter((a) => a.clave !== "mec_wa_asignado");
+    encolarAvisoMecanico([id], "mec_wa_asignado", datosVehiculoParaAviso(buildVehicleFromForm()));
+    avisadosAlSeleccionar.add(clave);
+    mostrarAvisosMecanico("mec_aviso_desc_asignar");
+  }
+  // Tras guardar: avisa a los mecánicos recién asignados a este servicio a los
+  // que no se les ofreció ya el aviso al marcarlos.
   function encolarAvisosDeAsignacion(vehicle, baseAnterior) {
     const sa = vehicle.servicio_actual;
     if (!sa || !Array.isArray(sa.mecanicos) || !sa.mecanicos.length) return;
     const antes = baseAnterior && baseAnterior.servicio_actual && baseAnterior.servicio_actual.id === sa.id ? (baseAnterior.servicio_actual.mecanicos || []) : [];
-    const nuevos = sa.mecanicos.filter((id) => !antes.includes(id));
+    const nuevos = sa.mecanicos.filter((id) => !antes.includes(id) && !avisadosAlSeleccionar.has(sa.id + ":" + id));
     if (nuevos.length) encolarAvisoMecanico(nuevos, "mec_wa_asignado", datosVehiculoParaAviso(vehicle));
   }
 
@@ -6432,6 +6457,7 @@
 
     if (tgt.dataset && tgt.dataset.mecAsignar) {
       leerAsignacionMecanicosDelDom();
+      avisarAsignacionAlSeleccionar(tgt.dataset.mecAsignar, tgt.checked);
       return;
     }
 
