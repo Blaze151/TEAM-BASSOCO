@@ -7744,5 +7744,16 @@
       "servicios": []
     }
   },
-  "folio_counter": 49
+  "folio_counter": 49,
+  "mecanicos": [
+    {
+      "id": "mec_mwjf0jg4x5dd",
+      "nombre": "Ivan Guajardo",
+      "salt": "a40f0553c2b2e46a",
+      "pin_hash": "5399e60c16c8b4dcbecbd1a1e4406936f4f0d1afd3bf8051e3690ce7b59d6031",
+      "activo": true,
+      "creado": "2026-11-16T15:25:21.666Z",
+      "telefono": "8712862236"
+    }
+  ]
 }
