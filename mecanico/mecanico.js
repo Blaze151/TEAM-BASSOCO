@@ -324,7 +324,7 @@
       if (!datos || !datos.t || !datos.m || (datos.r && datos.r !== REPO_NAME)) return false;
       sesion = { t: datos.t, m: datos.m };
       localStorage.setItem(SESSION_KEY, JSON.stringify(sesion));
-      try { sessionStorage.removeItem(UNLOCK_KEY); } catch (e) {}
+      try { localStorage.removeItem(UNLOCK_KEY); } catch (e) {}
       return true;
     } catch (e) {
       return false;
@@ -337,8 +337,11 @@
     } catch (e) {}
     return false;
   }
+  // La sesión queda abierta en este celular hasta que el mecánico la cierre.
+  // Se guarda la huella del NIP con el que entró: si el administrador genera un
+  // NIP nuevo, la sesión deja de valer y hay que entrar otra vez.
   function desbloqueado() {
-    try { return sessionStorage.getItem(UNLOCK_KEY) === sesion.m; } catch (e) { return false; }
+    try { return !!yo && localStorage.getItem(UNLOCK_KEY) === sesion.m + ":" + yo.pin_hash; } catch (e) { return false; }
   }
   async function sha256Hex(texto) {
     const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(texto));
@@ -362,9 +365,9 @@
     $("content").innerHTML = `
       <div class="card">
         <div class="card-title">Hola, ${esc(yo.nombre)}</div>
-        <p style="color:var(--text-dim);font-size:13.5px;margin-top:0;">Escribe tu PIN para entrar.</p>
+        <p style="color:var(--text-dim);font-size:13.5px;margin-top:0;">Escribe tu NIP para entrar. Tu sesión se queda abierta en este celular hasta que la cierres.</p>
         <div class="form-group">
-          <input type="password" id="pin-input" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="PIN" style="text-align:center;font-size:22px;letter-spacing:6px;">
+          <input type="password" id="pin-input" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="NIP" style="text-align:center;font-size:22px;letter-spacing:6px;">
         </div>
         <button class="btn btn-block" id="pin-entrar">Entrar</button>
         <p id="pin-error" style="color:var(--danger);font-size:12.5px;margin:10px 0 0;display:none;"></p>
@@ -383,13 +386,13 @@
       if (hash !== yo.pin_hash) {
         intentosPin++;
         if (intentosPin >= 5) { bloqueoPinHasta = Date.now() + 30000; intentosPin = 0; }
-        errEl.textContent = "PIN incorrecto.";
+        errEl.textContent = "NIP incorrecto.";
         errEl.style.display = "block";
         $("pin-input").value = "";
         return;
       }
       intentosPin = 0;
-      try { sessionStorage.setItem(UNLOCK_KEY, sesion.m); } catch (e) {}
+      try { localStorage.setItem(UNLOCK_KEY, sesion.m + ":" + yo.pin_hash); } catch (e) {}
       mostrarLista();
     };
     $("pin-entrar").addEventListener("click", entrar);
@@ -626,7 +629,7 @@
       <div class="card" id="etapa-activa">
         <div class="card-title">${ETAPAS[etapa].icon} ${esc(TITULO_ETAPA[etapa])}</div>
         ${rech ? `<div style="padding:10px;border-radius:10px;border:1px solid var(--danger);margin-bottom:12px;"><div style="font-size:13px;font-weight:600;color:var(--danger);">✗ El administrador pidió correcciones · ${esc(fechaHora(rech.fecha))}</div>${rech.motivo ? `<div style="font-size:13px;margin-top:4px;white-space:pre-wrap;">${esc(rech.motivo)}</div>` : ""}</div>` : ""}
-        ${sol ? `<div style="padding:10px;border-radius:10px;border:1px solid var(--yellow);margin-bottom:12px;font-size:13px;font-weight:600;color:var(--yellow);">⏳ Autorización pedida el ${esc(fechaHora(sol.fecha))}. Espera a que el administrador la apruebe.</div>` : ""}
+        ${sol ? `<div style="padding:10px;border-radius:10px;border:1px solid var(--yellow);margin-bottom:12px;font-size:13px;font-weight:600;color:var(--yellow);">⏳ Autorización pedida el ${esc(fechaHora(sol.fecha))}. Espera a que el administrador la apruebe.${enlaceAvisoAdmin(db.vehicles[vehiculoAbierto], etapa) ? `<a class="btn btn-sm" id="wa-avisar-otra-vez" href="${esc(enlaceAvisoAdmin(db.vehicles[vehiculoAbierto], etapa))}" rel="noopener" target="_blank" style="margin-top:9px;display:inline-flex;">💬 Avisar al administrador por WhatsApp</a>` : ""}</div>` : ""}
 
         <div class="attach-input-row">
           <button type="button" class="btn btn-outline btn-sm" id="btn-foto-camara">📷 Tomar foto</button>
@@ -858,21 +861,31 @@
     }
   }
 
-  // El panel del admin no recibe notificaciones: se ofrece avisarle por WhatsApp.
-  function ofrecerAvisoWhatsApp(v, etapa) {
+  // Toda la comunicación con el administrador va por WhatsApp: al terminar una
+  // etapa se le avisa con el mensaje ya escrito (WhatsApp no deja mandarlo solo).
+  function enlaceAvisoAdmin(v, etapa) {
     const numero = String((db.taller && (db.taller.whatsapp || db.taller.telefono)) || "").replace(/\D/g, "");
-    if (!numero) return;
+    if (!numero) return "";
     const s = v.servicio_actual;
-    const texto = `Hola, soy ${yo.nombre}. Ya subí las fotos y la información de ${ETAPAS[etapa].label} del ${v.marca || ""} ${v.modelo || ""} (placas ${v.placas || "s/p"})${s.folio ? ", folio " + s.folio : ""}. Te pido la autorización en el panel.`;
+    const idx = ORDEN_ETAPAS.indexOf(etapa);
+    const cierre = etapa === "listo"
+      ? "El vehículo está listo para recoger. Falta tu autorización en el panel."
+      : `Falta tu autorización en el panel para iniciar la siguiente: ${ETAPAS[ORDEN_ETAPAS[idx + 1]].label}.`;
+    const texto = `Hola, soy ${yo.nombre}. Ya terminé la etapa de ${ETAPAS[etapa].label} del ${(v.marca || "") + " " + (v.modelo || "")} (placas ${v.placas || "s/p"})${v.numero_unidad ? ", unidad " + v.numero_unidad : ""}${s.folio ? ", folio " + s.folio : ""}: ya subí las fotos y la información. ${cierre}`;
+    return `https://wa.me/${numero.length === 10 ? "52" + numero : numero}?text=${encodeURIComponent(texto.replace(/\s+/g, " "))}`;
+  }
+  function ofrecerAvisoWhatsApp(v, etapa) {
+    const enlace = enlaceAvisoAdmin(v, etapa);
+    if (!enlace) return;
     const overlay = document.createElement("div");
     overlay.className = "wa-prompt-overlay";
     overlay.innerHTML = `
       <div class="card wa-prompt-card">
         <div class="card-title">📨 Solicitud enviada</div>
-        <p style="font-size:13.5px;color:var(--text-dim);margin:0 0 16px;">El administrador la verá en su panel. Si quieres, avísale también por WhatsApp.</p>
+        <p style="font-size:13.5px;color:var(--text-dim);margin:0 0 16px;line-height:1.5;">Ahora avísale al administrador por WhatsApp para que la revise y autorice la siguiente etapa.</p>
         <div class="actions-row" style="flex-wrap:wrap;">
-          <a class="btn" href="https://wa.me/${numero.length === 10 ? "52" + numero : numero}?text=${encodeURIComponent(texto)}" rel="noopener" target="_blank" id="wa-avisar">💬 Avisar por WhatsApp</a>
-          <button class="btn btn-outline" id="wa-cerrar">Cerrar</button>
+          <a class="btn" href="${esc(enlace)}" rel="noopener" target="_blank" id="wa-avisar">💬 Avisar por WhatsApp</a>
+          <button class="btn btn-outline" id="wa-cerrar">Ahora no</button>
         </div>
       </div>`;
     document.body.appendChild(overlay);
@@ -885,8 +898,8 @@
   /* ---------------- Inicio ---------------- */
 
   $("btn-salir").addEventListener("click", () => {
-    if ((pendientes.length || subidas.length) && !confirm("Tienes fotos sin guardar. ¿Salir de todos modos?")) return;
-    try { sessionStorage.removeItem(UNLOCK_KEY); } catch (e) {}
+    if (!confirm((pendientes.length || subidas.length) ? "Tienes fotos sin guardar. ¿Cerrar sesión de todos modos?" : "¿Cerrar sesión? Para volver a entrar necesitarás tu NIP.")) return;
+    try { localStorage.removeItem(UNLOCK_KEY); } catch (e) {}
     pantallaPin();
   });
   window.addEventListener("beforeunload", (e) => {
@@ -900,7 +913,7 @@
   async function iniciar() {
     const activadoAhora = leerEnlaceDeActivacion();
     if (!activadoAhora && !sesion && !restaurarSesion()) {
-      pantallaMensaje("Acceso de mecánicos", `Para entrar necesitas el enlace de acceso que te manda el administrador de ${TALLER_NOMBRE}. Ábrelo en este celular una sola vez y después entra con tu PIN.`);
+      pantallaMensaje("Acceso de mecánicos", `Para entrar necesitas el enlace de acceso que te manda el administrador de ${TALLER_NOMBRE}. Ábrelo en este celular y entra con tu NIP.`);
       return;
     }
     $("content").innerHTML = `<div class="skeleton skeleton-card"></div><div class="skeleton skeleton-card"></div>`;
