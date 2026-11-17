@@ -1321,17 +1321,17 @@
         "tecnico": "Ivan Guajardo",
         "tiempo_entrega_aprox": "4 días",
         "fecha_inicio": "2026-10-26",
-        "estado": "recibido",
-        "actualizado": "2026-10-26",
+        "estado": "diagnostico",
+        "actualizado": "2026-11-17",
         "pago": {
           "estado": "no_pagado",
           "metodo": null
         },
         "orden_recepcion": {
           "enviado": false,
-          "aceptado": false,
+          "aceptado": true,
           "fecha_envio": null,
-          "fecha_aceptado": null,
+          "fecha_aceptado": "2026-11-17",
           "inventario": {
             "exteriores": {
               "antena": "no",
@@ -1378,7 +1378,8 @@
         },
         "hoja_salida": null,
         "fechas_etapa": {
-          "recibido": "2026-10-26T22:06:40.878Z"
+          "recibido": "2026-10-26T22:06:40.878Z",
+          "diagnostico": "2026-11-17T19:35:35.043Z"
         },
         "adjuntos": {
           "recibido": {
