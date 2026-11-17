@@ -1429,13 +1429,14 @@
               "fecha": "2026-11-17T19:36:37.250Z"
             }
           },
-          "solicitud": null,
-          "autorizaciones": {},
-          "rechazo": {
+          "solicitud": {
             "etapa": "diagnostico",
-            "motivo": "faltan fotos del otro motor",
-            "fecha": "2026-11-17T19:44:19.508Z"
-          }
+            "por": "mec_mwjf0jg4x5dd",
+            "nombre": "Ivan Guajardo",
+            "fecha": "2026-11-17T19:46:00.542Z"
+          },
+          "autorizaciones": {},
+          "rechazo": null
         }
       },
       "servicios": [
