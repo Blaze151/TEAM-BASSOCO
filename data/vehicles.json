@@ -1428,7 +1428,12 @@
               "fecha": "2026-11-17T19:36:37.250Z"
             }
           },
-          "solicitud": null,
+          "solicitud": {
+            "etapa": "diagnostico",
+            "por": "mec_mwjf0jg4x5dd",
+            "nombre": "Ivan Guajardo",
+            "fecha": "2026-11-17T19:36:45.082Z"
+          },
           "autorizaciones": {},
           "rechazo": null
         }
