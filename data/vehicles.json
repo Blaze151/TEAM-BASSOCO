@@ -1321,7 +1321,7 @@
         "tecnico": "Ivan Guajardo",
         "tiempo_entrega_aprox": "4 días",
         "fecha_inicio": "2026-10-26",
-        "estado": "diagnostico",
+        "estado": "en_proceso",
         "actualizado": "2026-11-17",
         "pago": {
           "estado": "no_pagado",
@@ -1389,7 +1389,8 @@
         "hoja_salida": null,
         "fechas_etapa": {
           "recibido": "2026-10-26T22:06:40.878Z",
-          "diagnostico": "2026-11-17T19:35:35.043Z"
+          "diagnostico": "2026-11-17T19:35:35.043Z",
+          "en_proceso": "2026-11-17T19:47:19.179Z"
         },
         "adjuntos": {
           "recibido": {
@@ -1439,13 +1440,13 @@
               "fecha": "2026-11-17T19:36:37.250Z"
             }
           },
-          "solicitud": {
-            "etapa": "diagnostico",
-            "por": "mec_mwjf0jg4x5dd",
-            "nombre": "Ivan Guajardo",
-            "fecha": "2026-11-17T19:46:00.542Z"
+          "solicitud": null,
+          "autorizaciones": {
+            "diagnostico": {
+              "fecha": "2026-11-17T19:47:19.178Z",
+              "solicito": "mec_mwjf0jg4x5dd"
+            }
           },
-          "autorizaciones": {},
           "rechazo": null
         }
       },
