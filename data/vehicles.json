@@ -1361,6 +1361,16 @@
           "pdf_path": null,
           "items": [
             {
+              "concepto": "cambio de motor 1",
+              "cantidad": 1,
+              "costo_unitario": 159321
+            },
+            {
+              "concepto": "cambio de motor 2",
+              "cantidad": 1,
+              "costo_unitario": 185962.99
+            },
+            {
               "concepto": "",
               "cantidad": 1,
               "costo_unitario": null
